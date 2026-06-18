@@ -128,6 +128,8 @@ def main(argv: list[str] | None = None) -> int:
                    help="Which venue(s) to include (default: both)")
     p.add_argument("--kalshi-min", type=float, default=None,
                    help="Min Kalshi trade notional (default: same as --min)")
+    p.add_argument("--kalshi-max-scan", type=int, default=60000,
+                   help="Max Kalshi raw trades to scan (default: 60000, keeps the run fast)")
     p.add_argument("--watchlist", type=str, default=None,
                    help="Path to watchlist JSON (default: watchlist.json if present)")
     p.add_argument("--no-edge", dest="edge", action="store_false", default=True,
@@ -158,7 +160,9 @@ def main(argv: list[str] | None = None) -> int:
         kmin = args.kalshi_min if args.kalshi_min is not None else args.min_usd
         print(f"Fetching Kalshi trades ≥ ${kmin:,.0f} "
               f"from the last {args.hours:g}h…", file=sys.stderr)
-        kx = fetch_kalshi_trades(min_usd=kmin, since_ts=since_ts)
+        kx = fetch_kalshi_trades(
+            min_usd=kmin, since_ts=since_ts, max_trades=args.kalshi_max_scan
+        )
         print(f"  Kalshi: {len(kx)} trades.", file=sys.stderr)
         trades += kx
 

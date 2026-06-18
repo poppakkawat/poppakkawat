@@ -104,13 +104,19 @@ def resolve_titles(trades: list[Trade], chunk: int = 20) -> None:
 def fetch_kalshi_trades(
     min_usd: float = 5000,
     since_ts: int | None = None,
-    max_trades: int = 200000,
+    max_trades: int = 60000,
     page_size: int = 1000,
 ) -> list[Trade]:
     """Fetch Kalshi trades >= ``min_usd`` notional within the window.
 
     Kalshi has no server-side cash filter, so we page (newest first, bounded
     by ``min_ts``) and filter client-side, then resolve market titles.
+
+    ``max_trades`` caps how many raw trades we scan. On very high-volume days
+    (e.g. World Cup) Kalshi can produce hundreds of thousands of tiny trades;
+    scanning all of them is slow, so we cap to the most recent ``max_trades``.
+    Large/notable trades are overwhelmingly recent, so this keeps the daily
+    job fast and bounded while still catching what matters.
     """
     out: list[Trade] = []
     cursor: str | None = None
