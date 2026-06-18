@@ -1,101 +1,85 @@
-# Life Management Ideas
+# 📈 polytrack — Polymarket Daily Trade Tracker
 
-A practical, no-fluff toolkit for getting your life organized. Pick a few
-things that resonate — you don't need to do all of it. Start small, build
-momentum.
+Daily updates and analytics of **interesting Polymarket trades**. Pulls the
+day's notable trades from Polymarket's public data API, analyzes the flow,
+and writes a clean Markdown report — whales, hot markets, top traders, and
+high-conviction bets.
 
-## How to use this
+- **Zero dependencies.** Pure Python 3 standard library.
+- **No API key.** Uses Polymarket's public data API.
+- **Automatable.** Ships with a GitHub Action that posts a report every day.
 
-- Don't try to adopt everything at once. Choose **one** area below.
-- Do it for two weeks before adding anything new.
-- Review what's working monthly (see [Weekly & Monthly Reviews](#weekly--monthly-reviews)).
+## Quick start
 
----
+```bash
+# Print a report for the last 24h of trades ≥ $5,000
+python3 -m polytrack
 
-## 1. Capture everything in one place
+# Bigger window / higher threshold
+python3 -m polytrack --hours 12 --min 25000
 
-Your brain is for having ideas, not storing them.
+# Save to reports/YYYY-MM-DD.md
+python3 -m polytrack --save
 
-- Keep a single **inbox** — a notes app, a paper notebook, anything — where
-  every task, idea, and reminder lands the moment it appears.
-- Empty the inbox once a day: delete, do (if under 2 minutes), schedule, or
-  delegate each item.
-- Suggested tools: Todoist, Apple Notes/Reminders, Notion, or a plain
-  `notes.md` file in this repo.
+# Also dump the raw analysis as JSON
+python3 -m polytrack --save --json latest.json
+```
 
-## 2. Plan your week, then your day
+See [`reports/`](reports/) for an example of generated output.
 
-- **Sunday (15 min):** look at the week ahead. Pick 3 outcomes that would
-  make the week a success.
-- **Each morning (5 min):** choose your **top 3 tasks** for today. Do the
-  hardest one first ("eat the frog").
-- Block time on a calendar for deep work — treat it like a meeting with
-  yourself.
+## What counts as "interesting"?
 
-## 3. Money basics
+The report surfaces several angles on the day's activity:
 
-- Track where money goes for one month — awareness alone changes behavior.
-- Automate savings: move a fixed amount to savings the day you get paid.
-- Keep an emergency fund target (start with 1 month of expenses, build to 3–6).
-- Review subscriptions quarterly and cancel what you don't use.
+| Section | What it shows |
+|---------|---------------|
+| 📊 **Summary** | Total notional, trade count, and net buy/sell flow |
+| 🐳 **Biggest Trades** | The largest single trades by USD value |
+| 🔥 **Hottest Markets** | Markets with the most money moving through them |
+| 💸 **Most Active Traders** | Wallets deploying the most capital |
+| 🎯 **High-Conviction Bets** | Large buys at extreme prices (longshots ≤0.15 or favorites ≥0.85) |
 
-## 4. Health & energy
+Trade USD value is `shares × price` (Polymarket prices are 0–1 probabilities).
 
-- **Sleep** is the highest-leverage habit. Fixed wake-up time, screens off
-  early.
-- Move daily, even a 20-minute walk counts.
-- Prep or plan meals so good choices are the easy default.
-- Drink water before coffee.
+## Options
 
-## 5. Relationships
+```
+--hours N        Look-back window in hours (default: 24)
+--min USD        Minimum trade notional to include (default: 5000)
+--top N          Rows per leaderboard (default: 10)
+--save           Write to reports/YYYY-MM-DD.md
+--out PATH       Explicit Markdown output path
+--json PATH      Also write raw analysis as JSON
+--max-trades N   Safety cap on trades fetched (default: 5000)
+```
 
-- Schedule recurring check-ins with the people who matter (a monthly call,
-  a weekly dinner).
-- Keep a short list of birthdays/important dates with reminders.
-- Reach out without an agenda sometimes — just to connect.
+## Automated daily reports
 
-## 6. Learning & growth
+The workflow in [`.github/workflows/daily.yml`](.github/workflows/daily.yml)
+runs every day, generates a fresh report, and commits it to `reports/`.
+It needs no secrets — the data API is public. You can also trigger it
+manually from the Actions tab, or adjust the schedule/threshold there.
 
-- Pick **one** skill or topic per quarter, not five.
-- 25 minutes a day beats a 5-hour weekend cram.
-- Keep a "what I learned" log — even one line per day.
+## Project layout
 
-## 7. Declutter your environment
+```
+polytrack/
+  client.py     # Polymarket data API client (stdlib urllib)
+  analytics.py  # leaderboards, hot markets, conviction detection
+  report.py     # Markdown report rendering
+  cli.py        # command-line interface
+reports/        # generated daily reports
+```
 
-- One in, one out: when something new comes in, something leaves.
-- 10-minute daily tidy beats a marathon cleanup.
-- Digital too: clean your desktop, inbox, and downloads folder weekly.
+## Notes & limits
 
----
+- The data API returns trades newest-first; we page back to the requested
+  window. A safety cap (`--max-trades`) prevents runaway paging on busy days.
+- This is informational only — **not financial advice.**
 
-## Weekly & Monthly Reviews
+## Ideas to extend
 
-A 20-minute review keeps the whole system honest.
-
-**Weekly:**
-- What went well? What didn't?
-- Empty all inboxes (email, notes, physical).
-- Plan next week's top 3 outcomes.
-
-**Monthly:**
-- Review goals — still relevant? On track?
-- Check finances and subscriptions.
-- Adjust habits that aren't sticking.
-
----
-
-## A simple starting plan
-
-If this feels like a lot, just do these three things this week:
-
-1. Set up **one inbox** and empty it daily.
-2. Each morning, write your **top 3 tasks**.
-3. Do a **15-minute review** on Sunday.
-
-That's it. Build from there.
-
----
-
-## Templates
-
-See [`templates/`](templates/) for copy-paste daily and weekly planning files.
+- Track a watchlist of specific wallets ("smart money") and alert on their moves
+- Detect price swings per market over the window, not just volume
+- Post the daily summary to Discord/Telegram/email
+- Add a sparkline of total volume over the past N days
