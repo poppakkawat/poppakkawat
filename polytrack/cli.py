@@ -116,6 +116,8 @@ def main(argv: list[str] | None = None) -> int:
                    help="Write the report to reports/YYYY-MM-DD.md")
     p.add_argument("--out", type=str, default=None,
                    help="Explicit output path for the Markdown report")
+    p.add_argument("--out-dir", type=str, default=None,
+                   help="Directory to write YYYY-MM-DD.md into (created if needed)")
     p.add_argument("--json", dest="json_out", type=str, default=None,
                    help="Also write raw analysis JSON to this path")
     p.add_argument("--max-trades", type=int, default=5000,
@@ -190,10 +192,12 @@ def main(argv: list[str] | None = None) -> int:
         )
 
     out_path: Path | None = None
+    day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     if args.out:
         out_path = Path(args.out)
+    elif args.out_dir:
+        out_path = Path(args.out_dir) / f"{day}.md"
     elif args.save:
-        day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         out_path = Path("reports") / f"{day}.md"
 
     if out_path:

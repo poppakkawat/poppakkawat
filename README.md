@@ -56,6 +56,7 @@ Trade USD value is `shares × price` (Polymarket prices are 0–1 probabilities)
 --top N            Rows per leaderboard (default: 10)
 --save             Write to reports/YYYY-MM-DD.md
 --out PATH         Explicit Markdown output path
+--out-dir DIR      Write YYYY-MM-DD.md into DIR (created if needed)
 --json PATH        Also write raw analysis as JSON
 --max-trades N     Safety cap on Polymarket trades fetched (default: 5000)
 --source V         Venue(s): polymarket | kalshi | both (default: both)
@@ -183,10 +184,19 @@ aborts the run.
 
 ## Automated daily reports
 
-The workflow in [`.github/workflows/daily.yml`](.github/workflows/daily.yml)
-runs every day, generates a fresh report, and commits it to `reports/`.
-It needs no secrets — the data API is public. You can also trigger it
-manually from the Actions tab, or adjust the schedule/threshold there.
+**In the cloud:** the workflow in
+[`.github/workflows/daily.yml`](.github/workflows/daily.yml) runs every day,
+generates a fresh report, and commits it to `reports/`. It needs no secrets —
+the data API is public. You can also trigger it manually from the Actions
+tab, or adjust the schedule/threshold there.
+
+**On your Windows PC → OneDrive:** see [`windows/`](windows/) for a one-command
+setup that schedules a daily task and saves each report into your
+`OneDrive\Prediction Market update` folder:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\windows\setup_schedule.ps1
+```
 
 ## Project layout
 
