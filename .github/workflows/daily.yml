@@ -1,4 +1,4 @@
-name: Daily Polymarket Report
+name: Daily Prediction Markets Report
 
 on:
   schedule:
@@ -55,6 +55,28 @@ jobs:
             --notify discord,telegram,email \
             --save
 
+      - name: Upload report to OneDrive (rclone)
+        env:
+          # Paste the contents of your rclone.conf into this repo secret.
+          # See docs/cloud-onedrive.md for the one-time setup.
+          RCLONE_CONF: ${{ secrets.RCLONE_CONF }}
+          # Optional overrides (defaults shown):
+          RCLONE_REMOTE: ${{ secrets.RCLONE_REMOTE }}       # default: onedrive
+          ONEDRIVE_DIR: ${{ secrets.ONEDRIVE_DIR }}         # default: Prediction Market update
+        run: |
+          if [ -z "$RCLONE_CONF" ]; then
+            echo "RCLONE_CONF secret not set — skipping OneDrive upload."
+            exit 0
+          fi
+          curl -fsSL https://rclone.org/install.sh | sudo bash
+          mkdir -p "$HOME/.config/rclone"
+          printf '%s' "$RCLONE_CONF" > "$HOME/.config/rclone/rclone.conf"
+          REMOTE="${RCLONE_REMOTE:-onedrive}"
+          DIR="${ONEDRIVE_DIR:-Prediction Market update}"
+          DAY=$(date -u +%F)
+          echo "Uploading reports/${DAY}.md to ${REMOTE}:${DIR}/"
+          rclone copy "reports/${DAY}.md" "${REMOTE}:${DIR}/" --no-traverse
+
       - name: Commit report
         run: |
           git config user.name "github-actions[bot]"
@@ -63,6 +85,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "chore: daily Polymarket report $(date -u +%Y-%m-%d)"
+            git commit -m "chore: daily prediction-market report $(date -u +%Y-%m-%d)"
             git push
           fi

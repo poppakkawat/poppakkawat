@@ -190,6 +190,11 @@ generates a fresh report, and commits it to `reports/`. It needs no secrets —
 the data API is public. You can also trigger it manually from the Actions
 tab, or adjust the schedule/threshold there.
 
+**Cloud → OneDrive (runs even with every PC off):** GitHub Actions generates
+the report daily and uploads it into your `OneDrive\Prediction Market update`
+folder via rclone. One-time setup (authorize rclone, add one secret) in
+[`docs/cloud-onedrive.md`](docs/cloud-onedrive.md).
+
 **On your Windows PC → OneDrive:** see [`windows/`](windows/) for a one-command
 setup that schedules a daily task and saves each report into your
 `OneDrive\Prediction Market update` folder:
