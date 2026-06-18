@@ -119,6 +119,14 @@
       "prob": 0.0040000000000000036,
       "first_seen": "2026-06-18",
       "last_seen": "2026-06-18"
+    },
+    "kalshi:KXBTCD-26JUN1815-T62599.99": {
+      "title": "Bitcoin price on Jun 18, 2026? \u2014 $62,600 or above",
+      "theme": "Bitcoin",
+      "venue": "kalshi",
+      "prob": 0.8,
+      "first_seen": "2026-06-18",
+      "last_seen": "2026-06-18"
     }
   },
   "updated": "2026-06-18"
