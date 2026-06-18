@@ -1,7 +1,7 @@
 """Tests for the fbscrape parser, client helpers, and scraper.
 
-Run with:  python -m pytest tests/test_fbscrape.py
-or simply: python tests/test_fbscrape.py
+Run with:  python -m pytest fbscrape/tests/test_fbscrape.py
+or simply: python fbscrape/tests/test_fbscrape.py
 """
 
 from __future__ import annotations
@@ -9,7 +9,7 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
 from fbscrape.client import Client, normalize_account_url, absolute_url
 from fbscrape.parser import parse_timeline
