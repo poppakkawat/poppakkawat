@@ -68,11 +68,30 @@ Trade USD value is `shares × price` (Polymarket prices are 0–1 probabilities)
 --dry-run-notify   Print the notification text instead of sending
 ```
 
+## ⚡ Daily edge briefing
+
+The top of every report is a 2-minute, actionable briefing built from three
+angles (the headline feature):
+
+1. **⚠️ Divergence alerts** — markets with strong crowd conviction (≥70%)
+   where the mapped instrument *hasn't moved yet* ("not priced in"). Intraday
+   noise (BTC up/down) and pure level markets ("above $X") are filtered out.
+2. **📈 Biggest overnight probability shifts** — each market's implied
+   probability vs the previous run, biggest movers first. This is where the
+   real edge tends to live: the crowd changed its mind before the instrument
+   reacted. Direction flips with the move (prob ↑ → long, prob ↓ → short).
+3. **🆕 New mapped markets today** — freshly seen markets that map to assets,
+   so you catch emerging themes early.
+
+Day-over-day comparison persists a small state file at
+`reports/state/edge_state.json` (committed, so the cloud run remembers
+yesterday). Shifts appear from the second run onward.
+
 ## 🧭 Cross-market edge signals
 
-This is the "get an edge on traditional markets" engine. A prediction
-market's price *is* the crowd's probability for an event — and many events
-move tradeable instruments. polytrack maps them and flags **divergences**.
+Below the briefing is the full mapping detail. A prediction market's price
+*is* the crowd's probability for an event — and many events move tradeable
+instruments. polytrack maps them and flags **divergences**.
 
 ```bash
 # Just the signals

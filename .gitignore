@@ -7,6 +7,9 @@ venv/
 # keep tracked examples / config templates
 !watchlist.example.json
 !.github/**/*.json
+# day-over-day edge state must be committed so the cloud run remembers yesterday
+!reports/state/
+!reports/state/*.json
 # your personal watchlist stays local
 watchlist.json
 .DS_Store

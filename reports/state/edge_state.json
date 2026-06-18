@@ -1,0 +1,125 @@
+{
+  "markets": {
+    "0xd86a816093fcd0a0e1ca440bc5ce199bd3c5a8d6139e044b076958164f8c5423": {
+      "title": "US x Iran permanent peace deal by June 15, 2026?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-18",
+      "last_seen": "2026-06-18"
+    },
+    "0x20af55ab35186377b81219db6cb8615240cba42cea41731091be9484a5f5b122": {
+      "title": "US x Iran permanent peace deal by July 31, 2026?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-18",
+      "last_seen": "2026-06-18"
+    },
+    "0x9769f78cbc95a5ed11895e6064bac471d8fd8f930b260cf581b68d3f58630d27": {
+      "title": "US x Iran permanent peace deal by December 31, 2026?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-18",
+      "last_seen": "2026-06-18"
+    },
+    "0xabc60885ff3bdf2f16293ea84ec1c97bf18a0ccf9db7f51a41a482f6db028ba5": {
+      "title": "Will the price of Bitcoin be above $62,000 on June 18?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-18",
+      "last_seen": "2026-06-18"
+    },
+    "0x6114a8a3f9ac214f48a7e20d169f1c7a5c84082cb6f7058ed9fe1137b11fd0e7": {
+      "title": "US x Iran permanent peace deal by June 30, 2026?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.998,
+      "first_seen": "2026-06-18",
+      "last_seen": "2026-06-18"
+    },
+    "0xa80bce091eea8e1a85da60a20063153f6bb6df3d4e5b02f6f6db757bc58324f5": {
+      "title": "Will the price of Bitcoin be above $58,000 on June 18?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.998,
+      "first_seen": "2026-06-18",
+      "last_seen": "2026-06-18"
+    },
+    "0xba6c7f57c86f73e1393697a6aeb3a9052562c320252a79aca655e4b5b83946d1": {
+      "title": "Will Bitcoin dip to $63,000 on June 18?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.99,
+      "first_seen": "2026-06-18",
+      "last_seen": "2026-06-18"
+    },
+    "0x0f66c17e18fe4f9ea5c1b4b3e85e5af9b9fa063be73244a700bc2146300b3497": {
+      "title": "Will the price of Bitcoin be above $60,000 on June 18?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.9873641279585397,
+      "first_seen": "2026-06-18",
+      "last_seen": "2026-06-18"
+    },
+    "0x68fbeb8d823552abf9d35f3ebdb8619a1a1d51b650da9101be62f09308fd18d2": {
+      "title": "US announces new Iran agreement/ceasefire extension by June 13?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-18",
+      "last_seen": "2026-06-18"
+    },
+    "0x4e4a7df876b0c04f0b8b29b9073eddfbaf5c787192da825ae7ca1031bc8cfd15": {
+      "title": "Will the Fed decrease interest rates by 50+ bps after the June 2026 meeting?",
+      "theme": "Fed rate cut",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-18",
+      "last_seen": "2026-06-18"
+    },
+    "0xa88d1a26e257a58a73fe7a3032e301b2cc82d49fd3aae836dbb86602d874419a": {
+      "title": "Will the price of Bitcoin be above $74,000 on June 20?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-18",
+      "last_seen": "2026-06-18"
+    },
+    "0x35cbb19e3e3c4c3e3b6e7a18fc42b7b120169f0c57b2e0bb1e7ae3dde67ba2ac": {
+      "title": "Will the price of Bitcoin be above $70,000 on June 18?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-18",
+      "last_seen": "2026-06-18"
+    },
+    "0x19b45e016995823419255364ed7c49423d411e7dbc712c6abf4e0e0222740109": {
+      "title": "Elon Musk wins $10b+ settlement against Altman/OpenAI?",
+      "theme": "AI / big tech",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-18",
+      "last_seen": "2026-06-18"
+    },
+    "0x053d22e12bfe8dd73b12fc1cf89858ecc0de76aede10fea3eca5c7877d8db40c": {
+      "title": "Israel x Hezbollah permanent peace deal by June 15, 2026?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.0017210916825509681,
+      "first_seen": "2026-06-18",
+      "last_seen": "2026-06-18"
+    },
+    "0xeda0e0633f131b761cbe6c6e5e16ae347c48d9448a08c5826bfc2c794b63758e": {
+      "title": "Will Crude Oil (CL) hit (HIGH) $150 by end of June?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.0040000000000000036,
+      "first_seen": "2026-06-18",
+      "last_seen": "2026-06-18"
+    }
+  },
+  "updated": "2026-06-18"
+}

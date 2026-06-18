@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 
 from .analytics import Analysis
 from .client import Trade
-from .signals import Signal, alignment, expected_sign
+from .signals import Signal, alignment, expected_sign, strong_divergence
 
 POLYMARKET_EVENT = "https://polymarket.com/event/"
 
@@ -33,6 +33,92 @@ def _price(x: float) -> str:
     if x >= 1:
         return f"{x:,.2f}"
     return f"{x:.4f}"
+
+
+def _dir_word(sign: int) -> str:
+    return {1: "long", -1: "short", 0: "watch"}[sign]
+
+
+def _dedupe(signals: list[Signal]) -> list[Signal]:
+    """Collapse near-identical signals (same theme + instrument set), keeping
+    the highest-volume one so the briefing isn't 4 copies of the same read."""
+    seen: dict[tuple, Signal] = {}
+    for s in sorted(signals, key=lambda s: s.volume_usd, reverse=True):
+        key = (s.rule.label, tuple(tk for tk, _, _ in s.rule.instruments))
+        if key not in seen:
+            seen[key] = s
+    return list(seen.values())
+
+
+def render_briefing(signals: list[Signal]) -> list[str]:
+    """The actionable morning briefing: alerts, overnight shifts, new markets."""
+    lines: list[str] = ["## ⚡ Today's Edge Briefing", ""]
+    if not signals:
+        lines += ["_No mapped markets in this window._", ""]
+        return lines
+
+    # A) Divergence alerts — strong crowd view, instrument not priced in.
+    alerts = [(s, hits) for s in _dedupe(signals) if (hits := strong_divergence(s))]
+    lines += ["### ⚠️ Divergence alerts — strong view, not yet priced in", ""]
+    if alerts:
+        for s, hits in alerts[:8]:
+            tag = VENUE_TAG.get(s.venue, s.venue)
+            picks = ", ".join(
+                f"**{_dir_word(sign)} {tk}** ({_pct_move(q)})"
+                for (tk, name, sign, q) in hits
+            )
+            lines.append(
+                f"- {tag} · **{s.rule.label}** at **{s.yes_prob:.0%}** → {picks}  "
+            )
+            lines.append(f"  ↳ _{s.market_title}_")
+    else:
+        lines.append("- _None today (no ≥70% market with an unmoved instrument)._")
+    lines.append("")
+
+    # B) Biggest overnight probability shifts (day-over-day).
+    moved = [s for s in signals if s.delta is not None and abs(s.delta) >= 0.05]
+    moved.sort(key=lambda s: abs(s.delta), reverse=True)
+    lines += ["### 📈 Biggest overnight probability shifts", ""]
+    if moved:
+        for s in moved[:8]:
+            arrow = "🔺" if s.delta >= 0 else "🔻"
+            tag = VENUE_TAG.get(s.venue, s.venue)
+            instruments = ", ".join(
+                f"{_dir_word(sign if s.delta >= 0 else -sign)} {tk}"
+                for (tk, name, sign) in s.rule.instruments if sign != 0
+            )
+            lines.append(
+                f"- {arrow} **{s.prev_prob:.0%} → {s.yes_prob:.0%}** "
+                f"({s.delta:+.0%}) · {tag} · {s.rule.label} — watch {instruments}  "
+            )
+            lines.append(f"  ↳ _{s.market_title}_")
+    else:
+        lines.append("- _No prior snapshot yet — shifts appear from tomorrow._")
+    lines.append("")
+
+    # C) New mapped markets today.
+    new = [s for s in _dedupe(signals) if s.is_new]
+    new.sort(key=lambda s: s.volume_usd, reverse=True)
+    lines += ["### 🆕 New mapped markets today", ""]
+    if new:
+        for s in new[:8]:
+            tag = VENUE_TAG.get(s.venue, s.venue)
+            link = f"[{s.market_title}]({s.url})" if s.url else s.market_title
+            lines.append(
+                f"- {tag} · {s.rule.label} · implied **{s.yes_prob:.0%}** — {link}"
+            )
+    else:
+        lines.append("- _Nothing new mapped today._")
+    lines.append("")
+    lines.append("---")
+    lines.append("")
+    return lines
+
+
+def _pct_move(q) -> str:
+    if q is None or q.pct_change is None:
+        return "no quote"
+    return f"{q.pct_change:+.2f}% today"
 
 
 def render_signals(signals: list[Signal], limit: int = 12) -> list[str]:
@@ -133,8 +219,9 @@ def render(
             lines.append(f"| {name} | {len(ts)} | {_money(sum(t.usd for t in ts))} |")
     lines.append("")
 
-    # Cross-market edge signals (headline section)
+    # Actionable edge briefing + detailed signals (headline sections)
     if signals is not None:
+        lines.extend(render_briefing(signals))
         lines.extend(render_signals(signals))
 
     # Smart-money watchlist

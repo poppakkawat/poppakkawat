@@ -38,23 +38,24 @@ RULES: tuple[Rule, ...] = (
         "Fed rate cut",
         ("rate cut", "cut rates", "cuts rates", "decrease interest", "lower rates",
          "fed cut", "rate decrease", "50+ bps decrease", "25 bps decrease"),
-        (("TLT", "20Y Treasuries", +1), ("SPY", "S&P 500", +1),
-         ("GLD", "Gold", +1), ("XLF", "Financials", +1)),
-        "Cuts ease financial conditions: bullish bonds, equities, gold.",
+        (("QQQ", "Nasdaq 100", +1), ("TLT", "20Y Treasuries", +1),
+         ("SPY", "S&P 500", +1), ("GLD", "Gold", +1)),
+        "Cuts ease conditions: bullish rate-sensitive tech, bonds, gold.",
     ),
     Rule(
         "Fed rate hike",
         ("rate hike", "hike rates", "hikes rates", "raise rates", "increase interest",
          "fed hike", "rate increase", "bps increase"),
-        (("TLT", "20Y Treasuries", -1), ("SPY", "S&P 500", -1), ("GLD", "Gold", -1)),
-        "Hikes tighten conditions: bearish bonds, equities, gold.",
+        (("QQQ", "Nasdaq 100", -1), ("TLT", "20Y Treasuries", -1),
+         ("SPY", "S&P 500", -1), ("GLD", "Gold", -1)),
+        "Hikes tighten conditions: bearish tech, bonds, gold.",
     ),
     Rule(
         "Recession",
         ("recession", "gdp decline", "economic contraction"),
-        (("SPY", "S&P 500", -1), ("TLT", "20Y Treasuries", +1),
-         ("XLP", "Consumer Staples", +1), ("HYG", "High-Yield Credit", -1)),
-        "Recession risk: risk-off, defensives and Treasuries bid.",
+        (("SPY", "S&P 500", -1), ("QQQ", "Nasdaq 100", -1),
+         ("TLT", "20Y Treasuries", +1), ("XLP", "Consumer Staples", +1)),
+        "Recession risk: risk-off (tech hit hardest), Treasuries bid.",
     ),
     Rule(
         "Inflation / CPI",
@@ -112,14 +113,30 @@ RULES: tuple[Rule, ...] = (
     Rule(
         "Nvidia / AI",
         ("nvidia", "nvda"),
-        (("NVDA", "Nvidia", +1), ("SMH", "Semiconductors", +1)),
-        "Company/AI event mapped to the stock and chip sector.",
+        (("NVDA", "Nvidia", +1), ("SMH", "Semiconductors", +1),
+         ("QQQ", "Nasdaq 100", +1)),
+        "Company/AI event mapped to the stock, chips, and Nasdaq.",
+    ),
+    Rule(
+        "AI / big tech",
+        ("artificial intelligence", "openai", "agi", " ai ", "chatgpt",
+         "data center", "semiconductor"),
+        (("QQQ", "Nasdaq 100", +1), ("SMH", "Semiconductors", +1),
+         ("NVDA", "Nvidia", +1)),
+        "AI/tech catalyst: Nasdaq and chip complex.",
+    ),
+    Rule(
+        "Nasdaq / US tech index",
+        ("nasdaq", "s&p 500", "s&p500", "stock market", "qqq"),
+        (("QQQ", "Nasdaq 100", +1), ("SPY", "S&P 500", +1)),
+        "Direct read on US equity indices.",
+        exclude=("recession", "crash"),
     ),
     Rule(
         "Tesla",
         ("tesla", "tsla", "elon musk"),
-        (("TSLA", "Tesla", +1),),
-        "Company event mapped to the stock.",
+        (("TSLA", "Tesla", +1), ("QQQ", "Nasdaq 100", +1)),
+        "Company event mapped to the stock and Nasdaq.",
     ),
 )
 
@@ -127,6 +144,7 @@ RULES: tuple[Rule, ...] = (
 @dataclass
 class Signal:
     rule: Rule
+    market_id: str
     market_title: str
     venue: str
     url: str
@@ -134,10 +152,21 @@ class Signal:
     n_trades: int
     volume_usd: float
     quotes: dict[str, Quote | None] = field(default_factory=dict)
+    # filled in from persisted state (day-over-day)
+    prev_prob: float | None = None
+    is_new: bool = False
+    first_seen: str | None = None
 
     @property
     def conviction(self) -> float:
         return abs(self.yes_prob - 0.5) * 2.0  # 0 (coin flip) .. 1 (certain)
+
+    @property
+    def delta(self) -> float | None:
+        """Change in implied probability since the last run (points)."""
+        if self.prev_prob is None:
+            return None
+        return self.yes_prob - self.prev_prob
 
 
 def _yes_prob(latest: Trade) -> float | None:
@@ -147,6 +176,28 @@ def _yes_prob(latest: Trade) -> float | None:
     if o in NEGATIVE:
         return 1.0 - latest.price
     return None  # multi-outcome (e.g. team names) — not a clean binary
+
+
+# Intraday / hyper-short markets that resolve constantly — not actionable edges.
+NOISE = ("up or down", "updown", "in next 5 min", "in next 15 min",
+         "next 5 mins", "next 15 mins", "am-", "pm-")
+NOISE_SLUG = ("updown", "-5m-", "-15m-", "-1h-")
+
+# Threshold/level markets ("above $X"): the price reflects the *current level*,
+# not directional momentum — so they don't make clean divergence alerts.
+LEVEL_HINTS = ("above $", "below $", "reach $", "hit $", "less than $",
+               "greater than $", "above ", "below ")
+
+
+def is_noise(title: str, slug: str) -> bool:
+    t = title.lower()
+    s = slug.lower()
+    return any(n in t for n in NOISE) or any(n in s for n in NOISE_SLUG)
+
+
+def is_level_market(title: str) -> bool:
+    t = title.lower()
+    return any(h in t for h in LEVEL_HINTS)
 
 
 def _match_rule(title: str) -> Rule | None:
@@ -171,6 +222,8 @@ def find_signals(trades: list[Trade], top_n: int = 15) -> list[Signal]:
 
     signals: list[Signal] = []
     for ts in by_market.values():
+        if is_noise(ts[0].title, ts[0].slug):
+            continue
         rule = _match_rule(ts[0].title)
         if not rule:
             continue
@@ -181,6 +234,7 @@ def find_signals(trades: list[Trade], top_n: int = 15) -> list[Signal]:
         signals.append(
             Signal(
                 rule=rule,
+                market_id=latest.condition_id,
                 market_title=latest.title,
                 venue=latest.venue,
                 url=latest.url,
@@ -230,3 +284,54 @@ def alignment(yes_prob: float, instrument_sign: int, q: Quote | None) -> str:
     if exp > 0:
         return "✅" if move > 0.1 else "⚠️"   # expect up
     return "✅" if move < -0.1 else "⚠️"       # expect down
+
+
+def apply_history(signals: list[Signal], state: dict, today: str) -> dict:
+    """Annotate signals with day-over-day info and update the state in place.
+
+    Reads each market's previously stored probability/first-seen, sets
+    ``prev_prob`` / ``is_new`` / ``first_seen`` on the signal, then records
+    today's value back into ``state`` for the next run.
+    """
+    markets = state.setdefault("markets", {})
+    for s in signals:
+        rec = markets.get(s.market_id)
+        if rec is None:
+            s.is_new = True
+            s.first_seen = today
+            s.prev_prob = None
+        else:
+            s.first_seen = rec.get("first_seen", today)
+            s.prev_prob = rec.get("prob")
+            s.is_new = s.first_seen == today
+        markets[s.market_id] = {
+            "title": s.market_title,
+            "theme": s.rule.label,
+            "venue": s.venue,
+            "prob": s.yes_prob,
+            "first_seen": s.first_seen,
+            "last_seen": today,
+        }
+    state["updated"] = today
+    return state
+
+
+def strong_divergence(s: Signal, threshold: float = 0.70):
+    """Instruments where the crowd is decisive (>= threshold) but the
+    instrument hasn't confirmed — the cleanest 'not priced in' setups.
+
+    Returns a list of (ticker, name, sign, quote).
+    """
+    if s.yes_prob < threshold:
+        return []
+    # Level markets ("above $X") price the current level, not momentum.
+    if is_level_market(s.market_title):
+        return []
+    out = []
+    for (tk, name, sign) in s.rule.instruments:
+        if sign == 0:
+            continue
+        q = s.quotes.get(tk)
+        if alignment(s.yes_prob, sign, q) == "⚠️":
+            out.append((tk, name, sign, q))
+    return out

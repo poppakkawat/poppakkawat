@@ -20,8 +20,9 @@ from .analytics import analyze
 from .client import fetch_large_trades, fetch_user_trades
 from .kalshi import fetch_kalshi_trades
 from .notify import build_summary, notify
-from .report import render, render_signals
-from .signals import alignment, find_signals
+from .report import render, render_briefing, render_signals
+from .signals import alignment, apply_history, find_signals
+from .state import DEFAULT_STATE, load_state, save_state
 
 
 def load_watchlist(path: str | None) -> dict[str, str]:
@@ -132,7 +133,9 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--no-edge", dest="edge", action="store_false", default=True,
                    help="Skip the cross-market edge signals section")
     p.add_argument("--edge-only", action="store_true",
-                   help="Print ONLY the cross-market edge signals")
+                   help="Print ONLY the edge briefing + signals")
+    p.add_argument("--state-file", type=str, default=str(DEFAULT_STATE),
+                   help="Path to day-over-day state JSON (default: reports/state/edge_state.json)")
     p.add_argument("--notify", type=str, default=None,
                    help="Comma-separated channels: discord,telegram,email")
     p.add_argument("--dry-run-notify", action="store_true",
@@ -172,17 +175,22 @@ def main(argv: list[str] | None = None) -> int:
     )
     window_label = f"last {args.hours:g}h"
 
+    day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     signals = None
     if args.edge or args.edge_only:
         print("Scanning cross-market edge signals…", file=sys.stderr)
         signals = find_signals(trades)
+        # Day-over-day: annotate with prior probabilities, then persist.
+        state = load_state(args.state_file)
+        apply_history(signals, state, day)
+        save_state(state, args.state_file)
         print(f"  {len(signals)} mapped signal(s).", file=sys.stderr)
 
     if args.edge_only:
-        day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         md = "\n".join(
-            [f"# Cross-Market Edge Signals — {day}", "",
+            [f"# Daily Edge Briefing — {day}", "",
              f"_Window: {window_label}_", ""]
+            + render_briefing(signals or [])
             + render_signals(signals or [], limit=50)
         )
     else:
