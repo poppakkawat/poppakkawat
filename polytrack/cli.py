@@ -20,7 +20,8 @@ from .analytics import analyze
 from .client import fetch_large_trades, fetch_user_trades
 from .kalshi import fetch_kalshi_trades
 from .notify import build_summary, notify
-from .report import render
+from .report import render, render_signals
+from .signals import alignment, find_signals
 
 
 def load_watchlist(path: str | None) -> dict[str, str]:
@@ -48,8 +49,8 @@ def load_watchlist(path: str | None) -> dict[str, str]:
     return out
 
 
-def _serialize(analysis, min_usd, hours) -> dict:
-    return {
+def _serialize(analysis, min_usd, hours, signals=None) -> dict:
+    out = {
         "generated_utc": datetime.now(timezone.utc).isoformat(),
         "window_hours": hours,
         "min_usd": min_usd,
@@ -78,6 +79,26 @@ def _serialize(analysis, min_usd, hours) -> dict:
             for h in analysis.watchlist
         ],
     }
+    if signals is not None:
+        out["signals"] = [
+            {
+                "theme": s.rule.label, "market": s.market_title, "venue": s.venue,
+                "url": s.url, "implied_prob": s.yes_prob, "conviction": s.conviction,
+                "volume_usd": s.volume_usd,
+                "instruments": [
+                    {
+                        "ticker": tk, "name": name, "sign": sign,
+                        "last": (s.quotes.get(tk).price if s.quotes.get(tk) else None),
+                        "pct_change": (
+                            s.quotes.get(tk).pct_change if s.quotes.get(tk) else None
+                        ),
+                    }
+                    for (tk, name, sign) in s.rule.instruments
+                ],
+            }
+            for s in signals
+        ]
+    return out
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -106,6 +127,10 @@ def main(argv: list[str] | None = None) -> int:
                    help="Min Kalshi trade notional (default: same as --min)")
     p.add_argument("--watchlist", type=str, default=None,
                    help="Path to watchlist JSON (default: watchlist.json if present)")
+    p.add_argument("--no-edge", dest="edge", action="store_false", default=True,
+                   help="Skip the cross-market edge signals section")
+    p.add_argument("--edge-only", action="store_true",
+                   help="Print ONLY the cross-market edge signals")
     p.add_argument("--notify", type=str, default=None,
                    help="Comma-separated channels: discord,telegram,email")
     p.add_argument("--dry-run-notify", action="store_true",
@@ -144,7 +169,25 @@ def main(argv: list[str] | None = None) -> int:
         trades, top_n=args.top, watch_trades=watch_trades, watchlist=watchlist
     )
     window_label = f"last {args.hours:g}h"
-    md = render(analysis, window_label=window_label, min_usd=args.min_usd)
+
+    signals = None
+    if args.edge or args.edge_only:
+        print("Scanning cross-market edge signals…", file=sys.stderr)
+        signals = find_signals(trades)
+        print(f"  {len(signals)} mapped signal(s).", file=sys.stderr)
+
+    if args.edge_only:
+        day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        md = "\n".join(
+            [f"# Cross-Market Edge Signals — {day}", "",
+             f"_Window: {window_label}_", ""]
+            + render_signals(signals or [], limit=50)
+        )
+    else:
+        md = render(
+            analysis, window_label=window_label,
+            min_usd=args.min_usd, signals=signals,
+        )
 
     out_path: Path | None = None
     if args.out:
@@ -162,14 +205,17 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.json_out:
         Path(args.json_out).write_text(
-            json.dumps(_serialize(analysis, args.min_usd, args.hours), indent=2),
+            json.dumps(
+                _serialize(analysis, args.min_usd, args.hours, signals=signals),
+                indent=2,
+            ),
             encoding="utf-8",
         )
         print(f"Wrote JSON → {args.json_out}", file=sys.stderr)
 
     if args.notify or args.dry_run_notify:
         channels = (args.notify or "discord,telegram,email").split(",")
-        summary = build_summary(analysis, window_label)
+        summary = build_summary(analysis, window_label, signals=signals)
         notify(channels, summary, dry_run=args.dry_run_notify)
 
     return 0

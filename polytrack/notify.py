@@ -33,7 +33,7 @@ def _money(x: float) -> str:
     return f"${x:,.0f}"
 
 
-def build_summary(a: Analysis, window_label: str) -> str:
+def build_summary(a: Analysis, window_label: str, signals=None) -> str:
     """A compact plain-text digest suitable for chat/email."""
     day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     if a.count == 0:
@@ -70,6 +70,27 @@ def build_summary(a: Analysis, window_label: str) -> str:
         out.append("Watchlist activity:")
         for h in a.watchlist[:5]:
             out.append(f"  • {h.label}: {_money(h.usd)} across {len(h.trades)} trade(s)")
+
+    if signals:
+        from .signals import alignment
+        flagged = [
+            s for s in signals
+            if any(
+                alignment(s.yes_prob, sign, s.quotes.get(tk)) == "⚠️"
+                for (tk, _, sign) in s.rule.instruments
+            )
+        ]
+        if flagged:
+            out.append("")
+            out.append("⚠️ Possible cross-market edges (strong view, not priced in):")
+            for s in flagged[:5]:
+                names = ", ".join(
+                    tk for (tk, _, sign) in s.rule.instruments
+                    if alignment(s.yes_prob, sign, s.quotes.get(tk)) == "⚠️"
+                )
+                out.append(
+                    f"  • {s.rule.label} {s.yes_prob:.0%} → watch {names} — {s.market_title}"
+                )
 
     return "\n".join(out)
 

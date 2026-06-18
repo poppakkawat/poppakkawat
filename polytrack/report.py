@@ -6,6 +6,7 @@ from datetime import datetime, timezone
 
 from .analytics import Analysis
 from .client import Trade
+from .signals import Signal, alignment, expected_sign
 
 POLYMARKET_EVENT = "https://polymarket.com/event/"
 
@@ -26,7 +27,70 @@ def _market_link(t: Trade) -> str:
     return f"[{title}]({t.url})" if t.url else title
 
 
-def render(analysis: Analysis, window_label: str, min_usd: float) -> str:
+def _price(x: float) -> str:
+    if x >= 1000:
+        return f"{x:,.0f}"
+    if x >= 1:
+        return f"{x:,.2f}"
+    return f"{x:.4f}"
+
+
+def render_signals(signals: list[Signal], limit: int = 12) -> list[str]:
+    """Markdown for the cross-market edge section."""
+    lines: list[str] = []
+    lines.append("## 🧭 Cross-Market Edge Signals")
+    lines.append("")
+    if not signals:
+        lines.append(
+            "_No mapped macro/crypto markets in this window. "
+            "Lower `--min` for more coverage._"
+        )
+        lines.append("")
+        return lines
+    lines.append(
+        "_What prediction markets imply for traditional assets. "
+        "Reads: ✅ instrument confirms · ⚠️ not priced in (possible edge) · "
+        "▫ no decisive view yet._"
+    )
+    lines.append("")
+
+    for s in signals[:limit]:
+        flags = sum(
+            1
+            for (tk, _, sign) in s.rule.instruments
+            if alignment(s.yes_prob, sign, s.quotes.get(tk)) == "⚠️"
+        )
+        edge = f" · ⚠️ {flags} possibly unpriced" if flags else ""
+        lines.append(
+            f"### {VENUE_TAG.get(s.venue, s.venue)} · {s.rule.label} — "
+            f"implied **{s.yes_prob:.0%}**{edge}"
+        )
+        title = s.market_title.replace("|", "\\|")
+        link = f"[{title}]({s.url})" if s.url else title
+        lines.append(f"_{link}_")
+        lines.append("")
+        lines.append("| Instrument | Last | Day | Implied view | Read |")
+        lines.append("|:-----------|-----:|----:|:------------:|:----:|")
+        for (tk, name, sign) in s.rule.instruments:
+            q = s.quotes.get(tk)
+            last = _price(q.price) if q else "—"
+            day = (f"{q.pct_change:+.2f}%" if q and q.pct_change is not None else "—")
+            exp = expected_sign(s.yes_prob, sign)
+            view = {1: "↑ bullish", -1: "↓ bearish", 0: "→ neutral"}[exp]
+            read = alignment(s.yes_prob, sign, q)
+            lines.append(f"| {name} ({tk}) | {last} | {day} | {view} | {read} |")
+        lines.append("")
+        lines.append(f"> {s.rule.rationale}")
+        lines.append("")
+    return lines
+
+
+def render(
+    analysis: Analysis,
+    window_label: str,
+    min_usd: float,
+    signals: list[Signal] | None = None,
+) -> str:
     a = analysis
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     lines: list[str] = []
@@ -68,6 +132,10 @@ def render(analysis: Analysis, window_label: str, min_usd: float) -> str:
             name = {"polymarket": "Polymarket", "kalshi": "Kalshi"}.get(v, v)
             lines.append(f"| {name} | {len(ts)} | {_money(sum(t.usd for t in ts))} |")
     lines.append("")
+
+    # Cross-market edge signals (headline section)
+    if signals is not None:
+        lines.extend(render_signals(signals))
 
     # Smart-money watchlist
     if a.watchlist:
