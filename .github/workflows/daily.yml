@@ -27,10 +27,27 @@ jobs:
           python-version: "3.11"
 
       - name: Generate daily report
+        env:
+          # Notifications are optional — set these as repository secrets to
+          # enable them. Empty secrets are simply skipped.
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
         run: |
+          # Use watchlist.json if you've committed one, else fall back to the example.
+          WATCHLIST=watchlist.json
+          [ -f "$WATCHLIST" ] || WATCHLIST=watchlist.example.json
           python3 -m polytrack \
             --hours "${{ github.event.inputs.hours || '24' }}" \
             --min "${{ github.event.inputs.min_usd || '10000' }}" \
+            --watchlist "$WATCHLIST" \
+            --notify discord,telegram,email \
             --save
 
       - name: Commit report

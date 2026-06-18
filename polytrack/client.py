@@ -31,6 +31,7 @@ class Trade:
     outcome: str
     slug: str
     condition_id: str
+    asset: str
     tx_hash: str
 
     @property
@@ -51,6 +52,7 @@ class Trade:
             outcome=d.get("outcome", ""),
             slug=d.get("slug", ""),
             condition_id=d.get("conditionId", ""),
+            asset=d.get("asset", ""),
             tx_hash=d.get("transactionHash", ""),
         )
 
@@ -99,6 +101,44 @@ def fetch_large_trades(
         except RuntimeError:
             # Deep pagination can intermittently time out. If we already
             # have data, return it rather than failing the whole run.
+            if out:
+                break
+            raise
+        if not batch:
+            break
+        stop = False
+        for raw in batch:
+            t = Trade.from_api(raw)
+            if since_ts is not None and t.timestamp < since_ts:
+                stop = True
+                break
+            out.append(t)
+        if stop or len(batch) < page_size:
+            break
+        offset += page_size
+    return out
+
+
+def fetch_user_trades(
+    address: str,
+    since_ts: int | None = None,
+    max_trades: int = 1000,
+    page_size: int = 500,
+) -> list[Trade]:
+    """Fetch ALL trades for a single wallet (any size), newest first.
+
+    Used for the smart-money watchlist so we catch a tracked wallet's
+    moves even when they're below the global notional threshold.
+    """
+    out: list[Trade] = []
+    offset = 0
+    while len(out) < max_trades:
+        try:
+            batch = _get(
+                "/trades",
+                {"user": address, "limit": page_size, "offset": offset},
+            )
+        except RuntimeError:
             if out:
                 break
             raise

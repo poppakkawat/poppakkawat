@@ -4,5 +4,9 @@ __pycache__/
 .venv/
 venv/
 *.json
+# keep tracked examples / config templates
+!watchlist.example.json
 !.github/**/*.json
+# your personal watchlist stays local
+watchlist.json
 .DS_Store

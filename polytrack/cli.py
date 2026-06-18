@@ -17,8 +17,34 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from .analytics import analyze
-from .client import fetch_large_trades
+from .client import fetch_large_trades, fetch_user_trades
+from .notify import build_summary, notify
 from .report import render
+
+
+def load_watchlist(path: str | None) -> dict[str, str]:
+    """Load a wallet watchlist from JSON.
+
+    Accepts either a mapping ``{"0xabc...": "Label"}`` or a list of
+    ``{"address": "0x...", "label": "..."}`` objects. Addresses are
+    lower-cased. Returns {} if the file is absent.
+    """
+    p = Path(path) if path else Path("watchlist.json")
+    if not p.exists():
+        if path:  # explicitly requested but missing
+            print(f"watchlist: {p} not found.", file=sys.stderr)
+        return {}
+    data = json.loads(p.read_text(encoding="utf-8"))
+    out: dict[str, str] = {}
+    if isinstance(data, dict):
+        for addr, label in data.items():
+            out[addr.lower()] = str(label)
+    elif isinstance(data, list):
+        for item in data:
+            addr = (item.get("address") or "").lower()
+            if addr:
+                out[addr] = str(item.get("label") or addr[:10])
+    return out
 
 
 def _serialize(analysis, min_usd, hours) -> dict:
@@ -33,6 +59,23 @@ def _serialize(analysis, min_usd, hours) -> dict:
         "top_trades": [vars(t) | {"usd": t.usd} for t in analysis.top_trades],
         "hot_markets": [vars(m) for m in analysis.hot_markets],
         "top_traders": [vars(t) for t in analysis.top_traders],
+        "price_swings": [
+            {
+                "title": s.title, "outcome": s.outcome, "slug": s.slug,
+                "open": s.open_price, "close": s.close_price,
+                "high": s.high, "low": s.low, "delta": s.delta,
+                "count": s.count, "volume_usd": s.volume_usd,
+            }
+            for s in analysis.price_swings
+        ],
+        "watchlist": [
+            {
+                "address": h.address, "label": h.label, "usd": h.usd,
+                "buy_usd": h.buy_usd, "sell_usd": h.sell_usd,
+                "trade_count": len(h.trades),
+            }
+            for h in analysis.watchlist
+        ],
     }
 
 
@@ -55,6 +98,12 @@ def main(argv: list[str] | None = None) -> int:
                    help="Also write raw analysis JSON to this path")
     p.add_argument("--max-trades", type=int, default=5000,
                    help="Safety cap on trades fetched (default: 5000)")
+    p.add_argument("--watchlist", type=str, default=None,
+                   help="Path to watchlist JSON (default: watchlist.json if present)")
+    p.add_argument("--notify", type=str, default=None,
+                   help="Comma-separated channels: discord,telegram,email")
+    p.add_argument("--dry-run-notify", action="store_true",
+                   help="Print the notification text instead of sending")
     args = p.parse_args(argv)
 
     since_ts = int(time.time() - args.hours * 3600)
@@ -66,7 +115,16 @@ def main(argv: list[str] | None = None) -> int:
     )
     print(f"Fetched {len(trades)} trades.", file=sys.stderr)
 
-    analysis = analyze(trades, top_n=args.top)
+    watchlist = load_watchlist(args.watchlist)
+    watch_trades = []
+    if watchlist:
+        print(f"Tracking {len(watchlist)} watched wallet(s)…", file=sys.stderr)
+        for addr in watchlist:
+            watch_trades.extend(fetch_user_trades(addr, since_ts=since_ts))
+
+    analysis = analyze(
+        trades, top_n=args.top, watch_trades=watch_trades, watchlist=watchlist
+    )
     window_label = f"last {args.hours:g}h"
     md = render(analysis, window_label=window_label, min_usd=args.min_usd)
 
@@ -90,6 +148,11 @@ def main(argv: list[str] | None = None) -> int:
             encoding="utf-8",
         )
         print(f"Wrote JSON → {args.json_out}", file=sys.stderr)
+
+    if args.notify or args.dry_run_notify:
+        channels = (args.notify or "discord,telegram,email").split(",")
+        summary = build_summary(analysis, window_label)
+        notify(channels, summary, dry_run=args.dry_run_notify)
 
     return 0
 

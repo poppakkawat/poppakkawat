@@ -55,6 +55,28 @@ def render(analysis: Analysis, window_label: str, min_usd: float) -> str:
     )
     lines.append("")
 
+    # Smart-money watchlist
+    if a.watchlist:
+        lines.append("## 🧠 Smart-Money Watchlist")
+        lines.append("")
+        for h in a.watchlist:
+            flow = "net BUY" if h.buy_usd >= h.sell_usd else "net SELL"
+            lines.append(
+                f"### {h.label} — {_money(h.usd)} across {len(h.trades)} trade(s), {flow}"
+            )
+            lines.append(
+                f"_[profile](https://polymarket.com/profile/{h.address})_"
+            )
+            lines.append("")
+            lines.append("| USD | Side | Outcome | Price | Market |")
+            lines.append("|----:|:----:|:--------|:-----:|:-------|")
+            for t in sorted(h.trades, key=lambda t: t.usd, reverse=True):
+                lines.append(
+                    f"| {_money(t.usd)} | {t.side} | {t.outcome} | "
+                    f"{t.price:.2f} | {_market_link(t)} |"
+                )
+            lines.append("")
+
     # Biggest trades
     lines.append("## 🐳 Biggest Trades")
     lines.append("")
@@ -80,6 +102,24 @@ def render(analysis: Analysis, window_label: str, min_usd: float) -> str:
             f"{_money(m.buy_usd)}/{_money(m.sell_usd)} | {link} |"
         )
     lines.append("")
+
+    # Price swings
+    if a.price_swings:
+        lines.append("## 📈 Biggest Price Swings")
+        lines.append("")
+        lines.append("_Largest open→close moves among sampled trades (≥3 prints)._")
+        lines.append("")
+        lines.append("| Move | Open→Close | Range | Outcome | Market |")
+        lines.append("|:----:|:----------:|:-----:|:--------|:-------|")
+        for s in a.price_swings:
+            arrow = "🔺" if s.delta >= 0 else "🔻"
+            move = f"{arrow} {s.delta:+.2f}"
+            oc = f"{s.open_price:.2f}→{s.close_price:.2f}"
+            rng = f"{s.low:.2f}–{s.high:.2f}"
+            title = s.title.replace("|", "\\|")
+            link = f"[{title}]({POLYMARKET_EVENT}{s.slug})" if s.slug else title
+            lines.append(f"| {move} | {oc} | {rng} | {s.outcome} | {link} |")
+        lines.append("")
 
     # Top traders
     lines.append("## 💸 Most Active Traders")
