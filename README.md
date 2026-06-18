@@ -1,25 +1,27 @@
-# 📈 polytrack — Polymarket Daily Trade Tracker
+# 📈 polytrack — Prediction Market Daily Trade Tracker
 
-Daily updates and analytics of **interesting Polymarket trades**. Pulls the
-day's notable trades from Polymarket's public data API, analyzes the flow,
-and writes a clean Markdown report — whales, hot markets, top traders, and
-high-conviction bets.
+Daily updates and analytics of **interesting prediction-market trades** across
+**Polymarket and Kalshi**. Pulls the day's notable trades from each venue's
+public API, analyzes the flow, and writes a clean Markdown report — whales,
+hot markets, top traders, price swings, and high-conviction bets.
 
 - **Zero dependencies.** Pure Python 3 standard library.
-- **No API key.** Uses Polymarket's public data API.
+- **No API key.** Uses Polymarket's and Kalshi's public data APIs.
+- **Two venues.** Combine both, or focus on one with `--source`.
 - **Automatable.** Ships with a GitHub Action that posts a report every day.
 
 ## Quick start
 
 ```bash
-# Print a report for the last 24h of trades ≥ $5,000
+# Both venues, last 24h of trades ≥ $5,000
 python3 -m polytrack
 
-# Bigger window / higher threshold
-python3 -m polytrack --hours 12 --min 25000
+# Just one venue
+python3 -m polytrack --source polymarket
+python3 -m polytrack --source kalshi --min 2000
 
-# Save to reports/YYYY-MM-DD.md
-python3 -m polytrack --save
+# Bigger window / higher threshold, save to reports/YYYY-MM-DD.md
+python3 -m polytrack --hours 12 --min 25000 --save
 
 # Also dump the raw analysis as JSON
 python3 -m polytrack --save --json latest.json
@@ -52,11 +54,28 @@ Trade USD value is `shares × price` (Polymarket prices are 0–1 probabilities)
 --save             Write to reports/YYYY-MM-DD.md
 --out PATH         Explicit Markdown output path
 --json PATH        Also write raw analysis as JSON
---max-trades N     Safety cap on trades fetched (default: 5000)
+--max-trades N     Safety cap on Polymarket trades fetched (default: 5000)
+--source V         Venue(s): polymarket | kalshi | both (default: both)
+--kalshi-min USD   Min Kalshi trade notional (default: same as --min)
 --watchlist PATH   Wallet watchlist JSON (default: watchlist.json if present)
 --notify CHANNELS  Comma-separated: discord,telegram,email
 --dry-run-notify   Print the notification text instead of sending
 ```
+
+## 🏛️ Venues
+
+| | Polymarket | Kalshi |
+|---|---|---|
+| API | `data-api.polymarket.com` | `api.elections.kalshi.com` |
+| Trader identity | Wallet address (public) | Anonymous |
+| Notional | `shares × price` | `contracts × price` |
+| Watchlist support | ✅ | — (anonymous) |
+
+Each trade in the report is tagged **PM** (Polymarket) or **KX** (Kalshi).
+The summary shows a per-venue breakdown when both are included. The
+**smart-money watchlist** is Polymarket-only because Kalshi trades carry no
+trader identity. Kalshi has no server-side size filter, so polytrack pages
+recent trades and filters by `--kalshi-min` client-side.
 
 ## 🧠 Smart-money watchlist
 
@@ -120,8 +139,10 @@ manually from the Actions tab, or adjust the schedule/threshold there.
 ```
 polytrack/
   client.py     # Polymarket data API client (stdlib urllib)
-  analytics.py  # leaderboards, hot markets, conviction detection
-  report.py     # Markdown report rendering
+  kalshi.py     # Kalshi data API client (normalized to same Trade shape)
+  analytics.py  # leaderboards, hot markets, price swings, conviction
+  report.py     # Markdown report rendering (venue-aware)
+  notify.py     # Discord / Telegram / email digests
   cli.py        # command-line interface
 reports/        # generated daily reports
 ```

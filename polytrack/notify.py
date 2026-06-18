@@ -37,19 +37,23 @@ def build_summary(a: Analysis, window_label: str) -> str:
     """A compact plain-text digest suitable for chat/email."""
     day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     if a.count == 0:
-        return f"Polymarket {day}: no notable trades in the {window_label}."
+        return f"Prediction Markets {day}: no notable trades in the {window_label}."
 
     flow = a.buy_usd - a.sell_usd
     bias = "net BUY" if flow >= 0 else "net SELL"
     out = [
-        f"📈 Polymarket Daily — {day} ({window_label})",
+        f"📈 Prediction Markets Daily — {day} ({window_label})",
         f"{a.count} notable trades · {_money(a.total_usd)} notional · "
         f"{bias} {_money(abs(flow))}",
         "",
         "Biggest trades:",
     ]
+    tag = {"polymarket": "PM", "kalshi": "KX"}
     for t in a.top_trades[:5]:
-        out.append(f"  • {_money(t.usd)} {t.side} {t.outcome} @ {t.price:.2f} — {t.title}")
+        out.append(
+            f"  • [{tag.get(t.venue, t.venue)}] {_money(t.usd)} {t.side} "
+            f"{t.outcome} @ {t.price:.2f} — {t.title}"
+        )
 
     if a.price_swings:
         out.append("")
@@ -116,7 +120,9 @@ def send_email(text: str, subject: str | None = None) -> bool:
     port = int(os.environ.get("SMTP_PORT", "587"))
 
     msg = MIMEText(text, "plain", "utf-8")
-    msg["Subject"] = subject or f"Polymarket Daily — {datetime.now(timezone.utc):%Y-%m-%d}"
+    msg["Subject"] = subject or (
+        f"Prediction Markets Daily — {datetime.now(timezone.utc):%Y-%m-%d}"
+    )
     msg["From"] = sender
     msg["To"] = recipient
 

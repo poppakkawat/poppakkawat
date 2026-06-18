@@ -18,6 +18,7 @@ from pathlib import Path
 
 from .analytics import analyze
 from .client import fetch_large_trades, fetch_user_trades
+from .kalshi import fetch_kalshi_trades
 from .notify import build_summary, notify
 from .report import render
 
@@ -98,6 +99,11 @@ def main(argv: list[str] | None = None) -> int:
                    help="Also write raw analysis JSON to this path")
     p.add_argument("--max-trades", type=int, default=5000,
                    help="Safety cap on trades fetched (default: 5000)")
+    p.add_argument("--source", type=str, default="both",
+                   choices=["polymarket", "kalshi", "both"],
+                   help="Which venue(s) to include (default: both)")
+    p.add_argument("--kalshi-min", type=float, default=None,
+                   help="Min Kalshi trade notional (default: same as --min)")
     p.add_argument("--watchlist", type=str, default=None,
                    help="Path to watchlist JSON (default: watchlist.json if present)")
     p.add_argument("--notify", type=str, default=None,
@@ -107,15 +113,27 @@ def main(argv: list[str] | None = None) -> int:
     args = p.parse_args(argv)
 
     since_ts = int(time.time() - args.hours * 3600)
-    print(f"Fetching Polymarket trades ≥ ${args.min_usd:,.0f} "
-          f"from the last {args.hours:g}h…", file=sys.stderr)
+    trades = []
 
-    trades = fetch_large_trades(
-        min_usd=args.min_usd, since_ts=since_ts, max_trades=args.max_trades
-    )
-    print(f"Fetched {len(trades)} trades.", file=sys.stderr)
+    if args.source in ("polymarket", "both"):
+        print(f"Fetching Polymarket trades ≥ ${args.min_usd:,.0f} "
+              f"from the last {args.hours:g}h…", file=sys.stderr)
+        pm = fetch_large_trades(
+            min_usd=args.min_usd, since_ts=since_ts, max_trades=args.max_trades
+        )
+        print(f"  Polymarket: {len(pm)} trades.", file=sys.stderr)
+        trades += pm
 
-    watchlist = load_watchlist(args.watchlist)
+    if args.source in ("kalshi", "both"):
+        kmin = args.kalshi_min if args.kalshi_min is not None else args.min_usd
+        print(f"Fetching Kalshi trades ≥ ${kmin:,.0f} "
+              f"from the last {args.hours:g}h…", file=sys.stderr)
+        kx = fetch_kalshi_trades(min_usd=kmin, since_ts=since_ts)
+        print(f"  Kalshi: {len(kx)} trades.", file=sys.stderr)
+        trades += kx
+
+    # Watchlist is Polymarket-only (Kalshi trades are anonymous).
+    watchlist = load_watchlist(args.watchlist) if args.source != "kalshi" else {}
     watch_trades = []
     if watchlist:
         print(f"Tracking {len(watchlist)} watched wallet(s)…", file=sys.stderr)

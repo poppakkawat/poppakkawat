@@ -33,6 +33,8 @@ class Trade:
     condition_id: str
     asset: str
     tx_hash: str
+    venue: str = "polymarket"
+    url: str = ""
 
     @property
     def usd(self) -> float:
@@ -54,6 +56,9 @@ class Trade:
             condition_id=d.get("conditionId", ""),
             asset=d.get("asset", ""),
             tx_hash=d.get("transactionHash", ""),
+            venue="polymarket",
+            url=(f"https://polymarket.com/event/{d.get('slug')}"
+                 if d.get("slug") else ""),
         )
 
 

@@ -18,10 +18,12 @@ def _money(x: float) -> str:
     return f"${x:,.0f}"
 
 
+VENUE_TAG = {"polymarket": "PM", "kalshi": "KX"}
+
+
 def _market_link(t: Trade) -> str:
-    slug = t.slug or ""
     title = t.title.replace("|", "\\|")
-    return f"[{title}]({POLYMARKET_EVENT}{slug})" if slug else title
+    return f"[{title}]({t.url})" if t.url else title
 
 
 def render(analysis: Analysis, window_label: str, min_usd: float) -> str:
@@ -29,7 +31,7 @@ def render(analysis: Analysis, window_label: str, min_usd: float) -> str:
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     lines: list[str] = []
 
-    lines.append(f"# Polymarket Daily — {datetime.now(timezone.utc):%Y-%m-%d}")
+    lines.append(f"# Prediction Markets Daily — {datetime.now(timezone.utc):%Y-%m-%d}")
     lines.append("")
     lines.append(
         f"_Generated {now} · window: {window_label} · "
@@ -53,6 +55,18 @@ def render(analysis: Analysis, window_label: str, min_usd: float) -> str:
         f"- **Flow:** {_money(a.buy_usd)} buys vs {_money(a.sell_usd)} sells "
         f"→ **{bias}** ({_money(abs(flow))})"
     )
+
+    # Per-venue breakdown (only when more than one venue is present)
+    venues: dict[str, list] = {}
+    for t in a.trades:
+        venues.setdefault(t.venue, []).append(t)
+    if len(venues) > 1:
+        lines.append("")
+        lines.append("| Venue | Trades | Notional |")
+        lines.append("|:------|-------:|---------:|")
+        for v, ts in sorted(venues.items(), key=lambda kv: -sum(t.usd for t in kv[1])):
+            name = {"polymarket": "Polymarket", "kalshi": "Kalshi"}.get(v, v)
+            lines.append(f"| {name} | {len(ts)} | {_money(sum(t.usd for t in ts))} |")
     lines.append("")
 
     # Smart-money watchlist
@@ -80,27 +94,25 @@ def render(analysis: Analysis, window_label: str, min_usd: float) -> str:
     # Biggest trades
     lines.append("## 🐳 Biggest Trades")
     lines.append("")
-    lines.append("| USD | Side | Outcome | Price | Trader | Market |")
-    lines.append("|----:|:----:|:--------|:-----:|:-------|:-------|")
+    lines.append("| USD | Venue | Side | Outcome | Price | Trader | Market |")
+    lines.append("|----:|:-----:|:----:|:--------|:-----:|:-------|:-------|")
     for t in a.top_trades:
         lines.append(
-            f"| {_money(t.usd)} | {t.side} | {t.outcome} | "
-            f"{t.price:.2f} | {t.trader} | {_market_link(t)} |"
+            f"| {_money(t.usd)} | {VENUE_TAG.get(t.venue, t.venue)} | {t.side} | "
+            f"{t.outcome} | {t.price:.2f} | {t.trader} | {_market_link(t)} |"
         )
     lines.append("")
 
     # Hot markets
     lines.append("## 🔥 Hottest Markets")
     lines.append("")
-    lines.append("| Notional | Trades | Buy/Sell | Market |")
-    lines.append("|---------:|-------:|:--------:|:-------|")
+    lines.append("| Notional | Venue | Trades | Market |")
+    lines.append("|---------:|:-----:|-------:|:-------|")
     for m in a.hot_markets:
         sample = next((t for t in a.trades if t.condition_id == m.key), None)
         link = _market_link(sample) if sample else m.label
-        lines.append(
-            f"| {_money(m.usd)} | {m.count} | "
-            f"{_money(m.buy_usd)}/{_money(m.sell_usd)} | {link} |"
-        )
+        tag = VENUE_TAG.get(sample.venue, sample.venue) if sample else "?"
+        lines.append(f"| {_money(m.usd)} | {tag} | {m.count} | {link} |")
     lines.append("")
 
     # Price swings
@@ -109,16 +121,17 @@ def render(analysis: Analysis, window_label: str, min_usd: float) -> str:
         lines.append("")
         lines.append("_Largest open→close moves among sampled trades (≥3 prints)._")
         lines.append("")
-        lines.append("| Move | Open→Close | Range | Outcome | Market |")
-        lines.append("|:----:|:----------:|:-----:|:--------|:-------|")
+        lines.append("| Move | Venue | Open→Close | Range | Outcome | Market |")
+        lines.append("|:----:|:-----:|:----------:|:-----:|:--------|:-------|")
         for s in a.price_swings:
             arrow = "🔺" if s.delta >= 0 else "🔻"
             move = f"{arrow} {s.delta:+.2f}"
             oc = f"{s.open_price:.2f}→{s.close_price:.2f}"
             rng = f"{s.low:.2f}–{s.high:.2f}"
             title = s.title.replace("|", "\\|")
-            link = f"[{title}]({POLYMARKET_EVENT}{s.slug})" if s.slug else title
-            lines.append(f"| {move} | {oc} | {rng} | {s.outcome} | {link} |")
+            link = f"[{title}]({s.url})" if s.url else title
+            tag = VENUE_TAG.get(s.venue, s.venue)
+            lines.append(f"| {move} | {tag} | {oc} | {rng} | {s.outcome} | {link} |")
         lines.append("")
 
     # Top traders
@@ -151,6 +164,6 @@ def render(analysis: Analysis, window_label: str, min_usd: float) -> str:
 
     lines.append("---")
     lines.append("")
-    lines.append("_Data: Polymarket public data API. Not financial advice._")
+    lines.append("_Data: Polymarket & Kalshi public APIs. Not financial advice._")
     lines.append("")
     return "\n".join(lines)

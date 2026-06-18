@@ -10,8 +10,11 @@ on:
         description: "Look-back window in hours"
         default: "24"
       min_usd:
-        description: "Minimum trade notional (USD)"
+        description: "Minimum Polymarket trade notional (USD)"
         default: "10000"
+      kalshi_min:
+        description: "Minimum Kalshi trade notional (USD)"
+        default: "5000"
 
 permissions:
   contents: write
@@ -44,8 +47,10 @@ jobs:
           WATCHLIST=watchlist.json
           [ -f "$WATCHLIST" ] || WATCHLIST=watchlist.example.json
           python3 -m polytrack \
+            --source both \
             --hours "${{ github.event.inputs.hours || '24' }}" \
             --min "${{ github.event.inputs.min_usd || '10000' }}" \
+            --kalshi-min "${{ github.event.inputs.kalshi_min || '5000' }}" \
             --watchlist "$WATCHLIST" \
             --notify discord,telegram,email \
             --save

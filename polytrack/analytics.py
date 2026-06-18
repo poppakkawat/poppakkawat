@@ -34,6 +34,8 @@ class Swing:
     low: float
     count: int
     volume_usd: float
+    venue: str = "polymarket"
+    url: str = ""
 
     @property
     def delta(self) -> float:
@@ -116,6 +118,8 @@ def detect_swings(
                 low=min(prices),
                 count=len(ts),
                 volume_usd=sum(t.usd for t in ts),
+                venue=first.venue,
+                url=first.url,
             )
         )
     swings.sort(key=lambda s: s.abs_delta, reverse=True)
@@ -170,8 +174,9 @@ def analyze(
     for t in trades:
         m = markets.setdefault(t.condition_id, Aggregate(t.condition_id, t.title))
         _add_side(m, t)
-        tr = traders.setdefault(t.wallet, Aggregate(t.wallet, t.trader))
-        _add_side(tr, t)
+        if t.wallet:  # skip anonymous venues (e.g. Kalshi) in the leaderboard
+            tr = traders.setdefault(t.wallet, Aggregate(t.wallet, t.trader))
+            _add_side(tr, t)
 
     hot_markets = sorted(markets.values(), key=lambda a: a.usd, reverse=True)[:top_n]
     top_traders = sorted(traders.values(), key=lambda a: a.usd, reverse=True)[:top_n]
