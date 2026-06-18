@@ -2,8 +2,8 @@ name: Daily Prediction Markets Report
 
 on:
   schedule:
-    # 13:00 UTC every day (~9am ET). Adjust as you like.
-    - cron: "0 13 * * *"
+    # 23:00 UTC = 06:00 in GMT+7 (Thailand) the next morning.
+    - cron: "0 23 * * *"
   workflow_dispatch:
     inputs:
       hours:
