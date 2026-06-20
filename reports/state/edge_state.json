@@ -108,9 +108,9 @@
       "title": "Israel x Hezbollah permanent peace deal by June 15, 2026?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.0017210916825509681,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-06-18",
-      "last_seen": "2026-06-19"
+      "last_seen": "2026-06-20"
     },
     "0xeda0e0633f131b761cbe6c6e5e16ae347c48d9448a08c5826bfc2c794b63758e": {
       "title": "Will Crude Oil (CL) hit (HIGH) $150 by end of June?",
@@ -156,9 +156,9 @@
       "title": "Will China invade Taiwan by June 30, 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.0050000000000000044,
+      "prob": 0.0040000000000000036,
       "first_seen": "2026-06-19",
-      "last_seen": "2026-06-19"
+      "last_seen": "2026-06-20"
     },
     "0xa5d0dfc81e6a87faa737df4ca52fae7e18b63d9f7568e364c6c7d8c45fb39e8b": {
       "title": "Will Crude Oil (CL) hit (HIGH) $130 by end of June?",
@@ -166,7 +166,7 @@
       "venue": "polymarket",
       "prob": 0.005028608618068975,
       "first_seen": "2026-06-19",
-      "last_seen": "2026-06-19"
+      "last_seen": "2026-06-20"
     },
     "0x98728d940ba33c8675997663835b21198c92326aa188e8ffc3c07eed7ba85b22": {
       "title": "Will Crude Oil (CL) hit (LOW) $52 by end of June?",
@@ -207,7 +207,103 @@
       "prob": 0.062000000000000055,
       "first_seen": "2026-06-19",
       "last_seen": "2026-06-19"
+    },
+    "0xc4569c1a4da5845a2bbb14195cfb31aee79e438c6c0c8fe6f0b1dbb922e1c3b0": {
+      "title": "Will the price of Bitcoin be above $58,000 on June 20?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-20",
+      "last_seen": "2026-06-20"
+    },
+    "0x8392df4eb83b16b7737c10ff848deb25757eeed4d4a5db88a510086034520743": {
+      "title": "Will the price of Bitcoin be above $60,000 on June 19?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-20",
+      "last_seen": "2026-06-20"
+    },
+    "0x5ff528cbb3a79801d024d2c3f986536616b5037fb8097281031dc92b692578f2": {
+      "title": "Will Elon Musk post 180-199 tweets from June 12 to June 19, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-20",
+      "last_seen": "2026-06-20"
+    },
+    "0x61e5ccf1ff689ac5ab6a968ebe684ec14f3bf7c1a196946c216b5fa627ec8653": {
+      "title": "Will the price of Bitcoin be above $58,000 on June 19?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-20",
+      "last_seen": "2026-06-20"
+    },
+    "0xb4cadb6865ad8c66a980f8ef78740690e01b1c4afcf3a1e925875bf76eb1e787": {
+      "title": "Will the price of Bitcoin be above $62,000 on June 19?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-20",
+      "last_seen": "2026-06-20"
+    },
+    "0x80b3af88cb991980e8da1ce86b9794a0957f96ec98c29319dd7ba65e9744d82b": {
+      "title": "Fed rate hike in 2026?",
+      "theme": "Fed rate hike",
+      "venue": "polymarket",
+      "prob": 0.6444584680172198,
+      "first_seen": "2026-06-20",
+      "last_seen": "2026-06-20"
+    },
+    "0x6622e5fc534109b78a3f2a833e1fd97c9e35ba35b8f5b0168f335921a121b0ad": {
+      "title": "Will Elon Musk post 220-239 tweets from June 12 to June 19, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-20",
+      "last_seen": "2026-06-20"
+    },
+    "0xe6e4dbb471a97b1deacb19455b2868d4d54a30c0e10286b50e09f01e25630a22": {
+      "title": "Will the price of Bitcoin be above $64,000 on June 19?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-20",
+      "last_seen": "2026-06-20"
+    },
+    "0xe6eda6d7f01af6d97588d836a2a34d67d2005de053bfa04662d19c33746a6964": {
+      "title": "Will Elon Musk post 200-219 tweets from June 12 to June 19, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-20",
+      "last_seen": "2026-06-20"
+    },
+    "0x6f59964d9f5f774c29cded18ff1a2e22395e1292d2ea8a94a479c977f3b4665b": {
+      "title": "Will the price of Bitcoin be above $66,000 on June 19?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-20",
+      "last_seen": "2026-06-20"
+    },
+    "0x140eb203cfebb00d88630f849849315352dfacc59af0bc1a0636721f60c38a0f": {
+      "title": "Will Elon Musk and Sam Altman settle?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0014807537754593092,
+      "first_seen": "2026-06-20",
+      "last_seen": "2026-06-20"
+    },
+    "0xd8c84f9cf35f8401e57e0b8813d061060a12c373de6e17a4c3345ef1d65aacdc": {
+      "title": "Will Elon Musk post 240-259 tweets from June 12 to June 19, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0021558424983718627,
+      "first_seen": "2026-06-20",
+      "last_seen": "2026-06-20"
     }
   },
-  "updated": "2026-06-19"
+  "updated": "2026-06-20"
 }
