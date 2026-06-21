@@ -172,9 +172,9 @@
       "title": "Will Crude Oil (CL) hit (LOW) $52 by end of June?",
       "theme": "Oil / OPEC",
       "venue": "polymarket",
-      "prob": 0.008000000000000007,
+      "prob": 0.006000000000000005,
       "first_seen": "2026-06-19",
-      "last_seen": "2026-06-19"
+      "last_seen": "2026-06-21"
     },
     "0x7e11a7c3dd2d6217c7d7454a29ba7812fa5096dfaeb6fdaacb4c412cc2da0c23": {
       "title": "Will the price of Bitcoin be above $64,000 on June 18?",
@@ -196,9 +196,9 @@
       "title": "Will Bitcoin dip to $47,500 in June?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.024006104505944648,
+      "prob": 0.013000000000000012,
       "first_seen": "2026-06-19",
-      "last_seen": "2026-06-19"
+      "last_seen": "2026-06-21"
     },
     "0xd9fb1184af0064e5e34b129f5b79afa5a17b7e32f2953ab05efed82315fee6d4": {
       "title": "Will China invade Taiwan by end of 2026?",
@@ -303,7 +303,111 @@
       "prob": 0.0021558424983718627,
       "first_seen": "2026-06-20",
       "last_seen": "2026-06-20"
+    },
+    "0x824cc8f1baa2df76f3702e30b4b076a48755c7c5e7c4e2976ea23943f8be0b25": {
+      "title": "Will the price of Bitcoin be above $58,000 on June 21?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21"
+    },
+    "0xf548709e796d4e2812879a9aa9a8658a129b0aa508b858fb7d9f6d5cc64e72b1": {
+      "title": "Will the price of Bitcoin be above $60,000 on June 20?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21"
+    },
+    "0xc7f9ce2c9fd1c8fb2ae93e45c22b21e158d0e4626fdbe522998ead9b25b75686": {
+      "title": "Will Elon Musk post 40-64 tweets from June 18 to June 20, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21"
+    },
+    "0x1c93487557afbd12db2e1bff2461bfb53726298d0f51b9ed2de7c8f345eadac8": {
+      "title": "Will the price of Bitcoin be above $62,000 on June 20?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21"
+    },
+    "0x9fdc100df26943708d31183bdccea84becda26b39ecdd7a51cfdbbf291bfb156": {
+      "title": "Will the price of Bitcoin be above $62,000 on June 21?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.9836639967301698,
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21"
+    },
+    "0xa0f4c4924ea1a8b410b4ce821c2a9955fad21a1b19bdcfde90816732278b3dd5": {
+      "title": "Will Bitcoin hit $150k by June 30, 2026?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21"
+    },
+    "0xb3a2479ffb64eae4baa37a037b14d1b00f549f2e29648137f94064864272207d": {
+      "title": "Will Elon Musk post 115-139 tweets from June 18 to June 20, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21"
+    },
+    "0x5f879a52e5349db7f66d386ca75f1a9bb608fdd6a738a1582681613730b23281": {
+      "title": "Will Crude Oil (CL) hit (HIGH) $200 by end of June?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.0020000000000000018,
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21"
+    },
+    "0xccc51cccefaae9546754ac4785db8fa14e617573d86da599c0ac8f36850eae9f": {
+      "title": "Will Bitcoin reach $90,000 in June?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0030000000000000027,
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21"
+    },
+    "0x9bfe6966da5da12dc39dec67b22375fd5bf21f3c6e9cbaae28d926708eac222f": {
+      "title": "Will Bitcoin reach $85,000 in June?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.006000000000000005,
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21"
+    },
+    "0x5efa976ebe94080bbda7e45605333ff8f30156cc91604d66c41eb52fd3e25f3e": {
+      "title": "Israel x Iran permanent peace deal by June 30, 2026?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.03400000000000003,
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21"
+    },
+    "0xc6d651e1f7f9fc47f0079c1fba2fc18290cd8a45644f76f73ef7a1ae35f8d65f": {
+      "title": "Will Bitcoin dip to $52,500 in June?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.040000000000000036,
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21"
+    },
+    "0x04fe95ce83c8fbb73697063c6339a2a1b65d27a5d8b495898a84d5ba67627aed": {
+      "title": "Will Bitcoin reach $72,500 in June?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.04506848223567983,
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21"
     }
   },
-  "updated": "2026-06-20"
+  "updated": "2026-06-21"
 }
