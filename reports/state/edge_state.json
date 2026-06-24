@@ -116,9 +116,9 @@
       "title": "Will Crude Oil (CL) hit (HIGH) $150 by end of June?",
       "theme": "Oil / OPEC",
       "venue": "polymarket",
-      "prob": 0.0050000000000000044,
+      "prob": 0.0040000000000000036,
       "first_seen": "2026-06-18",
-      "last_seen": "2026-06-22"
+      "last_seen": "2026-06-24"
     },
     "kalshi:KXBTCD-26JUN1815-T62599.99": {
       "title": "Bitcoin price on Jun 18, 2026? \u2014 $62,600 or above",
@@ -156,9 +156,9 @@
       "title": "Will China invade Taiwan by June 30, 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.0040000000000000036,
+      "prob": 0.0030000000000000027,
       "first_seen": "2026-06-19",
-      "last_seen": "2026-06-20"
+      "last_seen": "2026-06-24"
     },
     "0xa5d0dfc81e6a87faa737df4ca52fae7e18b63d9f7568e364c6c7d8c45fb39e8b": {
       "title": "Will Crude Oil (CL) hit (HIGH) $130 by end of June?",
@@ -350,7 +350,7 @@
       "venue": "polymarket",
       "prob": 0.0010000000000000009,
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-21"
+      "last_seen": "2026-06-24"
     },
     "0xb3a2479ffb64eae4baa37a037b14d1b00f549f2e29648137f94064864272207d": {
       "title": "Will Elon Musk post 115-139 tweets from June 18 to June 20, 2026?",
@@ -599,7 +599,103 @@
       "prob": 0.0020000000000000018,
       "first_seen": "2026-06-23",
       "last_seen": "2026-06-23"
+    },
+    "0xcc6c3d34503c34bb4e0bf1ca5ebeb44293b6807af1f79f7242cfeb993dfc5959": {
+      "title": "Will the price of Bitcoin be above $58,000 on June 23?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24"
+    },
+    "0xf008e6bf759491927d2f6546a64c7acee6afd1d7a494d3b3bce709c9e04c693e": {
+      "title": "Will Elon Musk post 200-219 tweets from June 16 to June 23, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24"
+    },
+    "0xcb3c2e94aefd13bb09a72fdf74d44fa7b2ebe437b863e0621831c020bfd4ed4d": {
+      "title": "Congress passes Iran war powers resolution by June 30?",
+      "theme": "Armed conflict / war",
+      "venue": "polymarket",
+      "prob": 0.998860434797064,
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24"
+    },
+    "0x0320816d8c42427e1a80cd91735a12621bc3a935fa8aaf5529a948d136474ee1": {
+      "title": "Will the price of Bitcoin be above $60,000 on June 23?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.99,
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24"
+    },
+    "0x684e5b72d4e407695397a79ed75ef37273c2655ca2548791a4153233d3744696": {
+      "title": "Will NVIDIA be the largest company in the world by market cap on December 31?",
+      "theme": "Nvidia / AI",
+      "venue": "polymarket",
+      "prob": 0.7,
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24"
+    },
+    "0xa841ecd1d447695cf5d56bed9bb6437015ad44f9532b57ee1dd15515147e19ba": {
+      "title": "Will Bitcoin dip to $57,000 on June 23?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24"
+    },
+    "0xdea78af5d4964e9f2681c6c2c822ba10738b73e937e9ec58638e4d62d375d764": {
+      "title": "Will Elon Musk post 220-239 tweets from June 16 to June 23, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24"
+    },
+    "0xa93a3a655d98a7de2027f9947bdaba90009ae18e0ffe022f901f3feaa21b39b0": {
+      "title": "Will Ethereum reach $3,000 in June?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24"
+    },
+    "0x8d303ae8a2d4e4691ca9be7650701b944de8b1b7d5ec82b0b2c7bdbbf8a84af8": {
+      "title": "Will Elon Musk post 0-19 tweets in July 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24"
+    },
+    "0xa70fa045b98d9734799e56d19f2847ed03fcaa00783a2282279ee945e77460f8": {
+      "title": "Will Elon Musk post 180-199 tweets from June 16 to June 23, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24"
+    },
+    "0x0c38dd9305e3205557885183f0730270779e7e426b0ec3e7743f23963b6d6e4a": {
+      "title": "Will France, UK, or Germany strike Iran by June 30?",
+      "theme": "Armed conflict / war",
+      "venue": "polymarket",
+      "prob": 0.0030000000000000027,
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24"
+    },
+    "0x7ae064ed7f3c9f4d201ce007b05b3a23f8e824170981c4d301f07301d554f451": {
+      "title": "Will Crude Oil (CL) hit (HIGH) $175 by end of June?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.0040000000000000036,
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24"
     }
   },
-  "updated": "2026-06-23"
+  "updated": "2026-06-24"
 }
