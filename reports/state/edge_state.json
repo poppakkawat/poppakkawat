@@ -350,7 +350,7 @@
       "venue": "polymarket",
       "prob": 0.0010000000000000009,
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-24"
+      "last_seen": "2026-06-25"
     },
     "0xb3a2479ffb64eae4baa37a037b14d1b00f549f2e29648137f94064864272207d": {
       "title": "Will Elon Musk post 115-139 tweets from June 18 to June 20, 2026?",
@@ -588,9 +588,9 @@
       "title": "Will the price of Bitcoin be above $72,000 on June 24?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.0010258284140965968,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-06-23",
-      "last_seen": "2026-06-23"
+      "last_seen": "2026-06-25"
     },
     "0x6122f0e541331c3324121a6377d6dbd898d4b472b1840ddaab570ed607477744": {
       "title": "Will Bitcoin reach $87,500 in June?",
@@ -695,7 +695,111 @@
       "prob": 0.0040000000000000036,
       "first_seen": "2026-06-24",
       "last_seen": "2026-06-24"
+    },
+    "0xe3b6d73cf8e160c796d91013e051198fc9da2bf964b9dc5b700bbab368b00dea": {
+      "title": "Will the price of Bitcoin be above $58,000 on June 24?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25"
+    },
+    "0x36bc56dcf8720c996ec33fb197b32efae04643ce7e79e93c03e7617049d2f590": {
+      "title": "Will the price of Bitcoin be above $56,000 on June 24?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25"
+    },
+    "0xa157e53c8320fcd217eaa4ae32e1af69baa8a4268e8143b61961238f21a747d6": {
+      "title": "Will Bitcoin dip to $60,000 by December 31, 2026?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25"
+    },
+    "0x2bcc5cf4950031b056a2b2839bd486617d6cb087b0518e45b81874ebee90bf7b": {
+      "title": "Will WTI Crude Oil (WTI) hit (LOW) $70 in June?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25"
+    },
+    "0x99b201a23f4e440b7311c2227db39c27c185145a4b6bc4ff514438dd17cf8b4c": {
+      "title": "Will the price of Bitcoin be above $60,000 on June 24?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25"
+    },
+    "0x571a812a306db7945332f7309676af8d67d6100faaf65c19b1ec0314eebe7f1b": {
+      "title": "Will the price of Bitcoin be above $54,000 on June 25?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25"
+    },
+    "0x07b6c6d39590bb7c630471be5214d644c4caa171cd9c9f77a986e50fb3a62574": {
+      "title": "Will Elon Musk post 90-114 tweets from June 22 to June 24, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25"
+    },
+    "0xa4d72632ac0ddadcac5247ffc586a193f1bc3bc839cf9ce993c2471e0d599cca": {
+      "title": "Will Anthropic have the best AI model at the end of June 2026?",
+      "theme": "AI / big tech",
+      "venue": "polymarket",
+      "prob": 0.9862922525678796,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25"
+    },
+    "0xd4e77ba6f29fc093509d24f508631abd445ecf506bbdc9c4c80e60256a318527": {
+      "title": "Will no Fed rate cuts happen in 2026?",
+      "theme": "Fed rate cut",
+      "venue": "polymarket",
+      "prob": 0.7672839507061294,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25"
+    },
+    "0x5f7f9b87912964dcf242da96c39d38667a9f7ac8d0f0d5c7f4ccd024721ad134": {
+      "title": "Will Elon Musk post 140-164 tweets from June 22 to June 24, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25"
+    },
+    "0xb0c15c419b1815862c6f71a4f444e66dc0e2477c4ff07f5caa174b720b5ef49d": {
+      "title": "Will Elon Musk post 165-189 tweets from June 22 to June 24, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25"
+    },
+    "0xd6798b7a0c8b65614c6ef094216fb012f58f4740554426bed80e9cec114a3d76": {
+      "title": "Will the price of Bitcoin be above $64,000 on June 24?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25"
+    },
+    "0xff1c3d8354df9a434cef16ec2b6ebe2831b13c3f767fe752a7bb3722ec838f73": {
+      "title": "Will the price of Bitcoin be above $74,000 on June 26?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25"
     }
   },
-  "updated": "2026-06-24"
+  "updated": "2026-06-25"
 }
