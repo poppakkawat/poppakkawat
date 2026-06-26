@@ -742,7 +742,7 @@
       "venue": "polymarket",
       "prob": 0.999,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25"
+      "last_seen": "2026-06-26"
     },
     "0x07b6c6d39590bb7c630471be5214d644c4caa171cd9c9f77a986e50fb3a62574": {
       "title": "Will Elon Musk post 90-114 tweets from June 22 to June 24, 2026?",
@@ -764,9 +764,9 @@
       "title": "Will no Fed rate cuts happen in 2026?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.7672839507061294,
+      "prob": 0.799322335,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25"
+      "last_seen": "2026-06-26"
     },
     "0x5f7f9b87912964dcf242da96c39d38667a9f7ac8d0f0d5c7f4ccd024721ad134": {
       "title": "Will Elon Musk post 140-164 tweets from June 22 to June 24, 2026?",
@@ -799,7 +799,111 @@
       "prob": 0.0010000000000000009,
       "first_seen": "2026-06-25",
       "last_seen": "2026-06-25"
+    },
+    "0x125b53cf29181ba1ccf31ce23500718c5a3b46093269a42682aa148c63b77f6d": {
+      "title": "Will the price of Bitcoin be above $56,000 on June 25?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-26",
+      "last_seen": "2026-06-26"
+    },
+    "0x6b7b33110020078d4f4a07f8b7b1c2e622f69a38e79c7aad50a90b003a2a70a7": {
+      "title": "Will the price of Bitcoin be above $52,000 on June 25?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-26",
+      "last_seen": "2026-06-26"
+    },
+    "0xcccbc0d6962389ab299496edeab08b4e3f3e84e4e5e25bf6c1b1224b0e5d8b4b": {
+      "title": "Will the price of Bitcoin be above $58,000 on June 25?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.996,
+      "first_seen": "2026-06-26",
+      "last_seen": "2026-06-26"
+    },
+    "0x79afea6a94f0b3dffb5e0886fa1dbd740d688029f7aba351dc46911bcb1b1f95": {
+      "title": "Will NVIDIA be the largest company in the world by market cap on June 30?",
+      "theme": "Nvidia / AI",
+      "venue": "polymarket",
+      "prob": 0.9857336528815624,
+      "first_seen": "2026-06-26",
+      "last_seen": "2026-06-26"
+    },
+    "0x48f04285375b1e042791a8171c8264aafaa68f8d384e347253ed38a301da2174": {
+      "title": "Will the price of Ethereum be above $2,100 on June 26?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-26",
+      "last_seen": "2026-06-26"
+    },
+    "0xb7c8aee46ff56db1a5fed9ebf2a2b4cacef93f27578ad72cfab28fc7db348e3f": {
+      "title": "Will the price of Bitcoin be above $64,000 on June 25?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-26",
+      "last_seen": "2026-06-26"
+    },
+    "0x6891dc7266781636a4f3f035bd8f710b5746c56ec6bcf695f62ac63dad0ed7c8": {
+      "title": "Will the price of Bitcoin be above $66,000 on June 26?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-26",
+      "last_seen": "2026-06-26"
+    },
+    "0xd369a32ccec26ff9b4d2ee36fff94e60653da869f37b2beebc8fe1eaa06c853e": {
+      "title": "Will the price of Bitcoin be above $72,000 on June 25?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-26",
+      "last_seen": "2026-06-26"
+    },
+    "0xace1187cff133fa44ab4a4ba13702f9926ca68f75c5e8b3418b896d0dee23020": {
+      "title": "Will Elon Musk post 200-219 tweets from June 19 to June 26, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-26",
+      "last_seen": "2026-06-26"
+    },
+    "0xf12d40786fe41726a9fc797fef32e9366152f394a8c4c309dcb4fbc984827eb5": {
+      "title": "Will Elon Musk post 140-159 tweets from June 23 to June 30, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-26",
+      "last_seen": "2026-06-26"
+    },
+    "0xd659b7ea4639f566e17eb7cc5fab7bca59d21bb3545984e08878a7ac2a57391b": {
+      "title": "Will Elon Musk post 80-99 tweets from June 26 to July 3, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-26",
+      "last_seen": "2026-06-26"
+    },
+    "0xe98938875eadeffcc491c02ae0e0f11d45352c8f70c1bcdec397ffc7dfdec8a9": {
+      "title": "Will the US officially declare war on Venezuela by June 30, 2026?",
+      "theme": "Armed conflict / war",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-26",
+      "last_seen": "2026-06-26"
+    },
+    "0x68c50b3da18986e043179a31dfd88745f03cb4b9369f446ed9e52fa91fff25bb": {
+      "title": "Will the price of Bitcoin be above $72,000 on June 30?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.001024796899743774,
+      "first_seen": "2026-06-26",
+      "last_seen": "2026-06-26"
     }
   },
-  "updated": "2026-06-25"
+  "updated": "2026-06-26"
 }
