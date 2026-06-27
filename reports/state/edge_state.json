@@ -116,9 +116,9 @@
       "title": "Will Crude Oil (CL) hit (HIGH) $150 by end of June?",
       "theme": "Oil / OPEC",
       "venue": "polymarket",
-      "prob": 0.0040000000000000036,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-06-18",
-      "last_seen": "2026-06-24"
+      "last_seen": "2026-06-27"
     },
     "kalshi:KXBTCD-26JUN1815-T62599.99": {
       "title": "Bitcoin price on Jun 18, 2026? \u2014 $62,600 or above",
@@ -156,9 +156,9 @@
       "title": "Will China invade Taiwan by June 30, 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.0030000000000000027,
+      "prob": 0.0020000000000000018,
       "first_seen": "2026-06-19",
-      "last_seen": "2026-06-24"
+      "last_seen": "2026-06-27"
     },
     "0xa5d0dfc81e6a87faa737df4ca52fae7e18b63d9f7568e364c6c7d8c45fb39e8b": {
       "title": "Will Crude Oil (CL) hit (HIGH) $130 by end of June?",
@@ -364,9 +364,9 @@
       "title": "Will Crude Oil (CL) hit (HIGH) $200 by end of June?",
       "theme": "Oil / OPEC",
       "venue": "polymarket",
-      "prob": 0.0020000000000000018,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-21"
+      "last_seen": "2026-06-27"
     },
     "0xccc51cccefaae9546754ac4785db8fa14e617573d86da599c0ac8f36850eae9f": {
       "title": "Will Bitcoin reach $90,000 in June?",
@@ -484,9 +484,9 @@
       "title": "Will Bitcoin reach $77,500 in June?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.009000000000000008,
+      "prob": 0.0050000000000000044,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-22"
+      "last_seen": "2026-06-27"
     },
     "0x4ede078cae84a5877ac32d7fb48811e5c23549a1904b7df06ff7935c6d79d831": {
       "title": "Will the Fed decrease interest rates by 25 bps after the July 2026 meeting?",
@@ -660,9 +660,9 @@
       "title": "Will Ethereum reach $3,000 in June?",
       "theme": "Ethereum",
       "venue": "polymarket",
-      "prob": 0.0010000000000000009,
+      "prob": 0.0030000000000000027,
       "first_seen": "2026-06-24",
-      "last_seen": "2026-06-24"
+      "last_seen": "2026-06-27"
     },
     "0x8d303ae8a2d4e4691ca9be7650701b944de8b1b7d5ec82b0b2c7bdbbf8a84af8": {
       "title": "Will Elon Musk post 0-19 tweets in July 2026?",
@@ -684,17 +684,17 @@
       "title": "Will France, UK, or Germany strike Iran by June 30?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.0030000000000000027,
+      "prob": 0.0020000000000000018,
       "first_seen": "2026-06-24",
-      "last_seen": "2026-06-24"
+      "last_seen": "2026-06-27"
     },
     "0x7ae064ed7f3c9f4d201ce007b05b3a23f8e824170981c4d301f07301d554f451": {
       "title": "Will Crude Oil (CL) hit (HIGH) $175 by end of June?",
       "theme": "Oil / OPEC",
       "venue": "polymarket",
-      "prob": 0.0040000000000000036,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-06-24",
-      "last_seen": "2026-06-24"
+      "last_seen": "2026-06-27"
     },
     "0xe3b6d73cf8e160c796d91013e051198fc9da2bf964b9dc5b700bbab368b00dea": {
       "title": "Will the price of Bitcoin be above $58,000 on June 24?",
@@ -764,9 +764,9 @@
       "title": "Will no Fed rate cuts happen in 2026?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.799322335,
+      "prob": 0.8,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-26"
+      "last_seen": "2026-06-27"
     },
     "0x5f7f9b87912964dcf242da96c39d38667a9f7ac8d0f0d5c7f4ccd024721ad134": {
       "title": "Will Elon Musk post 140-164 tweets from June 22 to June 24, 2026?",
@@ -903,7 +903,63 @@
       "prob": 0.001024796899743774,
       "first_seen": "2026-06-26",
       "last_seen": "2026-06-26"
+    },
+    "0xd8b5563bdecd4e530de9b9247cb0eb96dd6308b01b8bd1f5ea216a54debc1c4d": {
+      "title": "Will the price of Bitcoin be above $54,000 on June 26?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-27",
+      "last_seen": "2026-06-27"
+    },
+    "0x384a78b847edbafb7f4542dcde7000f0042d08a43ad12f11879050fbbf06b0ee": {
+      "title": "Ethereum all time high by June 30, 2026?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-27",
+      "last_seen": "2026-06-27"
+    },
+    "0xde92ee9116b4ec9859e1af0921d98ef0088ba09c439e354265353113f6f1cb3f": {
+      "title": "Will Elon Musk post 280-299 tweets from June 19 to June 26, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-27",
+      "last_seen": "2026-06-27"
+    },
+    "0x33d7b1f317c4dfd988f6f6248aff40ab0008bc09d6959ef52ee751f1ee36ca33": {
+      "title": "Will the price of Bitcoin be above $72,000 on June 28?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-27",
+      "last_seen": "2026-06-27"
+    },
+    "0x524b6f7e2838e22a90983fc29aeb978983d94818a0f6abd165b9f28524595b97": {
+      "title": "Will Crude Oil (CL) hit (LOW) $35 by end of June?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-27",
+      "last_seen": "2026-06-27"
+    },
+    "0x96a0f59c699051326eed1bb43053c8a1847b4dc9b6958428735c0244f088078f": {
+      "title": "Will Elon Musk post 220-239 tweets from June 19 to June 26, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-27",
+      "last_seen": "2026-06-27"
+    },
+    "0x17c1591393e9bfcaa68c89086af37ffc1b44db673c56c8bebe07480759c6038a": {
+      "title": "US-Iran Final Nuclear Deal by June 30, 2026?",
+      "theme": "Armed conflict / war",
+      "venue": "polymarket",
+      "prob": 0.0020000000000000018,
+      "first_seen": "2026-06-27",
+      "last_seen": "2026-06-27"
     }
   },
-  "updated": "2026-06-26"
+  "updated": "2026-06-27"
 }
