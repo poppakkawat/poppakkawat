@@ -118,7 +118,7 @@
       "venue": "polymarket",
       "prob": 0.0010000000000000009,
       "first_seen": "2026-06-18",
-      "last_seen": "2026-06-27"
+      "last_seen": "2026-06-28"
     },
     "kalshi:KXBTCD-26JUN1815-T62599.99": {
       "title": "Bitcoin price on Jun 18, 2026? \u2014 $62,600 or above",
@@ -156,9 +156,9 @@
       "title": "Will China invade Taiwan by June 30, 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.0020000000000000018,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-06-19",
-      "last_seen": "2026-06-27"
+      "last_seen": "2026-06-28"
     },
     "0xa5d0dfc81e6a87faa737df4ca52fae7e18b63d9f7568e364c6c7d8c45fb39e8b": {
       "title": "Will Crude Oil (CL) hit (HIGH) $130 by end of June?",
@@ -366,7 +366,7 @@
       "venue": "polymarket",
       "prob": 0.0010000000000000009,
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-27"
+      "last_seen": "2026-06-28"
     },
     "0xccc51cccefaae9546754ac4785db8fa14e617573d86da599c0ac8f36850eae9f": {
       "title": "Will Bitcoin reach $90,000 in June?",
@@ -684,9 +684,9 @@
       "title": "Will France, UK, or Germany strike Iran by June 30?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.0020000000000000018,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-06-24",
-      "last_seen": "2026-06-27"
+      "last_seen": "2026-06-28"
     },
     "0x7ae064ed7f3c9f4d201ce007b05b3a23f8e824170981c4d301f07301d554f451": {
       "title": "Will Crude Oil (CL) hit (HIGH) $175 by end of June?",
@@ -694,7 +694,7 @@
       "venue": "polymarket",
       "prob": 0.0010000000000000009,
       "first_seen": "2026-06-24",
-      "last_seen": "2026-06-27"
+      "last_seen": "2026-06-28"
     },
     "0xe3b6d73cf8e160c796d91013e051198fc9da2bf964b9dc5b700bbab368b00dea": {
       "title": "Will the price of Bitcoin be above $58,000 on June 24?",
@@ -959,7 +959,87 @@
       "prob": 0.0020000000000000018,
       "first_seen": "2026-06-27",
       "last_seen": "2026-06-27"
+    },
+    "0xa1732e030cd7fc3c29568f35343fe0f96f85e64adc6f7ed860a33eefe6275841": {
+      "title": "Will the price of Bitcoin be above $56,000 on June 27?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-28",
+      "last_seen": "2026-06-28"
+    },
+    "0xa841d48f7274b74fdce6a1905a82ccbfe2d60162056a372929ea504c7a241e2a": {
+      "title": "Will the price of Bitcoin be above $54,000 on June 28?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-28",
+      "last_seen": "2026-06-28"
+    },
+    "0x326349ee0139d76ea3925be6e12d842e963f577d6f9062b3684055327cbdb8fa": {
+      "title": "Will the price of Bitcoin be above $54,000 on June 27?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-06-28",
+      "last_seen": "2026-06-28"
+    },
+    "0xa1123ad72b9cefaf53b4cfe7baf50d16a4ee6150926b38f6f619a933f6232713": {
+      "title": "Will WTI Crude Oil (WTI) hit (HIGH) $150 in June?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-28",
+      "last_seen": "2026-06-28"
+    },
+    "0x4212fa6364042204748651b8a108772c7214dc295cf1c556f8609599a598ac7e": {
+      "title": "Will WTI Crude Oil (WTI) hit (HIGH) $140 in June?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-28",
+      "last_seen": "2026-06-28"
+    },
+    "0x0443a503a38b90446c8a3826db5ee1323144197ef2b4ed09bcdf545ac104dfcb": {
+      "title": "Will Crude Oil (CL) hit (HIGH) $140 by end of June?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-28",
+      "last_seen": "2026-06-28"
+    },
+    "0x32f5e88162b712d8a1706451b4b52832193b2e961fe49095f873bbf44e492229": {
+      "title": "Will Bitcoin reach $100,000 in June?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-28",
+      "last_seen": "2026-06-28"
+    },
+    "0xb941af01c632229376fa4d7c994369c90743654bc9a7a36072ec4fbb0bc855cc": {
+      "title": "Will Crude Oil (CL) hit (LOW) $40 by end of June?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-28",
+      "last_seen": "2026-06-28"
+    },
+    "0x5d7b464e5feb79a9c6d586fa3605d21c3dcbb46c289f715f2ecff93930be5b8e": {
+      "title": "Will Elon Musk post 160-179 tweets from June 23 to June 30, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-28",
+      "last_seen": "2026-06-28"
+    },
+    "0x20aa2aca6d76d29cf9ed13a252d8b5a2544e3b46d2611cd092fba37ffb0de374": {
+      "title": "Will Elon Musk post 90-114 tweets from June 25 to June 27, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-28",
+      "last_seen": "2026-06-28"
     }
   },
-  "updated": "2026-06-27"
+  "updated": "2026-06-28"
 }
