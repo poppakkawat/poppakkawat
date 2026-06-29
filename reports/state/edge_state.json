@@ -404,9 +404,9 @@
       "title": "Will Bitcoin reach $72,500 in June?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.04506848223567983,
+      "prob": 0.0030000000000000027,
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-21"
+      "last_seen": "2026-06-29"
     },
     "0x2600a77a8a7fb7ec360aa9a2c8fb45c05b3d55c213f3a1ee3db55ba8972b00be": {
       "title": "Will the price of Bitcoin be above $58,000 on June 22?",
@@ -660,9 +660,9 @@
       "title": "Will Ethereum reach $3,000 in June?",
       "theme": "Ethereum",
       "venue": "polymarket",
-      "prob": 0.0030000000000000027,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-06-24",
-      "last_seen": "2026-06-27"
+      "last_seen": "2026-06-29"
     },
     "0x8d303ae8a2d4e4691ca9be7650701b944de8b1b7d5ec82b0b2c7bdbbf8a84af8": {
       "title": "Will Elon Musk post 0-19 tweets in July 2026?",
@@ -974,7 +974,7 @@
       "venue": "polymarket",
       "prob": 0.999,
       "first_seen": "2026-06-28",
-      "last_seen": "2026-06-28"
+      "last_seen": "2026-06-29"
     },
     "0x326349ee0139d76ea3925be6e12d842e963f577d6f9062b3684055327cbdb8fa": {
       "title": "Will the price of Bitcoin be above $54,000 on June 27?",
@@ -1039,7 +1039,103 @@
       "prob": 0.0010000000000000009,
       "first_seen": "2026-06-28",
       "last_seen": "2026-06-28"
+    },
+    "0xebf17209dbfd9ed48141ca70b95b515cad6b83e69dfb8af2efcaf435f42a9fc0": {
+      "title": "Will the price of Bitcoin be above $64,000 on June 28?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29"
+    },
+    "0x806fb0e989b077af7566e558cab7379688c7a77f096dc770ab7fae8b2b87f879": {
+      "title": "Will Crude Oil reach a new all-time high by June 30?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29"
+    },
+    "0x753e6031044632c083fede2715235b69bb2596e37d34f6f19d2b6635d2d4dd58": {
+      "title": "Will OpenAI IPO by June 30 2026?",
+      "theme": "AI / big tech",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29"
+    },
+    "0x4819e6d648a89e088aed1c8bd446783f3108209a6459e8b5935cfcf68b882e01": {
+      "title": "Will Elon Musk post 360-379 tweets from June 23 to June 30, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29"
+    },
+    "0x76a7b9207af60a5f56597b507a868c93c118e6064503c2c734f17fa353ce194d": {
+      "title": "Will the price of Bitcoin be above $74,000 on June 28?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29"
+    },
+    "0xa9b0071d974619836e0e79d66045ea381bee9b787b06f8391fd9c6d85ff117f4": {
+      "title": "Will the price of Bitcoin be above $66,000 on June 29?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29"
+    },
+    "0xfc0490cc0eace4457825121fd4d88dc1687d3cde4f2df9fd0c4bf6a7565c6c16": {
+      "title": "Will the price of Bitcoin be greater than $74,000 on June 28?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29"
+    },
+    "0x6ecd13f937019c63bdc10848a4ee1e048ab6a84b6d0b20b77f122ce8b5676e8e": {
+      "title": "Russia x Ukraine ceasefire by June 30, 2026?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.002035688666666702,
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29"
+    },
+    "0xffdc3b996770b6ecea3e6a949e1bea866f080c2673548638590188b541bf4c71": {
+      "title": "Will the price of Bitcoin be above $60,000 on June 28?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.002961372674469609,
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29"
+    },
+    "0x437897fca4fc47ebf980cabdbdbb27f9ce845375549dad958a2ddb106d9cb06d": {
+      "title": "Will the price of Bitcoin be above $64,000 on June 29?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0032013890458367777,
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29"
+    },
+    "0xc205bbe50f75ed02eba00d19cd78ace68a846acbe97a529939e5c5ac66321110": {
+      "title": "Will Bitcoin dip to $58,000 on June 27?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0050000000000000044,
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29"
+    },
+    "0x26ca74d41edc9e3a6643698fbe8eae446377e4579d2f55f505da4ff6a1cf0f66": {
+      "title": "Trump announces US x Iran ceasefire over by June 30?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.009857475773758062,
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29"
     }
   },
-  "updated": "2026-06-28"
+  "updated": "2026-06-29"
 }
