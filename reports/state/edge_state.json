@@ -366,7 +366,7 @@
       "venue": "polymarket",
       "prob": 0.0010000000000000009,
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-28"
+      "last_seen": "2026-07-01"
     },
     "0xccc51cccefaae9546754ac4785db8fa14e617573d86da599c0ac8f36850eae9f": {
       "title": "Will Bitcoin reach $90,000 in June?",
@@ -404,9 +404,9 @@
       "title": "Will Bitcoin reach $72,500 in June?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.0030000000000000027,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-29"
+      "last_seen": "2026-07-01"
     },
     "0x2600a77a8a7fb7ec360aa9a2c8fb45c05b3d55c213f3a1ee3db55ba8972b00be": {
       "title": "Will the price of Bitcoin be above $58,000 on June 22?",
@@ -686,7 +686,7 @@
       "venue": "polymarket",
       "prob": 0.0010000000000000009,
       "first_seen": "2026-06-24",
-      "last_seen": "2026-06-28"
+      "last_seen": "2026-07-01"
     },
     "0x7ae064ed7f3c9f4d201ce007b05b3a23f8e824170981c4d301f07301d554f451": {
       "title": "Will Crude Oil (CL) hit (HIGH) $175 by end of June?",
@@ -756,9 +756,9 @@
       "title": "Will Anthropic have the best AI model at the end of June 2026?",
       "theme": "AI / big tech",
       "venue": "polymarket",
-      "prob": 0.9862922525678796,
+      "prob": 0.9979685336725759,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25"
+      "last_seen": "2026-07-01"
     },
     "0xd4e77ba6f29fc093509d24f508631abd445ecf506bbdc9c4c80e60256a318527": {
       "title": "Will no Fed rate cuts happen in 2026?",
@@ -828,9 +828,9 @@
       "title": "Will NVIDIA be the largest company in the world by market cap on June 30?",
       "theme": "Nvidia / AI",
       "venue": "polymarket",
-      "prob": 0.9857336528815624,
+      "prob": 0.998,
       "first_seen": "2026-06-26",
-      "last_seen": "2026-06-26"
+      "last_seen": "2026-07-01"
     },
     "0x48f04285375b1e042791a8171c8264aafaa68f8d384e347253ed38a301da2174": {
       "title": "Will the price of Ethereum be above $2,100 on June 26?",
@@ -1166,7 +1166,7 @@
       "venue": "polymarket",
       "prob": 0.999,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-06-30"
+      "last_seen": "2026-07-01"
     },
     "0xb6429ba0e418f91c34d3fb98d46896217a675974ac0a8c5fa48f85fa4327aadf": {
       "title": "Will Microstrategy announce a Bitcoin purchase June 23-29?",
@@ -1215,7 +1215,79 @@
       "prob": 0.0010000000000000009,
       "first_seen": "2026-06-30",
       "last_seen": "2026-06-30"
+    },
+    "0x5dbee5a7c4fc370e933dc9452ee872c83481de4965bd0d78a2cc27e6d04a00f1": {
+      "title": "Will NVIDIA (NVDA) close above $200 on June 30?",
+      "theme": "Nvidia / AI",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-01",
+      "last_seen": "2026-07-01"
+    },
+    "0xb1f20812ffdd6c0da18b00aadb00e8ca5b94e4add419fe0606e702d78b697580": {
+      "title": "Will the price of Bitcoin be between $58,000 and $60,000 on June 30?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-01",
+      "last_seen": "2026-07-01"
+    },
+    "0xb5e95cecd39975d5c3681a8e8c1c248bb0d7bd2b0f9a7d6772c8a9a79753e99c": {
+      "title": "Will the price of Bitcoin be above $58,000 on June 30?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-01",
+      "last_seen": "2026-07-01"
+    },
+    "0x8e9e7288a949d25931b509d85f6403e4839a86061469b43b878ce8d12d1f010f": {
+      "title": "Will the price of Bitcoin be above $52,000 on July 1?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-01",
+      "last_seen": "2026-07-01"
+    },
+    "0x784d68ce05efe5370a1a4597b709f1a7d4bbd92b79112c9f1cb0b1ee99dfe950": {
+      "title": "Will the price of Bitcoin be above $64,000 on June 30?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-01",
+      "last_seen": "2026-07-01"
+    },
+    "0x2d776edce6e8286dc3cd2befc7290961a4af1ae3dfe91e8a3fa61dbf372ec1a7": {
+      "title": "Will Bitcoin reach $62,500 in June?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-01",
+      "last_seen": "2026-07-01"
+    },
+    "0x631bdcb964cade99f17d55aced7cb995f7bd401476a1c1e65238cb45e0507713": {
+      "title": "Will Elon Musk post 280-299 tweets from June 23 to June 30, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-01",
+      "last_seen": "2026-07-01"
+    },
+    "0xa1dff21769905b07b589a1d0e838ac8ba046767f713add3aebd7c2a2184827e5": {
+      "title": "Will the price of Bitcoin be above $60,000 on June 30?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-01",
+      "last_seen": "2026-07-01"
+    },
+    "0xba8af64c1b08f322ca7f66f3cfdbdfd50c0eae6fc88d2fcf29c30ceb62682421": {
+      "title": "Will Crude Oil (CL) hit (HIGH) $120 by end of June?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-01",
+      "last_seen": "2026-07-01"
     }
   },
-  "updated": "2026-06-30"
+  "updated": "2026-07-01"
 }
