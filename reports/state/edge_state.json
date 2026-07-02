@@ -636,9 +636,9 @@
       "title": "Will NVIDIA be the largest company in the world by market cap on December 31?",
       "theme": "Nvidia / AI",
       "venue": "polymarket",
-      "prob": 0.7,
+      "prob": 0.67,
       "first_seen": "2026-06-24",
-      "last_seen": "2026-06-24"
+      "last_seen": "2026-07-02"
     },
     "0xa841ecd1d447695cf5d56bed9bb6437015ad44f9532b57ee1dd15515147e19ba": {
       "title": "Will Bitcoin dip to $57,000 on June 23?",
@@ -956,9 +956,9 @@
       "title": "US-Iran Final Nuclear Deal by June 30, 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.0020000000000000018,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-06-27",
-      "last_seen": "2026-06-27"
+      "last_seen": "2026-07-02"
     },
     "0xa1732e030cd7fc3c29568f35343fe0f96f85e64adc6f7ed860a33eefe6275841": {
       "title": "Will the price of Bitcoin be above $56,000 on June 27?",
@@ -1287,7 +1287,111 @@
       "prob": 0.0010000000000000009,
       "first_seen": "2026-07-01",
       "last_seen": "2026-07-01"
+    },
+    "0xf846ac231fbc711338811cad599ae9efc7d251bbf1d5d84530e0d629e56c8364": {
+      "title": "Will the price of Bitcoin be above $54,000 on July 1?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02"
+    },
+    "0xa0740e1d301d37038a9b22289ebf0e671eadcbd89a62bbd82b2bd2022835a76d": {
+      "title": "Will the price of Bitcoin be above $50,000 on July 2?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02"
+    },
+    "0xd29917b810b1cc8e30a060c10574c2b1ee29b3c6892109591fc50204ba6c5f16": {
+      "title": "Will the price of Bitcoin be above $56,000 on July 1?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02"
+    },
+    "0x618f3fc3320fb3eaba2cad973862795d360c70511d6410117e65fda25dc8398e": {
+      "title": "Will the price of Bitcoin be above $60,000 on July 1?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02"
+    },
+    "0x6561b85120b5c67235e7ea2771c289e19fd7111911c030ac3f0c0413ae443a53": {
+      "title": "Will the price of Bitcoin be above $50,000 on July 1?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02"
+    },
+    "0x3bfac310199f64e96df92531bd7285ffef1dfcf0017ec67941447c8d9e0f843e": {
+      "title": "Will Elon Musk post 40-64 tweets from June 29 to July 1, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02"
+    },
+    "0x19536fc554469bcac020edf31f29d3d038eb9c9ed8f2e7fcde748cddd4c53883": {
+      "title": "Will the price of Bitcoin be above $52,000 on July 2?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02"
+    },
+    "0x3a6c2b757cb3b3f44a8ab8b1102d4612d900f9611ab2689050aa9896cb39e312": {
+      "title": "Will the price of Bitcoin be above $54,000 on July 2?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.9989999999,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02"
+    },
+    "0x4ed16887bee191d62ca08dbe4ffe1e966899955806abd441180254aad5025509": {
+      "title": "Will the price of Bitcoin be above $52,000 on July 3?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.9989378527,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02"
+    },
+    "0x61217cbc0a7e8adbb271bbc941bad45038aec306e9151dfb62eaeae56bade11d": {
+      "title": "Will Bitcoin reach $60,000 on July 1?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.99,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02"
+    },
+    "0xa38f0aba5b78cfc9894826c431dc6c8b16e1dff8bb1f4ff3b9ab51d35e12cd55": {
+      "title": "Will NVIDIA be the largest company in the world by market cap on July 31?",
+      "theme": "Nvidia / AI",
+      "venue": "polymarket",
+      "prob": 0.9015806613,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02"
+    },
+    "0xfbc3243812594abf51ea3b443c0188d40c10e7243250c38c1f68371d45cfb006": {
+      "title": "Will the price of Bitcoin be above $62,000 on July 1?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02"
+    },
+    "0x66449ca0dc420074e2ba317fb7a0c3471c9fe7449178239059824329bf96bbb2": {
+      "title": "Will the price of Bitcoin be above $68,000 on July 2?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02"
     }
   },
-  "updated": "2026-07-01"
+  "updated": "2026-07-02"
 }
