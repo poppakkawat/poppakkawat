@@ -492,9 +492,9 @@
       "title": "Will the Fed decrease interest rates by 25 bps after the July 2026 meeting?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.015000000000000013,
+      "prob": 0.009000000000000008,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-22"
+      "last_seen": "2026-07-03"
     },
     "0x9ffe957294c4cfae5f9d3fa612c0676dbcdf60347acdd38e1ae40da3cb9c15cd": {
       "title": "Will the price of Bitcoin be above $56,000 on June 23?",
@@ -636,9 +636,9 @@
       "title": "Will NVIDIA be the largest company in the world by market cap on December 31?",
       "theme": "Nvidia / AI",
       "venue": "polymarket",
-      "prob": 0.67,
+      "prob": 0.65,
       "first_seen": "2026-06-24",
-      "last_seen": "2026-07-02"
+      "last_seen": "2026-07-03"
     },
     "0xa841ecd1d447695cf5d56bed9bb6437015ad44f9532b57ee1dd15515147e19ba": {
       "title": "Will Bitcoin dip to $57,000 on June 23?",
@@ -1372,9 +1372,9 @@
       "title": "Will NVIDIA be the largest company in the world by market cap on July 31?",
       "theme": "Nvidia / AI",
       "venue": "polymarket",
-      "prob": 0.9015806613,
+      "prob": 0.9,
       "first_seen": "2026-07-02",
-      "last_seen": "2026-07-02"
+      "last_seen": "2026-07-03"
     },
     "0xfbc3243812594abf51ea3b443c0188d40c10e7243250c38c1f68371d45cfb006": {
       "title": "Will the price of Bitcoin be above $62,000 on July 1?",
@@ -1391,7 +1391,103 @@
       "prob": 0.0010000000000000009,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-02"
+    },
+    "0x5dd78565acf7327f44e0e8b13ad428535b20d154f8fa28b59be2bcb20f666597": {
+      "title": "Will the price of Bitcoin be above $58,000 on July 2?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03"
+    },
+    "0xcb2b27ccb4809696a45122f14ef8c44be9ef01b6ae1a70602b4f6fb654bd8711": {
+      "title": "Will the price of Bitcoin be above $60,000 on July 2?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03"
+    },
+    "0x6d4c1b297102c7d2c5256ecf23d2a1d258f56f31f39d4728bf188bb48f3bec2e": {
+      "title": "Will the price of Bitcoin be above $56,000 on July 2?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03"
+    },
+    "0x1e037959bbf94a2e58fd5f5a78c7e4b5afa0dfa6ee2d80e80fccbebd0ab2267c": {
+      "title": "Will the price of Bitcoin be above $56,000 on July 3?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03"
+    },
+    "0xda36c44ccf53283d43103435473da3c0c6ef48a161037b701335bc56764c8e84": {
+      "title": "Will the price of Bitcoin be above $54,000 on July 3?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.998,
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03"
+    },
+    "0x4926438a8bcd51e07989a94a7efafff86a0c66101a5f0f51dc0a252425c41b4b": {
+      "title": "Will Tesla deliver 475000 or more vehicles in Q2 2026",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.9949880998,
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03"
+    },
+    "0x2b29ce7b5fca22d1ab6708578413e4f091e24d0d5226c7331d22f7f1601ace33": {
+      "title": "Will the price of Bitcoin be above $70,000 on July 3?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03"
+    },
+    "0x833382de56ddecb8050cab7d43066a071277cc77e60d79008ade2f8c9dbfbbb4": {
+      "title": "Will Elon Musk post 500+ tweets from July 3 to July 10, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03"
+    },
+    "0xecca02f2cf8af5c83e14ef4fcd3d41e8d6f7c7602aa0245d16956a2404081ac8": {
+      "title": "Trump orders federal review of AI model releases by June 30?",
+      "theme": "AI / big tech",
+      "venue": "polymarket",
+      "prob": 0.00105645089999995,
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03"
+    },
+    "0x3d675f1c88099a57c12abca632cf926be1bf430125168321de06234e9930fe1a": {
+      "title": "Will the Fed decrease interest rates by 50+ bps after the July 2026 meeting?",
+      "theme": "Fed rate cut",
+      "venue": "polymarket",
+      "prob": 0.0020000000000000018,
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03"
+    },
+    "0x2a28cc33492516116690a20d290f9922acbe0ed367ff52a6082154474c7f2971": {
+      "title": "Will the Fed increase interest rates by 50+ bps after the July 2026 meeting?",
+      "theme": "Fed rate hike",
+      "venue": "polymarket",
+      "prob": 0.0030000000000000027,
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03"
+    },
+    "0xac02cbb049e46d6a3627c0fdf52fa554982a9025d45968207b362acb6ca4b830": {
+      "title": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
+      "theme": "Fed rate cut",
+      "venue": "polymarket",
+      "prob": 0.040000000000000036,
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03"
     }
   },
-  "updated": "2026-07-02"
+  "updated": "2026-07-03"
 }
