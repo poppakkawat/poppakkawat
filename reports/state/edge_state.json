@@ -1572,10 +1572,122 @@
       "title": "US-Iran Final Nuclear Deal by July 31, 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.015515608199999975,
+      "prob": 0.013000000000000012,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-04"
+      "last_seen": "2026-07-05"
+    },
+    "0xa46a51e58dd4477e7cdd8645aa956a1a5bfe59817058ee0cabaf415a4e337b5f": {
+      "title": "Will the price of Bitcoin be above $58,000 on July 5?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05"
+    },
+    "0x4c5d8054931533eed5b76bb278a439233097288f548a755b41919539712557cd": {
+      "title": "Will the price of Bitcoin be above $50,000 on July 4?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05"
+    },
+    "0x4863841fee98ae432b657dbad973cd5562e7fa6bab5e1a725ebd833723c9493d": {
+      "title": "Will the price of Bitcoin be above $50,000 on July 5?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05"
+    },
+    "0xb3de7ea12cf0f5d039de9b401e357f1e53a1051f564a58eee6c2041d50ccac12": {
+      "title": "Will the price of Bitcoin be above $68,000 on July 5?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05"
+    },
+    "0x44dcd7c08485eb5efaeafe28296979ef25c47c02f15a09c5022c60869afc6a0b": {
+      "title": "Will the price of Bitcoin be above $66,000 on July 4?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05"
+    },
+    "0xfb17e4ff31d4df24d432c05afc51d8cc94e10cde34cbc907772326d683a1119b": {
+      "title": "Will the price of Bitcoin be above $70,000 on July 5?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05"
+    },
+    "0xc84688e9a008a57f44b4c032f3c5f633fe27cd6478c1c6d7d4a1c9f49067b092": {
+      "title": "Will Bitcoin reach $100,000 in July?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0020000000000000018,
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05"
+    },
+    "0x66c52ad2bc67c4a32cf4e4c0a8693dc41b4eeae7c7f7c5ba30075f09d9c08d88": {
+      "title": "Will Bitcoin dip to $37,500 in July?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.002300191699999954,
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05"
+    },
+    "0x7d64a1533a7d69055205382f1f37d5e0057b5fc40c75ee36df30438b1b0992e2": {
+      "title": "Will Bitcoin reach $82,500 in July?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.009000000000000008,
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05"
+    },
+    "0xcecf316313da9700f01c4bbc00f593285541287f9c64ad47eb76b8d3e222160d": {
+      "title": "Will Ethereum reach $1,900 June 29-July 5?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.016721683700000045,
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05"
+    },
+    "0x659bff8b341ee3f74dfd82b1608bf37dff28501774f25dd48f93076621aa8f8a": {
+      "title": "US-Iran Final Nuclear Deal by August 13, 2026?",
+      "theme": "Armed conflict / war",
+      "venue": "polymarket",
+      "prob": 0.050000000000000044,
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05"
+    },
+    "0xc0aed6d5d893988b4bef5a8242435bbc7c3b45b1e438bcffc9e9bf71d173ae46": {
+      "title": "US-Iran Final Nuclear Deal by August 18, 2026?",
+      "theme": "Armed conflict / war",
+      "venue": "polymarket",
+      "prob": 0.18999999999999995,
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05"
+    },
+    "0x23667427b34ca1c7144d50540beba9e7ffb608443a84252c194bb8b40919a0cb": {
+      "title": "US-Iran Final Nuclear Deal by September 30, 2026?",
+      "theme": "Armed conflict / war",
+      "venue": "polymarket",
+      "prob": 0.30000000000000004,
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05"
+    },
+    "0x2be031440c5a571cd4fc3e05e2478d98aee41c7a44d10d3c5e6a24e38b30fabb": {
+      "title": "Will Bitcoin dip to $57,500 in July?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.38200475700000003,
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05"
     }
   },
-  "updated": "2026-07-04"
+  "updated": "2026-07-05"
 }
