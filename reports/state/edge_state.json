@@ -204,9 +204,9 @@
       "title": "Will China invade Taiwan by end of 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.062000000000000055,
+      "prob": 0.03600000000000003,
       "first_seen": "2026-06-19",
-      "last_seen": "2026-06-19"
+      "last_seen": "2026-07-06"
     },
     "0xc4569c1a4da5845a2bbb14195cfb31aee79e438c6c0c8fe6f0b1dbb922e1c3b0": {
       "title": "Will the price of Bitcoin be above $58,000 on June 20?",
@@ -492,9 +492,9 @@
       "title": "Will the Fed decrease interest rates by 25 bps after the July 2026 meeting?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.009000000000000008,
+      "prob": 0.006000000000000005,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-07-04"
+      "last_seen": "2026-07-06"
     },
     "0x9ffe957294c4cfae5f9d3fa612c0676dbcdf60347acdd38e1ae40da3cb9c15cd": {
       "title": "Will the price of Bitcoin be above $56,000 on June 23?",
@@ -764,9 +764,9 @@
       "title": "Will no Fed rate cuts happen in 2026?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.8,
+      "prob": 0.7732742644,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-27"
+      "last_seen": "2026-07-06"
     },
     "0x5f7f9b87912964dcf242da96c39d38667a9f7ac8d0f0d5c7f4ccd024721ad134": {
       "title": "Will Elon Musk post 140-164 tweets from June 22 to June 24, 2026?",
@@ -1372,9 +1372,9 @@
       "title": "Will NVIDIA be the largest company in the world by market cap on July 31?",
       "theme": "Nvidia / AI",
       "venue": "polymarket",
-      "prob": 0.9,
+      "prob": 0.8200000001,
       "first_seen": "2026-07-02",
-      "last_seen": "2026-07-03"
+      "last_seen": "2026-07-06"
     },
     "0xfbc3243812594abf51ea3b443c0188d40c10e7243250c38c1f68371d45cfb006": {
       "title": "Will the price of Bitcoin be above $62,000 on July 1?",
@@ -1582,7 +1582,7 @@
       "venue": "polymarket",
       "prob": 0.999,
       "first_seen": "2026-07-05",
-      "last_seen": "2026-07-05"
+      "last_seen": "2026-07-06"
     },
     "0x4c5d8054931533eed5b76bb278a439233097288f548a755b41919539712557cd": {
       "title": "Will the price of Bitcoin be above $50,000 on July 4?",
@@ -1652,9 +1652,9 @@
       "title": "Will Ethereum reach $1,900 June 29-July 5?",
       "theme": "Ethereum",
       "venue": "polymarket",
-      "prob": 0.016721683700000045,
+      "prob": 0.0040000000000000036,
       "first_seen": "2026-07-05",
-      "last_seen": "2026-07-05"
+      "last_seen": "2026-07-06"
     },
     "0x659bff8b341ee3f74dfd82b1608bf37dff28501774f25dd48f93076621aa8f8a": {
       "title": "US-Iran Final Nuclear Deal by August 13, 2026?",
@@ -1687,7 +1687,79 @@
       "prob": 0.38200475700000003,
       "first_seen": "2026-07-05",
       "last_seen": "2026-07-05"
+    },
+    "0xb6cc043c2ea6a2ccae30010529d4ff673e9e2317ab54630ba1bd25016c41ba17": {
+      "title": "Will the price of Bitcoin be above $58,000 on July 6?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06"
+    },
+    "0xc50c1765e6cfd4342b75fd2aaf233f1a705dac14b281aad20146b2852cf0af4a": {
+      "title": "Will Elon Musk post 115-139 tweets from July 4 to July 6, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06"
+    },
+    "0x89261aceb4790de5f3df913c2cf75152d0eb585e18831602db67c9eb4a539dbe": {
+      "title": "Will Bitcoin reach $64,000 on July 4?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0014679694000000465,
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06"
+    },
+    "0x3b8009172e521abfad1deb60393bba4d11fc0aeffa5485b9a6da1c97b2159e5f": {
+      "title": "Will Elon Musk post 40-59 tweets from July 7 to July 14, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.001489713899999967,
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06"
+    },
+    "0x320256897a0946fb9190ab091bb4ef6349f095541c724c8153c4ca328db0cb02": {
+      "title": "Will Bitcoin dip to $42,500 in July?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.006000000000000005,
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06"
+    },
+    "0x7c11c14664000e9a338d1b2a112d9aba06bc37c900daf52b0df4372ab32367de": {
+      "title": "Will Bitcoin reach $80,000 in July?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.01200000000000001,
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06"
+    },
+    "0xec540d631a88397ca01a17e48193019b4d680fde10087a38d5c8467bfaae18c0": {
+      "title": "Will Bitcoin dip to $45,000 in July?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.028000000000000025,
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06"
+    },
+    "0xdfbe36a1200c4ec361aa20733ede4d33085eef400c11d28a00079a2ba46d3d05": {
+      "title": "Will Bitcoin dip to $47,500 in July?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.040000000000000036,
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06"
+    },
+    "0xb5c0abeecb5502e6e8d83155c27819174d8317af3c425c3afc5a8c45257a3793": {
+      "title": "Will the Fed increase interest rates by 25 bps after the July 2026 meeting?",
+      "theme": "Fed rate hike",
+      "venue": "polymarket",
+      "prob": 0.09599999999999997,
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06"
     }
   },
-  "updated": "2026-07-05"
+  "updated": "2026-07-06"
 }
