@@ -204,9 +204,9 @@
       "title": "Will China invade Taiwan by end of 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.0401778639,
+      "prob": 0.03829812929999998,
       "first_seen": "2026-06-19",
-      "last_seen": "2026-07-09"
+      "last_seen": "2026-07-12"
     },
     "0xc4569c1a4da5845a2bbb14195cfb31aee79e438c6c0c8fe6f0b1dbb922e1c3b0": {
       "title": "Will the price of Bitcoin be above $58,000 on June 20?",
@@ -494,7 +494,7 @@
       "venue": "polymarket",
       "prob": 0.006000000000000005,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-07-10"
+      "last_seen": "2026-07-12"
     },
     "0x9ffe957294c4cfae5f9d3fa612c0676dbcdf60347acdd38e1ae40da3cb9c15cd": {
       "title": "Will the price of Bitcoin be above $56,000 on June 23?",
@@ -1476,9 +1476,9 @@
       "title": "Will the Fed increase interest rates by 50+ bps after the July 2026 meeting?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.0040000000000000036,
+      "prob": 0.0050000000000000044,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-11"
+      "last_seen": "2026-07-12"
     },
     "0xac02cbb049e46d6a3627c0fdf52fa554982a9025d45968207b362acb6ca4b830": {
       "title": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
@@ -1668,9 +1668,9 @@
       "title": "US-Iran Final Nuclear Deal by August 18, 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.18999999999999995,
+      "prob": 0.06000000000000005,
       "first_seen": "2026-07-05",
-      "last_seen": "2026-07-05"
+      "last_seen": "2026-07-12"
     },
     "0x23667427b34ca1c7144d50540beba9e7ffb608443a84252c194bb8b40919a0cb": {
       "title": "US-Iran Final Nuclear Deal by September 30, 2026?",
@@ -1732,9 +1732,9 @@
       "title": "Will Bitcoin reach $80,000 in July?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.02099999990000001,
+      "prob": 0.013000000000000012,
       "first_seen": "2026-07-06",
-      "last_seen": "2026-07-11"
+      "last_seen": "2026-07-12"
     },
     "0xec540d631a88397ca01a17e48193019b4d680fde10087a38d5c8467bfaae18c0": {
       "title": "Will Bitcoin dip to $45,000 in July?",
@@ -2214,7 +2214,7 @@
       "venue": "polymarket",
       "prob": 0.999,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-07-11"
+      "last_seen": "2026-07-12"
     },
     "0x1578c0c4a0a5c3c8f5844b16a0f284cdb774e5b737155b834765d6730764e768": {
       "title": "Will the price of Bitcoin be above $62,000 on July 11?",
@@ -2254,7 +2254,7 @@
       "venue": "polymarket",
       "prob": 0.0010000000000000009,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-07-11"
+      "last_seen": "2026-07-12"
     },
     "0x3a869359895989c1dee6f920c203f12791f03c206e86ce48353c46626ee743b1": {
       "title": "Will WTI Crude Oil (WTI) hit (HIGH) $85 in July?",
@@ -2268,10 +2268,66 @@
       "title": "Will the U.S. invade Iran before 2027?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.17000000000000004,
+      "prob": 0.1786250469,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-07-11"
+      "last_seen": "2026-07-12"
+    },
+    "0xbca0b596e44dd239eeafdda4a3621ef73d76b07d3f4752e2bf8d7229fecda288": {
+      "title": "Will the price of Bitcoin be above $62,000 on July 12?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-12",
+      "last_seen": "2026-07-12"
+    },
+    "0x076195e2d75814bf39078c8b343c9d7b07855a4fa427ef97add3ef9f03245ee5": {
+      "title": "Will the price of Bitcoin be above $66,000 on July 12?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-12",
+      "last_seen": "2026-07-12"
+    },
+    "0x12294ae1f7bb4c036946dc8b6879acb59b6c5c87750883e38168acc31ee4c617": {
+      "title": "Will the price of Bitcoin be above $68,000 on July 13?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.00107612300000004,
+      "first_seen": "2026-07-12",
+      "last_seen": "2026-07-12"
+    },
+    "0x3b0a9c42c3bab1488e04fdb9ac37ed87d512f6e5f3adbc79dec264c09eeed6fe": {
+      "title": "Will the price of Bitcoin be above $66,000 on July 13?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.01666486860000005,
+      "first_seen": "2026-07-12",
+      "last_seen": "2026-07-12"
+    },
+    "0x13dae092813125bf5e892a59dac2154e0fdb6aff600a3996ed0ab3b07d68e683": {
+      "title": "Will Bitcoin reach $77,500 in July?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.02200000000000002,
+      "first_seen": "2026-07-12",
+      "last_seen": "2026-07-12"
+    },
+    "0xa1b3158fedfddaf2a0d8b364f6a57ee68146fb6ad458222aa8e02bcf0abbb099": {
+      "title": "US-Iran Final Nuclear Deal by August 31, 2026?",
+      "theme": "Armed conflict / war",
+      "venue": "polymarket",
+      "prob": 0.10999999999999999,
+      "first_seen": "2026-07-12",
+      "last_seen": "2026-07-12"
+    },
+    "0x668373148ae84fcdb7c43f6559e7a02c8a3f36bfcbebddb9d85f61166b342714": {
+      "title": "Will WTI Crude Oil (WTI) hit (LOW) $65 in July?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.17548136329999997,
+      "first_seen": "2026-07-12",
+      "last_seen": "2026-07-12"
     }
   },
-  "updated": "2026-07-11"
+  "updated": "2026-07-12"
 }
