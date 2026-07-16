@@ -492,9 +492,9 @@
       "title": "Will the Fed decrease interest rates by 25 bps after the July 2026 meeting?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.0050000000000000044,
+      "prob": 0.0040000000000000036,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-07-13"
+      "last_seen": "2026-07-16"
     },
     "0x9ffe957294c4cfae5f9d3fa612c0676dbcdf60347acdd38e1ae40da3cb9c15cd": {
       "title": "Will the price of Bitcoin be above $56,000 on June 23?",
@@ -1476,9 +1476,9 @@
       "title": "Will the Fed increase interest rates by 50+ bps after the July 2026 meeting?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.0050000000000000044,
+      "prob": 0.0030000000000000027,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-12"
+      "last_seen": "2026-07-16"
     },
     "0xac02cbb049e46d6a3627c0fdf52fa554982a9025d45968207b362acb6ca4b830": {
       "title": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
@@ -1644,9 +1644,9 @@
       "title": "Will Bitcoin reach $82,500 in July?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.009000000000000008,
+      "prob": 0.0030000000000000027,
       "first_seen": "2026-07-05",
-      "last_seen": "2026-07-09"
+      "last_seen": "2026-07-16"
     },
     "0xcecf316313da9700f01c4bbc00f593285541287f9c64ad47eb76b8d3e222160d": {
       "title": "Will Ethereum reach $1,900 June 29-July 5?",
@@ -1732,17 +1732,17 @@
       "title": "Will Bitcoin reach $80,000 in July?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.013000000000000012,
+      "prob": 0.009000000000000008,
       "first_seen": "2026-07-06",
-      "last_seen": "2026-07-12"
+      "last_seen": "2026-07-16"
     },
     "0xec540d631a88397ca01a17e48193019b4d680fde10087a38d5c8467bfaae18c0": {
       "title": "Will Bitcoin dip to $45,000 in July?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.028000000000000025,
+      "prob": 0.006000000000000005,
       "first_seen": "2026-07-06",
-      "last_seen": "2026-07-06"
+      "last_seen": "2026-07-16"
     },
     "0xdfbe36a1200c4ec361aa20733ede4d33085eef400c11d28a00079a2ba46d3d05": {
       "title": "Will Bitcoin dip to $47,500 in July?",
@@ -2495,7 +2495,87 @@
       "prob": 0.0010000000000000009,
       "first_seen": "2026-07-14",
       "last_seen": "2026-07-14"
+    },
+    "0xa5c42274f760fd10e85e0e6814177dc0e83c662f98f856090bd53f0c59e3eb2f": {
+      "title": "Will the price of Bitcoin be above $64,000 on July 15?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16"
+    },
+    "0x5e3a26206c36b8618af321c57f176348b8d30133c0c6b2b66b46487a71778fbe": {
+      "title": "Will the price of Bitcoin be above $54,000 on July 15?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16"
+    },
+    "0x782898aca177d3ce606b8aeab6c6e6cc665f8df5e76547407c424a2e72cbdc8c": {
+      "title": "Will the price of Bitcoin be above $62,000 on July 15?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16"
+    },
+    "0x42263327dd7b4812485ecd64c0d904e5411200e5e39aeaeee9a7fd3b1f1d43e6": {
+      "title": "Will the price of Bitcoin be above $52,000 on July 15?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16"
+    },
+    "0xbe20fcfd54937c2a48a7b8521ca349e6a2c4373566328ebb950a8c35ab1be3d9": {
+      "title": "Will Bitcoin reach $67,500 in July?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.6206736421,
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16"
+    },
+    "0xc8bc6aa06fe8377594227f399754218f5b9a81c5e65af02da1017e5a5eaf2c4f": {
+      "title": "Will the price of Bitcoin be above $68,000 on July 15?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16"
+    },
+    "0xb094db09647915d2fa6324270eb6897648bb97ab1313204b6f2bfc3aa67a508d": {
+      "title": "Will the price of Bitcoin be above $66,000 on July 15?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16"
+    },
+    "0x08b34d7aa04ce415df4088a66856704b65e8502765f424c2cebd9de7002326a9": {
+      "title": "Will the price of Bitcoin be above $70,000 on July 16?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16"
+    },
+    "0x717ee6f5a85c74709254597001a0e88f0fd8e583f6f6b775e122b44b16c416f7": {
+      "title": "Will Ethereum dip to $1,000 in July?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.0050000000000000044,
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16"
+    },
+    "0x96156036b132d16e711482e44a9f16380b1636d90926f6f1018615e394ad4319": {
+      "title": "Will Ethereum dip to $1,100 in July?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.006000000000000005,
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16"
     }
   },
-  "updated": "2026-07-14"
+  "updated": "2026-07-16"
 }
