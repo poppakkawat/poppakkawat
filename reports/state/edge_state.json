@@ -204,9 +204,9 @@
       "title": "Will China invade Taiwan by end of 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.03829812929999998,
+      "prob": 0.039000000000000035,
       "first_seen": "2026-06-19",
-      "last_seen": "2026-07-12"
+      "last_seen": "2026-07-17"
     },
     "0xc4569c1a4da5845a2bbb14195cfb31aee79e438c6c0c8fe6f0b1dbb922e1c3b0": {
       "title": "Will the price of Bitcoin be above $58,000 on June 20?",
@@ -1476,9 +1476,9 @@
       "title": "Will the Fed increase interest rates by 50+ bps after the July 2026 meeting?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.0030000000000000027,
+      "prob": 0.0040000000000000036,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-16"
+      "last_seen": "2026-07-17"
     },
     "0xac02cbb049e46d6a3627c0fdf52fa554982a9025d45968207b362acb6ca4b830": {
       "title": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
@@ -1748,17 +1748,17 @@
       "title": "Will Bitcoin dip to $47,500 in July?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.040000000000000036,
+      "prob": 0.007960791399999945,
       "first_seen": "2026-07-06",
-      "last_seen": "2026-07-06"
+      "last_seen": "2026-07-17"
     },
     "0xb5c0abeecb5502e6e8d83155c27819174d8317af3c425c3afc5a8c45257a3793": {
       "title": "Will the Fed increase interest rates by 25 bps after the July 2026 meeting?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.21300344770000001,
+      "prob": 0.04600000000000004,
       "first_seen": "2026-07-06",
-      "last_seen": "2026-07-11"
+      "last_seen": "2026-07-17"
     },
     "0x0d8fad0f76af4c128600190e0fc739f353ac4adeddda9e2c96731b0c5355e3ca": {
       "title": "Will the price of Bitcoin be above $58,000 on July 7?",
@@ -2575,7 +2575,95 @@
       "prob": 0.006000000000000005,
       "first_seen": "2026-07-16",
       "last_seen": "2026-07-16"
+    },
+    "0x462a940650a7d229081fa9d073ec2fbc93383cce43c099d00faad1ea79649e9f": {
+      "title": "Will the price of Bitcoin be above $62,000 on July 16?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17"
+    },
+    "0x1f3f778c30e271c58157c9e6820e565904c49de2d8acfdc68ecb355d7c8a1cf1": {
+      "title": "S&P 500 (SPY) closes above $745 on July 16?",
+      "theme": "Nasdaq / US tech index",
+      "venue": "polymarket",
+      "prob": 0.9795015433,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17"
+    },
+    "0xa2dd1db6f087441cf589072f3ea2b48bb04ac5e6c7d471eb1ee7a502b41e7f5c": {
+      "title": "Will Elon Musk post 120-139 tweets from July 10 to July 17, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17"
+    },
+    "0xb34456974a800f011d881dccd24241bbfe4f3a2eeed31156417c0ba6c145dd3c": {
+      "title": "Will the price of Bitcoin be above $72,000 on July 20?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17"
+    },
+    "0xd23da7282e434b5cf0a1d2ed0f270d9a3d1af7a9ecd3cbe4343b4384491f27e2": {
+      "title": "Will Elon Musk post 240-259 tweets from July 10 to July 17, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17"
+    },
+    "0x30348179221a0b98d1465c9977e9b93924f59813ba921464851a70a8753a5fb8": {
+      "title": "Will the price of Bitcoin be above $70,000 on July 17?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17"
+    },
+    "0x1a76f4fe42919075b4021360354351cd6dcf3b60704540620a675595dcb3a8cf": {
+      "title": "Will the price of Bitcoin be above $74,000 on July 21?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010533489999999812,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17"
+    },
+    "0xcfa5b3d9e618d3f7dbda457b95af3b45d23e53d5b90b7474638769d0003a30bf": {
+      "title": "Will WTI Crude Oil (WTI) hit (LOW) $60 in July?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.015000000000000013,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17"
+    },
+    "0x5523e3b9895124788b2bed38f4b6be72c3f41cd2d2ee4354d93b26a3f533eaf6": {
+      "title": "Will Bitcoin reach $75,000 in July?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.02300379220000004,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17"
+    },
+    "0xe498447cc887be42044835ac88ece14c34a158a3e6f5e1be07a89629d7100b61": {
+      "title": "Will Bitcoin dip to $52,500 in July?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.027000000000000024,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17"
+    },
+    "0x7d352ec1d718dd1f2d2fdb93d65fd3908cf34755d1aa45a8697a84d2b5ae1e8e": {
+      "title": "Will WTI Crude Oil (WTI) hit (HIGH) $95 in July?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.07100646850000003,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17"
     }
   },
-  "updated": "2026-07-16"
+  "updated": "2026-07-17"
 }
