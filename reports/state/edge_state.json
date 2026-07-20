@@ -494,7 +494,7 @@
       "venue": "polymarket",
       "prob": 0.0040000000000000036,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-07-16"
+      "last_seen": "2026-07-20"
     },
     "0x9ffe957294c4cfae5f9d3fa612c0676dbcdf60347acdd38e1ae40da3cb9c15cd": {
       "title": "Will the price of Bitcoin be above $56,000 on June 23?",
@@ -1828,9 +1828,9 @@
       "title": "Will Ethereum reach $2,500 in July?",
       "theme": "Ethereum",
       "venue": "polymarket",
-      "prob": 0.02100000000000002,
+      "prob": 0.007000000000000006,
       "first_seen": "2026-07-07",
-      "last_seen": "2026-07-07"
+      "last_seen": "2026-07-20"
     },
     "0xe6d5e5da83874cd82c9b651a8a5d4fc541a800a295fb62e85124b4f5a04a4b7d": {
       "title": "Will China invade Taiwan by December 31, 2027?",
@@ -2652,9 +2652,9 @@
       "title": "Will Bitcoin dip to $52,500 in July?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.025000000000000022,
+      "prob": 0.010000000000000009,
       "first_seen": "2026-07-17",
-      "last_seen": "2026-07-18"
+      "last_seen": "2026-07-20"
     },
     "0x7d352ec1d718dd1f2d2fdb93d65fd3908cf34755d1aa45a8697a84d2b5ae1e8e": {
       "title": "Will WTI Crude Oil (WTI) hit (HIGH) $95 in July?",
@@ -2764,9 +2764,9 @@
       "title": "US x Iran Effective Ceasefire by July 18?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.007000000000000006,
+      "prob": 0.002191581199999959,
       "first_seen": "2026-07-18",
-      "last_seen": "2026-07-18"
+      "last_seen": "2026-07-20"
     },
     "0x4efd038dab5d55b11d0180dd2e4c33127b2b77b6476036d0faaad8f8e8ca1080": {
       "title": "Will Elon Musk post 90-114 tweets from July 16 to July 18, 2026?",
@@ -2861,6 +2861,86 @@
       "theme": "Ethereum",
       "venue": "polymarket",
       "prob": 0.24,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20"
+    },
+    "0xdb190d8eff203f274f4abaecb46834f941909ecd5ac62f11e6c992367e0161e8": {
+      "title": "Will the price of Bitcoin be above $60,000 on July 21?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20"
+    },
+    "0xeeec7e5d7982f128f1c410fab3b7cd9aff6e09a2e629fe7df419bc4ec02bf419": {
+      "title": "Will Bitcoin reach $65,000 in July?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20"
+    },
+    "0x2fa81a419f7e3a70cf80b896cdeee160c4d5cc6ecdedc9c5a6399a0236f18b9e": {
+      "title": "Will the price of Bitcoin be above $52,000 on July 20?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20"
+    },
+    "0x3e28e3aa9a440b9e7268e52ff36e4e7748d33b1d7740086e4ed2d70add5e67a6": {
+      "title": "Will Elon Musk post <40 tweets from July 18 to July 20, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20"
+    },
+    "0x514c3dd24cde8101ec8e3982b74fca425c592e3fe7526056a4d80aa269c98808": {
+      "title": "Israel x Iran ceasefire continues through July 20?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.9849515651,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20"
+    },
+    "0xa6480903e54c68f2ee79cacb7861dfcc9b473e8b07d6dcaf2c9923034a5fb56f": {
+      "title": "Israel x Iran ceasefire continues through July 31?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.6022404617,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20"
+    },
+    "0x864d714298cdeb9c7a76b2b0e857f2191e179d1f07e3394b06c54ad075e0bc81": {
+      "title": "Will the price of Bitcoin be above $68,000 on July 20?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20"
+    },
+    "0xeaa7e8b1ddbffb38cc131596e7b7aeb76672bc3e85ef9f97515fe623bd3db3e2": {
+      "title": "Will Elon Musk post 120-139 tweets from July 14 to July 21, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20"
+    },
+    "0x6d775af3cefca8d41b20251a4bec16cad06cf93f8d8fd2f2698b629923eb9e0f": {
+      "title": "Will Elon Musk post 65-89 tweets from July 18 to July 20, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20"
+    },
+    "0xf11cac1c942b190540f996bcdd73f8dd2d6e1b379956ac3af2cb9ab65cb4a2a8": {
+      "title": "Will WTI Crude Oil (WTI) hit (HIGH) $120 in July?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.009000000000000008,
       "first_seen": "2026-07-20",
       "last_seen": "2026-07-20"
     }
