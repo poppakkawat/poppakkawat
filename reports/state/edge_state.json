@@ -1372,9 +1372,9 @@
       "title": "Will NVIDIA be the largest company in the world by market cap on July 31?",
       "theme": "Nvidia / AI",
       "venue": "polymarket",
-      "prob": 0.8200000001,
+      "prob": 0.77,
       "first_seen": "2026-07-02",
-      "last_seen": "2026-07-06"
+      "last_seen": "2026-07-25"
     },
     "0xfbc3243812594abf51ea3b443c0188d40c10e7243250c38c1f68371d45cfb006": {
       "title": "Will the price of Bitcoin be above $62,000 on July 1?",
@@ -2660,9 +2660,9 @@
       "title": "Will WTI Crude Oil (WTI) hit (HIGH) $95 in July?",
       "theme": "Oil / OPEC",
       "venue": "polymarket",
-      "prob": 0.07100646850000003,
+      "prob": 0.7,
       "first_seen": "2026-07-17",
-      "last_seen": "2026-07-17"
+      "last_seen": "2026-07-25"
     },
     "0xc0322eab2ed42ea21ae2dddd43f29c02ad662a80a13a93ee0c14398179ab911f": {
       "title": "Will the price of Bitcoin be above $60,000 on July 17?",
@@ -3118,7 +3118,7 @@
       "venue": "polymarket",
       "prob": 0.999,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-07-24"
+      "last_seen": "2026-07-25"
     },
     "0x2db16701181101068a3e0e1c5ef2813095f0d62a771f79de9320e9875961bd64": {
       "title": "Will the price of Bitcoin be above $62,000 on July 23?",
@@ -3140,9 +3140,9 @@
       "title": "Israel x Iran ceasefire continues through July 25?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.68,
+      "prob": 0.82,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-07-24"
+      "last_seen": "2026-07-25"
     },
     "0x44f981a04294d57dc1ae9b0c0b68501133ff4b7d3b235f23ab6b54fbb48b0137": {
       "title": "Will the price of Bitcoin be above $68,000 on July 23?",
@@ -3183,7 +3183,95 @@
       "prob": 0.001436152399999946,
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-24"
+    },
+    "0x6267e71de49ebe6fefcaaefad296722ebb7fabbf9f883bda329b8b51ca1d4da6": {
+      "title": "Will the price of Bitcoin be above $60,000 on July 25?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-25",
+      "last_seen": "2026-07-25"
+    },
+    "0x1079c44973db509356875db06aa3b585598068bdc5ff0673584f10dc3255b80a": {
+      "title": "Will WTI Crude Oil (WTI) hit (LOW) $90 in July?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-25",
+      "last_seen": "2026-07-25"
+    },
+    "0x06f222076b7b5cac94643842f3b10ddf7042257cc301a21ca96f23749f729faf": {
+      "title": "Will Elon Musk post 200-219 tweets from July 17 to July 24, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-25",
+      "last_seen": "2026-07-25"
+    },
+    "0xd49505ee6f8635f46137d728e5c188c1d8e94c8d31fb36d1c52036963fb312a6": {
+      "title": "Will the price of Bitcoin be above $62,000 on July 24?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-25",
+      "last_seen": "2026-07-25"
+    },
+    "0x9d84ac8d156dc95a7165567d642e60fc22c5b611d2627ed591efe5e1c1c58416": {
+      "title": "Will the price of Bitcoin be between $64,000 and $66,000 on July 24?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.998,
+      "first_seen": "2026-07-25",
+      "last_seen": "2026-07-25"
+    },
+    "0xfd33195eb1aa52ea3206df9759432d3e00a058a59d0171ea2dd327b7de7fb464": {
+      "title": "Israel x Iran ceasefire continues through July 23?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.9969053018,
+      "first_seen": "2026-07-25",
+      "last_seen": "2026-07-25"
+    },
+    "0x561e9279ca4e2fc1cdea5b0c1ae13559bfa8f6bb3be7e3015ffc548db34ab234": {
+      "title": "Will the price of Bitcoin be above $64,000 on July 24?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.99,
+      "first_seen": "2026-07-25",
+      "last_seen": "2026-07-25"
+    },
+    "0xcaf0965a8fef59b1838a0357eb7d6a9d878ecd0b4dae1bd44e48c27f7aa69958": {
+      "title": "Israel x Iran ceasefire continues through July 24?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.9835123254,
+      "first_seen": "2026-07-25",
+      "last_seen": "2026-07-25"
+    },
+    "0x33c491023cecc6a42a70608427c2be37dfbe789ae1b08d8791f2450a3f9696f2": {
+      "title": "Israel x Iran ceasefire continues through July 26?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.77,
+      "first_seen": "2026-07-25",
+      "last_seen": "2026-07-25"
+    },
+    "0x24b015b98c955ab4c6940986da542bb0125cda928c9100746c756d8b10a8e1d9": {
+      "title": "Will Bitcoin reach $67,000 on July 23?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-25",
+      "last_seen": "2026-07-25"
+    },
+    "0x1146a9020af0b4dafcba97375ac13f4dcc591b80c50efa7084973df14cc85833": {
+      "title": "Will OpenAI IPO by July 31 2026?",
+      "theme": "AI / big tech",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-07-25",
+      "last_seen": "2026-07-25"
     }
   },
-  "updated": "2026-07-24"
+  "updated": "2026-07-25"
 }
