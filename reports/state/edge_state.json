@@ -252,9 +252,9 @@
       "title": "Fed rate hike in 2026?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.77,
+      "prob": 0.62,
       "first_seen": "2026-06-20",
-      "last_seen": "2026-07-29"
+      "last_seen": "2026-07-30"
     },
     "0x6622e5fc534109b78a3f2a833e1fd97c9e35ba35b8f5b0168f335921a121b0ad": {
       "title": "Will Elon Musk post 220-239 tweets from June 12 to June 19, 2026?",
@@ -1470,15 +1470,15 @@
       "venue": "polymarket",
       "prob": 0.0010000000000000009,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-29"
+      "last_seen": "2026-07-30"
     },
     "0x2a28cc33492516116690a20d290f9922acbe0ed367ff52a6082154474c7f2971": {
       "title": "Will the Fed increase interest rates by 50+ bps after the July 2026 meeting?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.008000000000000007,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-23"
+      "last_seen": "2026-07-30"
     },
     "0xac02cbb049e46d6a3627c0fdf52fa554982a9025d45968207b362acb6ca4b830": {
       "title": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
@@ -3332,9 +3332,9 @@
       "title": "Israel x Iran ceasefire continues through July 29?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.965,
+      "prob": 0.9969939235,
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-28"
+      "last_seen": "2026-07-30"
     },
     "0x6b6b903db23d27b80ce805eababb0288d133586e9b1589e630b782094234ef78": {
       "title": "Will Bitcoin reach $78,000 July 20-26?",
@@ -3422,7 +3422,7 @@
       "venue": "polymarket",
       "prob": 0.998,
       "first_seen": "2026-07-28",
-      "last_seen": "2026-07-29"
+      "last_seen": "2026-07-30"
     },
     "0xb9e94a7cec4796f56153695a1b02fb37eba4a32dec796f9cb304748277b5f3fe": {
       "title": "Will the price of Bitcoin be above $62,000 on July 28?",
@@ -3452,9 +3452,9 @@
       "title": "Will the price of Bitcoin be above $60,000 on July 29?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.9982939287,
+      "prob": 0.999,
       "first_seen": "2026-07-29",
-      "last_seen": "2026-07-29"
+      "last_seen": "2026-07-30"
     },
     "0x14ea3802ada17265002bff37ddc4ea65014d3e37cb80ef2ea8aa2f588a5f78bc": {
       "title": "Will Bitcoin dip to $62,500 in July?",
@@ -3487,7 +3487,79 @@
       "prob": 0.0010000000000000009,
       "first_seen": "2026-07-29",
       "last_seen": "2026-07-29"
+    },
+    "0xa3e66712008b25709703e67369aedccb3d69180b12996cb632068f6c7caa7321": {
+      "title": "Will the price of Bitcoin be above $56,000 on July 30?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30"
+    },
+    "0x4faf31ae66078c5b7583cd19ab737de6cdfff2727fa019836b16ae9dd26b3d7f": {
+      "title": "Will the price of Ethereum be above $1,700 on July 29?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30"
+    },
+    "0x9314f1429ce744b3949a24d1aaa5fe6f6d5fe95a647413ce72fc29e70921e1d2": {
+      "title": "Will the price of Bitcoin be above $56,000 on July 29?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30"
+    },
+    "0x94bbe26c72498bf4fcf36eaed4be2da73bed6716f2521e1502c69497655fda20": {
+      "title": "Will the price of Bitcoin be above $62,000 on July 29?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30"
+    },
+    "0x293830c957e5cf477a1cba505c779f2faced783215367581c2b4c42f43070afa": {
+      "title": "Will the price of Bitcoin be above $54,000 on July 31?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.9988732762,
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30"
+    },
+    "0xf69cb174e3c3c7a956083d4f2b561e11a64d96cb12de10e0ea2de9d3e53d2f09": {
+      "title": "Will Ethereum reach $1,900 in July?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.99,
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30"
+    },
+    "0xc5ee7755714c6ce1e5a0514dfe888ebe8df262972d5f0fff1fee4d00ba2c6df9": {
+      "title": "Israel x Iran ceasefire continues through July 30?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.951,
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30"
+    },
+    "0x6acdc3316f0b43ca4fbc13623fc018e30f2fd20ae7b93bdc07c8193e99b0ac4d": {
+      "title": "Israel x Iran ceasefire continues through August 15?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.623511212,
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30"
+    },
+    "0xe694b9d67a28d66b3e0abbbc4c310e8d86533cde4f48bba31634cd62315a7579": {
+      "title": "Will WTI Crude Oil (WTI) hit (HIGH) $85 in July?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.61,
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30"
     }
   },
-  "updated": "2026-07-29"
+  "updated": "2026-07-30"
 }
