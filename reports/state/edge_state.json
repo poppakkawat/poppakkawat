@@ -2532,9 +2532,9 @@
       "title": "Will Bitcoin reach $67,500 in July?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.6206736421,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-07-16",
-      "last_seen": "2026-07-16"
+      "last_seen": "2026-08-01"
     },
     "0xc8bc6aa06fe8377594227f399754218f5b9a81c5e65af02da1017e5a5eaf2c4f": {
       "title": "Will the price of Bitcoin be above $68,000 on July 15?",
@@ -2908,7 +2908,7 @@
       "title": "Israel x Iran ceasefire continues through July 31?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.992,
+      "prob": 0.9989691582,
       "first_seen": "2026-07-20",
       "last_seen": "2026-08-01"
     },
@@ -3332,7 +3332,7 @@
       "title": "Israel x Iran ceasefire continues through July 29?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.9980613297,
+      "prob": 0.999,
       "first_seen": "2026-07-27",
       "last_seen": "2026-08-01"
     },
@@ -3668,7 +3668,7 @@
       "title": "Will the price of Ethereum be above $1,700 on August 1?",
       "theme": "Ethereum",
       "venue": "polymarket",
-      "prob": 0.994,
+      "prob": 0.999,
       "first_seen": "2026-08-01",
       "last_seen": "2026-08-01"
     },
@@ -3676,7 +3676,7 @@
       "title": "Israel x Iran ceasefire continues through August 2?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.7549503211,
+      "prob": 0.7674873429,
       "first_seen": "2026-08-01",
       "last_seen": "2026-08-01"
     },
@@ -3685,6 +3685,70 @@
       "theme": "Oil / OPEC",
       "venue": "polymarket",
       "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-01",
+      "last_seen": "2026-08-01"
+    },
+    "0xf3c287a4aa4809a33c32d67657c48691a1060a18661536dedb0d9ea8a12a8d9f": {
+      "title": "Will the price of Bitcoin be above $60,000 on August 1?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-01",
+      "last_seen": "2026-08-01"
+    },
+    "0x5ba1518b158abe437f1773d0a2a17b35ce196fd52e62ed516a2db00a57d6116f": {
+      "title": "Will the price of Ethereum be above $1,600 on August 1?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-01",
+      "last_seen": "2026-08-01"
+    },
+    "0xab9cc27fa581c5146081cd82be046a5e40b8208e7e3e6e37bd5112ec6482dcb7": {
+      "title": "Will the price of Bitcoin be above $58,000 on August 1?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-01",
+      "last_seen": "2026-08-01"
+    },
+    "0x98f962ca4a21a47b73c8a914d08f224be31bc6dbdc609b3f0edd9654bbc802a1": {
+      "title": "Israel x Iran ceasefire continues through August 1?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.996,
+      "first_seen": "2026-08-01",
+      "last_seen": "2026-08-01"
+    },
+    "0xd58be2e3b8db4f16f462a44bc7fc77a7d291c852076b4e865b68a0085f3c075c": {
+      "title": "Will Elon Musk post 115-139 tweets from July 30 to August 1, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-01",
+      "last_seen": "2026-08-01"
+    },
+    "0x936521602846ea2eaf6ffc5fdc4a230d8bed47f6170718e21be84b602e76dad2": {
+      "title": "Will Bitcoin dip to $61,000 on July 31?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0020000000000000018,
+      "first_seen": "2026-08-01",
+      "last_seen": "2026-08-01"
+    },
+    "0xacd55c00c33e2a1e7b2c9ce534883105a8766be9af4a0b5230aa5bc44d68514e": {
+      "title": "Will Bitcoin reach $70,000 July 27-August 2?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0020000000000000018,
+      "first_seen": "2026-08-01",
+      "last_seen": "2026-08-01"
+    },
+    "0x8e0d15f4212a47e10cfeb6b0bc1aea7f9fab3b2328e4a255fcc36a26037c5704": {
+      "title": "Will Bitcoin reach $65,000 on July 31?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0029539535999999478,
       "first_seen": "2026-08-01",
       "last_seen": "2026-08-01"
     }
