@@ -3766,23 +3766,23 @@
       "venue": "polymarket",
       "prob": 0.999,
       "first_seen": "2026-08-03",
-      "last_seen": "2026-08-05"
+      "last_seen": "2026-08-06"
     },
     "0x2f738e4c227b83c08c490dc6618164d31315a6740b9a5a98c392fc3160810957": {
       "title": "Israel x Iran ceasefire continues through August 4?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.995,
+      "prob": 0.999,
       "first_seen": "2026-08-03",
-      "last_seen": "2026-08-05"
+      "last_seen": "2026-08-06"
     },
     "0x68818a54ca4c49406bb28ada26ecf9ce732dba21505454ce874e7066da6d788c": {
       "title": "Israel x Iran ceasefire continues through August 9?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.8999961998,
+      "prob": 0.92,
       "first_seen": "2026-08-03",
-      "last_seen": "2026-08-04"
+      "last_seen": "2026-08-06"
     },
     "0x46dabb426176a595aa0d5b03574ee209effb42c2399dbddc73ab880e386cd9cc": {
       "title": "Will Bitcoin dip to $56,000 July 27-August 2?",
@@ -3862,7 +3862,7 @@
       "venue": "polymarket",
       "prob": 0.999,
       "first_seen": "2026-08-05",
-      "last_seen": "2026-08-05"
+      "last_seen": "2026-08-06"
     },
     "0x87eaedb80c4e5aa934eb12a0bf31438c9e0606e899deab9d4d4e2be350b23494": {
       "title": "Will the price of Bitcoin be above $60,000 on August 4?",
@@ -3919,7 +3919,95 @@
       "prob": 0.010000000000000009,
       "first_seen": "2026-08-05",
       "last_seen": "2026-08-05"
+    },
+    "0xa54e7b931f21f01218b6da3d456f1f45aacaefacd6cb2ca6d9424d1f99256be9": {
+      "title": "Will the price of Bitcoin be above $60,000 on August 5?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-08-06"
+    },
+    "0x0a1f45e39ae456c2b520b5a6c89d4073b9310caac0d17371daffead59b6dbfee": {
+      "title": "Will the price of Ethereum be above $1,700 on August 5?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-08-06"
+    },
+    "0x296947b2f8676e79f52cc1c7bddbcc2e394bdff92f33abc59f8042548d5370ed": {
+      "title": "Will the price of Bitcoin be above $56,000 on August 5?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-08-06"
+    },
+    "0xd640ebf0f1eed284398d1446569009addd4d9c46c6f49a6f1bb73b61784391d3": {
+      "title": "Will the price of Bitcoin be above $60,000 on August 6?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.9986023512,
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-08-06"
+    },
+    "0x49045ce1611f11aba24c745978474e7c603729378eb3f5882692b8cecd912327": {
+      "title": "Will Anthropic have the best AI model at the end of August 2026?",
+      "theme": "AI / big tech",
+      "venue": "polymarket",
+      "prob": 0.93,
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-08-06"
+    },
+    "0xc1556ecbe613e403dfb9e38bf1b25a8aee2aa1687f2b343bc896dd2c9763ed74": {
+      "title": "Israel x Iran ceasefire continues through August 31?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.8088071276,
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-08-06"
+    },
+    "0x331e84f080cef0976b352852775f948219eb8243ee4f3b3e59af411cc40d7800": {
+      "title": "Will Elon Musk post 65-89 tweets from August 3 to August 5, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-08-06"
+    },
+    "0x1ba5f3e6769e8dc16710fc36aa2326dcca9839ac0e9f0b7c51e029a892266a4a": {
+      "title": "Will the price of Bitcoin be above $74,000 on August 5?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-08-06"
+    },
+    "0xdeceb515f59a49a5774f1ed6f1e1317896cee34ec6f32cdae94e8184d49770eb": {
+      "title": "S&P 500 (SPY) closes above $770 on August 5?",
+      "theme": "Nasdaq / US tech index",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-08-06"
+    },
+    "0x81b29bac89835972725cb174b0c989b954db05974f960f605d75c7d8771659c2": {
+      "title": "Will Bitcoin reach $66,000 on August 4?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-08-06"
+    },
+    "0xafa1fad50c2bab694f5d2278456a53047d14017a3530b4aeaefad013d7bbf5cb": {
+      "title": "Will Bitcoin reach $67,000 on August 5?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010756715999999944,
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-08-06"
     }
   },
-  "updated": "2026-08-05"
+  "updated": "2026-08-06"
 }
