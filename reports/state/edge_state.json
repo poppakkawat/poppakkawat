@@ -2804,7 +2804,7 @@
       "title": "US x Iran Effective Ceasefire by July 31?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.82,
+      "prob": 0.83,
       "first_seen": "2026-07-18",
       "last_seen": "2026-08-07"
     },
@@ -3780,7 +3780,7 @@
       "title": "Israel x Iran ceasefire continues through August 9?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.9681010025,
+      "prob": 0.97,
       "first_seen": "2026-08-03",
       "last_seen": "2026-08-07"
     },
@@ -3916,9 +3916,9 @@
       "title": "Will the Fed decrease interest rates by 50+ bps after the September 2026 meeting?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.010000000000000009,
+      "prob": 0.009000000000000008,
       "first_seen": "2026-08-05",
-      "last_seen": "2026-08-05"
+      "last_seen": "2026-08-07"
     },
     "0xa54e7b931f21f01218b6da3d456f1f45aacaefacd6cb2ca6d9424d1f99256be9": {
       "title": "Will the price of Bitcoin be above $60,000 on August 5?",
@@ -4101,6 +4101,78 @@
       "theme": "Tesla",
       "venue": "polymarket",
       "prob": 0.0024573566000000158,
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07"
+    },
+    "0x4bb09926c3ba4322b8032d1059b2386c3de1cc30727faa7f515e6ffba21d76d8": {
+      "title": "Will the price of Ethereum be above $1,700 on August 7?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07"
+    },
+    "0x5a7c9f92d6fe2f30f5d8bde33fc7971726a9e90e15b6b232b713ba87368eb6c8": {
+      "title": "Will the price of Bitcoin be above $62,000 on August 7?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07"
+    },
+    "0xc5fac43fb2ceb6e88c4badb230421d6f5f3a3cdfe170d5b5469445d1747d960d": {
+      "title": "Will Elon Musk post 180-199 tweets from July 31 to August 7, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.9949969496,
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07"
+    },
+    "0x833f0bac240ad7d5c947d58a8acac0f77a74cf03dccd8f9b72a28811836a920f": {
+      "title": "US x Iran Effective Ceasefire by August 14?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.88,
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07"
+    },
+    "0x532179b2be6468d81de25ee974309abb05e72a1938b8a7c81fec4d1789b2b7f8": {
+      "title": "Will WTI Crude Oil (WTI) hit (HIGH) $80 in August?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.69,
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07"
+    },
+    "0x1c97385b78ed34e8553f627f2ada55f99e4d333e6078d5a35117d87c2fcc988e": {
+      "title": "Will Elon Musk post 360-379 tweets from August 4 to August 11, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07"
+    },
+    "0x609d2f3e63d2c20a9238caf691bb54a50f709dfb432937bb705f6f81dd1bb8fb": {
+      "title": "Will the price of Ethereum be above $2,000 on August 7?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.0013712984000000539,
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07"
+    },
+    "0xd8aa759cd108c3c896bb78a554e1d13475821456f04504e1191b93cb17c252a1": {
+      "title": "Will the price of Bitcoin be above $66,000 on August 7?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.002970341799999998,
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07"
+    },
+    "0x2e4b58fc18dbffd74d5275d89fb076943f21992763c45dcadd81391b83bde13c": {
+      "title": "Will the Fed increase interest rates by 50+ bps after the September 2026 meeting?",
+      "theme": "Fed rate hike",
+      "venue": "polymarket",
+      "prob": 0.006000000000000005,
       "first_seen": "2026-08-07",
       "last_seen": "2026-08-07"
     }
