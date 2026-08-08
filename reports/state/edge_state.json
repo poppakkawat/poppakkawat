@@ -1484,9 +1484,9 @@
       "title": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.03600000000000003,
+      "prob": 0.02100000000000002,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-18"
+      "last_seen": "2026-08-08"
     },
     "0x80948f409e0d303e556df2eb1369206c8702eacd3e44ede8953eb36b6d920459": {
       "title": "Will the price of Bitcoin be above $50,000 on July 3?",
@@ -2804,9 +2804,9 @@
       "title": "US x Iran Effective Ceasefire by July 31?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.83,
+      "prob": 0.89,
       "first_seen": "2026-07-18",
-      "last_seen": "2026-08-07"
+      "last_seen": "2026-08-08"
     },
     "0x7f47df08bd8b390e2d566761feead7cb20507e8e2ac37f7664f7e3a9d12b7f33": {
       "title": "Israel x Iran ceasefire continues through July 18?",
@@ -4175,7 +4175,111 @@
       "prob": 0.006000000000000005,
       "first_seen": "2026-08-07",
       "last_seen": "2026-08-07"
+    },
+    "0xaee6c331835e66f70e9b3c2d0a30f7366848f0dac176ee0dc7a43f3aab5ac344": {
+      "title": "Will the price of Bitcoin be above $62,000 on August 8?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08"
+    },
+    "0xb45a0f765b7162236610e306c9d90858cddb8a502fd47883d5d51d9bdae28abb": {
+      "title": "Will Elon Musk post 40-64 tweets from August 6 to August 8, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08"
+    },
+    "0x55b9dd040fd98f42a393f053c1eef66a0f6bff8f463011307c3b134c32cd05ca": {
+      "title": "Will the price of Bitcoin be above $64,000 on August 8?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08"
+    },
+    "0xc46a7a2aeaa4e82716cd34af1f49754478d9f7fd28de5eb47e241382f62994d5": {
+      "title": "Will the price of Bitcoin be above $54,000 on August 8?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08"
+    },
+    "0x54c97d4d322e91d85d6d078208115d8d3c5fa9901a2bc6ae5a485f31d72c35c0": {
+      "title": "Will the price of Bitcoin be above $60,000 on August 9?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08"
+    },
+    "0xfc8f592dfa7bc4d13844fcc4ace439b490cafd0475b6f8e03030c4430960dcae": {
+      "title": "Will Ethereum reach $2,000 in August?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.69,
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08"
+    },
+    "0xecd58376ddb13511de05c6fb27d13aac49c3a5f15fcb9156cf4074053b575d6a": {
+      "title": "Will the price of Bitcoin be above $68,000 on August 8?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08"
+    },
+    "0x90887fc51bde2638a135ba025f04930c75cdcf51ff4f5dac9c5fa710eff605d2": {
+      "title": "Will Elon Musk post 65-89 tweets from August 6 to August 8, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08"
+    },
+    "0x41ed8dfcf4bfd4a8fe716fbb4bba21e8935ea8d208531d9a72001f334d0888e5": {
+      "title": "Will the price of Bitcoin be above $66,000 on August 8?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08"
+    },
+    "0x116fe4fcb6fdb4b999499386edd6f2fd90119a9b6d35cf0a77fb26c023e50ba2": {
+      "title": "Will the price of Bitcoin be above $72,000 on August 9?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08"
+    },
+    "0xfabfca7f7d826a4982e51420842cf9594f544bd3870f352d9b35182e680e2c86": {
+      "title": "Will Bitcoin reach $72,000 August 3-9?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0020000000000000018,
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08"
+    },
+    "0x6123b5cc75c38ba9783f6c8ea260107b546c7d3454a8f9b5280c9921cc39f3d9": {
+      "title": "Bitcoin all time high by September 30, 2026?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.015392244299999969,
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08"
+    },
+    "kalshi:KXUSAIRANAGREEMENT-27-26SEP": {
+      "title": "Will the US agree to a new Iranian nuclear deal this year? \u2014 Before Sep 1, 2026",
+      "theme": "Armed conflict / war",
+      "venue": "kalshi",
+      "prob": 0.020000000000000018,
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08"
     }
   },
-  "updated": "2026-08-07"
+  "updated": "2026-08-08"
 }
