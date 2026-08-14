@@ -764,9 +764,9 @@
       "title": "Will no Fed rate cuts happen in 2026?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.8579593433,
+      "prob": 0.8587928466,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-08-10"
+      "last_seen": "2026-08-14"
     },
     "0x5f7f9b87912964dcf242da96c39d38667a9f7ac8d0f0d5c7f4ccd024721ad134": {
       "title": "Will Elon Musk post 140-164 tweets from June 22 to June 24, 2026?",
@@ -1484,9 +1484,9 @@
       "title": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.02100000000000002,
+      "prob": 0.01100000000000001,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-08-14"
     },
     "0x80948f409e0d303e556df2eb1369206c8702eacd3e44ede8953eb36b6d920459": {
       "title": "Will the price of Bitcoin be above $50,000 on July 3?",
@@ -1668,9 +1668,9 @@
       "title": "US-Iran Final Nuclear Deal by August 18, 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.0040000000000000036,
+      "prob": 0.0030000000000000027,
       "first_seen": "2026-07-05",
-      "last_seen": "2026-08-12"
+      "last_seen": "2026-08-14"
     },
     "0x23667427b34ca1c7144d50540beba9e7ffb608443a84252c194bb8b40919a0cb": {
       "title": "US-Iran Final Nuclear Deal by September 30, 2026?",
@@ -3548,9 +3548,9 @@
       "title": "Israel x Iran ceasefire continues through August 15?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.9833308397,
+      "prob": 0.9933738033,
       "first_seen": "2026-07-30",
-      "last_seen": "2026-08-13"
+      "last_seen": "2026-08-14"
     },
     "0xe694b9d67a28d66b3e0abbbc4c310e8d86533cde4f48bba31634cd62315a7579": {
       "title": "Will WTI Crude Oil (WTI) hit (HIGH) $85 in July?",
@@ -4671,7 +4671,95 @@
       "prob": 0.007000000000000006,
       "first_seen": "2026-08-13",
       "last_seen": "2026-08-13"
+    },
+    "0x1d09071e50967cc8c44062cab24fa96435a73d10f791349bc8cfcf46eb861b8b": {
+      "title": "Will the price of Bitcoin be above $60,000 on August 14?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14"
+    },
+    "0xbb8b28f5b14961350d6aa7480f66f5ef8ff1b292400c679e277cb4026a1237f7": {
+      "title": "Will the price of Bitcoin be above $58,000 on August 15?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14"
+    },
+    "0x524ce344b80a160c237d91a33efdd8b82468b0dc0d33f60d500f8bf69b80b8bb": {
+      "title": "Israel x Iran ceasefire continues through September 30?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.79,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14"
+    },
+    "0x8f6f79798688fac90132fcf5becf20daa2e64ad17150be881c115e891ca3273e": {
+      "title": "Will Elon Musk post 200-219 tweets from August 7 to August 14, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14"
+    },
+    "0xeb48bac2172428432127dcfad2076123b3c277f4774bfcee5ddd7e3a5948e8a4": {
+      "title": "Will the price of Bitcoin be above $66,000 on August 14?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14"
+    },
+    "0xe4a2fe16fc18aeb5be6dfed38d8dcacb072fed7d384fb42ca4f37ef3ad2f3587": {
+      "title": "Will Gareth Bale attend Cristiano Ronaldo's wedding?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.0015624330000000297,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14"
+    },
+    "0xa7d7ed69cfd6107e5e005556730dcf45727c1cdd1001f0378f5e471526181c47": {
+      "title": "Will Bitcoin reach $1,000,000 by December 31, 2026?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.008000000000000007,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14"
+    },
+    "0x1fcd2f7f384f2f28f1f5e13e74224795d99753eb3e9dff0258f9f0e54f328d8d": {
+      "title": "Will WTI Crude Oil (WTI) hit (HIGH) $130 in August?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.009000000000000008,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14"
+    },
+    "0xfd13c67069e83a4a8ba1ba425f259185bcbae282c4f91074646e3c5cf97b7ae3": {
+      "title": "Will Bitcoin reach $72,500 in August?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.06000000000000005,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14"
+    },
+    "0x0a061d09daa5ac4221fa7ea0d7abf84ab2ac42af0817a001d4c0dd3262be2cd8": {
+      "title": "Will Bitcoin reach $67,500 in August?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.21737688619999995,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14"
+    },
+    "0x876506d8b2bd7a0d3fa4fe18c024eee6e1dd81ee24c26795dadd6cfe4a7b5d0d": {
+      "title": "Will the Fed increase interest rates by 25 bps after the September 2026 meeting?",
+      "theme": "Fed rate hike",
+      "venue": "polymarket",
+      "prob": 0.25,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14"
     }
   },
-  "updated": "2026-08-13"
+  "updated": "2026-08-14"
 }
