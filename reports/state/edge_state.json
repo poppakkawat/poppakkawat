@@ -3548,9 +3548,9 @@
       "title": "Israel x Iran ceasefire continues through August 15?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.9933738033,
+      "prob": 0.998,
       "first_seen": "2026-07-30",
-      "last_seen": "2026-08-14"
+      "last_seen": "2026-08-15"
     },
     "0xe694b9d67a28d66b3e0abbbc4c310e8d86533cde4f48bba31634cd62315a7579": {
       "title": "Will WTI Crude Oil (WTI) hit (HIGH) $85 in July?",
@@ -3964,9 +3964,9 @@
       "title": "Israel x Iran ceasefire continues through August 31?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.8490201978,
+      "prob": 0.9199024242,
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-09"
+      "last_seen": "2026-08-15"
     },
     "0x331e84f080cef0976b352852775f948219eb8243ee4f3b3e59af411cc40d7800": {
       "title": "Will Elon Musk post 65-89 tweets from August 3 to August 5, 2026?",
@@ -4759,7 +4759,79 @@
       "prob": 0.25,
       "first_seen": "2026-08-14",
       "last_seen": "2026-08-14"
+    },
+    "0x813016a6a4cb90c73579dc803fc8589afd3c14bf0d55f8a94f545b3729e1bf5b": {
+      "title": "Will the price of Bitcoin be above $60,000 on August 15?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15"
+    },
+    "0x08d45ff848a644651016f3cee9881124065c5fa42e0eef14116834fae840d6bb": {
+      "title": "Will the price of Ethereum be above $1,600 on August 15?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15"
+    },
+    "0xe9c0a2cbce7252c9e5dc41acc788d229c7e5471e13f6fdc0b1e30d483009e557": {
+      "title": "Will the price of Bitcoin be above $56,000 on August 17?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15"
+    },
+    "0x7bce4cca9cd85312f176279c0eb205172676324f87eacff67a1bc5d1400746db": {
+      "title": "Will the price of Ethereum be above $1,700 on August 15?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.9989697786,
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15"
+    },
+    "0x81412f0b1c13ed4676e4f55330861f92ab9befc31442a9aa4465de02c4f0de38": {
+      "title": "Will the price of Ethereum be above $1,800 on August 15?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.998,
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15"
+    },
+    "0x6f83e9d2ac8018ab57ff673bb9e5d23b988c305217072a5b7fe9cfd1506060a4": {
+      "title": "Will WTI Crude Oil (WTI) hit (LOW) $30 in August?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15"
+    },
+    "0x8e5b3cca5dd6b5ad77bb203644722ceb5b9d12bfe2dd1ab19d5efd9bf854d04c": {
+      "title": "Will OpenAI IPO by August 31 2026?",
+      "theme": "AI / big tech",
+      "venue": "polymarket",
+      "prob": 0.001099497400000038,
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15"
+    },
+    "0xad523086957c401779d7deed21d3ec27d5f482d56de143bc030d82fade717169": {
+      "title": "Will OpenAI's IPO valuation be at least $2.5T?",
+      "theme": "AI / big tech",
+      "venue": "polymarket",
+      "prob": 0.03400000000000003,
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15"
+    },
+    "0x02231535ed31b03bc75f4d25a1ce33d44441763e32cfbd97a10a58d9cbc6809a": {
+      "title": "Will Ethereum dip to $1,600 in August?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.06000000000000005,
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15"
     }
   },
-  "updated": "2026-08-14"
+  "updated": "2026-08-15"
 }
