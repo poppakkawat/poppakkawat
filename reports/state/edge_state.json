@@ -3966,7 +3966,7 @@
       "venue": "polymarket",
       "prob": 0.95,
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-16"
+      "last_seen": "2026-08-17"
     },
     "0x331e84f080cef0976b352852775f948219eb8243ee4f3b3e59af411cc40d7800": {
       "title": "Will Elon Musk post 65-89 tweets from August 3 to August 5, 2026?",
@@ -4884,10 +4884,114 @@
       "title": "Will Bitcoin dip to $60,000 August 10-16?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.0017998431000000314,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-16"
+      "last_seen": "2026-08-17"
+    },
+    "0x3f3c03dce832a9f6a7b06d8f35705a494dad37671f834b10add4ccd212783fc9": {
+      "title": "Will the price of Bitcoin be above $60,000 on August 17?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17"
+    },
+    "0x8887e7bda8f0bb360d3cb5525627e7c6b221e802817da98941ce422e1dc9c190": {
+      "title": "Will Elon Musk post <40 tweets from August 15 to August 17, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17"
+    },
+    "0x5f8e282b6d8e2be11d803cb130cd58fd3aebc8693e2b8899e0fdd9dd945457e7": {
+      "title": "Will WTI Crude Oil (WTI) hit (HIGH) $85 Week of August 17 2026?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17"
+    },
+    "0xb6a0aedb29521627dd933fd8fddf78cb3fb36573814fe553da6a1caa39316fa2": {
+      "title": "Will the price of Bitcoin be above $60,000 on August 18?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17"
+    },
+    "0xc78d4cb90b765aeb4c6b3bed7f1119dbcf164975f015b78b954632fcabf8cf71": {
+      "title": "Will WTI Crude Oil (WTI) hit (HIGH) $85 in August?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.993,
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17"
+    },
+    "kalshi:KXCPI-26SEP-T0.6": {
+      "title": "Will CPI rise more than 0.6% in September 2026? \u2014 Above 0.6%",
+      "theme": "Inflation / CPI",
+      "venue": "kalshi",
+      "prob": 0.8,
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17"
+    },
+    "kalshi:KXINX-26AUG21H1600-B7762": {
+      "title": "Will the S&P 500 be between 7750 and 7774.9999 on Aug 21, 2026 at 4pm EDT? \u2014 7,750 to 7,774.9999",
+      "theme": "Nasdaq / US tech index",
+      "venue": "kalshi",
+      "prob": 0.8,
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17"
+    },
+    "kalshi:KXINX-26AUG21H1600-B7737": {
+      "title": "Will the S&P 500 be between 7725 and 7749.9999 on Aug 21, 2026 at 4pm EDT? \u2014 7,725 to 7,749.9999",
+      "theme": "Nasdaq / US tech index",
+      "venue": "kalshi",
+      "prob": 0.8,
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17"
+    },
+    "0x1c4c6a698f0591ddf0c96e1beb56f8c75112ef849331bf3b0388f14830a7421d": {
+      "title": "Israel x Iran ceasefire continues through December 31?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.68,
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17"
+    },
+    "0x7c8e7ba5da719d8cf2c2cf40bd9099d00c3df0a45a65ef5358cbea0c3bfb4b6a": {
+      "title": "Will Elon Musk post 220-239 tweets from August 11 to August 18, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17"
+    },
+    "0xa5609fab557c9a1467e2aed43e388e71399fb82306a824f66bfb73f7ca86e5c9": {
+      "title": "Will the price of Bitcoin be above $66,000 on August 17?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17"
+    },
+    "0x34a4336b97596bb89c07519cd8875054a35feedcadc3569a97147e7ec0ac0a2c": {
+      "title": "Will Elon Musk post 40-64 tweets from August 15 to August 17, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17"
+    },
+    "0x39ea1503427df7f1439e7dd6567aad5ed72284ed49c58d09e5b917a24389fab7": {
+      "title": "Will Bitcoin reach $100,000 in August?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0020000000000000018,
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17"
     }
   },
-  "updated": "2026-08-16"
+  "updated": "2026-08-17"
 }
