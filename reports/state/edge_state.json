@@ -1484,9 +1484,9 @@
       "title": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.014000000000000012,
+      "prob": 0.01100000000000001,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-08-16"
+      "last_seen": "2026-08-18"
     },
     "0x80948f409e0d303e556df2eb1369206c8702eacd3e44ede8953eb36b6d920459": {
       "title": "Will the price of Bitcoin be above $50,000 on July 3?",
@@ -1668,9 +1668,9 @@
       "title": "US-Iran Final Nuclear Deal by August 18, 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.0020000000000000018,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-07-05",
-      "last_seen": "2026-08-16"
+      "last_seen": "2026-08-18"
     },
     "0x23667427b34ca1c7144d50540beba9e7ffb608443a84252c194bb8b40919a0cb": {
       "title": "US-Iran Final Nuclear Deal by September 30, 2026?",
@@ -4662,7 +4662,7 @@
       "venue": "polymarket",
       "prob": 0.0050000000000000044,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-13"
+      "last_seen": "2026-08-18"
     },
     "0x98e5997750cfc27c47ad3b4f4278a01935bed1edfcec5e8f8f8574ac1d8adb93": {
       "title": "Will Bitcoin dip to $42,500 in August?",
@@ -4918,7 +4918,7 @@
       "venue": "polymarket",
       "prob": 0.999,
       "first_seen": "2026-08-17",
-      "last_seen": "2026-08-17"
+      "last_seen": "2026-08-18"
     },
     "0xc78d4cb90b765aeb4c6b3bed7f1119dbcf164975f015b78b954632fcabf8cf71": {
       "title": "Will WTI Crude Oil (WTI) hit (HIGH) $85 in August?",
@@ -4991,7 +4991,95 @@
       "prob": 0.0020000000000000018,
       "first_seen": "2026-08-17",
       "last_seen": "2026-08-17"
+    },
+    "0xaa1e6642025d3334b3fd0ce013902212256460299e1e925c06fa0876582418f3": {
+      "title": "Will the price of Bitcoin be above $56,000 on August 18?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18"
+    },
+    "0x6bdb0842c094ff171b17e7b23b68177a4f773324261d5a05ffd24b7b981c46d4": {
+      "title": "Will the price of Bitcoin be above $62,000 on August 18?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18"
+    },
+    "0x1137d525285651349cec3410fb225383d9a675912f1baefb0aaf3d4057b3d86f": {
+      "title": "Will the price of Bitcoin be above $56,000 on August 19?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18"
+    },
+    "0x3305f9d94bd319be40bfc2be6aaf5c7b83b1be50138d56fb20f33847a915e7ac": {
+      "title": "Will the price of Bitcoin be above $60,000 on August 19?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18"
+    },
+    "0x5ec416a4b14bf8170b7386c5e5fcc0e60c43488f73b4fcb1e0bb6b4019dae545": {
+      "title": "Will the price of Ethereum be above $1,700 on August 18?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18"
+    },
+    "0x0bb07407462b38ad2954e72eebfadea57ef20a15a0977775a5e30c8aace44926": {
+      "title": "Will the price of Bitcoin be above $68,000 on August 18?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18"
+    },
+    "0xdd880f94b2594932db42e52b910a53d132ca4689eaf54c34c25328e962550b94": {
+      "title": "Will WTI Crude Oil (WTI) hit (LOW) $40 in August?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.001027806199999981,
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18"
+    },
+    "0x1ec8d1cb89a36ce994eea996e5f80dccb432ddb77a3004fccf1cd4134ed39853": {
+      "title": "Will Elon Musk post 140-159 tweets from August 11 to August 18, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0027405032999999746,
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18"
+    },
+    "0xe06b3de145ee4e9f5dc434a395715f228fbde8d6e49b09d7dd934985af35fd77": {
+      "title": "Will WTI Crude Oil (WTI) hit (HIGH) $150 in August?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.0040000000000000036,
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18"
+    },
+    "0xfb549a4e6ed1671efbca86220cd974741ad1786e10e74e71c14d8206f7689e04": {
+      "title": "Will Ethereum dip to $1,100 in August?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.0050000000000000044,
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18"
+    },
+    "kalshi:KXOSCARNOMPIC-27-NAR": {
+      "title": "2027 Best Picture Oscar nominations? \u2014 Narnia: The Magician's Nephew",
+      "theme": "AI / big tech",
+      "venue": "kalshi",
+      "prob": 0.010000000000000009,
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18"
     }
   },
-  "updated": "2026-08-17"
+  "updated": "2026-08-18"
 }
