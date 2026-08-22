@@ -1484,9 +1484,9 @@
       "title": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.01100000000000001,
+      "prob": 0.014000000000000012,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-08-18"
+      "last_seen": "2026-08-22"
     },
     "0x80948f409e0d303e556df2eb1369206c8702eacd3e44ede8953eb36b6d920459": {
       "title": "Will the price of Bitcoin be above $50,000 on July 3?",
@@ -3964,9 +3964,9 @@
       "title": "Israel x Iran ceasefire continues through August 31?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.95,
+      "prob": 0.963793599,
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-17"
+      "last_seen": "2026-08-22"
     },
     "0x331e84f080cef0976b352852775f948219eb8243ee4f3b3e59af411cc40d7800": {
       "title": "Will Elon Musk post 65-89 tweets from August 3 to August 5, 2026?",
@@ -5388,9 +5388,9 @@
       "title": "Will Bitcoin dip to $50,000 in August?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.0020000000000000018,
+      "prob": 0.0050000000000000044,
       "first_seen": "2026-08-21",
-      "last_seen": "2026-08-21"
+      "last_seen": "2026-08-22"
     },
     "0x94574217f9e3a4694b3976e89de85c89d8a95363732244198e3abc001bd31fcf": {
       "title": "Will Bitcoin dip to $62,000 August 17-23?",
@@ -5399,7 +5399,103 @@
       "prob": 0.0020000000000000018,
       "first_seen": "2026-08-21",
       "last_seen": "2026-08-21"
+    },
+    "0x18be95e18195d4ac93c34012544fd4424d226d50fb85ef6740e98bbe52ba48e8": {
+      "title": "Will the price of Bitcoin be above $72,000 on August 22?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-22"
+    },
+    "0xdd67dd581815e272b109ca522bc8de46e3ef90e5c8a3475d0ed986f51e3b02bc": {
+      "title": "Will the price of Bitcoin be above $70,000 on August 22?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-22"
+    },
+    "0x72ae00a9c819522724484336c65afddffbd3a96596595530178493e25d6c39d6": {
+      "title": "US ceasefire against Iran continues through August 22?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.9989990391,
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-22"
+    },
+    "0xd5d59a70d32b15d32f1bfccdddbf28ce5379f6310804b9b95f2847c031c0fac8": {
+      "title": "Will Elon Musk post 90-114 tweets from August 20 to August 22, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.9988893518,
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-22"
+    },
+    "0xa176460f6ce977e08e31ecb53f82a71f09711b76a2e2cf88a1d06adb0b3fb0c4": {
+      "title": "Will the price of Ethereum be above $2,200 on August 22?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.9982029197,
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-22"
+    },
+    "0xf051316c2a8f215c97a3d7aaa6dc36433ca5ad04b1751584bfd24e376a763f66": {
+      "title": "Fagiano Okayama vs. T\u014dky\u014d Verdy: O/U 3.5",
+      "theme": "AI / big tech",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-22"
+    },
+    "0xcd70a4574af490fc07127316a1537be19c5ac47db8a876863727a5a7f8ccabfa": {
+      "title": "Will Elon Musk post 240-259 tweets from August 18 to August 25, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-22"
+    },
+    "0xb86e5a041b217f70f748ccdd4c7b4ce3fcd0f5503c1df64a42198fc6f70ccf11": {
+      "title": "Will Elon Musk post 220-239 tweets from August 18 to August 25, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-22"
+    },
+    "0x3ca28e0e327721336aad1c411984870554aa36afed3836a3ae7fccd3164aa7af": {
+      "title": "Fagiano Okayama vs. T\u014dky\u014d Verdy: O/U 2.5",
+      "theme": "AI / big tech",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-22"
+    },
+    "0x332e6954fec1a7d17df4752f89a13c0cf9251f38790d587118e84a98ae241fcd": {
+      "title": "Will Elon Musk post 165-189 tweets from August 20 to August 22, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-22"
+    },
+    "0x4d250b591dd7b7ffec3a518c1c83fc757f91d801762e868252c482d1f4d18896": {
+      "title": "Will Bitcoin dip to $55,000 in August?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.010000000000000009,
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-22"
+    },
+    "0xc4b7c43934d27a6b2dfd784ea1a793e541d6a1f82a5eca6d74f184a1c4c30fc9": {
+      "title": "Will Bitcoin dip to $57,500 in August?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.013042111900000042,
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-22"
     }
   },
-  "updated": "2026-08-21"
+  "updated": "2026-08-22"
 }
