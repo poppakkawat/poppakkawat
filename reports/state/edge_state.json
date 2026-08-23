@@ -4988,9 +4988,9 @@
       "title": "Will Bitcoin reach $100,000 in August?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.0020000000000000018,
+      "prob": 0.008000000000000007,
       "first_seen": "2026-08-17",
-      "last_seen": "2026-08-17"
+      "last_seen": "2026-08-23"
     },
     "0xaa1e6642025d3334b3fd0ce013902212256460299e1e925c06fa0876582418f3": {
       "title": "Will the price of Bitcoin be above $56,000 on August 18?",
@@ -5060,9 +5060,9 @@
       "title": "Will WTI Crude Oil (WTI) hit (HIGH) $150 in August?",
       "theme": "Oil / OPEC",
       "venue": "polymarket",
-      "prob": 0.0040000000000000036,
+      "prob": 0.0030000000000000027,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-18"
+      "last_seen": "2026-08-23"
     },
     "0xfb549a4e6ed1671efbca86220cd974741ad1786e10e74e71c14d8206f7689e04": {
       "title": "Will Ethereum dip to $1,100 in August?",
@@ -5164,9 +5164,9 @@
       "title": "US ceasefire against Iran continues through August 25?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.95,
+      "prob": 0.989,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-20"
+      "last_seen": "2026-08-23"
     },
     "0xd23d264d5821687c503a884b0436ac3646ae0436995fb886c34570158193086d": {
       "title": "Will Bitcoin reach $68,000 August 17-23?",
@@ -5390,7 +5390,7 @@
       "venue": "polymarket",
       "prob": 0.0050000000000000044,
       "first_seen": "2026-08-21",
-      "last_seen": "2026-08-22"
+      "last_seen": "2026-08-23"
     },
     "0x94574217f9e3a4694b3976e89de85c89d8a95363732244198e3abc001bd31fcf": {
       "title": "Will Bitcoin dip to $62,000 August 17-23?",
@@ -5454,7 +5454,7 @@
       "venue": "polymarket",
       "prob": 0.0010000000000000009,
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-22"
+      "last_seen": "2026-08-23"
     },
     "0xb86e5a041b217f70f748ccdd4c7b4ce3fcd0f5503c1df64a42198fc6f70ccf11": {
       "title": "Will Elon Musk post 220-239 tweets from August 18 to August 25, 2026?",
@@ -5492,10 +5492,82 @@
       "title": "Will Bitcoin dip to $57,500 in August?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.013042111900000042,
+      "prob": 0.009189741599999968,
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-22"
+      "last_seen": "2026-08-23"
+    },
+    "0xe1a790b7e09ba51c1790b16eb8f37de4c7d95f028010b026bd42abd4018f9f82": {
+      "title": "Will the price of Bitcoin be above $68,000 on August 24?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23"
+    },
+    "0xcbda9f5365075c6c110e6317fd8d84babc49e94995eb3695dcddd85055b5ae47": {
+      "title": "Will the price of Bitcoin be above $72,000 on August 23?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23"
+    },
+    "0x336b9a1e310b3e0bf50828b629871aa130dec3ac00f8317c5c043d2a5746f247": {
+      "title": "Will the price of Bitcoin be above $74,000 on August 23?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23"
+    },
+    "0x137cf69002f2f24c6cbc7572321db1f6fd995f53d2457fda7e52f7fd82446794": {
+      "title": "US ceasefire against Iran continues through August 31?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.92,
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23"
+    },
+    "0x96bc3dfae0bd0947748fa35f231dc24d5831cfe3e30a246b12e6ec2b89c325f1": {
+      "title": "Will Elon Musk post 500+ tweets from August 18 to August 25, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23"
+    },
+    "0x2b0a1d816fc95489e73e2c9a5d801fdce298760196e75447ffccaf7ade906b3d": {
+      "title": "Will Elon Musk post 260-279 tweets from August 18 to August 25, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23"
+    },
+    "0x82a76309f6a3e753f5101e72cdb542c56fd751e4ec8d65fd26774e68da7033c1": {
+      "title": "Will Ethereum dip to $1,800 August 17-23?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23"
+    },
+    "0xda060c4d2df6d6237d04480db15f121fa753ad72099fe5d7ed1e9607b7e51f81": {
+      "title": "Will WTI Crude Oil (WTI) hit (HIGH) $120 in August?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.0050000000000000044,
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23"
+    },
+    "0x0e81bd4de4f1827af0b9426ddec226e88f43c4a8e85812116d22bf0f1c94efc8": {
+      "title": "Will Ethereum dip to $1,700 in August?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.010000000000000009,
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23"
     }
   },
-  "updated": "2026-08-22"
+  "updated": "2026-08-23"
 }
