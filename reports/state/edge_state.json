@@ -5164,9 +5164,9 @@
       "title": "US ceasefire against Iran continues through August 25?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.989,
+      "prob": 0.9910795455,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-23"
+      "last_seen": "2026-08-24"
     },
     "0xd23d264d5821687c503a884b0436ac3646ae0436995fb886c34570158193086d": {
       "title": "Will Bitcoin reach $68,000 August 17-23?",
@@ -5502,7 +5502,7 @@
       "venue": "polymarket",
       "prob": 0.999,
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-23"
+      "last_seen": "2026-08-24"
     },
     "0xcbda9f5365075c6c110e6317fd8d84babc49e94995eb3695dcddd85055b5ae47": {
       "title": "Will the price of Bitcoin be above $72,000 on August 23?",
@@ -5524,9 +5524,9 @@
       "title": "US ceasefire against Iran continues through August 31?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.92,
+      "prob": 0.9,
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-23"
+      "last_seen": "2026-08-24"
     },
     "0x96bc3dfae0bd0947748fa35f231dc24d5831cfe3e30a246b12e6ec2b89c325f1": {
       "title": "Will Elon Musk post 500+ tweets from August 18 to August 25, 2026?",
@@ -5567,7 +5567,103 @@
       "prob": 0.010000000000000009,
       "first_seen": "2026-08-23",
       "last_seen": "2026-08-23"
+    },
+    "0x5d29d642093db5dc1f7b72bc1b99926f4ec97fb5be3416efe75f248d8ec8545c": {
+      "title": "Will Ethereum reach $2,500 August 24-30?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24"
+    },
+    "0x02a1ae65eb40134beab10ed79d80d78e3eb39ed56274d5976487317b4c1a23e2": {
+      "title": "Will the price of Bitcoin be above $70,000 on August 25?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24"
+    },
+    "0xfd105823dbf627e8a57aa1924703ef23138050d9d8da4a98a5136ea2ad98acd4": {
+      "title": "Will Bitcoin reach $80,000 in August?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24"
+    },
+    "0x6c48953cafb05e315f2027ec87b882cb682f37dc84a7e6785816a99118b13969": {
+      "title": "Will Ethereum reach $2,500 in August?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24"
+    },
+    "0x29a5359b7ceb474cce180b5c7648fe41c36955e11e4f925a5f7b68fe17dd9836": {
+      "title": "Will the price of Bitcoin be above $74,000 on August 24?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24"
+    },
+    "0x250aa00ae9d6c46c1a6cf306fe8971e3b501f88d12243f8f87407adcef2f28ef": {
+      "title": "Will the price of Bitcoin be above $72,000 on August 24?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24"
+    },
+    "0x2f7fd7124a7ff44d324a49cda1415371c7cc4ee111f60b288a3d6ad194319d15": {
+      "title": "Will NVIDIA be the largest company in the world by market cap on September 30?",
+      "theme": "Nvidia / AI",
+      "venue": "polymarket",
+      "prob": 0.92,
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24"
+    },
+    "0x6d9199d1b691da5854dc08782ce0f94cb98b680c46514837511aabc24c14433c": {
+      "title": "Will the price of Bitcoin be above $80,000 on August 24?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24"
+    },
+    "0xe490f2e7c5367ef75f182faca8eeee61552f391ada0895f75d6aaa68aad00d92": {
+      "title": "Will the price of Bitcoin be less than $56,000 on August 24?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24"
+    },
+    "0xefa17d525273d1fe592ca4d666538d6ad8b5e2ef73125fe0597e00e55f4c7e46": {
+      "title": "Will Elon Musk post 420-439 tweets from August 18 to August 25, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24"
+    },
+    "0x3cfda1e2e8a702f30b5f880703a4234d0711d65a5be0c27bf91af87d8b209dc3": {
+      "title": "Will Elon Musk post 440-459 tweets from August 18 to August 25, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24"
+    },
+    "0xffbc5891831869ea75e4cd73909d6c7c9da9e4049fb64a0820fd865f23202b10": {
+      "title": "Will Elon Musk post 500+ tweets from August 21 to August 28, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0020000000000000018,
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24"
     }
   },
-  "updated": "2026-08-23"
+  "updated": "2026-08-24"
 }
