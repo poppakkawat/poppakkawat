@@ -3964,9 +3964,9 @@
       "title": "Israel x Iran ceasefire continues through August 31?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.963793599,
+      "prob": 0.9708122709,
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-22"
+      "last_seen": "2026-08-25"
     },
     "0x331e84f080cef0976b352852775f948219eb8243ee4f3b3e59af411cc40d7800": {
       "title": "Will Elon Musk post 65-89 tweets from August 3 to August 5, 2026?",
@@ -5068,9 +5068,9 @@
       "title": "Will Ethereum dip to $1,100 in August?",
       "theme": "Ethereum",
       "venue": "polymarket",
-      "prob": 0.0050000000000000044,
+      "prob": 0.0011798754999999828,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-18"
+      "last_seen": "2026-08-25"
     },
     "kalshi:KXOSCARNOMPIC-27-NAR": {
       "title": "2027 Best Picture Oscar nominations? \u2014 Narnia: The Magician's Nephew",
@@ -5164,9 +5164,9 @@
       "title": "US ceasefire against Iran continues through August 25?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.9910795455,
+      "prob": 0.999,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-24"
+      "last_seen": "2026-08-25"
     },
     "0xd23d264d5821687c503a884b0436ac3646ae0436995fb886c34570158193086d": {
       "title": "Will Bitcoin reach $68,000 August 17-23?",
@@ -5420,9 +5420,9 @@
       "title": "US ceasefire against Iran continues through August 22?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.9989990391,
+      "prob": 0.999,
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-22"
+      "last_seen": "2026-08-25"
     },
     "0xd5d59a70d32b15d32f1bfccdddbf28ce5379f6310804b9b95f2847c031c0fac8": {
       "title": "Will Elon Musk post 90-114 tweets from August 20 to August 22, 2026?",
@@ -5484,17 +5484,17 @@
       "title": "Will Bitcoin dip to $55,000 in August?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.010000000000000009,
+      "prob": 0.0020000000000000018,
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-22"
+      "last_seen": "2026-08-25"
     },
     "0xc4b7c43934d27a6b2dfd784ea1a793e541d6a1f82a5eca6d74f184a1c4c30fc9": {
       "title": "Will Bitcoin dip to $57,500 in August?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.009189741599999968,
+      "prob": 0.0020000000000000018,
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-23"
+      "last_seen": "2026-08-25"
     },
     "0xe1a790b7e09ba51c1790b16eb8f37de4c7d95f028010b026bd42abd4018f9f82": {
       "title": "Will the price of Bitcoin be above $68,000 on August 24?",
@@ -5564,9 +5564,9 @@
       "title": "Will Ethereum dip to $1,700 in August?",
       "theme": "Ethereum",
       "venue": "polymarket",
-      "prob": 0.010000000000000009,
+      "prob": 0.0040000000000000036,
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-23"
+      "last_seen": "2026-08-25"
     },
     "0x5d29d642093db5dc1f7b72bc1b99926f4ec97fb5be3416efe75f248d8ec8545c": {
       "title": "Will Ethereum reach $2,500 August 24-30?",
@@ -5663,7 +5663,71 @@
       "prob": 0.0020000000000000018,
       "first_seen": "2026-08-24",
       "last_seen": "2026-08-24"
+    },
+    "0x78622ab331fe8a136782a4e280ac5bca712c5b7a6d2a05a08c3c784dd916e18a": {
+      "title": "Will the price of Bitcoin be above $72,000 on August 25?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25"
+    },
+    "0xf824296f1ab8ecc3c7a6dc99938b18d0ae11cfa0b92cdb55dd02992e918e5c46": {
+      "title": "Will the price of Bitcoin be above $74,000 on August 25?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25"
+    },
+    "0x9601280c3d5109783ba64644da25bdfdf120ce516a696f88a42f54ffd2ac761b": {
+      "title": "US ceasefire against Iran continues through September 30?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.75,
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25"
+    },
+    "0x55ae2f91bba959ea0ab4ecbbfa2eb3501a12fd5f7107f0d71415e76cbf9a7d11": {
+      "title": "Will Bitcoin reach $82,500 in August?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.7168779605,
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25"
+    },
+    "0xa9d484e56ed8cd844175a9afdf190ffdb37e4c23f087d64d6ce365ac034e34cb": {
+      "title": "Will the price of Bitcoin be between $58,000 and $60,000 on August 25?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25"
+    },
+    "0x3a109d41e9dedf00a6636ebe0a8a421b6dec03a456e2a8c9d7ea5d324cc05fc1": {
+      "title": "Will the price of Bitcoin be less than $56,000 on August 25?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25"
+    },
+    "0x462dc3a25f4bd83645256c18ef2ad472b93135a29b4fc53fe02dd0762b42c2e9": {
+      "title": "Will Bitcoin dip to $45,000 in August?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25"
+    },
+    "0x4eb74fe35a288d003806e62c2997c90ce51f4d028820e95261eb92be21f563dc": {
+      "title": "Will Ethereum dip to $1,200 in August?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.001164232100000051,
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25"
     }
   },
-  "updated": "2026-08-24"
+  "updated": "2026-08-25"
 }
