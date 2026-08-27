@@ -1484,9 +1484,9 @@
       "title": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.014000000000000012,
+      "prob": 0.01200000000000001,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-08-22"
+      "last_seen": "2026-08-27"
     },
     "0x80948f409e0d303e556df2eb1369206c8702eacd3e44ede8953eb36b6d920459": {
       "title": "Will the price of Bitcoin be above $50,000 on July 3?",
@@ -4452,9 +4452,9 @@
       "title": "Will NVIDIA be the largest company in the world by market cap on August 31?",
       "theme": "Nvidia / AI",
       "venue": "polymarket",
-      "prob": 0.9487368987,
+      "prob": 0.993,
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-11"
+      "last_seen": "2026-08-27"
     },
     "0x7ee9f30ca1033e2d2974a2d28de72a59b58f491c4b21ab6c815b6d1eedf3fc19": {
       "title": "Will the price of Bitcoin be above $66,000 on August 11?",
@@ -4652,9 +4652,9 @@
       "title": "Will Bitcoin dip to $40,000 in August?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.013000000000000012,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-16"
+      "last_seen": "2026-08-27"
     },
     "0x8891b0406ea0b853a407e9df0ae210d4736ef32b950031eaab673645ac38f307": {
       "title": "Will WTI Crude Oil (WTI) hit (HIGH) $140 in August?",
@@ -5166,7 +5166,7 @@
       "venue": "polymarket",
       "prob": 0.999,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-25"
+      "last_seen": "2026-08-27"
     },
     "0xd23d264d5821687c503a884b0436ac3646ae0436995fb886c34570158193086d": {
       "title": "Will Bitcoin reach $68,000 August 17-23?",
@@ -5718,7 +5718,7 @@
       "venue": "polymarket",
       "prob": 0.0010000000000000009,
       "first_seen": "2026-08-25",
-      "last_seen": "2026-08-25"
+      "last_seen": "2026-08-27"
     },
     "0x4eb74fe35a288d003806e62c2997c90ce51f4d028820e95261eb92be21f563dc": {
       "title": "Will Ethereum dip to $1,200 in August?",
@@ -5727,7 +5727,87 @@
       "prob": 0.001164232100000051,
       "first_seen": "2026-08-25",
       "last_seen": "2026-08-25"
+    },
+    "0x730d14b3e6029b3420ccc709c6e0596e70d690267de3eee03c01aa59e3514391": {
+      "title": "Does Ox Alpha belong to Zhipu AI (Z.ai)?",
+      "theme": "AI / big tech",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27"
+    },
+    "0x3e9b33df9e35b39696f7a733c0d9d340dd54c2e6b53c1eb9e7421d2d10450bef": {
+      "title": "Will the price of Bitcoin be above $72,000 on August 27?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27"
+    },
+    "0x3fad3b3cc61dbd32fab1a07e08fd25ab90160d0590f20cddd7a34bc7da1803b5": {
+      "title": "Will the price of Bitcoin be above $74,000 on August 26?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27"
+    },
+    "0xe4e531e70757c4e56d34a9fe2a0430d16fffb65f2d54cd09a16be427d814fb0d": {
+      "title": "Will the price of Bitcoin be above $70,000 on August 28?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.9988533475,
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27"
+    },
+    "0xda345549bd2bc7738321d3b4eefa07d9545748a8a1335b169b75978a5e9e6431": {
+      "title": "Will Bitcoin dip to $47,500 in August?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27"
+    },
+    "0xf091265ee9afa65d9174086515e54febb406b44b52faad6f77f276ddfc0935aa": {
+      "title": "Will Elon Musk post 140-159 tweets from August 21 to August 28, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27"
+    },
+    "0xffa311b87e24d62c05de04a7410ee3a53b9e35eeae6cf109b4353c619a27ca24": {
+      "title": "Will Ethereum dip to $1,500 in August?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27"
+    },
+    "0xe2c03bf40c216b41b7d66e29c978f286febe2e7676897dbb4b167546f38f6f97": {
+      "title": "Will the price of Bitcoin be above $84,000 on August 26?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27"
+    },
+    "0x6e20040290841f33a9d80fd7fe433a710ad803fabb10b2060d3b7b96bbe4b809": {
+      "title": "Will the price of Bitcoin be above $80,000 on August 26?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27"
+    },
+    "0xac32e73aa9e0dae801d88d4f81efd2ef3fa0f04b815f3a0e74426f0762e668cd": {
+      "title": "Will Bitcoin reach $200,000 by December 31, 2026?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.01707948800000003,
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27"
     }
   },
-  "updated": "2026-08-25"
+  "updated": "2026-08-27"
 }
