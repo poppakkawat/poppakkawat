@@ -252,9 +252,9 @@
       "title": "Fed rate hike in 2026?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.67,
+      "prob": 0.66,
       "first_seen": "2026-06-20",
-      "last_seen": "2026-08-03"
+      "last_seen": "2026-08-31"
     },
     "0x6622e5fc534109b78a3f2a833e1fd97c9e35ba35b8f5b0168f335921a121b0ad": {
       "title": "Will Elon Musk post 220-239 tweets from June 12 to June 19, 2026?",
@@ -3964,9 +3964,9 @@
       "title": "Israel x Iran ceasefire continues through August 31?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.9708122709,
+      "prob": 0.9936925722,
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-25"
+      "last_seen": "2026-08-31"
     },
     "0x331e84f080cef0976b352852775f948219eb8243ee4f3b3e59af411cc40d7800": {
       "title": "Will Elon Musk post 65-89 tweets from August 3 to August 5, 2026?",
@@ -4692,9 +4692,9 @@
       "title": "Israel x Iran ceasefire continues through September 30?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.89,
+      "prob": 0.88,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-30"
+      "last_seen": "2026-08-31"
     },
     "0x8f6f79798688fac90132fcf5becf20daa2e64ad17150be881c115e891ca3273e": {
       "title": "Will Elon Musk post 200-219 tweets from August 7 to August 14, 2026?",
@@ -4988,9 +4988,9 @@
       "title": "Will Bitcoin reach $100,000 in August?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.0040000000000000036,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-08-17",
-      "last_seen": "2026-08-30"
+      "last_seen": "2026-08-31"
     },
     "0xaa1e6642025d3334b3fd0ce013902212256460299e1e925c06fa0876582418f3": {
       "title": "Will the price of Bitcoin be above $56,000 on August 18?",
@@ -5524,9 +5524,9 @@
       "title": "US ceasefire against Iran continues through August 31?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.9681705554,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-28"
+      "last_seen": "2026-08-31"
     },
     "0x96bc3dfae0bd0947748fa35f231dc24d5831cfe3e30a246b12e6ec2b89c325f1": {
       "title": "Will Elon Musk post 500+ tweets from August 18 to August 25, 2026?",
@@ -5684,9 +5684,9 @@
       "title": "US ceasefire against Iran continues through September 30?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.75,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-08-25",
-      "last_seen": "2026-08-25"
+      "last_seen": "2026-08-31"
     },
     "0x55ae2f91bba959ea0ab4ecbbfa2eb3501a12fd5f7107f0d71415e76cbf9a7d11": {
       "title": "Will Bitcoin reach $82,500 in August?",
@@ -5844,9 +5844,9 @@
       "title": "Will Bitcoin dip to $62,500 in August?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.0020000000000000018,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-08-28",
-      "last_seen": "2026-08-28"
+      "last_seen": "2026-08-31"
     },
     "0x211f2f58d38d8022f3d71a99685ebec3ff12a396118c38e8fb97fdcab53ded1e": {
       "title": "Will Bitcoin dip to $60,000 in August?",
@@ -5884,9 +5884,9 @@
       "title": "US ceasefire against Iran continues through September 15?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.8656327919,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-08-29",
-      "last_seen": "2026-08-29"
+      "last_seen": "2026-08-31"
     },
     "0xbd097a77fd5859fa55b0ea203d784c58408ef0f6667ebf96e9666e813fe51268": {
       "title": "Will the price of Bitcoin be above $84,000 on August 29?",
@@ -6015,7 +6015,63 @@
       "prob": 0.0050000000000000044,
       "first_seen": "2026-08-30",
       "last_seen": "2026-08-30"
+    },
+    "0xb7f4439c60094f4e476b620ec43aa4a0ac7a76f8ca9c3f81a01ef3c810e5342e": {
+      "title": "Will the price of Bitcoin be above $76,000 on August 30?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-08-31"
+    },
+    "0x9edcd9688b48d23c93ea982bdd7105d6a05889e3ee5079d90e1a5d6162028a33": {
+      "title": "Will the price of Bitcoin be above $74,000 on August 30?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-08-31"
+    },
+    "0xab829e2ba00a717c27395f8595d4e4e755ab04cde44e09f670470d3715c11ece": {
+      "title": "Will Bitcoin dip to $77,000 on August 30?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.9982279647,
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-08-31"
+    },
+    "0xadbd0a8f379d45f01d42cac8984736493223d6100fa719ab16a110e222c9523f": {
+      "title": "Will Ethereum dip to $2,400 in August?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.99400982,
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-08-31"
+    },
+    "0x00e0a933f06bbfa63e5b9d822ce6b71ba36b4df0f523500e07f0b4eb6fde6f38": {
+      "title": "Will Ethereum dip to $2,400 August 24-30?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.9939653955,
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-08-31"
+    },
+    "0x4ca4c2914ffc92a7e686e6b732da62cc6440242895df5c527225cb7b62255615": {
+      "title": "Will WTI Crude Oil (WTI) hit (LOW) $60 in August?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-08-31"
+    },
+    "0xfa5b311066dd88501898c2b33aaf4b977acbdf5dfc7741b645e5fdbfed2e25f0": {
+      "title": "Will the price of Bitcoin be above $82,000 on August 30?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-08-31"
     }
   },
-  "updated": "2026-08-30"
+  "updated": "2026-08-31"
 }
