@@ -252,9 +252,9 @@
       "title": "Fed rate hike in 2026?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.67,
+      "prob": 0.71,
       "first_seen": "2026-06-20",
-      "last_seen": "2026-09-01"
+      "last_seen": "2026-09-02"
     },
     "0x6622e5fc534109b78a3f2a833e1fd97c9e35ba35b8f5b0168f335921a121b0ad": {
       "title": "Will Elon Musk post 220-239 tweets from June 12 to June 19, 2026?",
@@ -1484,9 +1484,9 @@
       "title": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.01200000000000001,
+      "prob": 0.006000000000000005,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-08-27"
+      "last_seen": "2026-09-02"
     },
     "0x80948f409e0d303e556df2eb1369206c8702eacd3e44ede8953eb36b6d920459": {
       "title": "Will the price of Bitcoin be above $50,000 on July 3?",
@@ -1676,9 +1676,9 @@
       "title": "US-Iran Final Nuclear Deal by September 30, 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.30000000000000004,
+      "prob": 0.008000000000000007,
       "first_seen": "2026-07-05",
-      "last_seen": "2026-07-05"
+      "last_seen": "2026-09-02"
     },
     "0x2be031440c5a571cd4fc3e05e2478d98aee41c7a44d10d3c5e6a24e38b30fabb": {
       "title": "Will Bitcoin dip to $57,500 in July?",
@@ -3966,7 +3966,7 @@
       "venue": "polymarket",
       "prob": 0.999,
       "first_seen": "2026-08-06",
-      "last_seen": "2026-09-01"
+      "last_seen": "2026-09-02"
     },
     "0x331e84f080cef0976b352852775f948219eb8243ee4f3b3e59af411cc40d7800": {
       "title": "Will Elon Musk post 65-89 tweets from August 3 to August 5, 2026?",
@@ -6110,7 +6110,7 @@
       "venue": "polymarket",
       "prob": 0.0010000000000000009,
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-01"
+      "last_seen": "2026-09-02"
     },
     "0xf9007cbaa15157f543e4dd5f23ecfa4631a510fad9d3bd059c206fe7083e537a": {
       "title": "Will Ethereum dip to $2,000 in August?",
@@ -6142,8 +6142,80 @@
       "venue": "polymarket",
       "prob": 0.0010000000000000009,
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-01"
+      "last_seen": "2026-09-02"
+    },
+    "0xe44740395fa2ee0089b0f1d39d138f8e51c4cad58e1df2f7f7a5390e216f6ab1": {
+      "title": "Will the price of Ethereum be above $1,900 on September 2?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02"
+    },
+    "0x2bb236f88b90a8829f82b7a2b1caec233d835eaab12299bc0458439455466ad0": {
+      "title": "Will the price of Bitcoin be above $74,000 on September 1?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02"
+    },
+    "0xd02d4eb3d7f5ce3d85e550e0f7888d25c2e65a3db9a9527d742543296b6ef3f3": {
+      "title": "Will Elon Musk post 160-179 tweets from August 25 to September 1, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02"
+    },
+    "0x57ce4c6859ea458de150aaef10752d51f2112a6afa575acfd9bac66a8bfc579c": {
+      "title": "Will the price of Bitcoin be above $76,000 on September 1?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02"
+    },
+    "0x3e98dc594a949edce9d5cc8b6cf75ef7d6a2ff7b3f9821d166ca1fe1163e4f67": {
+      "title": "Will the price of Bitcoin be above $72,000 on September 2?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.998606953,
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02"
+    },
+    "0x537df24dbae425e973a421983b6ee570d582cac06b5fdbebef099d3d07913985": {
+      "title": "Will Anthropic have the best AI model at the end of September 2026?",
+      "theme": "AI / big tech",
+      "venue": "polymarket",
+      "prob": 0.94,
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02"
+    },
+    "0x879d8bafea846e151c8266bf79b4f8fa2a5df72c7387182748f40c6512362017": {
+      "title": "Will the price of Bitcoin be above $84,000 on September 2?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02"
+    },
+    "0x6d244daa9ac01837aa4f16ab3b989c21458dcdf8e7417aa2f7221e35d4df7779": {
+      "title": "Will Seth Moulton be the Democratic nominee for Senate in Massachusetts?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02"
+    },
+    "0xa768cef4415e7224857f8e605c1783f953b5fda7d5b19132740550152f7ed57b": {
+      "title": "Will Bitcoin reach $80,000 in August?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.004057984100000023,
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02"
     }
   },
-  "updated": "2026-09-01"
+  "updated": "2026-09-02"
 }
