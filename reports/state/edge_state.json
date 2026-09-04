@@ -1484,9 +1484,9 @@
       "title": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.006000000000000005,
+      "prob": 0.006999999899999998,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-09-02"
+      "last_seen": "2026-09-04"
     },
     "0x80948f409e0d303e556df2eb1369206c8702eacd3e44ede8953eb36b6d920459": {
       "title": "Will the price of Bitcoin be above $50,000 on July 3?",
@@ -4268,9 +4268,9 @@
       "title": "Bitcoin all time high by September 30, 2026?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.015392244299999969,
+      "prob": 0.0050000000000000044,
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-08"
+      "last_seen": "2026-09-04"
     },
     "kalshi:KXUSAIRANAGREEMENT-27-26SEP": {
       "title": "Will the US agree to a new Iranian nuclear deal this year? \u2014 Before Sep 1, 2026",
@@ -6215,7 +6215,111 @@
       "prob": 0.004057984100000023,
       "first_seen": "2026-09-02",
       "last_seen": "2026-09-02"
+    },
+    "0x0371e9b666a1d24a2de843f223d664bd3b4cc16c09f3dd51b9f9b345d8d14b30": {
+      "title": "Will the price of Bitcoin be above $70,000 on September 4?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04"
+    },
+    "0xf9ad22be9b38cb5d67c204af4acb6e582333d2fd41300562505d6d448eb1ae9b": {
+      "title": "Will the price of Bitcoin be above $72,000 on September 3?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04"
+    },
+    "0x774f4a1dfd50d71acb3734a62f33372ff0781d1f523aee787b0e5d345ec820e1": {
+      "title": "Will the price of Bitcoin be above $74,000 on September 3?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04"
+    },
+    "0xa4e9e6e41c7abed0eb9f4b364cb33f945e3eddb311ca5558afd871429c40266d": {
+      "title": "Will the price of Bitcoin be above $76,000 on September 3?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04"
+    },
+    "0xf0ffa7fb8840d7680017378594b09106e4ad1059e17d3dfcf337b856e1316326": {
+      "title": "Will the price of Bitcoin be above $72,000 on September 4?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04"
+    },
+    "0x59051d0d37a3fdc04f6ba94f67af5ac2f086d01edfb2db98c0512c6f80c3c963": {
+      "title": "Will OpenAI\u2019s Astra model be released by September 3, 2026?",
+      "theme": "AI / big tech",
+      "venue": "polymarket",
+      "prob": 0.9899367728,
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04"
+    },
+    "0xcd287fe19ecbf413252492678afaaadb07f8ccdc9bd05071c51bb8e38fb66d15": {
+      "title": "Will the price of Bitcoin be above $80,000 on September 3?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.9778424458,
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04"
+    },
+    "0xc4cc6d2ddca13b7194a7737e331aa8109575cdc38d02bd6be31a5a47d1b34520": {
+      "title": "Will Bitcoin reach $82,500 in September?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.83,
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04"
+    },
+    "0xe4b2e761aa4b4aa6d548b009a38808a01d648223ec9627fb1bf4c644c928564b": {
+      "title": "Will the price of Bitcoin be above $84,000 on September 3?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04"
+    },
+    "0x46d6b9dbfad631131d65e09d40e7a777f473f609a8573d5930e61d8b2267d127": {
+      "title": "Will Elon Musk post 160-179 tweets from August 28 to September 4, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04"
+    },
+    "0xb4580c18341d7ec8e708b082664fb8c98a861a66967e0a62cf4f396660ee3e26": {
+      "title": "Will Elon Musk post 300-319 tweets from August 28 to September 4, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0020000000000000018,
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04"
+    },
+    "0xb4022c0b2718eca7ad27195f2d48f06527fa000269d188e1d3001ff8bbc16956": {
+      "title": "Fed rate cut by September 2026 meeting?",
+      "theme": "Fed rate cut",
+      "venue": "polymarket",
+      "prob": 0.007455385099999989,
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04"
+    },
+    "0x3b0107a80edd066fe987784d7ab5963c177888433efbec10689951c17320606c": {
+      "title": "Will Satoshi move any Bitcoin in 2026?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.04500000000000004,
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04"
     }
   },
-  "updated": "2026-09-02"
+  "updated": "2026-09-04"
 }
