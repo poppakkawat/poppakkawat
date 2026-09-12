@@ -252,9 +252,9 @@
       "title": "Fed rate hike in 2026?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.7039454378,
+      "prob": 0.89,
       "first_seen": "2026-06-20",
-      "last_seen": "2026-09-11"
+      "last_seen": "2026-09-12"
     },
     "0x6622e5fc534109b78a3f2a833e1fd97c9e35ba35b8f5b0168f335921a121b0ad": {
       "title": "Will Elon Musk post 220-239 tweets from June 12 to June 19, 2026?",
@@ -764,9 +764,9 @@
       "title": "Will no Fed rate cuts happen in 2026?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.9091302447,
+      "prob": 0.942058556,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-09-05"
+      "last_seen": "2026-09-12"
     },
     "0x5f7f9b87912964dcf242da96c39d38667a9f7ac8d0f0d5c7f4ccd024721ad134": {
       "title": "Will Elon Musk post 140-164 tweets from June 22 to June 24, 2026?",
@@ -1484,9 +1484,9 @@
       "title": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.006000000000000005,
+      "prob": 0.0040000000000000036,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-09-11"
+      "last_seen": "2026-09-12"
     },
     "0x80948f409e0d303e556df2eb1369206c8702eacd3e44ede8953eb36b6d920459": {
       "title": "Will the price of Bitcoin be above $50,000 on July 3?",
@@ -4172,9 +4172,9 @@
       "title": "Will the Fed increase interest rates by 50+ bps after the September 2026 meeting?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.010000000000000009,
+      "prob": 0.008000000000000007,
       "first_seen": "2026-08-07",
-      "last_seen": "2026-09-11"
+      "last_seen": "2026-09-12"
     },
     "0xaee6c331835e66f70e9b3c2d0a30f7366848f0dac176ee0dc7a43f3aab5ac344": {
       "title": "Will the price of Bitcoin be above $62,000 on August 8?",
@@ -4756,9 +4756,9 @@
       "title": "Will the Fed increase interest rates by 25 bps after the September 2026 meeting?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.65,
+      "prob": 0.8,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-11"
+      "last_seen": "2026-09-12"
     },
     "0x813016a6a4cb90c73579dc803fc8589afd3c14bf0d55f8a94f545b3729e1bf5b": {
       "title": "Will the price of Bitcoin be above $60,000 on August 15?",
@@ -5620,9 +5620,9 @@
       "title": "Will NVIDIA be the largest company in the world by market cap on September 30?",
       "theme": "Nvidia / AI",
       "venue": "polymarket",
-      "prob": 0.92,
+      "prob": 0.945,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-28"
+      "last_seen": "2026-09-12"
     },
     "0x6d9199d1b691da5854dc08782ce0f94cb98b680c46514837511aabc24c14433c": {
       "title": "Will the price of Bitcoin be above $80,000 on August 24?",
@@ -6764,9 +6764,9 @@
       "title": "Will the price of Bitcoin be above $84,000 on September 11?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.0010892007999999676,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-09-11",
-      "last_seen": "2026-09-11"
+      "last_seen": "2026-09-12"
     },
     "0xa00e736834c2af3f8225a839f4576283a174fd0a134980bf51bed733430934ff": {
       "title": "Will WTI Crude Oil (WTI) hit (HIGH) $140 in September?",
@@ -6791,7 +6791,71 @@
       "prob": 0.03496969240000003,
       "first_seen": "2026-09-11",
       "last_seen": "2026-09-11"
+    },
+    "0xf9f8f8b59a41cfad6e22cd5750aec106386a389366526cd5152007b4ad9ffe73": {
+      "title": "Will the price of Bitcoin be above $72,000 on September 11?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12"
+    },
+    "0x5ef898ea8c229b21b27fd4356797ece65d75bbe9e3057206218cbaff4b0998f6": {
+      "title": "Will Ethereum reach $2,650 on September 11?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.9973717762,
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12"
+    },
+    "0x73d8a8208d23a74937d114a713d6a56cd4161a1068056c52ac74c8419c99da7c": {
+      "title": "Fed Rate Hike by September 2026 Meeting?",
+      "theme": "Fed rate hike",
+      "venue": "polymarket",
+      "prob": 0.65,
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12"
+    },
+    "0xf916456f88bf43c37ee850778c736285d1a991c65cabc608aacbe3fab206e5c3": {
+      "title": "Will the price of Bitcoin be above $80,000 on September 11?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12"
+    },
+    "0x2bcf734d181f7f900e88f9a770bde8c8b5e24233d8d3d0c8784659311be39e2d": {
+      "title": "Will the price of Bitcoin be above $86,000 on September 11?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12"
+    },
+    "0x985347420591538e2a5aaf6624122a00a31bfd3cec3e5470b5915bb2f46e3bfb": {
+      "title": "Will the price of Bitcoin be above $84,000 on September 12?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12"
+    },
+    "0x2ce10d76461d282b726cd72b986d3b6e839753e02bb1848b83d29db4874f6488": {
+      "title": "Will the price of Bitcoin be above $78,000 on September 11?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12"
+    },
+    "0x80a25985a630f2c67513387ac268371adeaf5b486667ac3e124da1a22b67ac65": {
+      "title": "Will Elon Musk post 140-159 tweets from September 4 to September 11, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12"
     }
   },
-  "updated": "2026-09-11"
+  "updated": "2026-09-12"
 }
