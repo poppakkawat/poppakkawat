@@ -1484,9 +1484,9 @@
       "title": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.0040000000000000036,
+      "prob": 0.0030000000000000027,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-09-12"
+      "last_seen": "2026-09-13"
     },
     "0x80948f409e0d303e556df2eb1369206c8702eacd3e44ede8953eb36b6d920459": {
       "title": "Will the price of Bitcoin be above $50,000 on July 3?",
@@ -1676,9 +1676,9 @@
       "title": "US-Iran Final Nuclear Deal by September 30, 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.006000000000000005,
+      "prob": 0.009624175799999968,
       "first_seen": "2026-07-05",
-      "last_seen": "2026-09-10"
+      "last_seen": "2026-09-13"
     },
     "0x2be031440c5a571cd4fc3e05e2478d98aee41c7a44d10d3c5e6a24e38b30fabb": {
       "title": "Will Bitcoin dip to $57,500 in July?",
@@ -2268,9 +2268,9 @@
       "title": "Will the U.S. invade Iran before 2027?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.15000000000000002,
+      "prob": 0.17000000000000004,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-09-09"
+      "last_seen": "2026-09-13"
     },
     "0xbca0b596e44dd239eeafdda4a3621ef73d76b07d3f4752e2bf8d7229fecda288": {
       "title": "Will the price of Bitcoin be above $62,000 on July 12?",
@@ -3916,9 +3916,9 @@
       "title": "Will the Fed decrease interest rates by 50+ bps after the September 2026 meeting?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.0020000000000000018,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-08-05",
-      "last_seen": "2026-09-11"
+      "last_seen": "2026-09-13"
     },
     "0xa54e7b931f21f01218b6da3d456f1f45aacaefacd6cb2ca6d9424d1f99256be9": {
       "title": "Will the price of Bitcoin be above $60,000 on August 5?",
@@ -4172,9 +4172,9 @@
       "title": "Will the Fed increase interest rates by 50+ bps after the September 2026 meeting?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.008000000000000007,
+      "prob": 0.006000000000000005,
       "first_seen": "2026-08-07",
-      "last_seen": "2026-09-12"
+      "last_seen": "2026-09-13"
     },
     "0xaee6c331835e66f70e9b3c2d0a30f7366848f0dac176ee0dc7a43f3aab5ac344": {
       "title": "Will the price of Bitcoin be above $62,000 on August 8?",
@@ -4756,9 +4756,9 @@
       "title": "Will the Fed increase interest rates by 25 bps after the September 2026 meeting?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.8,
+      "prob": 0.79,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-12"
+      "last_seen": "2026-09-13"
     },
     "0x813016a6a4cb90c73579dc803fc8589afd3c14bf0d55f8a94f545b3729e1bf5b": {
       "title": "Will the price of Bitcoin be above $60,000 on August 15?",
@@ -6100,9 +6100,9 @@
       "title": "Will OpenAI not IPO by December 31, 2026?",
       "theme": "AI / big tech",
       "venue": "polymarket",
-      "prob": 0.8675926531,
+      "prob": 0.9444283811,
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-01"
+      "last_seen": "2026-09-13"
     },
     "0x535d97a1668d37434151bc020a316acad256bc1ef49b185c37236138bace8020": {
       "title": "Will Ethereum dip to $2,200 in August?",
@@ -6780,9 +6780,9 @@
       "title": "Will Bitcoin dip to $60,000 in September?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.03400000000000003,
+      "prob": 0.026136458500000015,
       "first_seen": "2026-09-11",
-      "last_seen": "2026-09-11"
+      "last_seen": "2026-09-13"
     },
     "0x63e89bec83a4793994c937bd041cd5b9035917249382c9d97b6e62749180a13a": {
       "title": "Will WTI Crude Oil (WTI) hit (HIGH) $150 in September?",
@@ -6855,7 +6855,39 @@
       "prob": 0.0010000000000000009,
       "first_seen": "2026-09-12",
       "last_seen": "2026-09-12"
+    },
+    "0x7438f87927f30aedbb5454ccccf7c96aa0672902e5e8091e2d344a9f8472fa93": {
+      "title": "Will the price of Bitcoin be above $72,000 on September 12?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-09-13",
+      "last_seen": "2026-09-13"
+    },
+    "0xc935d527ca33ce80081a5b24c54d3589e572d8a6e36f2b29b081a0665f4823b6": {
+      "title": "Will the price of Bitcoin be above $74,000 on September 12?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-09-13",
+      "last_seen": "2026-09-13"
+    },
+    "0xce8ab0b2eef1e585dd496964fe2a235dcc2d7655b886ae30556fc1c4ae378433": {
+      "title": "Will the price of Bitcoin be above $82,000 on September 13?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-09-13",
+      "last_seen": "2026-09-13"
+    },
+    "0x86dee3f66a2eef2e129f1a0a675aa658f83cddd99ac7277d24d1807934d7cde8": {
+      "title": "Will Elon Musk post 500+ tweets from September 11 to September 18, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-09-13",
+      "last_seen": "2026-09-13"
     }
   },
-  "updated": "2026-09-12"
+  "updated": "2026-09-13"
 }
