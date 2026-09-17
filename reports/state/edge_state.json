@@ -252,9 +252,9 @@
       "title": "Fed rate hike in 2026?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.95,
+      "prob": 0.8243324269,
       "first_seen": "2026-06-20",
-      "last_seen": "2026-09-16"
+      "last_seen": "2026-09-17"
     },
     "0x6622e5fc534109b78a3f2a833e1fd97c9e35ba35b8f5b0168f335921a121b0ad": {
       "title": "Will Elon Musk post 220-239 tweets from June 12 to June 19, 2026?",
@@ -1484,9 +1484,9 @@
       "title": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.0020000000000000018,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-09-16"
+      "last_seen": "2026-09-17"
     },
     "0x80948f409e0d303e556df2eb1369206c8702eacd3e44ede8953eb36b6d920459": {
       "title": "Will the price of Bitcoin be above $50,000 on July 3?",
@@ -3918,7 +3918,7 @@
       "venue": "polymarket",
       "prob": 0.0010000000000000009,
       "first_seen": "2026-08-05",
-      "last_seen": "2026-09-15"
+      "last_seen": "2026-09-17"
     },
     "0xa54e7b931f21f01218b6da3d456f1f45aacaefacd6cb2ca6d9424d1f99256be9": {
       "title": "Will the price of Bitcoin be above $60,000 on August 5?",
@@ -4692,9 +4692,9 @@
       "title": "Israel x Iran ceasefire continues through September 30?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.8776701574,
+      "prob": 0.8765542142,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-08"
+      "last_seen": "2026-09-17"
     },
     "0x8f6f79798688fac90132fcf5becf20daa2e64ad17150be881c115e891ca3273e": {
       "title": "Will Elon Musk post 200-219 tweets from August 7 to August 14, 2026?",
@@ -4756,9 +4756,9 @@
       "title": "Will the Fed increase interest rates by 25 bps after the September 2026 meeting?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.87,
+      "prob": 0.999,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-16"
+      "last_seen": "2026-09-17"
     },
     "0x813016a6a4cb90c73579dc803fc8589afd3c14bf0d55f8a94f545b3729e1bf5b": {
       "title": "Will the price of Bitcoin be above $60,000 on August 15?",
@@ -5620,9 +5620,9 @@
       "title": "Will NVIDIA be the largest company in the world by market cap on September 30?",
       "theme": "Nvidia / AI",
       "venue": "polymarket",
-      "prob": 0.945,
+      "prob": 0.88,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-09-12"
+      "last_seen": "2026-09-17"
     },
     "0x6d9199d1b691da5854dc08782ce0f94cb98b680c46514837511aabc24c14433c": {
       "title": "Will the price of Bitcoin be above $80,000 on August 24?",
@@ -6308,9 +6308,9 @@
       "title": "Fed rate cut by September 2026 meeting?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.0040000000000000036,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-06"
+      "last_seen": "2026-09-17"
     },
     "0x3b0107a80edd066fe987784d7ab5963c177888433efbec10689951c17320606c": {
       "title": "Will Satoshi move any Bitcoin in 2026?",
@@ -6812,9 +6812,9 @@
       "title": "Fed Rate Hike by September 2026 Meeting?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.65,
+      "prob": 0.87,
       "first_seen": "2026-09-12",
-      "last_seen": "2026-09-12"
+      "last_seen": "2026-09-17"
     },
     "0xf916456f88bf43c37ee850778c736285d1a991c65cabc608aacbe3fab206e5c3": {
       "title": "Will the price of Bitcoin be above $80,000 on September 11?",
@@ -6908,9 +6908,9 @@
       "title": "Fed Rate Hike by October 2026 Meeting?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.92,
+      "prob": 0.9530637285,
       "first_seen": "2026-09-14",
-      "last_seen": "2026-09-16"
+      "last_seen": "2026-09-17"
     },
     "0x846a5bcc3cade0a6ee300a5f533de2661595ef53742a8d40fdbd44cbe5fcb9ce": {
       "title": "Will Elon Musk post 115-139 tweets from September 12 to September 14, 2026?",
@@ -6980,9 +6980,9 @@
       "title": "US x Iran Effective Ceasefire by September 4?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.9263204302,
+      "prob": 0.999,
       "first_seen": "2026-09-15",
-      "last_seen": "2026-09-15"
+      "last_seen": "2026-09-17"
     },
     "0x28a02d49d28df24e7158ab124d9b00e54d0a557ecdbdc67c86b0ef602bf59706": {
       "title": "Will Bitcoin reach $78,000 September 7-13?",
@@ -7087,7 +7087,47 @@
       "prob": 0.007000000000000006,
       "first_seen": "2026-09-16",
       "last_seen": "2026-09-16"
+    },
+    "0xfef493a8c66402027270ecf4ad018703f855ce02aa38af5d5d92284ebfe90554": {
+      "title": "Will the price of Bitcoin be above $68,000 on September 17?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17"
+    },
+    "0x7b659ff07896427571a24b6b13cf916db24ecce28cacf912a20853531c298da9": {
+      "title": "Will the price of Bitcoin be above $68,000 on September 16?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17"
+    },
+    "0x29dc2ee25ac75c263e40a0b22cda915d579be17136136e7135b2893da133eb9c": {
+      "title": "Will the price of Bitcoin be above $70,000 on September 17?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.9982295058,
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17"
+    },
+    "0x603c4e1901a5f839d5d5acc54ad354d55b93ede3195172935e81d8b60b5e2430": {
+      "title": "Will Bitcoin reach $80,000 on September 16?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.002720506700000014,
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17"
+    },
+    "0xa69ef420d8b4075ad8ba8611d02c63cb2ece46f5c8c643af223c272689b0c96f": {
+      "title": "Will the Fed decrease interest rates by 50+ bps after the October 2026 meeting?",
+      "theme": "Fed rate cut",
+      "venue": "polymarket",
+      "prob": 0.0030000000000000027,
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17"
     }
   },
-  "updated": "2026-09-16"
+  "updated": "2026-09-17"
 }
