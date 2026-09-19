@@ -7148,9 +7148,9 @@
       "title": "Will the Bank of Japan announce a 25 bps increase at the September 2026 meeting?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.9975827492,
+      "prob": 0.996,
       "first_seen": "2026-09-18",
-      "last_seen": "2026-09-18"
+      "last_seen": "2026-09-19"
     },
     "0x0f13212aa2b7f25ba4718dc2ecd23d068b18a04a8b801da4b0ac96d943576f99": {
       "title": "Will the price of Bitcoin be above $80,000 on September 17?",
@@ -7166,7 +7166,7 @@
       "venue": "polymarket",
       "prob": 0.0010000000000000009,
       "first_seen": "2026-09-18",
-      "last_seen": "2026-09-18"
+      "last_seen": "2026-09-19"
     },
     "0x1ed4c66816f9b71581c49b612e6317473cbb991773555a87ba402c30311b360b": {
       "title": "Will Elon Musk post 280-299 tweets from September 11 to September 18, 2026?",
@@ -7188,25 +7188,25 @@
       "title": "Will the Bank of Japan announce a 50+ bps increase at the September 2026 meeting?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.0030000000000000027,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-09-18",
-      "last_seen": "2026-09-18"
+      "last_seen": "2026-09-19"
     },
     "0x5b5ecbfeef12e5787590f05bdfa0ae26833fe4c99fba4b522c32fae45248da21": {
       "title": "Will Ethereum reach $4,000 in September?",
       "theme": "Ethereum",
       "venue": "polymarket",
-      "prob": 0.0050000000000000044,
+      "prob": 0.004996471300000027,
       "first_seen": "2026-09-18",
-      "last_seen": "2026-09-18"
+      "last_seen": "2026-09-19"
     },
     "0x913581dc6f16ad7018bbfb51f6e2fa0a4bdd305212ef7976efb5cf0209304cb6": {
       "title": "Will Bitcoin reach $100,000 in September?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.006000000000000005,
+      "prob": 0.007000000000000006,
       "first_seen": "2026-09-18",
-      "last_seen": "2026-09-18"
+      "last_seen": "2026-09-19"
     },
     "0x9cf563d7b55aa9aa876d5d7e55126347eee473f0ae56d799e325fdef2bf25297": {
       "title": "Will the Fed decrease interest rates by 25 bps after the October 2026 meeting?",
@@ -7215,7 +7215,87 @@
       "prob": 0.007000000000000006,
       "first_seen": "2026-09-18",
       "last_seen": "2026-09-18"
+    },
+    "0xc949f5ad36b48204535f874f81bf559f91b034f67d5991b771bbc7d44f0fe405": {
+      "title": "Will the price of Bitcoin be above $72,000 on September 18?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19"
+    },
+    "0x3f722dacc4867f77a892ceec273d70b7f055dbbe21703185a94ac47a2e457935": {
+      "title": "Will the price of Bitcoin be above $74,000 on September 18?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19"
+    },
+    "0x3c7cd07f73173f82f90d73c10a588a7df1d6385c41d59615d2b1812a3088a621": {
+      "title": "Will Ethereum reach $2,500 in September?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.9989974771,
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19"
+    },
+    "0x38db1635ad95dffe4eb6f790e63834fdfd9556c75db9684bbf44f9b5499e9364": {
+      "title": "Will the price of Bitcoin be above $76,000 on September 19?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.998684013,
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19"
+    },
+    "0xc0fff3b5ed4d7c82647b11050d56629450902b05c1562d8476df1452ae46510a": {
+      "title": "Will WTI Crude Oil (WTI) hit (LOW) $95 in September?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.998,
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19"
+    },
+    "0xc3210fbb791fd5a4b847ea1eeb9d131d72c496f627d6ef4138d0e5036103af0c": {
+      "title": "Will the price of Bitcoin be above $78,000 on September 18?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.9582353576,
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19"
+    },
+    "0x866ebc4f47fb651d8bf24f22abc116c5dd0e3a3602fda25530c9a503bcd54e6d": {
+      "title": "Will Ethereum reach $2,700 in September?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.62,
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19"
+    },
+    "0xc9edea0ed9ea7ac560b2231302e153f64a059e09c08d8ed14b496305728d0770": {
+      "title": "Will Elon Musk post 180-199 tweets from September 11 to September 18, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19"
+    },
+    "0xc80307dfabb96cffbdd615abf23082104fdb777015e76c5779a10fab9f1c5dbc": {
+      "title": "Will Elon Musk post 160-179 tweets from September 11 to September 18, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19"
+    },
+    "0x6a18969bc603992de4c5c9d53c2881e1378ac193cdad01e7f932afa7fdc4af3e": {
+      "title": "Will Crude Oil reach a new all-time high by September 30?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.0040000000000000036,
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19"
     }
   },
-  "updated": "2026-09-18"
+  "updated": "2026-09-19"
 }
