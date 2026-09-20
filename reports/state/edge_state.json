@@ -1676,9 +1676,9 @@
       "title": "US-Iran Final Nuclear Deal by September 30, 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.009624175799999968,
+      "prob": 0.0040000000000000036,
       "first_seen": "2026-07-05",
-      "last_seen": "2026-09-13"
+      "last_seen": "2026-09-20"
     },
     "0x2be031440c5a571cd4fc3e05e2478d98aee41c7a44d10d3c5e6a24e38b30fabb": {
       "title": "Will Bitcoin dip to $57,500 in July?",
@@ -2268,9 +2268,9 @@
       "title": "Will the U.S. invade Iran before 2027?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.17000000000000004,
+      "prob": 0.16000000000000003,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-09-13"
+      "last_seen": "2026-09-20"
     },
     "0xbca0b596e44dd239eeafdda4a3621ef73d76b07d3f4752e2bf8d7229fecda288": {
       "title": "Will the price of Bitcoin be above $62,000 on July 12?",
@@ -6316,9 +6316,9 @@
       "title": "Will Satoshi move any Bitcoin in 2026?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.04500000000000004,
+      "prob": 0.04203436999999999,
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04"
+      "last_seen": "2026-09-20"
     },
     "0x66fe55ead2581747d5b4265bfb00f94173d24081ec0d962c16abe78bbda7c188": {
       "title": "Will the price of Bitcoin be above $74,000 on September 5?",
@@ -6452,9 +6452,9 @@
       "title": "Will Bitcoin dip to $35,000 by December 31, 2026?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.06000000000000005,
+      "prob": 0.03005693899999995,
       "first_seen": "2026-09-06",
-      "last_seen": "2026-09-06"
+      "last_seen": "2026-09-20"
     },
     "0x885a6abefad122348b4fbd503473d7fd1f9035d0438cf988a7591620f316a859": {
       "title": "Will Bitcoin reach $130,000 by December 31, 2026?",
@@ -6780,9 +6780,9 @@
       "title": "Will Bitcoin dip to $60,000 in September?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.02300000000000002,
+      "prob": 0.0050000000000000044,
       "first_seen": "2026-09-11",
-      "last_seen": "2026-09-18"
+      "last_seen": "2026-09-20"
     },
     "0x63e89bec83a4793994c937bd041cd5b9035917249382c9d97b6e62749180a13a": {
       "title": "Will WTI Crude Oil (WTI) hit (HIGH) $150 in September?",
@@ -7204,9 +7204,9 @@
       "title": "Will Bitcoin reach $100,000 in September?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.007000000000000006,
+      "prob": 0.016000000000000014,
       "first_seen": "2026-09-18",
-      "last_seen": "2026-09-19"
+      "last_seen": "2026-09-20"
     },
     "0x9cf563d7b55aa9aa876d5d7e55126347eee473f0ae56d799e325fdef2bf25297": {
       "title": "Will the Fed decrease interest rates by 25 bps after the October 2026 meeting?",
@@ -7295,7 +7295,39 @@
       "prob": 0.0040000000000000036,
       "first_seen": "2026-09-19",
       "last_seen": "2026-09-19"
+    },
+    "0x7274a4402ae90ef4eb022db8d683e49af1ae29ff4d2fb7df54ab5c0207abf142": {
+      "title": "Will the price of Bitcoin be above $72,000 on September 20?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20"
+    },
+    "0x1db576e8ac0d7dad5739cb5adc638f3c86f8faa419857c61b663948ad8a1161f": {
+      "title": "Will the price of Bitcoin be above $68,000 on September 19?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20"
+    },
+    "0x9b1a03b41a1a68c209e9c3caf3d8af3f878420d6dbe8cb8afffd66049e73b114": {
+      "title": "Another Fed rate hike in 2026?",
+      "theme": "Fed rate hike",
+      "venue": "polymarket",
+      "prob": 0.84,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20"
+    },
+    "0xa7442cd1620f09e45b89adc7cd35ee4ce3e50e47423a5d5fe5f16169e4d82ca4": {
+      "title": "Will WTI Crude Oil (WTI) hit (LOW) $70 in September?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.0145174723,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20"
     }
   },
-  "updated": "2026-09-19"
+  "updated": "2026-09-20"
 }
