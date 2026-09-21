@@ -204,9 +204,9 @@
       "title": "Will China invade Taiwan by end of 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.04300000000000004,
+      "prob": 0.04500000000000004,
       "first_seen": "2026-06-19",
-      "last_seen": "2026-09-14"
+      "last_seen": "2026-09-21"
     },
     "0xc4569c1a4da5845a2bbb14195cfb31aee79e438c6c0c8fe6f0b1dbb922e1c3b0": {
       "title": "Will the price of Bitcoin be above $58,000 on June 20?",
@@ -2268,9 +2268,9 @@
       "title": "Will the U.S. invade Iran before 2027?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.16000000000000003,
+      "prob": 0.17000000000000004,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-09-20"
+      "last_seen": "2026-09-21"
     },
     "0xbca0b596e44dd239eeafdda4a3621ef73d76b07d3f4752e2bf8d7229fecda288": {
       "title": "Will the price of Bitcoin be above $62,000 on July 12?",
@@ -6540,9 +6540,9 @@
       "title": "US-Iran Final Nuclear Deal by December 31, 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.1,
+      "prob": 0.09999999999999998,
       "first_seen": "2026-09-08",
-      "last_seen": "2026-09-08"
+      "last_seen": "2026-09-21"
     },
     "0x752fa61c93f16c4b15e85b0bd438d9c684176b0ea7b319a84c8aca34616e8a8c": {
       "title": "Will Bitcoin dip to $55,000 by December 31, 2026?",
@@ -6636,17 +6636,17 @@
       "title": "Will Bitcoin dip to $57,500 in September?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.015000000000000013,
+      "prob": 0.006000000000000005,
       "first_seen": "2026-09-09",
-      "last_seen": "2026-09-14"
+      "last_seen": "2026-09-21"
     },
     "0x63eaf41ce1f475323e2202d7dfa3b1def8b82cd166f7007c50bfbf47615c7b01": {
       "title": "Will Bitcoin reach $110,000 by December 31, 2026?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.13,
+      "prob": 0.14,
       "first_seen": "2026-09-09",
-      "last_seen": "2026-09-09"
+      "last_seen": "2026-09-21"
     },
     "0x7d7d0962e0ff00faec3e3877b33f2fb66bb47bb2f428093f34ed7e0ae0746e0e": {
       "title": "Will the price of Ethereum be above $2,000 on September 10?",
@@ -7292,9 +7292,9 @@
       "title": "Will Crude Oil reach a new all-time high by September 30?",
       "theme": "Oil / OPEC",
       "venue": "polymarket",
-      "prob": 0.0040000000000000036,
+      "prob": 0.014000000000000012,
       "first_seen": "2026-09-19",
-      "last_seen": "2026-09-19"
+      "last_seen": "2026-09-21"
     },
     "0x7274a4402ae90ef4eb022db8d683e49af1ae29ff4d2fb7df54ab5c0207abf142": {
       "title": "Will the price of Bitcoin be above $72,000 on September 20?",
@@ -7327,7 +7327,79 @@
       "prob": 0.0145174723,
       "first_seen": "2026-09-20",
       "last_seen": "2026-09-20"
+    },
+    "0xf1c3c59f6d882553ee1e61f2fd43ea67ce6f1041e9a8b70e1da1f0bf2a21bd8d": {
+      "title": "Will Ethereum dip to $2,600 in September?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    "0x7c162a2f68adfde9be73c1b1b794673a541ac971732e3116977b8fbdd0a840d9": {
+      "title": "US x Iran ceasefire continues through September 20?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.9989940809,
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    "0x7774d7546c5090f0571739f386644536bbaf137d9e1668e1c4c7bfad1e8f227c": {
+      "title": "Will the price of Ethereum be above $2,400 on September 21?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.9978890321,
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    "0x3ebfc39ef533f45e1ea4faa9b72715ff2251de8c86623de65e457aa8df4c8bf3": {
+      "title": "US x Iran ceasefire continues through September 25?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.8577085013,
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    "0x2dcbc71a3f8108936e768b503d565fbda7a644b2a0bd9ed45f74982a2bb11fba": {
+      "title": "Israel x Iran ceasefire continues through November 30?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.71,
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    "0xd60bbfc1f1a3b57f1e6d60c4591f2c3eee0f290a57dc33da8ced59712057746a": {
+      "title": "Will Elon Musk post 115-139 tweets from September 19 to September 21, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    "0x4b184297c578c17ccf66e9e77ccf43b2c3492f998f6766a6a88161a719c97f47": {
+      "title": "Will the price of Bitcoin be above $82,000 on September 20?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    "0x1d606f80126fefc5156f4a7e356b1fb1af8afa4b45547130b4e8d2cf27f78827": {
+      "title": "Will the price of Bitcoin be above $86,000 on September 20?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
+    },
+    "0xd7b7147b215c5c31c31a9c54d6e6c6643638fb602402ca8cfdd09644c54bdb70": {
+      "title": "Will WTI Crude Oil (WTI) hit (HIGH) $105 in September?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.33999999999999997,
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21"
     }
   },
-  "updated": "2026-09-20"
+  "updated": "2026-09-21"
 }
