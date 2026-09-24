@@ -1676,9 +1676,9 @@
       "title": "US-Iran Final Nuclear Deal by September 30, 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.013000000000000012,
+      "prob": 0.008000000000000007,
       "first_seen": "2026-07-05",
-      "last_seen": "2026-09-23"
+      "last_seen": "2026-09-24"
     },
     "0x2be031440c5a571cd4fc3e05e2478d98aee41c7a44d10d3c5e6a24e38b30fabb": {
       "title": "Will Bitcoin dip to $57,500 in July?",
@@ -3004,9 +3004,9 @@
       "title": "Will China invade Taiwan by September 30, 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.013000000000000012,
+      "prob": 0.003087424099999958,
       "first_seen": "2026-07-21",
-      "last_seen": "2026-07-21"
+      "last_seen": "2026-09-24"
     },
     "0x28a74286edd0bf6461d31c4c610c120a3ce2b92507b59d647b8977ac3a50f28f": {
       "title": "Will the price of Bitcoin be above $62,000 on July 22?",
@@ -4692,9 +4692,9 @@
       "title": "Israel x Iran ceasefire continues through September 30?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.8765542142,
+      "prob": 0.95682026,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-17"
+      "last_seen": "2026-09-24"
     },
     "0x8f6f79798688fac90132fcf5becf20daa2e64ad17150be881c115e891ca3273e": {
       "title": "Will Elon Musk post 200-219 tweets from August 7 to August 14, 2026?",
@@ -6316,9 +6316,9 @@
       "title": "Will Satoshi move any Bitcoin in 2026?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.04203436999999999,
+      "prob": 0.03500000000000003,
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-20"
+      "last_seen": "2026-09-24"
     },
     "0x66fe55ead2581747d5b4265bfb00f94173d24081ec0d962c16abe78bbda7c188": {
       "title": "Will the price of Bitcoin be above $74,000 on September 5?",
@@ -6772,9 +6772,9 @@
       "title": "Will WTI Crude Oil (WTI) hit (HIGH) $140 in September?",
       "theme": "Oil / OPEC",
       "venue": "polymarket",
-      "prob": 0.010000000000000009,
+      "prob": 0.0038153136999999893,
       "first_seen": "2026-09-11",
-      "last_seen": "2026-09-18"
+      "last_seen": "2026-09-24"
     },
     "0x2c47938eef5f049db49b140a169041b73a1089e1b8cc8d0924fd62e1ccdfa141": {
       "title": "Will Bitcoin dip to $60,000 in September?",
@@ -6788,9 +6788,9 @@
       "title": "Will WTI Crude Oil (WTI) hit (HIGH) $150 in September?",
       "theme": "Oil / OPEC",
       "venue": "polymarket",
-      "prob": 0.008000000000000007,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-09-11",
-      "last_seen": "2026-09-18"
+      "last_seen": "2026-09-24"
     },
     "0xf9f8f8b59a41cfad6e22cd5750aec106386a389366526cd5152007b4ad9ffe73": {
       "title": "Will the price of Bitcoin be above $72,000 on September 11?",
@@ -7126,7 +7126,7 @@
       "venue": "polymarket",
       "prob": 0.0030000000000000027,
       "first_seen": "2026-09-17",
-      "last_seen": "2026-09-17"
+      "last_seen": "2026-09-24"
     },
     "0x3db052315d8e06325af1cc1009f33d4f2174bc7795c68b46f01b4ef34b2a06e0": {
       "title": "Will WTI Crude Oil (WTI) hit (LOW) $100 in September?",
@@ -7212,9 +7212,9 @@
       "title": "Will the Fed decrease interest rates by 25 bps after the October 2026 meeting?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.007000000000000006,
+      "prob": 0.0050000000000000044,
       "first_seen": "2026-09-18",
-      "last_seen": "2026-09-18"
+      "last_seen": "2026-09-24"
     },
     "0xc949f5ad36b48204535f874f81bf559f91b034f67d5991b771bbc7d44f0fe405": {
       "title": "Will the price of Bitcoin be above $72,000 on September 18?",
@@ -7567,7 +7567,63 @@
       "prob": 0.0986034831,
       "first_seen": "2026-09-23",
       "last_seen": "2026-09-23"
+    },
+    "0x9278513390b6b65b92673628a20b447ed49c22de57425266d9bc1e3565ad19ce": {
+      "title": "Will the price of Bitcoin be above $84,000 on September 23?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-09-24"
+    },
+    "0xf49f5da899d2a09af29abb5fab1024f944a1920fe6f663407d7515c4e0e6fd73": {
+      "title": "Will the price of Bitcoin be above $82,000 on September 23?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-09-24"
+    },
+    "0x0cd2f5803486bb970ebaa7967488564b609ecd6e544ae9f7a8c5efa0e78fb453": {
+      "title": "Will Bitcoin dip to $85,000 in September?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-09-24"
+    },
+    "0x4dac1db95f0c445604dd1d6842279f460b3fde0d120421cdc3425d31a762b6b5": {
+      "title": "Will the price of Bitcoin be above $80,000 on September 23?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-09-24"
+    },
+    "0x12aa13b3da17ceae1b0a59b5d5b77121e91bb79b4bb0b52bf6543ed3f8d0953b": {
+      "title": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
+      "theme": "Fed rate hike",
+      "venue": "polymarket",
+      "prob": 0.68,
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-09-24"
+    },
+    "0xd933efdc5443ebb588e41e35c6a8d6e910c4a60218bf49942b5da5c0009d07d6": {
+      "title": "Will the price of Bitcoin be between $82,000 and $84,000 on September 23?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-09-24"
+    },
+    "0x2582aadb90aaf4b0f51b36a49d146558bacd0e53c2c13d13704e194b3194c324": {
+      "title": "Will WTI Crude Oil (WTI) hit (LOW) $65 in September?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.00605920510000002,
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-09-24"
     }
   },
-  "updated": "2026-09-23"
+  "updated": "2026-09-24"
 }
