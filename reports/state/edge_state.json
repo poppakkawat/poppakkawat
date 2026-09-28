@@ -204,9 +204,9 @@
       "title": "Will China invade Taiwan by end of 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.04500000000000004,
+      "prob": 0.03300000000000003,
       "first_seen": "2026-06-19",
-      "last_seen": "2026-09-21"
+      "last_seen": "2026-09-28"
     },
     "0xc4569c1a4da5845a2bbb14195cfb31aee79e438c6c0c8fe6f0b1dbb922e1c3b0": {
       "title": "Will the price of Bitcoin be above $58,000 on June 20?",
@@ -1676,9 +1676,9 @@
       "title": "US-Iran Final Nuclear Deal by September 30, 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.0040000000000000036,
+      "prob": 0.0030000000000000027,
       "first_seen": "2026-07-05",
-      "last_seen": "2026-09-26"
+      "last_seen": "2026-09-28"
     },
     "0x2be031440c5a571cd4fc3e05e2478d98aee41c7a44d10d3c5e6a24e38b30fabb": {
       "title": "Will Bitcoin dip to $57,500 in July?",
@@ -6780,9 +6780,9 @@
       "title": "Will Bitcoin dip to $60,000 in September?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.00200000010000001,
+      "prob": 0.0020000000000000018,
       "first_seen": "2026-09-11",
-      "last_seen": "2026-09-27"
+      "last_seen": "2026-09-28"
     },
     "0x63e89bec83a4793994c937bd041cd5b9035917249382c9d97b6e62749180a13a": {
       "title": "Will WTI Crude Oil (WTI) hit (HIGH) $150 in September?",
@@ -7604,9 +7604,9 @@
       "title": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.63,
+      "prob": 0.64,
       "first_seen": "2026-09-24",
-      "last_seen": "2026-09-26"
+      "last_seen": "2026-09-28"
     },
     "0xd933efdc5443ebb588e41e35c6a8d6e910c4a60218bf49942b5da5c0009d07d6": {
       "title": "Will the price of Bitcoin be between $82,000 and $84,000 on September 23?",
@@ -7684,9 +7684,9 @@
       "title": "Will Ethereum dip to $1,600 in September?",
       "theme": "Ethereum",
       "venue": "polymarket",
-      "prob": 0.0030000000000000027,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-09-25",
-      "last_seen": "2026-09-25"
+      "last_seen": "2026-09-28"
     },
     "0x55cb2a8f838ca03dcf6eff319593762caa162729edbf28b5cd0483f50676867d": {
       "title": "Will the price of Bitcoin be above $70,000 on September 25?",
@@ -7791,7 +7791,87 @@
       "prob": 0.18999999999999995,
       "first_seen": "2026-09-27",
       "last_seen": "2026-09-27"
+    },
+    "0xe25d32dbaa6fa022f1215a4ff1dc82974319017dd3666c743b36c1a7338b6e7d": {
+      "title": "Will the price of Bitcoin be above $76,000 on September 28?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28"
+    },
+    "0x7cadf271b6b9f5c4d06e1aa7fb9b311e54ec60a24f4f7032d48fcc0d32976b56": {
+      "title": "Will the price of Bitcoin be above $80,000 on September 27?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28"
+    },
+    "0x8d4be2f078a8a01323d440a1267dc2398906e19a8b589968bbb21e1a71b8b2dc": {
+      "title": "Kenneth Walker: Rushing Yards O/U 109.5",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.98,
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28"
+    },
+    "0xb9b3d2030d42fc39204e9b02fabee427fbbd303790783654e46037fd2f4a2ab8": {
+      "title": "Will the price of Bitcoin be above $92,000 on September 28?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28"
+    },
+    "0x232f7347d35c7d8bec7cfb748f8ecf4bb7dfff7ddf1c9a9e1a64d551380e539f": {
+      "title": "Will Elon Musk post 500+ tweets from September 29 to October 6, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0020000000000000018,
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28"
+    },
+    "0xec86f82a81fb31eb6e8470cd2eda51d0f6e5e9d4a4277f5e3da7a367a1c6e738": {
+      "title": "Will Bitcoin dip to $75,000 in September?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.013000000000000012,
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28"
+    },
+    "0xaca5a83788459ba53c8e44d2234b139a481a0debd3e365ccf66b26428b6534cb": {
+      "title": "Will Ethereum dip to $2,000 in September?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.013000000000000012,
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28"
+    },
+    "0xbeb1d04b222dc8208cb95182ba74eb736243d8b116166ff10c9b54326160e7ac": {
+      "title": "Will Bitcoin reach $92,500 in September?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.020000000000000018,
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28"
+    },
+    "0xb144f3084de3e90d09f499f2803328bea372d4cc01ebec74f8c6d4d18c96cfdb": {
+      "title": "Will Bitcoin dip to $77,500 in September?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.03600000000000003,
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28"
+    },
+    "0xfb6b5f3c90ff6a78d1d32dabfcc6031154020062045291ed223743f37e6edbd5": {
+      "title": "Will Ethereum dip to $2,500 in September?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.05016525790000004,
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28"
     }
   },
-  "updated": "2026-09-27"
+  "updated": "2026-09-28"
 }
