@@ -204,9 +204,9 @@
       "title": "Will China invade Taiwan by end of 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.030000000000000027,
+      "prob": 0.02531718599999999,
       "first_seen": "2026-06-19",
-      "last_seen": "2026-10-02"
+      "last_seen": "2026-10-03"
     },
     "0xc4569c1a4da5845a2bbb14195cfb31aee79e438c6c0c8fe6f0b1dbb922e1c3b0": {
       "title": "Will the price of Bitcoin be above $58,000 on June 20?",
@@ -7124,9 +7124,9 @@
       "title": "Will the Fed decrease interest rates by 50+ bps after the October 2026 meeting?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.0020000000000000018,
+      "prob": 0.0030000000000000027,
       "first_seen": "2026-09-17",
-      "last_seen": "2026-10-02"
+      "last_seen": "2026-10-03"
     },
     "0x3db052315d8e06325af1cc1009f33d4f2174bc7795c68b46f01b4ef34b2a06e0": {
       "title": "Will WTI Crude Oil (WTI) hit (LOW) $100 in September?",
@@ -7756,9 +7756,9 @@
       "title": "US-Iran Final Nuclear Deal by October 31, 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.03300000000000003,
+      "prob": 0.031000000000000028,
       "first_seen": "2026-09-26",
-      "last_seen": "2026-10-02"
+      "last_seen": "2026-10-03"
     },
     "0xed0a3d999ef6b84f0a818610fac2a4cb162e6ccefe1c08470a00be4da6e29ffe": {
       "title": "Will Bitcoin dip to $80,000 September 21-27?",
@@ -8092,9 +8092,9 @@
       "title": "Will Bitcoin reach $105,000 in October?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.03200000000000003,
+      "prob": 0.04700000000000004,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-02"
+      "last_seen": "2026-10-03"
     },
     "0x68bd2cba871a2289c3cbc75396a2e180795b74c0183c1407875247243a083af7": {
       "title": "Will Bitcoin dip to $65,000 in October?",
@@ -8119,7 +8119,95 @@
       "prob": 0.050000000000000044,
       "first_seen": "2026-10-02",
       "last_seen": "2026-10-02"
+    },
+    "0x27be67654f627fe41b8c1f0a85b7ce81cf57c4cb196331b2d8a6758d189a8d6a": {
+      "title": "Will the price of Bitcoin be above $76,000 on October 3?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03"
+    },
+    "0x7503b4d712b45394adaa56eb244113742daddf5fcb7ca32aaee606648032910e": {
+      "title": "Will the price of Bitcoin be above $74,000 on October 2?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03"
+    },
+    "0xf456c8a9c52c01923ac21e0228d837da44e79a689be4f8dd39805eec6f4323ee": {
+      "title": "Will the price of Bitcoin be above $80,000 on October 2?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.998,
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03"
+    },
+    "0x42dc04e485b5d8ec749326fe564820ee37a1c63425f43d7b0755a016afd5c4cb": {
+      "title": "Will Bitcoin reach $87,500 in October?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.84,
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03"
+    },
+    "0x73e2cd7070148c27d54de515e4c6e27845954302a6d2ed505a4abe190fb90cf9": {
+      "title": "Will Elon Musk post 240-259 tweets from September 25 to October 2, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03"
+    },
+    "0xdf74e46c2968ae6671a32dff6ae8e868bcbe3265a257be02dc2b027da22597e6": {
+      "title": "Will Elon Musk post 260-279 tweets from September 25 to October 2, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03"
+    },
+    "0x8717c39520cadcb8ad6f88af148c30acf7d044c92a9cf48416b9b9a5ed65d6d8": {
+      "title": "Will Bitcoin reach $150,000 in October?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0050000000000000044,
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03"
+    },
+    "0xe496820bb94513f7e748a98dbac56d9883f3165236faf2eef5d6d89dd25b6d14": {
+      "title": "Will Bitcoin dip to $60,000 in October?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.020000000000000018,
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03"
+    },
+    "0x799c35de1e5f3ebd75053643e020e6df9e9a3f477e3d6066eb0a8565f65d547f": {
+      "title": "Will Bitcoin reach $180,000 by December 31, 2026?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.020000000000000018,
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03"
+    },
+    "0xab282b072be770a1f8b7ef07439a48fdec479d6e8a09300071a68d5ba617bf9d": {
+      "title": "Will Bitcoin reach $88,000 September 28-October 4?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.049000000000000044,
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03"
+    },
+    "0x758784e5d3076107c30fee0658405306e8c2bd051c9be06af638d63b5dd6b1d2": {
+      "title": "Will Bitcoin dip to $67,500 in October?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.06000000000000005,
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03"
     }
   },
-  "updated": "2026-10-02"
+  "updated": "2026-10-03"
 }
