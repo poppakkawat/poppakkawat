@@ -204,9 +204,9 @@
       "title": "Will China invade Taiwan by end of 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.02531718599999999,
+      "prob": 0.02400000000000002,
       "first_seen": "2026-06-19",
-      "last_seen": "2026-10-03"
+      "last_seen": "2026-10-05"
     },
     "0xc4569c1a4da5845a2bbb14195cfb31aee79e438c6c0c8fe6f0b1dbb922e1c3b0": {
       "title": "Will the price of Bitcoin be above $58,000 on June 20?",
@@ -2268,9 +2268,9 @@
       "title": "Will the U.S. invade Iran before 2027?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.16,
+      "prob": 0.16000000000000003,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-09-27"
+      "last_seen": "2026-10-05"
     },
     "0xbca0b596e44dd239eeafdda4a3621ef73d76b07d3f4752e2bf8d7229fecda288": {
       "title": "Will the price of Bitcoin be above $62,000 on July 12?",
@@ -7086,7 +7086,7 @@
       "venue": "polymarket",
       "prob": 0.0050000000000000044,
       "first_seen": "2026-09-16",
-      "last_seen": "2026-10-02"
+      "last_seen": "2026-10-05"
     },
     "0xfef493a8c66402027270ecf4ad018703f855ce02aa38af5d5d92284ebfe90554": {
       "title": "Will the price of Bitcoin be above $68,000 on September 17?",
@@ -8092,9 +8092,9 @@
       "title": "Will Bitcoin reach $105,000 in October?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.04700000000000004,
+      "prob": 0.050000000000000044,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-03"
+      "last_seen": "2026-10-05"
     },
     "0x68bd2cba871a2289c3cbc75396a2e180795b74c0183c1407875247243a083af7": {
       "title": "Will Bitcoin dip to $65,000 in October?",
@@ -8172,9 +8172,9 @@
       "title": "Will Bitcoin reach $150,000 in October?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.0050000000000000044,
+      "prob": 0.009000000000000008,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-03"
+      "last_seen": "2026-10-05"
     },
     "0xe496820bb94513f7e748a98dbac56d9883f3165236faf2eef5d6d89dd25b6d14": {
       "title": "Will Bitcoin dip to $60,000 in October?",
@@ -8244,9 +8244,9 @@
       "title": "US x Iran ceasefire continues through October 15?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.7884076324,
+      "prob": 0.8672706974,
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-04"
+      "last_seen": "2026-10-05"
     },
     "0x3738ad9665480991affe3ba286cd035516e17d1f8b7703e05088ec19c70c21a4": {
       "title": "US x Iran ceasefire continues through October 31?",
@@ -8303,7 +8303,79 @@
       "prob": 0.050000000000000044,
       "first_seen": "2026-10-04",
       "last_seen": "2026-10-04"
+    },
+    "0x62767ffca65adb779d79f11251aa295575a64961cee57bcdf0ee19d69c226abc": {
+      "title": "Will the price of Bitcoin be above $82,000 on October 4?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05"
+    },
+    "0x2ebd864919bd149475d00db8aa75a70768a6ad3f33a0ab56a2ee0d54cbad9e3e": {
+      "title": "Will the price of Bitcoin be above $74,000 on October 5?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05"
+    },
+    "0x0abe6d51d8fe80093ca3f7bd1b2bd2e581be990ba55ea68412bbdf2ec673c703": {
+      "title": "Will Elon Musk post 320-339 tweets from September 29 to October 6, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05"
+    },
+    "0xf65e0118e816b8d1216ee2f005e9ee14768906fa2c941bd9bad2172c36da9c7d": {
+      "title": "Will Ethereum dip to $2,600 September 28-October 4?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.007000000000000006,
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05"
+    },
+    "0x3bb78a2c5b082e3d3ceb4e118cc94acf7c0419cdbea66c76faf7eea5089291e9": {
+      "title": "Will Ethereum reach $2,800 September 28-October 4?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.013000000000000012,
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05"
+    },
+    "0xbd74157f7762f8d936f5d7999cc9585490dc4daddbf5ce97ad897ff632a74f2c": {
+      "title": "Will the price of Ethereum be above $2,700 on October 4?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.020000000000000018,
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05"
+    },
+    "0x22f8fd30d000ac57ad567c6fae3982fdea710720bbc343f0a9d667c6bcb2535d": {
+      "title": "Will Indiana enact a data center moratorium by December 31, 2028?",
+      "theme": "AI / big tech",
+      "venue": "polymarket",
+      "prob": 0.14,
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05"
+    },
+    "0x9775cd557a3cdba4f0478070afa399c0805761dd9aa0e7ce4435a71fed32621c": {
+      "title": "Will Ethereum reach $4,000 by December 31, 2026?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.14113380090000005,
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05"
+    },
+    "0x99a1879635bc8873891cc472d5e39ca0efaf2017c562ae244810747a7f8edbd5": {
+      "title": "Will Ethereum dip to $2,250 by December 31, 2026?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.24032023000000002,
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05"
     }
   },
-  "updated": "2026-10-04"
+  "updated": "2026-10-05"
 }
