@@ -7516,9 +7516,9 @@
       "title": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.7204405294,
+      "prob": 0.7398745795,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-09-29"
+      "last_seen": "2026-10-06"
     },
     "0x8923e1ccf64ef74e177a1e3386b342736e7dd4b1f5bc91e8c16e3a9b55677a97": {
       "title": "Will Bitcoin dip to $81,000 on September 22?",
@@ -7540,9 +7540,9 @@
       "title": "Will Bitcoin dip to $50,000 by December 31, 2026?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.040000000000000036,
+      "prob": 0.050000000000000044,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-09-23"
+      "last_seen": "2026-10-06"
     },
     "0xcf25ccc8360f3952139fb5e3f14cb9bb0636cb53d0e30e947321ceccab7e9780": {
       "title": "Will Ethereum dip to $1,500 by December 31, 2026?",
@@ -7660,9 +7660,9 @@
       "title": "Israel x Iran ceasefire continues through October 31?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.8500659624,
+      "prob": 0.85,
       "first_seen": "2026-09-25",
-      "last_seen": "2026-09-25"
+      "last_seen": "2026-10-06"
     },
     "0x3e04385988e1d6e6995397d1590c7a49600cac84ea990c85656f09ef3eecb9b1": {
       "title": "Will Ethereum dip to $2,600 in September?",
@@ -8172,9 +8172,9 @@
       "title": "Will Bitcoin reach $150,000 in October?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.009000000000000008,
+      "prob": 0.0030000000000000027,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-05"
+      "last_seen": "2026-10-06"
     },
     "0xe496820bb94513f7e748a98dbac56d9883f3165236faf2eef5d6d89dd25b6d14": {
       "title": "Will Bitcoin dip to $60,000 in October?",
@@ -8318,7 +8318,7 @@
       "venue": "polymarket",
       "prob": 0.999,
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-05"
+      "last_seen": "2026-10-06"
     },
     "0x0abe6d51d8fe80093ca3f7bd1b2bd2e581be990ba55ea68412bbdf2ec673c703": {
       "title": "Will Elon Musk post 320-339 tweets from September 29 to October 6, 2026?",
@@ -8375,7 +8375,87 @@
       "prob": 0.24032023000000002,
       "first_seen": "2026-10-05",
       "last_seen": "2026-10-05"
+    },
+    "0xa36c093c5f9f8d0ee9d99965f264db541692aaa7116ede826cf811fe1a2a8d47": {
+      "title": "Will the price of Bitcoin be above $84,000 on October 5?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.994,
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06"
+    },
+    "0xa01984a038cf05bb3fec2133890a29ab93a52e90d9dbb0de9d01a821588b9a2a": {
+      "title": "Will WTI Crude Oil (WTI) hit (LOW) $85 in October?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.6896980547,
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06"
+    },
+    "0xa96ad025051ba1866e27efe9e10daa3c95eba1204398084aeab40d3c739c5c62": {
+      "title": "Will Elon Musk post 40-64 tweets from October 3 to October 5, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06"
+    },
+    "kalshi:KXMVECROSSCATEGORY-S2026ACCAF55D019-64B448B827C": {
+      "title": "yes Dominik Palan,yes Sidharth Rawat,yes Hikaru Shiraishi,yes Ai Maruyama",
+      "theme": "AI / big tech",
+      "venue": "kalshi",
+      "prob": 0.009199999999999986,
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06"
+    },
+    "0x2d8368e14f603d27bcaa3b5cd30210d8e121cf8e7e60c57fa184260cb51baed7": {
+      "title": "Will WTI Crude Oil (WTI) hit (LOW) $60 in October?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.010000000000000009,
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06"
+    },
+    "0x024b68f77bfc019341ee3db8f57c103334e4b9430bba4746d8c94aafd8b36fee": {
+      "title": "Will Bitcoin dip to $45,000 by December 31, 2026?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.039000000000000035,
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06"
+    },
+    "0x80ebf0a88a44bf737d4047b3accd7108285c69b84257e5c684bdc4c715c81139": {
+      "title": "Will the U.S. invade Cuba in 2026?",
+      "theme": "Armed conflict / war",
+      "venue": "polymarket",
+      "prob": 0.050000000000000044,
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06"
+    },
+    "0xc4c41407dd3e1be7fae485778117cd12832edebb652609cd34ba8eb60b817ee2": {
+      "title": "Will Ethereum dip to $1,750 by December 31, 2026?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.050000000000000044,
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06"
+    },
+    "0x8a5c0b5fc339f2dbaf584def66bcf8bff94d91f0250562e452782fed3d18f821": {
+      "title": "Will Crude Oil reach a new all-time high by December 31?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.09999999999999998,
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06"
+    },
+    "0xbf0602707edd80eada90c28ee03e74b9330432105f71b41da38f3997a55c1bde": {
+      "title": "Will Bitcoin dip to $72,500 in October?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.12,
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06"
     }
   },
-  "updated": "2026-10-05"
+  "updated": "2026-10-06"
 }
