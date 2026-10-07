@@ -13,10 +13,9 @@ Dashboard การเทรดสไตล์เกม pixel ที่มีต
 
 ## เปิดใช้ครั้งแรก (ทำครั้งเดียว)
 
-1. merge โค้ดนี้เข้า branch หลัก (`main`) เพราะ GitHub รันงานตามเวลาจาก branch หลักเท่านั้น
-2. ไปที่ **Settings → Pages → Build and deployment → Source** แล้วเลือก **GitHub Actions**
-3. ไปที่ **Actions → Pixel Trading Floor → Run workflow** เพื่อรันรอบแรกทันที
-4. เปิด `https://<username>.github.io/<repo>/` ซึ่งเป็น dashboard ที่จะอัปเดตเองทุก 30 นาที
+1. ไปที่ **Settings → Pages → Build and deployment → Source** แล้วเลือก **GitHub Actions**
+2. ไปที่ **Actions → Pixel Trading Floor → Run workflow** เพื่อรันรอบแรกทันที
+3. เปิด https://poppakkawat.github.io/poppakkawat/ ซึ่งเป็น dashboard ที่จะอัปเดตเองทุก 30 นาที
 
 หน้าเว็บนี้เป็นสาธารณะ ใครมีลิงก์ก็เปิดได้ ตอนนี้แสดงแค่เงินทดลอง เมื่อจะต่อบัญชีจริงค่อยพิจารณาเรื่องความเป็นส่วนตัวอีกครั้ง
 
