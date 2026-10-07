@@ -1,0 +1,69 @@
+name: Pixel Trading Floor
+
+on:
+  schedule:
+    # Every 30 minutes. Oil trades almost 24/5; weekend runs just refresh the page.
+    - cron: "7,37 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write   # push the state to the floor-data branch
+  pages: write      # publish the dashboard
+  id-token: write
+
+concurrency:
+  group: pixel-floor
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Load previous state
+        run: |
+          mkdir -p out
+          if git fetch --depth 1 origin floor-data 2>/dev/null; then
+            git show FETCH_HEAD:state.json > out/state.json || rm -f out/state.json
+          else
+            echo "No floor-data branch yet: starting fresh paper desks."
+          fi
+
+      - name: Update paper desks
+        run: python3 -m floor --state out/state.json --out out/data.json
+
+      - name: Save state to floor-data branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cp floor/site/index.html out/index.html
+          touch out/.nojekyll
+          cd out
+          git init -q -b floor-data
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -qm "data: $(date -u +%FT%TZ)"
+          # One commit, force-pushed: the branch holds only the latest snapshot.
+          git push -fq "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" floor-data
+
+      - uses: actions/configure-pages@v5
+        id: pages
+        continue-on-error: true   # Pages not switched on yet: keep saving state anyway
+
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.pages.outcome == 'success'
+        with:
+          path: out
+
+      - uses: actions/deploy-pages@v4
+        id: deploy
+        if: steps.pages.outcome == 'success'

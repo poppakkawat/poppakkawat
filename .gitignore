@@ -13,3 +13,6 @@ venv/
 # your personal watchlist stays local
 watchlist.json
 .DS_Store
+
+# Pixel Trading Floor local runs
+out/
