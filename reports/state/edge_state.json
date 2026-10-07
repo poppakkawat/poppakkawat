@@ -206,7 +206,7 @@
       "venue": "polymarket",
       "prob": 0.02400000000000002,
       "first_seen": "2026-06-19",
-      "last_seen": "2026-10-05"
+      "last_seen": "2026-10-07"
     },
     "0xc4569c1a4da5845a2bbb14195cfb31aee79e438c6c0c8fe6f0b1dbb922e1c3b0": {
       "title": "Will the price of Bitcoin be above $58,000 on June 20?",
@@ -7214,7 +7214,7 @@
       "venue": "polymarket",
       "prob": 0.0050000000000000044,
       "first_seen": "2026-09-18",
-      "last_seen": "2026-10-02"
+      "last_seen": "2026-10-07"
     },
     "0xc949f5ad36b48204535f874f81bf559f91b034f67d5991b771bbc7d44f0fe405": {
       "title": "Will the price of Bitcoin be above $72,000 on September 18?",
@@ -7540,9 +7540,9 @@
       "title": "Will Bitcoin dip to $50,000 by December 31, 2026?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.050000000000000044,
+      "prob": 0.040000000000000036,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-10-06"
+      "last_seen": "2026-10-07"
     },
     "0xcf25ccc8360f3952139fb5e3f14cb9bb0636cb53d0e30e947321ceccab7e9780": {
       "title": "Will Ethereum dip to $1,500 by December 31, 2026?",
@@ -8100,9 +8100,9 @@
       "title": "Will Bitcoin dip to $65,000 in October?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.04700000000000004,
+      "prob": 0.03700000000000003,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-02"
+      "last_seen": "2026-10-07"
     },
     "0xff6a852f912fc6548ec130b05de014f21b1a26342adedef20e4103bb97b4e81d": {
       "title": "Will Bitcoin dip to $62,500 in October?",
@@ -8172,9 +8172,9 @@
       "title": "Will Bitcoin reach $150,000 in October?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.0030000000000000027,
+      "prob": 0.009000000000000008,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-06"
+      "last_seen": "2026-10-07"
     },
     "0xe496820bb94513f7e748a98dbac56d9883f3165236faf2eef5d6d89dd25b6d14": {
       "title": "Will Bitcoin dip to $60,000 in October?",
@@ -8204,9 +8204,9 @@
       "title": "Will Bitcoin dip to $67,500 in October?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.06000000000000005,
+      "prob": 0.047122899100000004,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-03"
+      "last_seen": "2026-10-07"
     },
     "0x8764f7431ad942e3b2e25441bbe6fd2cce61935895fb5710719665c0b18d1894": {
       "title": "Will the price of Bitcoin be above $74,000 on October 4?",
@@ -8412,9 +8412,9 @@
       "title": "Will WTI Crude Oil (WTI) hit (LOW) $60 in October?",
       "theme": "Oil / OPEC",
       "venue": "polymarket",
-      "prob": 0.010000000000000009,
+      "prob": 0.01200000000000001,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-06"
+      "last_seen": "2026-10-07"
     },
     "0x024b68f77bfc019341ee3db8f57c103334e4b9430bba4746d8c94aafd8b36fee": {
       "title": "Will Bitcoin dip to $45,000 by December 31, 2026?",
@@ -8455,7 +8455,71 @@
       "prob": 0.12,
       "first_seen": "2026-10-06",
       "last_seen": "2026-10-06"
+    },
+    "0x3b409142f222755dec8a8537468691febc0d3c793cc0a46609d9f7b0eccde3c9": {
+      "title": "Will the price of Bitcoin be above $84,000 on October 6?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-07",
+      "last_seen": "2026-10-07"
+    },
+    "0x5bcf0a7252eaaf8049aa9d5ce5c54f4c597eb196f4e99de22a6bd4de8637f5d1": {
+      "title": "Will the price of Bitcoin be above $76,000 on October 7?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-07",
+      "last_seen": "2026-10-07"
+    },
+    "0xccb5b9ffc72ef6411d01d29f027945d980327daff39764e6c49e2153b851a9a7": {
+      "title": "Will the price of Bitcoin be above $92,000 on October 7?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-07",
+      "last_seen": "2026-10-07"
+    },
+    "0x201f51d2d892c41c5bfa6568a0a2f93ab2ea426e87dddfd5fb0191f7ec34a441": {
+      "title": "Will Ethereum reach $10,000 by December 31, 2026?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.010000000000000009,
+      "first_seen": "2026-10-07",
+      "last_seen": "2026-10-07"
+    },
+    "0x4ded40c58263ee00bf780b42ba859cd7bc201e84f28f366528f7abf7bdb54fe6": {
+      "title": "Will Elon Musk post 80-99 tweets from October 2 to October 9, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.010000000000000009,
+      "first_seen": "2026-10-07",
+      "last_seen": "2026-10-07"
+    },
+    "0x2783e6bcd25df4a97028df67ebd9050306a1d85fc69d74757308da66353ce590": {
+      "title": "Bitcoin above 84,400 on October 6, 10PM ET?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.01332786379999995,
+      "first_seen": "2026-10-07",
+      "last_seen": "2026-10-07"
+    },
+    "0xab449b45ddb6c2682ec7e931dfb18705cf611cddf42ae35aa300c79453913dca": {
+      "title": "Will North Carolina enact a data center moratorium by December 31, 2026?",
+      "theme": "AI / big tech",
+      "venue": "polymarket",
+      "prob": 0.06000000000000005,
+      "first_seen": "2026-10-07",
+      "last_seen": "2026-10-07"
+    },
+    "0x8feb2a254634f61caacbbe13abd7b9d5b30c296e66fa3666990cab540fb3d0a5": {
+      "title": "Will Bitcoin dip to $70,000 in October?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.06999999999999995,
+      "first_seen": "2026-10-07",
+      "last_seen": "2026-10-07"
     }
   },
-  "updated": "2026-10-06"
+  "updated": "2026-10-07"
 }
