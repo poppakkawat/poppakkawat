@@ -19,6 +19,22 @@ Dashboard การเทรดสไตล์เกม pixel ที่มีต
 
 หน้าเว็บนี้เป็นสาธารณะ ใครมีลิงก์ก็เปิดได้ ตอนนี้แสดงแค่เงินทดลอง เมื่อจะต่อบัญชีจริงค่อยพิจารณาเรื่องความเป็นส่วนตัวอีกครั้ง
 
+## ส่งสรุปเข้า Obsidian (OneDrive)
+
+วันละ 2 รอบ (ราว 06:00 และ 18:00 เวลาไทย) ระบบจะเขียนไฟล์สรุปลง
+`OneDrive Obsidian/Pixel Trading Floor/` ซึ่งบนเครื่องคือ
+`D:\Users\pakkawat\OneDrive\OneDrive Obsidian\Pixel Trading Floor`
+
+- `Daily/YYYY-MM-DD.md` คือสรุปประจำวัน ตัวเลขอยู่ใน frontmatter (ใช้กับ Dataview ได้) ตามด้วยเหตุการณ์ของวันนั้น
+- `Trading Floor.md` คือหน้าหลักที่อธิบายกลยุทธ์ และมีตาราง Dataview 14 วันล่าสุด
+- `T-Bill guide.md` คือคู่มือลงทุน T-Bill
+
+`Trading Floor.md` กับ `T-Bill guide.md` สร้างครั้งเดียว แก้หรือจดโน้ตเพิ่มได้ ระบบจะไม่เขียนทับ
+
+ใช้ secret `RCLONE_CONF` ตัวเดียวกับรายงาน Polymarket (ดู `docs/cloud-onedrive.md`)
+ถ้าต้องการเปลี่ยนโฟลเดอร์ ให้ตั้ง **Settings → Secrets and variables → Actions → Variables** ชื่อ `FLOOR_ONEDRIVE_DIR`
+ถ้ากด **Run workflow** เอง ระบบจะส่งโน้ตทันทีโดยไม่ต้องรอรอบเวลา
+
 ## ปรับค่า
 
 แก้ `floor/config.py` แล้ว commit โดยแก้ได้ทั้งทุนแต่ละแผนก กรอบ Grid ระยะชั้น ขนาดต่อชั้น รายชื่อหุ้น และเป้ารายเดือน

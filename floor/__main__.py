@@ -15,12 +15,14 @@ from datetime import datetime, timezone
 from . import config as C
 from .data import chart
 from .desks import local_date, run_alpha, run_grid, run_roc
+from .notes import write_notes
 
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="floor", description=__doc__)
     ap.add_argument("--state", default="out/state.json", help="state file (read and rewritten)")
     ap.add_argument("--out", default="out/data.json", help="dashboard data file to write")
+    ap.add_argument("--notes", metavar="DIR", help="also write Obsidian notes (Daily/YYYY-MM-DD.md) here")
     args = ap.parse_args(argv)
 
     st: dict = {}
@@ -84,6 +86,8 @@ def main(argv: list[str] | None = None) -> int:
         with open(tmp, "w", encoding="utf-8") as f:
             json.dump(obj, f, ensure_ascii=False, separators=(",", ":"))
         os.replace(tmp, path)
+    if args.notes:
+        print("note:", write_notes(out, args.notes))
     print(f"equity ${equity:,.2f} · WTI {grid.get('price')} · alpha {alpha.get('alpha', 0):+.2f}% · "
           f"{len(events)} events")
     return 0
