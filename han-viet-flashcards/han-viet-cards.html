@@ -1,0 +1,797 @@
+<title>บัตรคำฮั่นเวียด</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&family=Noto+Serif+TC:wght@500;700&family=Noto+Sans+Thai:wght@400;500;600&display=swap">
+<style>
+/* Layout: single centered study column — header, one flip card, controls, word list */
+:root{
+  --bg:#e9eeeb; --surface:#f8faf8; --ink:#17231f; --muted:#5b6b65; --line:#cdd8d3;
+  --seal:#b3261e; --seal-ink:#fff6f3; --jade:#1f6b57; --jade-soft:#d6e8e1;
+  --f-vi:"Be Vietnam Pro",system-ui,sans-serif;
+  --f-han:"Noto Serif TC","Songti TC","PMingLiU",serif;
+  --f-th:"Noto Sans Thai","Sukhumvit Set","Leelawadee UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#101715; --surface:#18221f; --ink:#e6eeea; --muted:#94a69f; --line:#2a3833;
+  --seal:#d9483d; --seal-ink:#fff6f3; --jade:#6cc3a7; --jade-soft:#1d3a31; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#101715; --surface:#18221f; --ink:#e6eeea; --muted:#94a69f; --line:#2a3833;
+  --seal:#d9483d; --seal-ink:#fff6f3; --jade:#6cc3a7; --jade-soft:#1d3a31; color-scheme:dark}
+
+body{background:var(--bg);color:var(--ink);font-family:var(--f-th);font-size:16px;line-height:1.6}
+.wrap{max-width:560px;margin:0 auto;padding-inline:16px;padding-block:28px 48px;display:grid;gap:20px}
+header{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}
+h1{margin:0;font-size:1.35rem;font-weight:600;text-wrap:balance}
+h1 small{display:block;font-family:var(--f-vi);font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--jade)}
+.count{font-family:var(--f-vi);font-variant-numeric:tabular-nums;color:var(--muted);font-size:.9rem}
+
+.decks{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:10px;padding:3px;gap:3px;background:var(--surface)}
+.deck{font:inherit;font-size:.95rem;border:0;border-radius:8px;padding:8px;background:transparent;color:var(--muted);cursor:pointer}
+.deck[aria-selected="true"]{background:var(--jade);color:var(--surface);font-weight:600}
+.deck:focus-visible{outline:3px solid var(--jade);outline-offset:2px}
+.deck .n{font-family:var(--f-vi);font-variant-numeric:tabular-nums;opacity:.75;margin-left:4px}
+.origin{display:inline-block;align-self:flex-start;font-size:.8rem;padding:1px 10px;border-radius:999px;background:var(--jade-soft);color:var(--ink);margin-bottom:8px}
+.modes{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font:inherit;font-size:.85rem;border:1px solid var(--line);background:transparent;color:var(--muted);padding:4px 12px;border-radius:999px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--jade-soft);border-color:var(--jade);color:var(--ink)}
+
+.stage{perspective:1400px}
+.card{position:relative;display:grid;width:100%;cursor:pointer;transform-style:preserve-3d;transition:transform .5s cubic-bezier(.3,.7,.2,1)}
+.card.instant{transition:none}
+.card.flipped{transform:rotateY(180deg)}
+.face{grid-area:1/1;min-height:340px;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;box-shadow:0 10px 30px -18px rgba(0,0,0,.35)}
+.back{transform:rotateY(180deg)}
+.card:focus-visible{outline:none}
+.card:focus-visible .face{outline:3px solid var(--jade);outline-offset:3px}
+.say{flex:none;display:inline-grid;place-items:center;width:38px;height:38px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--jade);cursor:pointer;padding:0;vertical-align:middle}
+.say:hover{border-color:var(--jade)}
+.say:focus-visible{outline:3px solid var(--jade);outline-offset:2px}
+.say.sm{width:30px;height:30px}
+.say.sm svg{width:15px;height:15px}
+.say.playing{background:var(--jade);color:var(--surface);border-color:var(--jade)}
+.front .say{position:absolute;top:16px;right:16px}
+.front{position:relative}
+.head{display:flex;align-items:center;gap:10px}
+.voice-row{display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--muted);flex-wrap:wrap}
+.voice-row select{font:inherit;font-size:.85rem;padding:4px 8px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);max-width:100%;min-width:0}
+.tts-msg{margin:0;font-size:.85rem;color:var(--seal)}
+.hint{margin-top:auto;font-size:.8rem;color:var(--muted)}
+
+.front .main{flex:1;display:grid;place-items:center;text-align:center;gap:8px}
+.big-vi{font-family:var(--f-vi);font-weight:700;font-size:clamp(2.2rem,9vw,3.4rem);line-height:1.15}
+.big-han{font-family:var(--f-han);font-weight:700;font-size:clamp(2.6rem,11vw,4rem);letter-spacing:.08em}
+.big-th{font-size:clamp(1.8rem,7vw,2.6rem);font-weight:600}
+
+.back h2{margin:0;font-family:var(--f-vi);font-size:1.6rem;font-weight:700}
+.back .mean{font-size:1.25rem;font-weight:600;color:var(--jade);margin:2px 0 16px}
+.parts{display:grid;gap:10px}
+.part{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;padding-block:10px;border-top:1px solid var(--line)}
+.seal{width:58px;height:58px;display:grid;place-items:center;background:var(--seal);color:var(--seal-ink);font-family:var(--f-han);font-weight:700;font-size:2rem;border-radius:6px;box-shadow:inset 0 0 0 3px var(--seal),inset 0 0 0 4px rgba(255,255,255,.55)}
+.seal.none{background:transparent;color:var(--muted);box-shadow:none;border:2px dashed var(--line);font-size:1.4rem}
+.part-txt{min-width:0}
+.part-vi{font-family:var(--f-vi);font-weight:700;font-size:1.1rem}
+.py{font-family:var(--f-vi);font-style:italic;color:var(--muted);font-weight:400;margin-left:6px}
+.part-th{color:var(--ink)}
+.note{margin-top:12px;font-size:.9rem;color:var(--muted)}
+.src{margin:8px 0 0;font-size:.85rem;color:var(--muted)}
+.src b{color:var(--jade);font-weight:600}
+.note b{font-family:var(--f-han);color:var(--ink);font-weight:500}
+
+.controls{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.btn{font:inherit;font-size:.95rem;padding:10px 8px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.btn:hover{border-color:var(--jade)}
+.btn:focus-visible,.chip:focus-visible{outline:3px solid var(--jade);outline-offset:2px}
+.btn:disabled{opacity:.45;cursor:default}
+.btn.known[aria-pressed="true"]{background:var(--jade);border-color:var(--jade);color:var(--surface)}
+.row2{display:flex;gap:8px;justify-content:space-between;flex-wrap:wrap;font-size:.85rem;color:var(--muted)}
+.link{font:inherit;background:none;border:0;color:var(--jade);cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:3px}
+
+.search{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:10px;padding:8px 12px;background:var(--surface);color:var(--muted);margin-bottom:12px}
+.search:focus-within{border-color:var(--jade);outline:2px solid var(--jade-soft)}
+.search input{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);font:inherit;font-family:var(--f-vi),var(--f-th);outline:none}
+.list .dk{font-size:.75rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:0 8px;margin-left:6px;white-space:nowrap}
+.list .empty{color:var(--muted);font-size:.9rem;padding:8px 2px}
+.list h3{margin:0 0 6px;font-size:.8rem;font-weight:600;letter-spacing:.06em;color:var(--muted)}
+.list ol{margin:0;padding:0;list-style:none;display:grid;gap:4px}
+.list li button{width:100%;display:flex;justify-content:space-between;gap:10px;font:inherit;background:none;border:0;border-bottom:1px solid var(--line);padding:8px 2px;color:var(--ink);cursor:pointer;text-align:left}
+.list li button[aria-current="true"]{color:var(--jade);font-weight:600}
+.list .lv{font-family:var(--f-vi)}
+.list .lh{font-family:var(--f-han);color:var(--muted)}
+.tick{color:var(--jade)}
+@media (prefers-reduced-motion:reduce){.card{transition:none}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1><small>Từ Hán Việt</small>บัตรคำฮั่นเวียด</h1>
+    <span class="count" id="count">1 / 1</span>
+  </header>
+
+  <div class="decks" role="tablist" aria-label="ชุดคำ">
+    <button class="deck" id="d-han" role="tab" data-deck="han">ฮั่นเวียด<span class="n" id="n-han"></span></button>
+    <button class="deck" id="d-other" role="tab" data-deck="other">คำอื่น ๆ<span class="n" id="n-other"></span></button>
+  </div>
+
+  <div class="modes" role="group" aria-label="ด้านหน้าการ์ดแสดง">
+    <button class="chip" id="m-vi" data-mode="vi" aria-pressed="true">หน้า: เวียดนาม</button>
+    <button class="chip" id="m-han" data-mode="han" aria-pressed="false">หน้า: อักษรจีน</button>
+    <button class="chip" id="m-th" data-mode="th" aria-pressed="false">หน้า: ไทย</button>
+  </div>
+
+  <div class="stage">
+    <div class="card" id="card" role="button" tabindex="0" aria-label="พลิกการ์ด">
+      <div class="face front" id="front"></div>
+      <div class="face back" id="back" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="btn" id="prev">← ก่อนหน้า</button>
+    <button class="btn known" id="known" aria-pressed="false">จำได้แล้ว</button>
+    <button class="btn" id="next">ถัดไป →</button>
+  </div>
+  <div class="voice-row" id="voice-row">
+    <label for="voice-sel">เสียงอ่าน</label>
+    <select id="voice-sel"></select>
+    <button class="link" id="voice-test" type="button">ทดลองฟัง</button>
+    <span id="voice-info"></span>
+  </div>
+  <p class="tts-msg" id="tts-msg" hidden></p>
+  <div class="row2">
+    <span>แตะการ์ดหรือกด Space เพื่อพลิก · ← → เปลี่ยนคำ</span>
+    <button class="link" id="shuffle">สุ่มลำดับ</button>
+  </div>
+
+  <section class="list">
+    <label class="search" for="q">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input id="q" type="search" placeholder="ค้นหา เช่น cấp, cap, 級, ระดับ" autocomplete="off" spellcheck="false">
+    </label>
+    <h3 id="list-title">คำทั้งหมด</h3>
+    <ol id="list"></ol>
+  </section>
+</div>
+
+<script>
+const WORDS = [
+  {
+    vi: "Khách sạn", th: "โรงแรม",
+    parts: [
+      { vi: "Khách", han: "客", py: "kè", th: "แขก / ผู้เข้าพัก" },
+      { vi: "Sạn", han: "棧", py: "zhàn", th: "ที่พัก / ร้านค้า" }
+    ],
+    note: "ในภาษาจีน <b>客棧</b> (kèzhàn) หมายถึงโรงเตี๊ยมหรือที่พักแรมสมัยก่อน"
+  },
+  {
+    vi: "Làm việc", th: "ทำงาน",
+    parts: [
+      { vi: "Làm", th: "ทำ (คำเวียดแท้ ไม่มีอักษรจีน)" },
+      { vi: "Việc", han: "役", py: "yì", th: "งาน / ภาระหน้าที่" }
+    ],
+    note: "คำลูกผสม: Làm เป็นคำเวียดแท้ ส่วน Việc เป็นเสียงฮั่นเวียดยุคเก่า (Hán Việt cổ) ของ <b>役</b> ซึ่งเสียงฮั่นเวียดมาตรฐานของตัวนี้คือ dịch"
+  },
+  {
+    vi: "Dịch vụ", th: "บริการ",
+    parts: [
+      { vi: "Dịch", han: "役", py: "yì", th: "งาน / การรับใช้ / แรงงาน" },
+      { vi: "Vụ", han: "務", py: "wù", th: "กิจการ / ธุระ / หน้าที่" }
+    ],
+    note: "役 ตัวเดียวกับ việc ใน làm việc แต่ที่นี่อ่านแบบฮั่นเวียดมาตรฐาน (dịch) · ภาษาจีนปัจจุบันใช้ <b>服務</b> (fúwù) แทน ส่วน <b>役務</b> ยังใช้ในภาษาญี่ปุ่น (ekimu)"
+  },
+  {
+    vi: "Nhà vệ sinh", th: "ห้องน้ำ / ห้องสุขา",
+    parts: [
+      { vi: "Nhà", th: "บ้าน / ห้อง / อาคาร (คำเวียดแท้ ไม่มีอักษรจีน)" },
+      { vi: "Vệ", han: "衛", py: "wèi", th: "ปกป้อง / พิทักษ์" },
+      { vi: "Sinh", han: "生", py: "shēng", th: "ชีวิต / การมีชีวิต" }
+    ],
+    note: "คำลูกผสม: nhà (เวียดแท้) + vệ sinh <b>衛生</b> ที่แปลว่า สุขอนามัย (ปกป้องชีวิต) · ภาษาจีนก็เรียกห้องน้ำว่า <b>衛生間</b> (wèishēngjiān) แปลตรงตัวว่า ห้องสุขอนามัย"
+  },
+  {
+    vi: "Nhà hàng", th: "ร้านอาหาร / ภัตตาคาร",
+    parts: [
+      { vi: "Nhà", th: "บ้าน / อาคาร (คำเวียดแท้ ไม่มีอักษรจีน)" },
+      { vi: "Hàng", han: "行", py: "háng", th: "ร้านค้า / กิจการ / สินค้า" }
+    ],
+    note: "คำลูกผสม: ตรงตัวคือ อาคารร้านค้า · 行 ตัวเดียวกับใน ngân hàng <b>銀行</b> (ธนาคาร = ร้านเงิน) ระวังสับสนกับ hành <b>行</b> ที่แปลว่า เดิน/กระทำ ซึ่งเป็นตัวเดียวกันแต่อ่านต่างกันตามความหมาย"
+  },
+  {
+    vi: "Ngân hàng", th: "ธนาคาร",
+    parts: [
+      { vi: "Ngân", han: "銀", py: "yín", th: "เงิน (โลหะเงิน)" },
+      { vi: "Hàng", han: "行", py: "háng", th: "ร้านค้า / กิจการ" }
+    ],
+    note: "ตรงตัวคือ ร้านเงิน · ภาษาจีนใช้ <b>銀行</b> (yínháng) ภาษาญี่ปุ่น ginkō และภาษาเกาหลี eunhaeng ก็มาจากคำเดียวกัน · คู่กับ nhà hàng ที่ใช้ hàng ตัวเดียวกัน"
+  },
+  {
+    vi: "Kẻ địch", th: "ศัตรู / ข้าศึก", src: "ROV (Liên Quân Mobile)",
+    parts: [
+      { vi: "Kẻ", th: "คน / ผู้ (คำเวียดแท้ ใช้กับคนในแง่ลบ)" },
+      { vi: "Địch", han: "敵", py: "dí", th: "ศัตรู / ต่อต้าน" }
+    ],
+    note: "คำลูกผสม: kẻ ใช้นำหน้าคนที่ไม่ดี เช่น kẻ trộm (ขโมย) kẻ thù (ศัตรู) · 敵 เจอในคำฮั่นเวียดอื่น เช่น vô địch <b>無敵</b> (ไร้ศัตรู = แชมป์) และ đối địch <b>對敵</b> (เป็นปฏิปักษ์)"
+  },
+  {
+    vi: "Đối thủ", th: "คู่แข่ง / คู่ต่อสู้", src: "ROV (Liên Quân Mobile)",
+    parts: [
+      { vi: "Đối", han: "對", py: "duì", th: "ตรงข้าม / เผชิญหน้า / คู่" },
+      { vi: "Thủ", han: "手", py: "shǒu", th: "มือ → ผู้ทำ / ผู้เล่น" }
+    ],
+    note: "ตรงตัวคือ มือฝั่งตรงข้าม · ภาษาจีนใช้ <b>對手</b> (duìshǒu) เหมือนกัน · 手 ในความหมาย ผู้เล่น/ผู้ชำนาญ เจอใน cầu thủ <b>球手</b> (นักฟุตบอล) tuyển thủ <b>選手</b> (นักกีฬาตัวแทน) · ต่างจาก kẻ địch ตรงที่ đối thủ เป็นคู่แข่งธรรมดา ไม่จำเป็นต้องเป็นศัตรู"
+  },
+  {
+    vi: "Gây sát thương", th: "สร้างความเสียหาย / ทำดาเมจ", src: "ROV (Liên Quân Mobile)",
+    parts: [
+      { vi: "Gây", th: "ก่อ / ทำให้เกิด (คำเวียดแท้ ไม่มีอักษรจีน)" },
+      { vi: "Sát", han: "殺", py: "shā", th: "ฆ่า" },
+      { vi: "Thương", han: "傷", py: "shāng", th: "บาดเจ็บ / บาดแผล" }
+    ],
+    note: "วลีลูกผสม: gây (เวียดแท้) + sát thương <b>殺傷</b> ที่แปลว่า ความเสียหาย / ดาเมจ · ในเกมเจอคู่กับ sát thương vật lý (ดาเมจกายภาพ) และ sát thương phép (ดาเมจเวท) · 傷 ตัวเดียวกับใน bị thương (ได้รับบาดเจ็บ)"
+  },
+  {
+    vi: "Sát thương phép", th: "ดาเมจเวท / ความเสียหายเวทมนตร์", src: "ROV (Liên Quân Mobile)",
+    parts: [
+      { vi: "Sát", han: "殺", py: "shā", th: "ฆ่า" },
+      { vi: "Thương", han: "傷", py: "shāng", th: "บาดเจ็บ" },
+      { vi: "Phép", han: "法", py: "fǎ", th: "เวทมนตร์ / วิชา / กฎ" }
+    ],
+    note: "phép เป็นเสียงฮั่นเวียดยุคเก่า (Hán Việt cổ) ของ <b>法</b> ส่วนเสียงมาตรฐานคือ pháp เช่น pháp luật <b>法律</b> (กฎหมาย) · คล้าย việc/dịch ที่เป็นตัว 役 เดียวกัน · ในเกมเจอ phép thuật <b>法術</b> (เวทมนตร์) และ pháp sư <b>法師</b> (เมจ)"
+  },
+  {
+    vi: "Sát thương vật lý", th: "ดาเมจกายภาพ", src: "ROV (Liên Quân Mobile)",
+    parts: [
+      { vi: "Sát", han: "殺", py: "shā", th: "ฆ่า" },
+      { vi: "Thương", han: "傷", py: "shāng", th: "บาดเจ็บ" },
+      { vi: "Vật", han: "物", py: "wù", th: "สิ่งของ / วัตถุ" },
+      { vi: "Lý", han: "理", py: "lǐ", th: "หลักการ / เหตุผล" }
+    ],
+    note: "vật lý <b>物理</b> แปลว่า ฟิสิกส์ / ทางกายภาพ (ตรงตัวคือ หลักของวัตถุ) ภาษาจีนใช้ <b>物理傷害</b> สำหรับดาเมจกายภาพ · คู่กับ sát thương phép (ดาเมจเวท)"
+  },
+  {
+    vi: "Giáp phép", th: "เกราะเวท / ค่าป้องกันเวท", src: "ROV (Liên Quân Mobile)",
+    parts: [
+      { vi: "Giáp", han: "甲", py: "jiǎ", th: "เกราะ / กระดอง" },
+      { vi: "Phép", han: "法", py: "fǎ", th: "เวทมนตร์" }
+    ],
+    note: "ค่าสเตตัสที่ลด sát thương phép · คู่กับ giáp (เกราะกายภาพ) ที่ลด sát thương vật lý · 甲 เจอใน áo giáp (ชุดเกราะ) และยังเป็นตัวแรกของสิบก้านฟ้า <b>天干</b> เช่น ปี Giáp Tý <b>甲子</b>"
+  },
+  {
+    vi: "Hiệu ứng", th: "เอฟเฟกต์ / ผลกระทบ", src: "ROV (Liên Quân Mobile)",
+    parts: [
+      { vi: "Hiệu", han: "效", py: "xiào", th: "ผล / ประสิทธิผล" },
+      { vi: "Ứng", han: "應", py: "yìng", th: "ตอบสนอง / สนองตอบ" }
+    ],
+    note: "ตรงตัวคือ ผลที่ตอบสนอง · ภาษาจีนใช้ <b>效應</b> (xiàoyìng) ในความหมาย ปรากฏการณ์/ผลกระทบ เช่น hiệu ứng nhà kính <b>溫室效應</b> (ปรากฏการณ์เรือนกระจก) · ในเกมเจอ hiệu ứng làm chậm (เอฟเฟกต์สโลว์) · 效 เจอใน hiệu quả <b>效果</b> (ประสิทธิผล) ส่วน 應 เจอใน phản ứng <b>反應</b> (ปฏิกิริยา)"
+  },
+  {
+    vi: "Pháp sư", th: "เมจ / จอมเวท", src: "ROV (Liên Quân Mobile)",
+    parts: [
+      { vi: "Pháp", han: "法", py: "fǎ", th: "เวทมนตร์ / วิชา / กฎ" },
+      { vi: "Sư", han: "師", py: "shī", th: "ครู / ผู้เชี่ยวชาญ" }
+    ],
+    note: "ชื่อคลาส Mage ในเกม · 法 ตัวเดียวกับ phép ใน sát thương phép แต่อ่านแบบฮั่นเวียดมาตรฐาน (pháp) · ในภาษาจีน <b>法師</b> ยังหมายถึงพระอาจารย์ในพุทธ/เต๋า · 師 = ผู้เชี่ยวชาญ เจอใน kỹ sư <b>技師</b> (วิศวกร) luật sư <b>律師</b> (ทนายความ) giáo sư <b>教師</b> (ศาสตราจารย์)"
+  },
+  {
+    vi: "Nhẫn ma pháp", th: "แหวนเวทมนตร์", src: "ROV (Liên Quân Mobile)",
+    parts: [
+      { vi: "Nhẫn", th: "แหวน (คำเวียดแท้ ไม่มีอักษรจีน)" },
+      { vi: "Ma", han: "魔", py: "mó", th: "ปีศาจ / มนตร์ดำ" },
+      { vi: "Pháp", han: "法", py: "fǎ", th: "วิชา / เวท" }
+    ],
+    note: "คำลูกผสม: nhẫn (เวียดแท้) + ma pháp <b>魔法</b> (เวทมนตร์) ซึ่งจีนและญี่ปุ่น (mahō) ก็ใช้คำนี้ · ชื่อไอเทมในเกม · ระวังสับสนกับ nhẫn ฮั่นเวียด <b>忍</b> ที่แปลว่า อดทน เช่น kiên nhẫn <b>堅忍</b> (อดทน) · 法 ตัวที่ 3 ที่เจอแล้ว ต่อจาก phép และ pháp sư"
+  },
+  {
+    vi: "Áo choàng băng giá", th: "เสื้อคลุมน้ำแข็ง", src: "ROV (Liên Quân Mobile)",
+    parts: [
+      { vi: "Áo", th: "เสื้อ (คำเวียดแท้ ไม่มีอักษรจีน)" },
+      { vi: "Choàng", th: "คลุม / พาด (คำเวียดแท้)" },
+      { vi: "Băng", han: "冰", py: "bīng", th: "น้ำแข็ง" },
+      { vi: "Giá", th: "หนาวเย็น / เยือกแข็ง (คำเวียดแท้)" }
+    ],
+    note: "คำลูกผสม: áo choàng (เสื้อคลุม) + băng giá (เย็นเยือกแข็ง) ซึ่ง băng เป็นฮั่นเวียด ส่วน giá เป็นคำเวียดแท้ เช่น giá rét (หนาวจัด) · ชื่อไอเทมในเกม · 冰 เจอใน băng tuyết <b>冰雪</b> (น้ำแข็งและหิมะ) · นักภาษาศาสตร์บางคนเสนอว่า áo อาจยืมมาจาก <b>襖</b> (ǎo เสื้อนวม) ตั้งแต่ยุคเก่ามาก แต่ทั่วไปถือเป็นคำเวียดแท้"
+  },
+  {
+    vi: "Biến về", th: "วาร์ปกลับฐาน / รีคอล", src: "ROV (Liên Quân Mobile)",
+    parts: [
+      { vi: "Biến", han: "變", py: "biàn", th: "เปลี่ยนแปลง / แปลงร่าง → หายวับ" },
+      { vi: "Về", th: "กลับ (บ้าน/ที่เดิม) (คำเวียดแท้ ไม่มีอักษรจีน)" }
+    ],
+    note: "คำลูกผสม: ชื่อปุ่ม Recall ในเกม ตรงตัวคือ หายวับกลับไป · ภาษาพูด biến ยังแปลว่า หายไป เช่น biến mất (หายไป) Biến đi! (ไปให้พ้น!) · 變 เจอใน biến hình <b>變形</b> (แปลงร่าง) และ biến đổi (เปลี่ยนแปลง) · ระวังสะกด: biến (ê + เสียง sắc) ไม่ใช่ biền"
+  },
+  {
+    vi: "Ấn để tiếp tục", th: "แตะเพื่อดำเนินการต่อ", src: "ROV (Liên Quân Mobile)",
+    parts: [
+      { vi: "Ấn", th: "กด / แตะ (มักถือเป็นคำเวียดแท้ ดูหมายเหตุ)" },
+      { vi: "Để", th: "เพื่อ (คำเวียดแท้)" },
+      { vi: "Tiếp", han: "接", py: "jiē", th: "ต่อ / รับ / เชื่อม" },
+      { vi: "Tục", han: "續", py: "xù", th: "สืบต่อ / ต่อเนื่อง" }
+    ],
+    note: "ประโยคลูกผสม: ấn + để + tiếp tục <b>接續</b> (ดำเนินต่อ) · ใช้ bấm แทน ấn ได้ (Bấm để tiếp tục) · tiếp tục เจอบ่อยในภาษาทั่วไป เช่น Tiếp tục! (ต่อเลย!) · 接 เจอใน tiếp xúc <b>接觸</b> (สัมผัส/ติดต่อ) · ấn ที่แปลว่ากด บางตำราโยงกับ <b>按</b> (àn กด) แต่ไม่แน่ชัด ระวังสับสนกับ ấn <b>印</b> (ตราประทับ/พิมพ์) เช่น ấn tượng <b>印象</b> (ความประทับใจ) และ Ấn Độ <b>印度</b> (อินเดีย)"
+  },
+  {
+    vi: "Đường rồng", th: "เลนมังกร", src: "ROV (Liên Quân Mobile)",
+    parts: [
+      { vi: "Đường", th: "ถนน / ทาง / เลน (ที่มาไม่แน่ชัด ดูหมายเหตุ)" },
+      { vi: "Rồng", han: "龍", py: "lóng", th: "มังกร" }
+    ],
+    note: "เลนฝั่งที่มีมังกร (Dragon Lane) ในเกม · rồng เป็นการยืมจาก <b>龍</b> ตั้งแต่ยุคเก่ามาก (ก่อนฮั่นเวียด) ส่วนเสียงฮั่นเวียดมาตรฐานคือ long เช่น Thăng Long <b>昇龍</b> (ชื่อเก่าของฮานอย) และ long vương (ราชามังกร) · đường บางตำราโยงกับ <b>塘</b> แต่ไม่แน่ชัด และระวังสับสนกับ đường ที่แปลว่า น้ำตาล (<b>糖</b>)"
+  },
+  {
+    vi: "Hồi máu", th: "ฟื้นเลือด / ฮีล", src: "ROV (Liên Quân Mobile)",
+    parts: [
+      { vi: "Hồi", han: "回", py: "huí", th: "กลับคืน / ฟื้น" },
+      { vi: "Máu", th: "เลือด → HP ในเกม (คำเวียดแท้ ไม่มีอักษรจีน)" }
+    ],
+    note: "คำลูกผสม: ตรงตัวคือ เลือดกลับคืน · 回 เจอใน hồi phục <b>回復</b> (ฟื้นฟู) hồi sinh <b>回生</b> (ฟื้นคืนชีพ) · คำฮั่นเวียดของเลือดคือ huyết <b>血</b> เช่น huyết áp <b>血壓</b> (ความดันเลือด) แต่ในเกมและภาษาพูดใช้ máu"
+  },
+  {
+    vi: "ST vùng", say: "sát thương vùng", th: "ดาเมจวงกว้าง / ดาเมจพื้นที่ (AoE)", src: "ROV (Liên Quân Mobile)",
+    parts: [
+      { vi: "Sát", han: "殺", py: "shā", th: "ฆ่า (ตัว S ใน ST)" },
+      { vi: "Thương", han: "傷", py: "shāng", th: "บาดเจ็บ (ตัว T ใน ST)" },
+      { vi: "Vùng", th: "พื้นที่ / เขต / บริเวณ (คำเวียดแท้ ไม่มีอักษรจีน)" }
+    ],
+    note: "ST ย่อมาจาก sát thương (ดาเมจ) ที่เกมใช้ในคำอธิบายสกิลและไอเทม เขียนเต็มว่า sát thương vùng · vùng ใช้ทั่วไปด้วย เช่น vùng miền (ภูมิภาค) vùng biển (เขตทะเล) · คำฮั่นเวียดที่ความหมายใกล้กันคือ khu vực <b>區域</b> (เขต/พื้นที่)"
+  },
+  {
+    vi: "Bạc", th: "เงิน (โลหะ) / แรงก์ Silver", src: "ROV (Liên Quân Mobile)",
+    parts: [
+      { vi: "Bạc", han: "白", py: "bái", th: "ขาว → โลหะสีขาว = เงิน" }
+    ],
+    note: "ในเกมคือแรงก์ Bạc (Silver) · bạc เป็นเสียงฮั่นเวียดยุคเก่าของ <b>白</b> (ขาว) ส่วนเสียงมาตรฐานคือ bạch เช่น bạch tuộc (ปลาหมึกยักษ์) · คำฮั่นเวียดของโลหะเงินคือ ngân <b>銀</b> ตัวเดียวกับใน ngân hàng · ภาษาพูด bạc ยังแปลว่า เงินทอง ได้ด้วย เช่น tiền bạc (เงินทอง) cờ bạc (การพนัน) · ระวังสับสนกับ bạc <b>薄</b> (บาง/ไร้น้ำใจ) เช่น bạc tình (ใจจืดใจดำ)"
+  },
+  {
+    vi: "Màn hình", th: "หน้าจอ", src: "ROV (Liên Quân Mobile)",
+    parts: [
+      { vi: "Màn", th: "ม่าน / ฉาก (ที่มาไม่แน่ชัด ดูหมายเหตุ)" },
+      { vi: "Hình", han: "形", py: "xíng", th: "รูป / ภาพ / รูปร่าง" }
+    ],
+    note: "ตรงตัวคือ ม่านที่มีภาพ · เจอในประโยค Ấn màn hình để tiếp tục (แตะหน้าจอเพื่อดำเนินการต่อ) ดูบัตร Ấn để tiếp tục ประกอบ · 形 เจอใน hình ảnh <b>形影</b> (รูปภาพ) และ biến hình <b>變形</b> (แปลงร่าง) · màn บางตำราโยงกับ <b>幔</b> (ม่าน) แต่ไม่แน่ชัด · ภาษาจีนเรียกหน้าจอว่า <b>屏幕</b> คนละคำกัน"
+  },
+  {
+    vi: "Đánh thường", th: "การโจมตีปกติ / โจมตีธรรมดา", src: "ROV (Liên Quân Mobile)",
+    parts: [
+      { vi: "Đánh", th: "ตี / โจมตี (คำเวียดแท้ ไม่มีอักษรจีน)" },
+      { vi: "Thường", han: "常", py: "cháng", th: "ปกติ / ธรรมดา / เสมอ" }
+    ],
+    note: "คำลูกผสม: ปุ่มโจมตีปกติ (basic attack) ในเกม · 常 เจอใน bình thường <b>平常</b> (ปกติ) และ thường xuyên (บ่อย ๆ) · ระวังสะกด: thường (เสียง huyền) = ปกติ ส่วน thương <b>傷</b> (ไม่มีวรรณยุกต์) = บาดเจ็บ ใน sát thương · đánh ใช้กว้างมาก เช่น đánh nhau (ต่อยกัน) đánh máy (พิมพ์ดีด)"
+  },
+  {
+    vi: "Sảnh", th: "ล็อบบี้ / ห้องโถง", src: "ROV (Liên Quân Mobile)",
+    parts: [
+      { vi: "Sảnh", han: "廳", py: "tīng", th: "ห้องโถง / ห้องรับแขก" }
+    ],
+    note: "ในเกมคือหน้าล็อบบี้ก่อนเข้าแมตช์ · เจอใน đại sảnh <b>大廳</b> (ห้องโถงใหญ่) และ sảnh chờ (ล็อบบี้รอ เช่นในโรงแรม/สนามบิน) · ภาษาจีนก็ใช้ <b>大廳</b> (dàtīng) เรียกล็อบบี้ · คำนี้ไปด้วยกันกับ khách sạn: sảnh khách sạn = ล็อบบี้โรงแรม"
+  },
+  {
+    vi: "Đấu lại", th: "เล่นอีกครั้ง / รีแมตช์", src: "ROV (Liên Quân Mobile)",
+    parts: [
+      { vi: "Đấu", han: "鬥", py: "dòu", th: "ต่อสู้ / แข่งขัน" },
+      { vi: "Lại", th: "อีกครั้ง / ซ้ำ (คำเวียดแท้ ไม่มีอักษรจีน)" }
+    ],
+    note: "คำลูกผสม: ปุ่มเล่นอีกตาหลังจบแมตช์ · 鬥 เจอใน chiến đấu <b>戰鬥</b> (ต่อสู้) đấu trường <b>鬥場</b> (สนามประลอง/อารีน่า) และ trận đấu (แมตช์) · lại วางหลังกริยาแปลว่า …อีกครั้ง เช่น chơi lại (เล่นใหม่) nói lại (พูดอีกที)"
+  },
+  {
+    vi: "Chí mạng", th: "คริติคอล / ถึงตาย", src: "ROV (Liên Quân Mobile)",
+    parts: [
+      { vi: "Chí", han: "致", py: "zhì", th: "ทำให้ถึง / นำไปสู่" },
+      { vi: "Mạng", han: "命", py: "mìng", th: "ชีวิต / ชะตา" }
+    ],
+    note: "ตรงตัวคือ ถึงแก่ชีวิต (ภาษาจีน <b>致命</b> = ร้ายแรงถึงตาย) ในเกมแปลว่า คริ · เจอใน tỉ lệ chí mạng (อัตราคริ) sát thương chí mạng (ดาเมจคริ) · mạng เป็นอีกเสียงอ่านของ 命 ซึ่งเสียงมาตรฐานคือ mệnh เช่น số mệnh <b>數命</b>/định mệnh <b>定命</b> (โชคชะตา) · ระวัง: mạng ที่แปลว่า เครือข่าย เช่น mạng xã hội (โซเชียลมีเดีย) เป็นคนละความหมาย"
+  },
+  {
+    vi: "Thăng cấp ngọc", th: "อัปเกรดอาร์คานา / อัปเลเวลเม็ดอัญมณี", src: "ROV (Liên Quân Mobile)",
+    parts: [
+      { vi: "Thăng", han: "升", py: "shēng", th: "ขึ้น / เลื่อนขึ้น" },
+      { vi: "Cấp", han: "級", py: "jí", th: "ระดับ / ขั้น" },
+      { vi: "Ngọc", han: "玉", py: "yù", th: "หยก / อัญมณี" }
+    ],
+    note: "thăng cấp <b>升級</b> = อัปเกรด/เลื่อนระดับ (จีนใช้คำเดียวกัน shēngjí) · ngọc ในเกมคือ อาร์คานา (Arcana) เช่น bảng ngọc (หน้าอาร์คานา) · 級 ตัวเดียวกับใน cấp bậc (ดูบัตร Bậc) · ชื่อเมือง Thăng Long ใช้ตัว <b>昇</b> ซึ่งอ่าน thăng และแปลว่า ขึ้น เหมือนกัน · 玉 เจอใน ngọc trai (ไข่มุก) และ Ngọc Hoàng <b>玉皇</b> (เง็กเซียนฮ่องเต้)"
+  },
+  {
+    vi: "Lực chiến", th: "พลังต่อสู้ / พาวเวอร์",
+    parts: [
+      { vi: "Lực", han: "力", py: "lì", th: "แรง / พลัง" },
+      { vi: "Chiến", han: "戰", py: "zhàn", th: "รบ / ต่อสู้ / สงคราม" }
+    ],
+    note: "ตัวเลขบอกความแข็งแกร่งของฮีโร่หรือผู้เล่นในเกม · ภาษาจีนเรียงกลับเป็น <b>戰力</b> (zhànlì) · 力 เจอใน năng lực <b>能力</b> (ความสามารถ) และ sức lực (เรี่ยวแรง) · 戰 เจอใน chiến đấu <b>戰鬥</b> (ต่อสู้ ดูบัตร Đấu lại) และ chiến tranh <b>戰爭</b> (สงคราม)"
+  },
+  {
+    vi: "Khả năng", th: "ความสามารถ / ความเป็นไปได้",
+    parts: [
+      { vi: "Khả", han: "可", py: "kě", th: "สามารถ / ได้" },
+      { vi: "Năng", han: "能", py: "néng", th: "ความสามารถ / พลัง" }
+    ],
+    note: "มีสองความหมาย: ความสามารถ เช่น khả năng đặc biệt (ความสามารถพิเศษ) และ ความเป็นไปได้ เช่น Có khả năng trời mưa (อาจจะฝนตก) · ภาษาจีน <b>可能</b> (kěnéng) ใช้แค่ความหมาย เป็นไปได้ · 能 เจอใน năng lực <b>能力</b> (ความสามารถ) และ kỹ năng <b>技能</b> (สกิล)"
+  },
+  {
+    vi: "Mỗi lần", th: "ทุกครั้ง / แต่ละครั้ง",
+    parts: [
+      { vi: "Mỗi", han: "每", py: "měi", th: "แต่ละ / ทุก" },
+      { vi: "Lần", th: "ครั้ง / หน (คำเวียดแท้ ไม่มีอักษรจีน)" }
+    ],
+    note: "คำลูกผสม · ตัวอย่าง: Mỗi lần chơi đều thua. (เล่นทีไรแพ้ทุกที) · mỗi ใช้กับคำอื่นได้: mỗi ngày (ทุกวัน) mỗi người (แต่ละคน) · ภาษาจีน <b>每次</b> (měi cì) ความหมายเดียวกัน · lần ใช้นับครั้ง: một lần (หนึ่งครั้ง) lần đầu (ครั้งแรก) · คำอธิบายสกิลในเกมมักใช้ mỗi lần … เช่น mỗi lần đánh thường (ทุกครั้งที่โจมตีปกติ)"
+  },
+  {
+    vi: "Ngôi trường", th: "โรงเรียน (หนึ่งแห่ง)",
+    parts: [
+      { vi: "Ngôi", th: "ลักษณนามของอาคาร/วัด/ดาว (คำเวียดแท้ ไม่มีอักษรจีน)" },
+      { vi: "Trường", han: "場", py: "chǎng", th: "สถานที่ / ลาน → โรงเรียน" }
+    ],
+    note: "คำลูกผสม: ngôi เป็นลักษณนาม เหมือน căn ใน căn nhà เช่น ngôi nhà (บ้านหลังหนึ่ง) ngôi chùa (วัด) ngôi sao (ดาว) · trường เดี่ยว ๆ = โรงเรียน ย่อมาจาก trường học · 場 ตัวเดียวกับใน đấu trường <b>鬥場</b> (อารีน่า) และ thị trường <b>市場</b> (ตลาด) · ระวังสับสนกับ trường <b>長</b> (ยาว) เช่น trường kỳ (ระยะยาว)"
+  },
+  {
+    vi: "Học sinh", th: "นักเรียน",
+    parts: [
+      { vi: "Học", han: "學", py: "xué", th: "เรียน / ศึกษา" },
+      { vi: "Sinh", han: "生", py: "shēng", th: "คน / ผู้ (เดิมแปลว่า เกิด / ชีวิต)" }
+    ],
+    note: "ภาษาจีน <b>學生</b> (xuésheng) คำเดียวกัน · ใช้กับนักเรียนระดับประถม-มัธยม ส่วนนักศึกษามหาวิทยาลัยคือ sinh viên <b>生員</b> · 學 เจอใน trường học (โรงเรียน) đại học <b>大學</b> (มหาวิทยาลัย) · 生 ตัวเดียวกับใน vệ sinh <b>衛生</b> (ดูบัตร Nhà vệ sinh)"
+  },
+  {
+    vi: "Câu hỏi", th: "คำถาม",
+    parts: [
+      { vi: "Câu", han: "句", py: "jù", th: "ประโยค / วลี" },
+      { vi: "Hỏi", th: "ถาม (คำเวียดแท้ ไม่มีอักษรจีน)" }
+    ],
+    note: "คำลูกผสม: ตรงตัวคือ ประโยคถาม · câu เป็นเสียงฮั่นเวียดยุคเก่าของ <b>句</b> ส่วนเสียงมาตรฐานคือ cú (แบบเดียวกับ việc/dịch) · câu ใช้นำหน้าได้หลายคำ: câu trả lời (คำตอบ) câu chuyện (เรื่องเล่า) · ชื่อวรรณยุกต์ dấu hỏi (เครื่องหมายคำถาม ̉ ) ก็มาจาก hỏi นี้ เพราะรูปร่างเหมือนเครื่องหมาย ?"
+  },
+  {
+    vi: "Cấp sao", th: "ระดับดาว / เลเวลดาว",
+    parts: [
+      { vi: "Cấp", han: "級", py: "jí", th: "ระดับ / ขั้น" },
+      { vi: "Sao", th: "ดาว (คำเวียดแท้ ไม่มีอักษรจีน)" }
+    ],
+    note: "คำลูกผสม: ระดับที่นับเป็นจำนวนดาว เช่น ระดับดาวของฮีโร่ แรงก์ หรือโรงแรม · 級 ตัวเดียวกับใน thăng cấp (ดูบัตร Thăng cấp ngọc) และ cấp bậc (ดูบัตร Bậc) · sao ตัวเดียวกับ ngôi sao (ดวงดาว ดูบัตร Sao) · ตัวอย่าง: khách sạn 5 sao (โรงแรม 5 ดาว) · ภาษาจีนใช้ <b>星級</b> (xīngjí) เรียงกลับกัน"
+  },
+  {
+    vi: "Từ điển", th: "พจนานุกรม",
+    parts: [
+      { vi: "Từ", han: "詞", py: "cí", th: "คำ / ถ้อยคำ" },
+      { vi: "Điển", han: "典", py: "diǎn", th: "ตำรา / คัมภีร์ / แบบแผน" }
+    ],
+    note: "ตรงตัวคือ ตำราคำ · ภาษาจีน <b>詞典</b> (cídiǎn) คำเดียวกัน · 詞 เจอใน từ vựng <b>詞彙</b> (คำศัพท์) · 典 เจอใน cổ điển <b>古典</b> (คลาสสิก) kinh điển <b>經典</b> (คัมภีร์/สุดยอดคลาสสิก) · ระวังสับสนกับ từ ที่แปลว่า จาก (ดูบัตร Đến từ) ซึ่งเป็นคนละคำ"
+  },
+  {
+    vi: "Từ vựng", th: "คำศัพท์",
+    parts: [
+      { vi: "Từ", han: "詞", py: "cí", th: "คำ / ถ้อยคำ" },
+      { vi: "Vựng", han: "彙", py: "huì", th: "รวบรวม / ประมวล" }
+    ],
+    note: "ตรงตัวคือ ประมวลคำ · ภาษาจีน <b>詞彙</b> (cíhuì) คำเดียวกัน · คู่กับ từ điển (พจนานุกรม) ที่ใช้ 詞 ตัวเดียวกัน · ตัวอย่าง: học từ vựng (เรียนคำศัพท์) từ vựng tiếng Việt (คำศัพท์ภาษาเวียดนาม) · 彙 เป็นตัวที่ไม่ค่อยเจอในคำอื่น จำผ่านคำนี้คำเดียวก็พอ · ทำไม huì ≠ vựng: ตามเสียงโบราณ 彙 ควรอ่านเหมือน <b>胃</b> (จีน wèi / ฮั่นเวียด vị) แต่จีนกลางเพี้ยนเป็น huì เพราะปนกับ <b>匯</b> (huì รวม) ส่วนเวียดนามเพี้ยนเป็น vựng จนกลายเป็นเสียงที่ใช้ทั่วไป (พจนานุกรม Thiều Chửu ให้เสียงหลัก vị) · เสียงฮั่นเวียดไม่ได้มาจากพินอิน ทั้งสองแยกกันมาจากจีนยุคกลาง แต่มีรูปแบบตรงกัน เช่น w/y ↔ v: 胃 wèi = vị, 王 wáng = vương, 雲 yún = vân · ตัวย่อ: 词汇"
+  },
+  {
+    vi: "Địch", th: "ศัตรู / ฝ่ายตรงข้าม", src: "ROV (Liên Quân Mobile)",
+    parts: [
+      { vi: "Địch", han: "敵", py: "dí", th: "ศัตรู / ต่อต้าน / ต่อกร" }
+    ],
+    note: "ในเกมใช้เดี่ยว ๆ หมายถึงฝ่ายศัตรู เช่น phe địch (ฝ่ายศัตรู) trụ địch (ป้อมศัตรู) · ดูบัตร Kẻ địch ประกอบ · 敵 เจอใน vô địch <b>無敵</b> (แชมป์) และ đối địch <b>對敵</b> · ระวังสะกด: địch (Đ มีขีด) ≠ dịch <b>役</b> ใน dịch vụ (D ไม่มีขีด)"
+  },
+  {
+    deck: "other", origin: "คำเวียดแท้ (thuần Việt)",
+    vi: "Căn nhà", th: "บ้าน (หนึ่งหลัง)",
+    parts: [
+      { vi: "Căn", th: "ลักษณนามของบ้าน ห้อง อพาร์ตเมนต์ (หลัง / ห้อง)" },
+      { vi: "Nhà", th: "บ้าน" }
+    ],
+    note: "ระวังสับสน: căn ที่เป็นฮั่นเวียดก็มี คือ 根 (gēn) แปลว่า ราก เช่น căn bản (พื้นฐาน) แต่เป็นคนละคำกับ căn ที่เป็นลักษณนาม"
+  },
+  {
+    deck: "other", origin: "คำเวียดแท้ (thuần Việt)",
+    vi: "Chị gái", th: "พี่สาว",
+    parts: [
+      { vi: "Chị", th: "พี่ (ผู้หญิง) · ใช้เป็นสรรพนามเรียกผู้หญิงที่อายุมากกว่าเล็กน้อยด้วย" },
+      { vi: "Gái", th: "ผู้หญิง / เพศหญิง" }
+    ],
+    note: "gái ใช้ระบุเพศหญิง คู่กับ trai ที่ระบุเพศชาย เช่น anh trai (พี่ชาย) em gái (น้องสาว) em trai (น้องชาย) · คำฮั่นเวียดที่แปลว่าพี่สาวคือ tỷ <b>姊</b> เช่น tỷ muội (พี่สาวน้องสาว) ซึ่งเจอในนิยายจีนแปลมากกว่าภาษาพูด"
+  },
+  {
+    deck: "other", origin: "คำเวียดแท้ (thuần Việt)", src: "ROV (Liên Quân Mobile)",
+    vi: "Gây", th: "ก่อให้เกิด / ทำให้เกิด",
+    parts: [
+      { vi: "Gây", th: "ก่อ / ทำให้เกิด (มักใช้กับผลที่ไม่ดี)" }
+    ],
+    note: "ในเกมเจอบ่อยใน gây sát thương (สร้างความเสียหาย / ทำดาเมจ) โดย sát thương เป็นฮั่นเวียด <b>殺傷</b> (ฆ่า + บาดเจ็บ) · ตัวอย่างอื่น: gây chiến (ก่อสงคราม) gây ra (ก่อให้เกิด)"
+  },
+  {
+    deck: "other", origin: "คำเวียดแท้ (thuần Việt) · รูปประโยค", src: "ROV (Liên Quân Mobile)",
+    vi: "Đã … chưa?", th: "…แล้วหรือยัง?",
+    parts: [
+      { vi: "Đã", th: "แล้ว (วางหน้ากริยา บอกว่าเกิดขึ้นแล้ว)" },
+      { vi: "Chưa", th: "ยัง (วางท้ายประโยค ทำให้เป็นคำถาม)" }
+    ],
+    note: "ตัวอย่าง: Bạn đã sẵn sàng chưa? (พร้อมหรือยัง?) · Bạn đã ăn cơm chưa? (กินข้าวหรือยัง?) · ตอบ rồi = แล้ว หรือ chưa = ยัง · ภาษาพูดตัด đã ทิ้งได้ เช่น Ăn cơm chưa? · ระวังสะกด Đ (เสียง ด) ไม่ใช่ D (ภาคเหนือออกเสียง z)"
+  },
+  {
+    deck: "other", origin: "คำเวียดแท้ (thuần Việt)", src: "ROV (Liên Quân Mobile)",
+    vi: "Làm chậm", th: "ทำให้ช้าลง / สโลว์",
+    parts: [
+      { vi: "Làm", th: "ทำ → ทำให้ (เมื่อตามด้วยคุณศัพท์)" },
+      { vi: "Chậm", th: "ช้า" }
+    ],
+    note: "รูป làm + คุณศัพท์ = ทำให้… เช่น làm đẹp (ทำให้สวย) làm choáng (ทำให้มึน = สตั๊น) · ในเกมเจอ hiệu ứng làm chậm (เอฟเฟกต์สโลว์) โดย hiệu ứng เป็นฮั่นเวียด <b>效應</b> · làm ตัวเดียวกับใน làm việc · ตรงข้ามกับ nhanh (เร็ว)"
+  },
+  {
+    deck: "other", origin: "คำเวียดแท้ (thuần Việt)", src: "ROV (Liên Quân Mobile)",
+    vi: "Về đi", th: "กลับเถอะ! / ถอยกลับ!",
+    parts: [
+      { vi: "Về", th: "กลับ (บ้าน/ฐาน/ที่เดิม)" },
+      { vi: "Đi", th: "ไป → ท้ายประโยคเป็นคำชวน/สั่ง = …เถอะ / …เลย" }
+    ],
+    note: "ในเกมใช้บอกเพื่อนให้ถอยกลับฐาน · đi ท้ายประโยคทำให้เป็นคำสั่งหรือคำชวน เช่น Ăn đi! (กินเลย!) Đánh đi! (ตีเลย!) · về ตัวเดียวกับใน Biến về (รีคอล) · ระวัง: đi ต้นประโยคแปลว่า ไป เช่น Đi về (กลับบ้าน)"
+  },
+  {
+    deck: "other", origin: "มักถือเป็นคำเวียดแท้ (ที่มาไม่แน่ชัด)", src: "ROV (Liên Quân Mobile)",
+    vi: "Bậc", th: "ขั้น / ระดับ / เทียร์",
+    parts: [
+      { vi: "Bậc", th: "ขั้นบันได → ขั้น / ระดับ / ชั้น" }
+    ],
+    note: "ในเกมใช้บอกระดับ เช่น ไอเทมหรือแรงก์ bậc 1, bậc 2 · ความหมายเดิมคือขั้นบันได เช่น bậc thang (ขั้นบันได) · คู่กับฮั่นเวียด cấp <b>級</b> (ระดับ) ในคำ cấp bậc (ยศ/ลำดับชั้น) · ระวังสับสนกับ Bạc (แรงก์ Silver) ที่สระต่างกัน: bậc (â) ≠ bạc (a)"
+  },
+  {
+    deck: "other", origin: "คำเวียดแท้ (thuần Việt)", src: "ROV (Liên Quân Mobile)",
+    vi: "Thay đổi", th: "เปลี่ยน / เปลี่ยนแปลง",
+    parts: [
+      { vi: "Thay", th: "แทนที่ / เปลี่ยน (เอาอันใหม่มาแทน)" },
+      { vi: "Đổi", th: "แลก / สลับ / เปลี่ยน" }
+    ],
+    note: "คำซ้อนความหมายเดียวกันสองคำ (แบบ เปลี่ยน+แปลง ในภาษาไทย) · ในเกมเจอในปุ่มเปลี่ยนสกิน ชื่อ หรือการตั้งค่า · ใช้แยกได้: thay quần áo (เปลี่ยนเสื้อผ้า) đổi tiền (แลกเงิน) · คำที่ใช้ฮั่นเวียดคือ biến đổi (เปลี่ยนแปลง) ซึ่ง biến <b>變</b> ตัวเดียวกับใน Biến về"
+  },
+  {
+    deck: "other", origin: "คำเวียดแท้ (thuần Việt) · รูปประโยค",
+    vi: "Nếu … thì …", say: "nếu thì", th: "ถ้า … ก็ …",
+    parts: [
+      { vi: "Nếu", th: "ถ้า / หาก (ขึ้นต้นเงื่อนไข)" },
+      { vi: "Thì", th: "ก็ / จึง (ขึ้นต้นผลลัพธ์)" }
+    ],
+    note: "ตัวอย่าง: Nếu trời mưa thì tôi ở nhà. (ถ้าฝนตก ฉันก็อยู่บ้าน) · Nếu bạn thắng thì tôi mời. (ถ้าเธอชนะ ฉันเลี้ยง) · ภาษาพูดตัด nếu หรือ thì ทิ้งได้ · thì ยังใช้เดี่ยว ๆ เน้นหัวเรื่องได้ เช่น Tôi thì không biết. (ส่วนฉันน่ะไม่รู้) · ใช้ khi … thì … ได้ด้วย = เมื่อ … ก็ …"
+  },
+  {
+    deck: "other", origin: "คำเวียดแท้ (thuần Việt)",
+    vi: "Mua bán", th: "ซื้อขาย / ค้าขาย",
+    parts: [
+      { vi: "Mua", th: "ซื้อ" },
+      { vi: "Bán", th: "ขาย" }
+    ],
+    note: "คำซ้อนแบบตรงข้าม (ซื้อ+ขาย) เหมือนภาษาไทย · ใช้แยกได้: mua sắm (ช้อปปิ้ง) bán hàng (ขายของ) · ในเกมเจอ Mua (ซื้อ) ในร้านค้า · คำฮั่นเวียดที่ความหมายใกล้กันคือ thương mại <b>商賣</b> (การค้า) · นักภาษาศาสตร์บางคนเสนอว่า mua อาจเกี่ยวกับ <b>買</b> (ซื้อ) ในยุคเก่ามาก แต่ทั่วไปถือเป็นคำเวียดแท้"
+  },
+  {
+    deck: "other", origin: "คำเวียดแท้ (thuần Việt)",
+    vi: "Khó khăn", th: "ยากลำบาก / ความยากลำบาก",
+    parts: [
+      { vi: "Khó", th: "ยาก" },
+      { vi: "Khăn", th: "(พยางค์เสริมเสียง ไม่มีความหมายแยก)" }
+    ],
+    note: "คำซ้อนเสียง (từ láy) ที่ขึ้นต้นด้วยเสียง kh เหมือนกัน คล้าย ยุ่งยาก ในภาษาไทย · ใช้ได้ทั้งคุณศัพท์และคำนาม เช่น Bài này khó khăn quá. (ข้อนี้ยากจัง) gặp khó khăn (เจอปัญหา) · khó เดี่ยว ๆ ใช้บ่อยกว่า เช่น khó quá! (ยากมาก!) ตรงข้ามคือ dễ (ง่าย) · ระวัง: khăn เดี่ยว ๆ อีกคำแปลว่า ผ้า เช่น khăn tắm (ผ้าเช็ดตัว) · คำฮั่นเวียดที่ความหมายใกล้กันคือ gian nan <b>艱難</b> (ยากลำบาก)"
+  },
+  {
+    deck: "other", origin: "คำเวียดแท้ (thuần Việt)",
+    vi: "Rắc rối", th: "ยุ่งยาก / ซับซ้อน / ปัญหา",
+    parts: [
+      { vi: "Rắc", th: "(พยางค์เสริมเสียง ในคำนี้ไม่มีความหมายแยก)" },
+      { vi: "Rối", th: "พันกัน / ยุ่งเหยิง" }
+    ],
+    note: "คำซ้อนเสียง (từ láy) ขึ้นต้นด้วย r เหมือนกัน แบบเดียวกับ khó khăn · ใช้ได้ทั้งคุณศัพท์และคำนาม: Chuyện này rắc rối quá. (เรื่องนี้ยุ่งยากจัง) gặp rắc rối (เจอปัญหา/ซวย) gây rắc rối (ก่อเรื่อง ดูบัตร Gây) · rối เดี่ยว ๆ = พันกัน เช่น tóc rối (ผมพันกัน) rối loạn (สับสนวุ่นวาย ซึ่ง loạn = <b>亂</b>) · คำฮั่นเวียดที่ใกล้กันคือ phức tạp <b>複雜</b> (ซับซ้อน)"
+  },
+  {
+    deck: "other", origin: "คำเวียดแท้ (thuần Việt)",
+    vi: "Những", th: "พวก / บรรดา (บอกพหูพจน์)",
+    parts: [
+      { vi: "Những", th: "วางหน้าคำนาม บอกว่ามีหลายอัน" }
+    ],
+    note: "ภาษาเวียดนามไม่ผันคำนามเป็นพหูพจน์ จึงใช้ những วางหน้าแทน เช่น những người bạn (บรรดาเพื่อน ๆ) những ngày mưa (วันฝนตกทั้งหลาย) · ต่างจาก các ที่หมายถึง ทั้งหมดทุกตัว เช่น các bạn (พวกเธอทุกคน) ส่วน những เน้นบางส่วน/บางกลุ่ม · ระวังสะกด: những (ư) ≠ nhũng (u) ซึ่งเป็นฮั่นเวียด <b>冗</b> ใน tham nhũng (คอร์รัปชัน)"
+  },
+  {
+    deck: "other", origin: "คำเวียดแท้ (thuần Việt)",
+    vi: "Bọn họ", th: "พวกเขา / พวกนั้น",
+    parts: [
+      { vi: "Bọn", th: "พวก / กลุ่ม (ใช้กับคน ภาษาพูด มักออกแนวไม่สุภาพ)" },
+      { vi: "Họ", th: "เขา (พหูพจน์) / พวกเขา" }
+    ],
+    note: "họ คำเดียวก็แปลว่า พวกเขา และเป็นกลางกว่า · เติม bọn ข้างหน้าจะฟังเป็นกันเองหรือห่างเหิน บางครั้งดูแคลน (คล้าย พวกมัน/พวกนั้น) · bọn ใช้กับคำอื่นได้: bọn mình (พวกเรา แบบกันเอง) bọn trẻ (พวกเด็ก ๆ) · เทียบ những (ดูบัตร Những) ที่ใช้กับสิ่งของได้ แต่ bọn ใช้กับคนหรือสัตว์เท่านั้น · ระวัง: họ ยังแปลว่า นามสกุล ได้ เช่น họ Nguyễn (นามสกุลเหงียน)"
+  },
+  {
+    deck: "other", origin: "คำเวียดแท้ (thuần Việt) · ที่มาของ từ ไม่แน่ชัด",
+    vi: "Đến từ", th: "มาจาก",
+    parts: [
+      { vi: "Đến", th: "มา / ถึง" },
+      { vi: "Từ", th: "จาก (บอกจุดเริ่มต้น)" }
+    ],
+    note: "ประโยคแนะนำตัว: Tôi đến từ Thái Lan. (ฉันมาจากประเทศไทย) · ถาม: Bạn đến từ đâu? (เธอมาจากไหน?) · từ เดี่ยว ๆ = จาก/ตั้งแต่ เช่น từ sáng đến tối (ตั้งแต่เช้าถึงค่ำ) · บางตำราโยง từ กับ <b>自</b> (ฮั่นเวียดมาตรฐาน tự) แต่ไม่แน่ชัด · ระวังสับสนกับ từ ฮั่นเวียด <b>詞</b> = คำ เช่น từ điển <b>詞典</b> (พจนานุกรม)"
+  },
+  {
+    deck: "other", origin: "คำเวียดแท้ (thuần Việt)",
+    vi: "Sao", th: "ทำไม / ยังไง · ดาว",
+    parts: [
+      { vi: "Sao", th: "① ทำไม / ยังไง (คำถาม) ② ดาว" }
+    ],
+    note: "① คำถาม: Sao vậy? (เป็นอะไรไป? / ทำไมล่ะ?) Sao không đi? (ทำไมไม่ไป?) · tại sao = ทำไม (แบบเต็ม ซึ่ง tại = <b>在</b>) · Không sao! (ไม่เป็นไร!) · ② ดาว: ngôi sao (ดวงดาว ดูบัตร Ngôi trường) และใช้ให้คะแนนดาว เช่น 5 sao (5 ดาว)"
+  },
+  {
+    deck: "other", origin: "คำเวียดแท้ (thuần Việt)",
+    vi: "Nổi tiếng", th: "มีชื่อเสียง / โด่งดัง",
+    parts: [
+      { vi: "Nổi", th: "ลอย / ผุดขึ้น / โดดเด่น" },
+      { vi: "Tiếng", th: "เสียง → ชื่อเสียง (ยังแปลว่า ภาษา ได้ด้วย)" }
+    ],
+    note: "ตรงตัวคือ เสียงลอยขึ้นมา (เป็นที่ได้ยินทั่ว) · tiếng ตัวเดียวกับใน tiếng Việt (ภาษาเวียดนาม) tiếng Thái (ภาษาไทย) · คำที่ความหมายคล้ายกันแบบฮั่นเวียดคือ nổi danh ซึ่ง danh = <b>名</b> (ชื่อ) และ danh tiếng (ชื่อเสียง)"
+  }
+];
+
+const store = {
+  get(k, d){ try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d } catch { return d } },
+  set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)) } catch {} }
+};
+let deck = store.get("hv-deck", "han");
+const deckOf = w => w.deck || "han";
+let order = [];
+const loadDeck = () => { order = WORDS.map((w, i) => deckOf(w) === deck ? i : -1).filter(i => i >= 0); pos = 0; };
+let pos = 0;
+let curMode = store.get("hv-mode", "vi");
+let known = new Set(store.get("hv-known", []));
+
+const $ = id => document.getElementById(id);
+const card = $("card");
+const hanOf = w => w.parts.map(p => p.han || p.vi.toLowerCase()).join(" ");
+
+const ICON = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+const sayText = w => (w.say || w.vi).replace(/…/g, " ").replace(/[?!]/g, "").trim();
+const sayBtn = (t, label, sm) => `<button class="say${sm ? " sm" : ""}" type="button" data-say="${t}" aria-label="${label}" title="${label}">${ICON}</button>`;
+
+const tts = "speechSynthesis" in window ? window.speechSynthesis : null;
+let viVoice = null;
+const SOUTH = /south|miền nam|mien nam|sài gòn|sai gon|saigon|hcm|hồ chí minh|cần thơ|can tho|cantho/i;
+const isSouth = v => SOUTH.test(v.name + " " + v.voiceURI);
+function pickVoice(){
+  if (!tts) return;
+  const vs = tts.getVoices().filter(v => /^vi([-_]|$)/i.test(v.lang));
+  const saved = store.get("hv-voice", null);
+  viVoice = vs.find(v => v.voiceURI === saved) || vs.find(isSouth) || vs[0] || null;
+  const sel = $("voice-sel");
+  sel.innerHTML = vs.length
+    ? vs.map(v => `<option value="${v.voiceURI}"${v === viVoice ? " selected" : ""}>${v.name}${isSouth(v) ? " (ใต้)" : ""}${v.localService === false ? " · ออนไลน์" : ""}</option>`).join("")
+    : `<option>ไม่พบเสียงภาษาเวียดนาม</option>`;
+  sel.disabled = vs.length < 2;
+  $("voice-info").textContent = vs.length < 2
+    ? `เครื่องนี้มีเสียงภาษาเวียดนาม ${vs.length} เสียง · เพิ่มได้ในการตั้งค่าเสียงอ่านของเครื่อง`
+    : `พบ ${vs.length} เสียง`;
+}
+$("voice-test").onclick = () => speak("Xin chào, tôi là người miền Nam", $("voice-test"));
+if (!tts) $("voice-row").hidden = true;
+$("voice-sel").addEventListener("change", e => { store.set("hv-voice", e.target.value); pickVoice(); speak("Xin chào"); });
+if (tts) { pickVoice(); tts.addEventListener?.("voiceschanged", pickVoice); }
+function ttsMsg(t){ const m = $("tts-msg"); m.textContent = t || ""; m.hidden = !t; }
+function speak(text, btn){
+  if (!tts) { ttsMsg("เบราว์เซอร์นี้ไม่รองรับการอ่านออกเสียง"); return; }
+  pickVoice();
+  tts.cancel();
+  document.querySelectorAll(".say.playing").forEach(b => b.classList.remove("playing"));
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = "vi-VN"; u.rate = 0.85;
+  if (viVoice) u.voice = viVoice;
+  if (btn) { btn.classList.add("playing"); u.onend = u.onerror = () => btn.classList.remove("playing"); }
+  ttsMsg(viVoice ? "" : "ไม่พบเสียงภาษาเวียดนามในเครื่องนี้ ถ้าไม่มีเสียงหรือสำเนียงเพี้ยน ให้ติดตั้งเสียงภาษาเวียดนามในการตั้งค่าของเครื่อง");
+  tts.speak(u);
+}
+
+function render(){
+  document.querySelectorAll(".deck").forEach(d => d.setAttribute("aria-selected", d.dataset.deck === deck));
+  $("n-han").textContent = WORDS.filter(w => deckOf(w) === "han").length;
+  $("n-other").textContent = WORDS.filter(w => deckOf(w) === "other").length;
+  $("m-han").hidden = deck !== "han";
+  const mode = (curMode === "han" && deck !== "han") ? "vi" : curMode;
+  const w = WORDS[order[pos]];
+  if (!w) { $("front").innerHTML = `<div class="main"><div class="big-th">ยังไม่มีคำในชุดนี้</div></div>`; $("back").innerHTML = ""; $("count").textContent = "0 / 0"; $("list").innerHTML = ""; return; }
+  const big = mode === "vi" ? `<div class="big-vi">${w.vi}</div>`
+            : mode === "han" ? `<div class="big-han">${hanOf(w)}</div>`
+            : `<div class="big-th">${w.th}</div>`;
+  $("front").innerHTML = `<div class="main"><div>${big}</div></div><div class="hint">แตะเพื่อดูความหมายและที่มาของคำ</div>${mode === "th" ? "" : sayBtn(sayText(w), "ฟังเสียงคำนี้")}`;
+  $("back").innerHTML = `
+    ${w.origin ? `<span class="origin">${w.origin}</span>` : ""}
+    <div class="head"><h2>${w.vi}</h2>${sayBtn(sayText(w), "ฟังเสียงคำนี้")}</div>
+    <div class="mean">${w.th}</div>
+    <div class="parts">${w.parts.map(p => `
+      <div class="part">
+        <div class="seal${p.han ? "" : " none"}" aria-hidden="true">${p.han || "越"}</div>
+        <div class="part-txt">
+          <div class="part-vi">${sayBtn(p.vi, "ฟังเสียง " + p.vi, true)} ${p.vi}${p.han ? ` <span style="font-family:var(--f-han)">${p.han}</span><span class="py" title="พินอิน (จีนกลาง)">${p.py}</span>` : ""}</div>
+          <div class="part-th">${p.th}</div>
+        </div>
+      </div>`).join("")}</div>
+    ${w.note ? `<p class="note">${w.note}</p>` : ""}
+    ${w.src ? `<p class="src">เจอคำนี้จาก: <b>${w.src}</b></p>` : ""}`;
+  $("count").textContent = `${pos + 1} / ${order.length}`;
+  $("prev").disabled = order.length < 2;
+  $("next").disabled = order.length < 2;
+  $("known").setAttribute("aria-pressed", known.has(w.vi));
+  $("known").textContent = known.has(w.vi) ? "✓ จำได้แล้ว" : "จำได้แล้ว";
+  document.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", c.dataset.mode === mode));
+  renderList();
+}
+
+const fold = t => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[đĐ]/g, "d").toLowerCase();
+const hay = w => [w.vi, w.th, w.say || "", ...w.parts.flatMap(p => [p.vi, p.th, p.han || "", p.py || ""])].join(" | ");
+let noteHits = new Set();
+function renderList(){
+  noteHits = new Set();
+  const q = $("q").value.trim();
+  const cur = order[pos];
+  let items;
+  if (q) {
+    const exact = fold(q) !== q.toLowerCase();
+    const needle = exact ? q.toLowerCase() : fold(q);
+    const hit = t => (exact ? t.toLowerCase() : fold(t)).includes(needle);
+    const all = WORDS.map((w, i) => i);
+    const main = all.filter(i => hit(hay(WORDS[i])));
+    const inNote = all.filter(i => !main.includes(i) && hit((WORDS[i].note || "").replace(/<[^>]+>/g, "")));
+    noteHits = new Set(inNote);
+    items = [...main, ...inNote];
+    $("list-title").textContent = `ผลค้นหา "${q}" · ${main.length} คำ` + (inNote.length ? ` + เจอในหมายเหตุ ${inNote.length} ใบ` : "") + " (ทุกชุด)";
+  } else {
+    items = order;
+    $("list-title").textContent = "คำทั้งหมด";
+  }
+  $("list").innerHTML = items.length ? items.map(i => {
+    const x = WORDS[i];
+    const badge = q ? `<span class="dk">${noteHits.has(i) ? "ในหมายเหตุ · " : ""}${deckOf(x) === "han" ? "ฮั่นเวียด" : "คำอื่น ๆ"}</span>` : "";
+    return `<li><button data-i="${i}" aria-current="${i === cur}">
+      <span><span class="lv">${x.vi}</span> · ${x.th}${badge}</span>
+      <span>${known.has(x.vi) ? '<span class="tick">✓</span> ' : ""}<span class="lh">${hanOf(x)}</span></span>
+    </button></li>`;
+  }).join("") : `<li class="empty">ไม่พบคำที่ตรงกับ "${q}"</li>`;
+}
+
+function setFlip(on){
+  card.classList.toggle("flipped", on);
+  $("front").setAttribute("aria-hidden", on);
+  $("back").setAttribute("aria-hidden", !on);
+}
+function show(){
+  card.classList.add("instant"); setFlip(false);
+  void card.offsetWidth; card.classList.remove("instant");
+  render();
+}
+const flip = () => setFlip(!card.classList.contains("flipped"));
+const go = d => { if (!order.length) return; pos = (pos + d + order.length) % order.length; show(); };
+card.addEventListener("click", e => {
+  const b = e.target.closest("[data-say]");
+  if (b) { e.stopPropagation(); speak(b.dataset.say, b); return; }
+  flip();
+});
+card.addEventListener("keydown", e => {
+  if (e.target !== card) { if (e.key === " " || e.key === "Enter") e.stopPropagation(); return; }
+  if (e.key === "Enter" || e.key === " ") { e.preventDefault(); e.stopPropagation(); flip(); }
+});
+$("prev").onclick = () => go(-1);
+$("next").onclick = () => go(1);
+$("known").onclick = () => {
+  if (!order.length) return;
+  const v = WORDS[order[pos]].vi;
+  known.has(v) ? known.delete(v) : known.add(v);
+  store.set("hv-known", [...known]); render();
+};
+$("shuffle").onclick = () => {
+  for (let i = order.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; }
+  pos = 0; show();
+};
+document.querySelectorAll(".chip").forEach(c => c.onclick = () => { curMode = c.dataset.mode; store.set("hv-mode", curMode); render(); });
+$("list").addEventListener("click", e => {
+  const b = e.target.closest("button[data-i]");
+  if (!b) return;
+  const i = +b.dataset.i;
+  if (deckOf(WORDS[i]) !== deck) { deck = deckOf(WORDS[i]); store.set("hv-deck", deck); loadDeck(); }
+  pos = Math.max(0, order.indexOf(i));
+  show();
+  if ($("q").value.trim()) card.scrollIntoView({ behavior: "smooth", block: "center" });
+});
+$("q").addEventListener("input", renderList);
+document.addEventListener("keydown", e => {
+  if (e.key === "ArrowRight") go(1);
+  else if (e.key === "ArrowLeft") go(-1);
+  else if (e.key === " " && e.target === document.body) { e.preventDefault(); flip(); }
+});
+document.querySelectorAll(".deck").forEach(d => d.onclick = () => { deck = d.dataset.deck; store.set("hv-deck", deck); loadDeck(); show(); });
+if (!["han", "other"].includes(deck)) deck = "han";
+loadDeck();
+render();
+</script>
