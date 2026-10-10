@@ -1,0 +1,98 @@
+name: Pixel Trading Floor
+
+on:
+  schedule:
+    # Every 30 minutes. Oil trades almost 24/5; weekend runs just refresh the page.
+    - cron: "7,37 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write   # push the state to the floor-data branch
+  pages: write      # publish the dashboard
+  id-token: write
+
+concurrency:
+  group: pixel-floor
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Load previous state
+        run: |
+          mkdir -p out
+          if git fetch --depth 1 origin floor-data 2>/dev/null; then
+            git show FETCH_HEAD:state.json > out/state.json || rm -f out/state.json
+          else
+            echo "No floor-data branch yet: starting fresh paper desks."
+          fi
+
+      - name: Update paper desks
+        run: python3 -m floor --state out/state.json --out out/data.json --notes notes
+
+      - name: Save state to floor-data branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cp floor/site/index.html out/index.html
+          touch out/.nojekyll
+          cd out
+          git init -q -b floor-data
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -qm "data: $(date -u +%FT%TZ)"
+          # One commit, force-pushed: the branch holds only the latest snapshot.
+          git push -fq "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" floor-data
+
+      - name: Send daily note to OneDrive (Obsidian)
+        env:
+          # Same rclone secrets as the daily Polymarket report (docs/cloud-onedrive.md).
+          RCLONE_CONF: ${{ secrets.RCLONE_CONF }}
+          RCLONE_REMOTE: ${{ secrets.RCLONE_REMOTE }}       # default: onedrive
+          FLOOR_ONEDRIVE_DIR: ${{ vars.FLOOR_ONEDRIVE_DIR }} # default below
+        run: |
+          if [ -z "$RCLONE_CONF" ]; then
+            echo "RCLONE_CONF secret not set — skipping OneDrive notes."
+            exit 0
+          fi
+          # Twice a day (06:xx and 18:xx Thailand time) to keep OneDrive sync quiet;
+          # a manual "Run workflow" always sends.
+          HOUR=$(TZ=Asia/Bangkok date +%H)
+          if [ "$GITHUB_EVENT_NAME" != "workflow_dispatch" ] && [ "$HOUR" != "06" ] && [ "$HOUR" != "18" ]; then
+            echo "Not a note hour ($HOUR:xx Bangkok) — skipping."
+            exit 0
+          fi
+          curl -fsSL https://rclone.org/install.sh | sudo bash >/dev/null
+          mkdir -p "$HOME/.config/rclone"
+          printf '%s' "$RCLONE_CONF" > "$HOME/.config/rclone/rclone.conf"
+          REMOTE="${RCLONE_REMOTE:-onedrive}"
+          DIR="${FLOOR_ONEDRIVE_DIR:-OneDrive Obsidian/Pixel Trading Floor}"
+          cp docs/tbill-guide.md "notes/T-Bill guide.md"
+          rclone copy notes/Daily "${REMOTE}:${DIR}/Daily"
+          # Hub and guide are written once; your edits in Obsidian are never overwritten.
+          rclone copy notes "${REMOTE}:${DIR}" --max-depth 1 --ignore-existing
+          echo "Sent notes to ${REMOTE}:${DIR}"
+
+      - uses: actions/configure-pages@v5
+        id: pages
+        continue-on-error: true   # Pages not switched on yet: keep saving state anyway
+
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.pages.outcome == 'success'
+        with:
+          path: out
+
+      - uses: actions/deploy-pages@v4
+        id: deploy
+        if: steps.pages.outcome == 'success'
