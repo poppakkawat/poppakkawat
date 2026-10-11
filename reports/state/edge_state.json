@@ -8108,9 +8108,9 @@
       "title": "Will Bitcoin dip to $62,500 in October?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.02008850630000003,
+      "prob": 0.019288347799999994,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-08"
+      "last_seen": "2026-10-11"
     },
     "kalshi:KXBTCD-26OCT0122-T84899.99": {
       "title": "Bitcoin price on Oct 1, 2026? \u2014 $84,900 or above",
@@ -8244,17 +8244,17 @@
       "title": "US x Iran ceasefire continues through October 15?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.9,
+      "prob": 0.92,
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     "0x3738ad9665480991affe3ba286cd035516e17d1f8b7703e05088ec19c70c21a4": {
       "title": "US x Iran ceasefire continues through October 31?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.74,
+      "prob": 0.78,
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     "0xbde661710532d882dc1ed45ec97220d2331e526fded07a8fb4ae497d82d1d94e": {
       "title": "Will the price of Bitcoin be less than $76,000 on October 3?",
@@ -8596,9 +8596,9 @@
       "title": "US x Iran ceasefire continues through October 12?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.9400678101,
+      "prob": 0.957,
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     "0xa0d7c1bdbaf25aba65ec96f37fc8b8edc9c1e132bfdad93677bc4799ae05e2ce": {
       "title": "Will the price of Bitcoin be above $88,000 on October 8?",
@@ -8684,9 +8684,9 @@
       "title": "Will the price of Bitcoin be above $86,000 on October 10?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.0030000000000000027,
+      "prob": 0.0010716919000000047,
       "first_seen": "2026-10-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-11"
     },
     "0xed27e6e47a8682e28fb6cc546bcd143d020c73b8acf58b05cd30da8653368322": {
       "title": "Will Bitcoin reach $94,000 October 5-11?",
@@ -8719,7 +8719,87 @@
       "prob": 0.050000000000000044,
       "first_seen": "2026-10-10",
       "last_seen": "2026-10-10"
+    },
+    "0x6a2583072ffeced112df272484fe6b6d47a8e88fe3a8f76bd9c18c9507c48da5": {
+      "title": "Will the price of Bitcoin be above $78,000 on October 10?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-11",
+      "last_seen": "2026-10-11"
+    },
+    "0x486899aab7f418a0d110ba145b472bdc702bae999815726ffadd497820ad587e": {
+      "title": "Will the price of Bitcoin be above $74,000 on October 10?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-11",
+      "last_seen": "2026-10-11"
+    },
+    "0x55c4c5fc2503d86a19748f9d70e468d8aad1c6753d30de41ea2652dddc5959b8": {
+      "title": "Will Elon Musk post 90-114 tweets from October 8 to October 10, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-11",
+      "last_seen": "2026-10-11"
+    },
+    "0x613613192c69d90cee89758c260a019368fc1f4a596b4d300c39b6235d2b643f": {
+      "title": "US-Iran ceasefire continues through the midterms?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.74,
+      "first_seen": "2026-10-11",
+      "last_seen": "2026-10-11"
+    },
+    "0xca394e0db041f91ac2d69f3ea06efdfc8643acb0d2751283bd594e7b8bd581f9": {
+      "title": "Israel x Iran ceasefire continues through November 15?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.7290477627,
+      "first_seen": "2026-10-11",
+      "last_seen": "2026-10-11"
+    },
+    "0x401f9ccae8ac634e15d59042db4772cc4014492636096d1f24535a4c66e77aae": {
+      "title": "Will Elon Musk post 240-259 tweets from October 6 to October 13, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-11",
+      "last_seen": "2026-10-11"
+    },
+    "0x53c0554d5aa52f1caf24b7275c7a9a1cca54f8a624b1f70c11c2dbf5805fef86": {
+      "title": "Will Elon Musk post 115-139 tweets from October 8 to October 10, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-11",
+      "last_seen": "2026-10-11"
+    },
+    "0x5c142c775049021df63bc7733e1622eea51268989eeea0669d53762a60931c16": {
+      "title": "Will Elon Musk post 260-279 tweets from October 6 to October 13, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.002025077999999958,
+      "first_seen": "2026-10-11",
+      "last_seen": "2026-10-11"
+    },
+    "0x68ebe48ae04b7953589ea51e56736b53ca71b21254814804ba79f3943e8dee2c": {
+      "title": "Will Elon Musk post 65-89 tweets from October 8 to October 10, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0022875643999999973,
+      "first_seen": "2026-10-11",
+      "last_seen": "2026-10-11"
+    },
+    "0x01611e4c18d74b6ddf12dbe9d0aab7ef35279b8e837b03c2a2169aea1479ac76": {
+      "title": "Will Elon Musk post 165-189 tweets from October 10 to October 12, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.006000000000000005,
+      "first_seen": "2026-10-11",
+      "last_seen": "2026-10-11"
     }
   },
-  "updated": "2026-10-10"
+  "updated": "2026-10-11"
 }
