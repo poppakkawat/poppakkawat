@@ -6316,9 +6316,9 @@
       "title": "Will Satoshi move any Bitcoin in 2026?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.033372603899999964,
+      "prob": 0.029000000000000026,
       "first_seen": "2026-09-04",
-      "last_seen": "2026-10-04"
+      "last_seen": "2026-10-15"
     },
     "0x66fe55ead2581747d5b4265bfb00f94173d24081ec0d962c16abe78bbda7c188": {
       "title": "Will the price of Bitcoin be above $74,000 on September 5?",
@@ -6732,9 +6732,9 @@
       "title": "Will Bitcoin reach $120,000 by December 31, 2026?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.09323529600000002,
+      "prob": 0.06000000000000005,
       "first_seen": "2026-09-10",
-      "last_seen": "2026-09-27"
+      "last_seen": "2026-10-15"
     },
     "0xd57be88521d58f086db165345493e09765d812d3634d462705695206a05f5635": {
       "title": "Will the price of Bitcoin be above $76,000 on September 10?",
@@ -7516,9 +7516,9 @@
       "title": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.7398745795,
+      "prob": 0.79,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-10-06"
+      "last_seen": "2026-10-15"
     },
     "0x8923e1ccf64ef74e177a1e3386b342736e7dd4b1f5bc91e8c16e3a9b55677a97": {
       "title": "Will Bitcoin dip to $81,000 on September 22?",
@@ -7604,9 +7604,9 @@
       "title": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.66,
+      "prob": 0.27,
       "first_seen": "2026-09-24",
-      "last_seen": "2026-09-29"
+      "last_seen": "2026-10-15"
     },
     "0xd933efdc5443ebb588e41e35c6a8d6e910c4a60218bf49942b5da5c0009d07d6": {
       "title": "Will the price of Bitcoin be between $82,000 and $84,000 on September 23?",
@@ -8244,17 +8244,17 @@
       "title": "US x Iran ceasefire continues through October 15?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.9700008645,
+      "prob": 0.969,
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-14"
+      "last_seen": "2026-10-15"
     },
     "0x3738ad9665480991affe3ba286cd035516e17d1f8b7703e05088ec19c70c21a4": {
       "title": "US x Iran ceasefire continues through October 31?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.81,
+      "prob": 0.7956549156,
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-14"
+      "last_seen": "2026-10-15"
     },
     "0xbde661710532d882dc1ed45ec97220d2331e526fded07a8fb4ae497d82d1d94e": {
       "title": "Will the price of Bitcoin be less than $76,000 on October 3?",
@@ -8292,9 +8292,9 @@
       "title": "Will Bitcoin reach $140,000 by December 31, 2026?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.03600000000000003,
+      "prob": 0.030000000000000027,
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-04"
+      "last_seen": "2026-10-15"
     },
     "0x7b04de3a0e24f0437d1257af0e41eebfffab0f246cda38d3b1b98eb970a61727": {
       "title": "Will Louisiana enact a data center moratorium by December 31, 2026?",
@@ -8428,9 +8428,9 @@
       "title": "Will the U.S. invade Cuba in 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.050000000000000044,
+      "prob": 0.06999999999999995,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-06"
+      "last_seen": "2026-10-15"
     },
     "0xc4c41407dd3e1be7fae485778117cd12832edebb652609cd34ba8eb60b817ee2": {
       "title": "Will Ethereum dip to $1,750 by December 31, 2026?",
@@ -8918,7 +8918,7 @@
       "venue": "polymarket",
       "prob": 0.999,
       "first_seen": "2026-10-14",
-      "last_seen": "2026-10-14"
+      "last_seen": "2026-10-15"
     },
     "0x4fa4923f048a3a173e626a7a9a9778ae415a2e66a676362358005af1c02430dc": {
       "title": "Will the price of Bitcoin be above $80,000 on October 13?",
@@ -8975,7 +8975,55 @@
       "prob": 0.13110382499999995,
       "first_seen": "2026-10-14",
       "last_seen": "2026-10-14"
+    },
+    "0x4bb71c8432d5776cbc195391589666e43a61165b21a2ca60658290e10def98e6": {
+      "title": "Will the price of Bitcoin be above $74,000 on October 14?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-15"
+    },
+    "0x18acd2d24a1de9c595ac94497412a75aa28d7d99682c7912149449a29a628297": {
+      "title": "Will Bitcoin reach $85,000 on October 13?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-15"
+    },
+    "0x057182f73e7294749e34ccbd298cbe788a6e39ae5dbe2e20de45a84824449eac": {
+      "title": "Will the price of Bitcoin be above $84,000 on October 14?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-15"
+    },
+    "0xbabb335e1b9d6edbf4f84d91d051ac2b68ecacc51404506f9161d36acc6a1b54": {
+      "title": "Will Bitcoin reach $85,000 on October 14?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0015627907999999913,
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-15"
+    },
+    "0x543dfe914a5cfeca992bce871c4705578a3402fcfe44528a35be47efd5981ab7": {
+      "title": "Will North Carolina enact a data center moratorium by June 30, 2027?",
+      "theme": "AI / big tech",
+      "venue": "polymarket",
+      "prob": 0.13989169420000003,
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-15"
+    },
+    "0x90eb090b7cfb854b88e4252c9c2a74dcc875558212b71c10dc86188323e3e5c3": {
+      "title": "Will Indiana enact a data center moratorium by December 31, 2027?",
+      "theme": "AI / big tech",
+      "venue": "polymarket",
+      "prob": 0.15,
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-15"
     }
   },
-  "updated": "2026-10-14"
+  "updated": "2026-10-15"
 }
