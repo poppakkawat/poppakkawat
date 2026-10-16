@@ -7084,9 +7084,9 @@
       "title": "Will the Fed increase interest rates by 50+ bps after the October 2026 meeting?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.0040000000000000036,
+      "prob": 0.0050000000000000044,
       "first_seen": "2026-09-16",
-      "last_seen": "2026-10-09"
+      "last_seen": "2026-10-16"
     },
     "0xfef493a8c66402027270ecf4ad018703f855ce02aa38af5d5d92284ebfe90554": {
       "title": "Will the price of Bitcoin be above $68,000 on September 17?",
@@ -8244,17 +8244,17 @@
       "title": "US x Iran ceasefire continues through October 15?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.969,
+      "prob": 0.998,
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-15"
+      "last_seen": "2026-10-16"
     },
     "0x3738ad9665480991affe3ba286cd035516e17d1f8b7703e05088ec19c70c21a4": {
       "title": "US x Iran ceasefire continues through October 31?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.7956549156,
+      "prob": 0.79,
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-15"
+      "last_seen": "2026-10-16"
     },
     "0xbde661710532d882dc1ed45ec97220d2331e526fded07a8fb4ae497d82d1d94e": {
       "title": "Will the price of Bitcoin be less than $76,000 on October 3?",
@@ -8676,9 +8676,9 @@
       "title": "Israel x Iran ceasefire continues through October 15?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.9869835675,
+      "prob": 0.998,
       "first_seen": "2026-10-10",
-      "last_seen": "2026-10-14"
+      "last_seen": "2026-10-16"
     },
     "0xce630a616e8ff3c98178dc83553fa8046e25d461d0833ab55dcecb8cabf5020d": {
       "title": "Will the price of Bitcoin be above $86,000 on October 10?",
@@ -9023,7 +9023,95 @@
       "prob": 0.15,
       "first_seen": "2026-10-15",
       "last_seen": "2026-10-15"
+    },
+    "0x3fdbd1caa72fadb63b94b0c72307b81626c2276c86de5b7719f3a5e69c9a8ca0": {
+      "title": "Will Bitcoin dip to $80,000 October 12-18?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-16"
+    },
+    "0xc03375be4dbbb6741528dc30f7e3b0e0fb00768572f49a5f5f43da6840b7d9c0": {
+      "title": "Will the price of Bitcoin be above $74,000 on October 16?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-16"
+    },
+    "0xdf4f8600cd6eede05c22546a6ba7c4c47c8494871a93bb49076f41a7a0567a6d": {
+      "title": "Will the price of Bitcoin be above $72,000 on October 15?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-16"
+    },
+    "0x2bb8120b87f2baea61bd66204ea331b5d4446f5ad1cab6a2933df7603d30a0a1": {
+      "title": "Will Ethereum dip to $2,350 on October 14?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.9968649269,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-16"
+    },
+    "0x782ec735d4ad1be9b6d7535366b4f1ecb1ff3c51bbd0092e04b9dc23d2fb8428": {
+      "title": "Will Ethereum dip to $2,400 on October 14?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.9865671432,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-16"
+    },
+    "0x9841f98ef43863279f2a7affd3b2d258c3b86b526f5f8ba23ec3677128beb268": {
+      "title": "US x Iran ceasefire continues through October 16?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.9798088885,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-16"
+    },
+    "0x1175651306e9ae39991642dcff3fd96778ae0301fc44c7f5565251fc2bb68d31": {
+      "title": "Israel x Iran ceasefire continues through October 21?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.9182643382,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-16"
+    },
+    "0xef3ecdd3f240c8f45081bbd5a048dcdfabddc50654ee445e925bad90a147eea5": {
+      "title": "Will Bitcoin dip to $80,000 on October 14?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-16"
+    },
+    "0xba75ad0d810c50b68eb8d4e2ee19d867dd5bfab9d02586f480a8ed98b4e7e100": {
+      "title": "Will the price of Bitcoin be above $90,000 on October 16?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-16"
+    },
+    "0xfe4687bfe0a000aaddd5ee46921f5b376c6c6d94a31be0a257c48c2aaabcd332": {
+      "title": "Will the price of Ethereum be above $2,700 on October 15?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-16"
+    },
+    "0xfe53d050a407eff851227ab6f83697d62e133234b7be004e6a1fbacadf3a3958": {
+      "title": "Will Elon Musk post 280-299 tweets from October 9 to October 16, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010190665999999515,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-16"
     }
   },
-  "updated": "2026-10-15"
+  "updated": "2026-10-16"
 }
