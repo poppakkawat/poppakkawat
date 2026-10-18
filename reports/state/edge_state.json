@@ -204,9 +204,9 @@
       "title": "Will China invade Taiwan by end of 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.02400000000000002,
+      "prob": 0.020000000000000018,
       "first_seen": "2026-06-19",
-      "last_seen": "2026-10-07"
+      "last_seen": "2026-10-18"
     },
     "0xc4569c1a4da5845a2bbb14195cfb31aee79e438c6c0c8fe6f0b1dbb922e1c3b0": {
       "title": "Will the price of Bitcoin be above $58,000 on June 20?",
@@ -8252,9 +8252,9 @@
       "title": "US x Iran ceasefire continues through October 31?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.7988357349,
+      "prob": 0.8,
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-17"
+      "last_seen": "2026-10-18"
     },
     "0xbde661710532d882dc1ed45ec97220d2331e526fded07a8fb4ae497d82d1d94e": {
       "title": "Will the price of Bitcoin be less than $76,000 on October 3?",
@@ -8748,17 +8748,17 @@
       "title": "US-Iran ceasefire continues through the midterms?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.75,
+      "prob": 0.76,
       "first_seen": "2026-10-11",
-      "last_seen": "2026-10-17"
+      "last_seen": "2026-10-18"
     },
     "0xca394e0db041f91ac2d69f3ea06efdfc8643acb0d2751283bd594e7b8bd581f9": {
       "title": "Israel x Iran ceasefire continues through November 15?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.7290477627,
+      "prob": 0.7064286001,
       "first_seen": "2026-10-11",
-      "last_seen": "2026-10-11"
+      "last_seen": "2026-10-18"
     },
     "0x401f9ccae8ac634e15d59042db4772cc4014492636096d1f24535a4c66e77aae": {
       "title": "Will Elon Musk post 240-259 tweets from October 6 to October 13, 2026?",
@@ -9118,7 +9118,7 @@
       "venue": "polymarket",
       "prob": 0.999,
       "first_seen": "2026-10-17",
-      "last_seen": "2026-10-17"
+      "last_seen": "2026-10-18"
     },
     "0x6125d5c4164e39e19ca0dbe9fd1ae091083f0af37a4a0781daa06994da5d7159": {
       "title": "Will the Tesla Roadster fly for 1s+?",
@@ -9156,9 +9156,9 @@
       "title": "US x Iran ceasefire continues through October 17?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.9558807962,
+      "prob": 0.999,
       "first_seen": "2026-10-17",
-      "last_seen": "2026-10-17"
+      "last_seen": "2026-10-18"
     },
     "0x9b46491458a21a795224c87d17cc20e6e805385ab3f7735ced35d546dfa9ae34": {
       "title": "Will Elon Musk post 400-419 tweets from October 9 to October 16, 2026?",
@@ -9183,7 +9183,79 @@
       "prob": 0.0010000000000000009,
       "first_seen": "2026-10-17",
       "last_seen": "2026-10-17"
+    },
+    "0x086714fe7b14712ec349b909235c24c3b7fa9d2168e1ab2d1393c5393b8ddcc9": {
+      "title": "Will the price of Bitcoin be above $78,000 on October 17?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-18",
+      "last_seen": "2026-10-18"
+    },
+    "0x275caaeeb2715e0b56a8833a110e2a2d48697780972c41cc795f8947d4d53aaa": {
+      "title": "Israel x Iran ceasefire continues through October 18?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.97697505,
+      "first_seen": "2026-10-18",
+      "last_seen": "2026-10-18"
+    },
+    "0xa7676ccf35f9688305454fee351a248363851b6d5e92aae7092e124043713004": {
+      "title": "US x Iran ceasefire continues through October 18?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.972543468,
+      "first_seen": "2026-10-18",
+      "last_seen": "2026-10-18"
+    },
+    "0x9b5ef99e7437bccf7cea388a8ae9b90678cdda6eb5ed534cfb49d691a755b0ed": {
+      "title": "Will Elon Musk post 165-189 tweets from October 15 to October 17, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-18",
+      "last_seen": "2026-10-18"
+    },
+    "0x483cdcb2604d5762339a7fcd4b2e5e5eb6fd375f19c9413061dd4d3668fba7cd": {
+      "title": "Will Elon Musk post 260-279 tweets from October 13 to October 20, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-18",
+      "last_seen": "2026-10-18"
+    },
+    "0x8e150b56b90e267b50985bb88ccb549e6f2896cca3981f154dc5def84a73e3e4": {
+      "title": "Will Ethereum reach $3,100 October 12-18?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-18",
+      "last_seen": "2026-10-18"
+    },
+    "0xaceb2a1c91e5f68cda1ee3461af58795ed2fcad71d68d64f0c3458a7576a897f": {
+      "title": "Will Elon Musk post 80-99 tweets from October 20 to October 27, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-18",
+      "last_seen": "2026-10-18"
+    },
+    "0x7ba90c028db923d6e10b8ed56c5c1ae2078defb23750ecb945f4a9dc0fea7ad1": {
+      "title": "Will Elon Musk post 140-164 tweets from October 15 to October 17, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0020000000000000018,
+      "first_seen": "2026-10-18",
+      "last_seen": "2026-10-18"
+    },
+    "0x5dd1ac831c6d5e79bae02cbdb64c8ffb3f311051f282fe2350900e5415e86949": {
+      "title": "Will the price of Bitcoin be above $84,000 on October 17?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0030000000000000027,
+      "first_seen": "2026-10-18",
+      "last_seen": "2026-10-18"
     }
   },
-  "updated": "2026-10-17"
+  "updated": "2026-10-18"
 }
