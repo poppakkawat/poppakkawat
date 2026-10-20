@@ -7214,7 +7214,7 @@
       "venue": "polymarket",
       "prob": 0.0040000000000000036,
       "first_seen": "2026-09-18",
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     "0xc949f5ad36b48204535f874f81bf559f91b034f67d5991b771bbc7d44f0fe405": {
       "title": "Will the price of Bitcoin be above $72,000 on September 18?",
@@ -7516,9 +7516,9 @@
       "title": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.79,
+      "prob": 0.77,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-10-15"
+      "last_seen": "2026-10-20"
     },
     "0x8923e1ccf64ef74e177a1e3386b342736e7dd4b1f5bc91e8c16e3a9b55677a97": {
       "title": "Will Bitcoin dip to $81,000 on September 22?",
@@ -8100,9 +8100,9 @@
       "title": "Will Bitcoin dip to $65,000 in October?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.020092551099999967,
+      "prob": 0.015027393899999963,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     "0xff6a852f912fc6548ec130b05de014f21b1a26342adedef20e4103bb97b4e81d": {
       "title": "Will Bitcoin dip to $62,500 in October?",
@@ -8252,9 +8252,9 @@
       "title": "US x Iran ceasefire continues through October 31?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.83,
+      "prob": 0.6852236282,
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     "0xbde661710532d882dc1ed45ec97220d2331e526fded07a8fb4ae497d82d1d94e": {
       "title": "Will the price of Bitcoin be less than $76,000 on October 3?",
@@ -8708,9 +8708,9 @@
       "title": "Will WTI Crude Oil (WTI) hit (HIGH) $150 in October?",
       "theme": "Oil / OPEC",
       "venue": "polymarket",
-      "prob": 0.009000000000000008,
+      "prob": 0.0050000000000000044,
       "first_seen": "2026-10-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-20"
     },
     "0x48f445c1ec9ea8effe9a89314179eae44cef49bb800559b74478cc860c8df699": {
       "title": "Will Ohio enact a data center moratorium by December 31, 2026?",
@@ -8748,9 +8748,9 @@
       "title": "US-Iran ceasefire continues through the midterms?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.76,
+      "prob": 0.81,
       "first_seen": "2026-10-11",
-      "last_seen": "2026-10-18"
+      "last_seen": "2026-10-20"
     },
     "0xca394e0db041f91ac2d69f3ea06efdfc8643acb0d2751283bd594e7b8bd581f9": {
       "title": "Israel x Iran ceasefire continues through November 15?",
@@ -9118,7 +9118,7 @@
       "venue": "polymarket",
       "prob": 0.999,
       "first_seen": "2026-10-17",
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     "0x6125d5c4164e39e19ca0dbe9fd1ae091083f0af37a4a0781daa06994da5d7159": {
       "title": "Will the Tesla Roadster fly for 1s+?",
@@ -9303,7 +9303,71 @@
       "prob": 0.0020000000000000018,
       "first_seen": "2026-10-19",
       "last_seen": "2026-10-19"
+    },
+    "0xfc6fb237d52468df1de9860e6244fcf79790a6c574ed2d0f01110d4bfff42bc7": {
+      "title": "Will the price of Bitcoin be above $76,000 on October 19?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-20",
+      "last_seen": "2026-10-20"
+    },
+    "0xe9fc62bb706b15f06e3953849d589af54fc9c0a1a132639aa3642e8d65ec521a": {
+      "title": "Will the price of Ethereum be above $2,200 on October 19?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-20",
+      "last_seen": "2026-10-20"
+    },
+    "0x04fb634139d4654febf4b62c425b209806e06d9eff93ac2e7c5301ecdaf5e4ca": {
+      "title": "US x Iran ceasefire continues through October 22?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.9180778759,
+      "first_seen": "2026-10-20",
+      "last_seen": "2026-10-20"
+    },
+    "0x48a09353d6ee6ad60fb12e70d01e2c3dba832b36ec0a422bee9e9d879d32bd11": {
+      "title": "Will Elon Musk post 300-319 tweets from October 13 to October 20, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-20",
+      "last_seen": "2026-10-20"
+    },
+    "0x81e3be684d83cba98322385e69f67e5583c2047805d6180a05936c1cc644dfea": {
+      "title": "Will Ethereum dip to $2,200 October 12-18?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-20",
+      "last_seen": "2026-10-20"
+    },
+    "0x5a4dec4adbeec242197f3642c76ad4a9f52216c106ea2a86d011e05fb4e869aa": {
+      "title": "Will Elon Musk post 140-164 tweets from October 17 to October 19, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-20",
+      "last_seen": "2026-10-20"
+    },
+    "0x6e08a4716e2a71763865258f78210684b09a146429a48a87fb6f3a3bee1bb81f": {
+      "title": "Will Elon Musk post 65-89 tweets from October 17 to October 19, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-20",
+      "last_seen": "2026-10-20"
+    },
+    "0xefc45792f1a9b1bb7099b50624af95b0390132afce22e2ec04a977ae297df596": {
+      "title": "Will Texas enact a data center moratorium by December 31, 2026?",
+      "theme": "AI / big tech",
+      "venue": "polymarket",
+      "prob": 0.018554325600000032,
+      "first_seen": "2026-10-20",
+      "last_seen": "2026-10-20"
     }
   },
-  "updated": "2026-10-19"
+  "updated": "2026-10-20"
 }
