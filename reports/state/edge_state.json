@@ -204,9 +204,9 @@
       "title": "Will China invade Taiwan by end of 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.020000000000000018,
+      "prob": 0.02200000000000002,
       "first_seen": "2026-06-19",
-      "last_seen": "2026-10-18"
+      "last_seen": "2026-10-21"
     },
     "0xc4569c1a4da5845a2bbb14195cfb31aee79e438c6c0c8fe6f0b1dbb922e1c3b0": {
       "title": "Will the price of Bitcoin be above $58,000 on June 20?",
@@ -2268,9 +2268,9 @@
       "title": "Will the U.S. invade Iran before 2027?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.16000000000000003,
+      "prob": 0.15,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-10-05"
+      "last_seen": "2026-10-21"
     },
     "0xbca0b596e44dd239eeafdda4a3621ef73d76b07d3f4752e2bf8d7229fecda288": {
       "title": "Will the price of Bitcoin be above $62,000 on July 12?",
@@ -7540,9 +7540,9 @@
       "title": "Will Bitcoin dip to $50,000 by December 31, 2026?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.040000000000000036,
+      "prob": 0.07999999999999996,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-10-07"
+      "last_seen": "2026-10-21"
     },
     "0xcf25ccc8360f3952139fb5e3f14cb9bb0636cb53d0e30e947321ceccab7e9780": {
       "title": "Will Ethereum dip to $1,500 by December 31, 2026?",
@@ -7604,9 +7604,9 @@
       "title": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.27,
+      "prob": 0.13,
       "first_seen": "2026-09-24",
-      "last_seen": "2026-10-15"
+      "last_seen": "2026-10-21"
     },
     "0xd933efdc5443ebb588e41e35c6a8d6e910c4a60218bf49942b5da5c0009d07d6": {
       "title": "Will the price of Bitcoin be between $82,000 and $84,000 on September 23?",
@@ -8420,9 +8420,9 @@
       "title": "Will Bitcoin dip to $45,000 by December 31, 2026?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.03500000000000003,
+      "prob": 0.04400000000000004,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-08"
+      "last_seen": "2026-10-21"
     },
     "0x80ebf0a88a44bf737d4047b3accd7108285c69b84257e5c684bdc4c715c81139": {
       "title": "Will the U.S. invade Cuba in 2026?",
@@ -8932,9 +8932,9 @@
       "title": "US x Yemen ceasefire continues through October 31?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.91,
+      "prob": 0.94,
       "first_seen": "2026-10-14",
-      "last_seen": "2026-10-17"
+      "last_seen": "2026-10-21"
     },
     "0x2da43a83294d15daacd4b6ec1134863075f1c0981e0fef4a91ad0a19316d43f7": {
       "title": "Will Elon Musk post 140-159 tweets from October 9 to October 16, 2026?",
@@ -9367,7 +9367,31 @@
       "prob": 0.018554325600000032,
       "first_seen": "2026-10-20",
       "last_seen": "2026-10-20"
+    },
+    "0x1ee2613733fdf7a2c7aa674a32e278724febfa3a9927d0eebf62775e4ce0cf36": {
+      "title": "Will the price of Bitcoin be above $80,000 on October 20?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    "0x483c569cd9a3617a9e421dcbc24782bd2c993652af259e9ad843b405e517cdc8": {
+      "title": "Will Elon Musk post 360-379 tweets from October 13 to October 20, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
+    },
+    "0x2983c308c4f1c19891985535d05e7c48e3bacb82921a1d04a241ed1d14b5be25": {
+      "title": "Will Bitcoin dip to $74,000 October 19-25?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.015018125899999957,
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21"
     }
   },
-  "updated": "2026-10-20"
+  "updated": "2026-10-21"
 }
