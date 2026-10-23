@@ -7086,7 +7086,7 @@
       "venue": "polymarket",
       "prob": 0.0040000000000000036,
       "first_seen": "2026-09-16",
-      "last_seen": "2026-10-22"
+      "last_seen": "2026-10-23"
     },
     "0xfef493a8c66402027270ecf4ad018703f855ce02aa38af5d5d92284ebfe90554": {
       "title": "Will the price of Bitcoin be above $68,000 on September 17?",
@@ -7212,9 +7212,9 @@
       "title": "Will the Fed decrease interest rates by 25 bps after the October 2026 meeting?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.0040000000000000036,
+      "prob": 0.0030000000000000027,
       "first_seen": "2026-09-18",
-      "last_seen": "2026-10-22"
+      "last_seen": "2026-10-23"
     },
     "0xc949f5ad36b48204535f874f81bf559f91b034f67d5991b771bbc7d44f0fe405": {
       "title": "Will the price of Bitcoin be above $72,000 on September 18?",
@@ -7316,9 +7316,9 @@
       "title": "Another Fed rate hike in 2026?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.8200000000000001,
+      "prob": 0.72,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-01"
+      "last_seen": "2026-10-23"
     },
     "0xa7442cd1620f09e45b89adc7cd35ee4ce3e50e47423a5d5fe5f16169e4d82ca4": {
       "title": "Will WTI Crude Oil (WTI) hit (LOW) $70 in September?",
@@ -7516,9 +7516,9 @@
       "title": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.77,
+      "prob": 0.7606283242,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-10-20"
+      "last_seen": "2026-10-23"
     },
     "0x8923e1ccf64ef74e177a1e3386b342736e7dd4b1f5bc91e8c16e3a9b55677a97": {
       "title": "Will Bitcoin dip to $81,000 on September 22?",
@@ -9076,9 +9076,9 @@
       "title": "Israel x Iran ceasefire continues through October 21?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.9951589883,
+      "prob": 0.995,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-22"
+      "last_seen": "2026-10-23"
     },
     "0xef3ecdd3f240c8f45081bbd5a048dcdfabddc50654ee445e925bad90a147eea5": {
       "title": "Will Bitcoin dip to $80,000 on October 14?",
@@ -9324,9 +9324,9 @@
       "title": "US x Iran ceasefire continues through October 22?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.96,
+      "prob": 0.9860928204,
       "first_seen": "2026-10-20",
-      "last_seen": "2026-10-22"
+      "last_seen": "2026-10-23"
     },
     "0x48a09353d6ee6ad60fb12e70d01e2c3dba832b36ec0a422bee9e9d879d32bd11": {
       "title": "Will Elon Musk post 300-319 tweets from October 13 to October 20, 2026?",
@@ -9436,9 +9436,9 @@
       "title": "US x Iran ceasefire continues through October 24?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.76,
+      "prob": 0.8707645701,
       "first_seen": "2026-10-22",
-      "last_seen": "2026-10-22"
+      "last_seen": "2026-10-23"
     },
     "0xfbb80ea5f8fc02ee7df8bd4f58790e1d04b874078a49a7b7028a74a2075100c9": {
       "title": "Will Elon Musk win the 2028 Republican presidential nomination?",
@@ -9463,7 +9463,71 @@
       "prob": 0.0010000000000000009,
       "first_seen": "2026-10-22",
       "last_seen": "2026-10-22"
+    },
+    "0xeb7e417fa9e7a548993ff518290d8d8d3c1b8bcc7f83075b77e12d70cad78b65": {
+      "title": "Hawks vs. Magic: O/U 234.5",
+      "theme": "AI / big tech",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-23",
+      "last_seen": "2026-10-23"
+    },
+    "0x3ad2e894bc0b85c39195c52dc654d82ee832cedd47f0e919723f5c88597ce338": {
+      "title": "Will the price of Bitcoin be above $76,000 on October 22?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-23",
+      "last_seen": "2026-10-23"
+    },
+    "0xcc35b316b8cac5a749438bd46ffe58d7f5b324ecb6cdbbde2147fe3d40667ffc": {
+      "title": "Will the price of Ethereum be between $2,300 and $2,400 on October 22?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.998,
+      "first_seen": "2026-10-23",
+      "last_seen": "2026-10-23"
+    },
+    "kalshi:KXCPICOREYOY-26NOV-T2.2": {
+      "title": "Will the rate of core CPI inflation be above 2.2% for the year ending in November 2026? \u2014 Above 2.2%",
+      "theme": "Inflation / CPI",
+      "venue": "kalshi",
+      "prob": 0.99,
+      "first_seen": "2026-10-23",
+      "last_seen": "2026-10-23"
+    },
+    "0x585e5a5b0b683bd6b254cc4bde7f635c21de7fef9cde8dc7fb2ef8fe6f17200d": {
+      "title": "S&P 500 (SPY) closes above $760 on October 22?",
+      "theme": "Nasdaq / US tech index",
+      "venue": "polymarket",
+      "prob": 0.94,
+      "first_seen": "2026-10-23",
+      "last_seen": "2026-10-23"
+    },
+    "0x52aaffd60e340c57e50284f0eb46eae6ba5d6f28c98a420d4af785820cbdff7c": {
+      "title": "Will the price of Ethereum be above $2,400 on October 22?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-23",
+      "last_seen": "2026-10-23"
+    },
+    "0xff25b88a9edc85eaf3d4eafef768ffc854eabab1724cdb65bc20035942ec52a1": {
+      "title": "Will the price of Bitcoin be above $86,000 on October 22?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-23",
+      "last_seen": "2026-10-23"
+    },
+    "0x54cdfa47b0db752bacf78297b1a3c7fe9c3da19d56a92352f0b45078181f23c0": {
+      "title": "Will the price of Ethereum be between $2,400 and $2,500 on October 22?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.0020000000000000018,
+      "first_seen": "2026-10-23",
+      "last_seen": "2026-10-23"
     }
   },
-  "updated": "2026-10-22"
+  "updated": "2026-10-23"
 }
