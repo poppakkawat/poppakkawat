@@ -206,7 +206,7 @@
       "venue": "polymarket",
       "prob": 0.02200000000000002,
       "first_seen": "2026-06-19",
-      "last_seen": "2026-10-21"
+      "last_seen": "2026-10-24"
     },
     "0xc4569c1a4da5845a2bbb14195cfb31aee79e438c6c0c8fe6f0b1dbb922e1c3b0": {
       "title": "Will the price of Bitcoin be above $58,000 on June 20?",
@@ -8252,9 +8252,9 @@
       "title": "US x Iran ceasefire continues through October 31?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.6896868376,
+      "prob": 0.8,
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-22"
+      "last_seen": "2026-10-24"
     },
     "0xbde661710532d882dc1ed45ec97220d2331e526fded07a8fb4ae497d82d1d94e": {
       "title": "Will the price of Bitcoin be less than $76,000 on October 3?",
@@ -9436,9 +9436,9 @@
       "title": "US x Iran ceasefire continues through October 24?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.8707645701,
+      "prob": 0.8880461367,
       "first_seen": "2026-10-22",
-      "last_seen": "2026-10-23"
+      "last_seen": "2026-10-24"
     },
     "0xfbb80ea5f8fc02ee7df8bd4f58790e1d04b874078a49a7b7028a74a2075100c9": {
       "title": "Will Elon Musk win the 2028 Republican presidential nomination?",
@@ -9484,9 +9484,9 @@
       "title": "Will the price of Ethereum be between $2,300 and $2,400 on October 22?",
       "theme": "Ethereum",
       "venue": "polymarket",
-      "prob": 0.998,
+      "prob": 0.999,
       "first_seen": "2026-10-23",
-      "last_seen": "2026-10-23"
+      "last_seen": "2026-10-24"
     },
     "kalshi:KXCPICOREYOY-26NOV-T2.2": {
       "title": "Will the rate of core CPI inflation be above 2.2% for the year ending in November 2026? \u2014 Above 2.2%",
@@ -9510,7 +9510,7 @@
       "venue": "polymarket",
       "prob": 0.0010000000000000009,
       "first_seen": "2026-10-23",
-      "last_seen": "2026-10-23"
+      "last_seen": "2026-10-24"
     },
     "0xff25b88a9edc85eaf3d4eafef768ffc854eabab1724cdb65bc20035942ec52a1": {
       "title": "Will the price of Bitcoin be above $86,000 on October 22?",
@@ -9524,10 +9524,82 @@
       "title": "Will the price of Ethereum be between $2,400 and $2,500 on October 22?",
       "theme": "Ethereum",
       "venue": "polymarket",
-      "prob": 0.0020000000000000018,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-10-23",
-      "last_seen": "2026-10-23"
+      "last_seen": "2026-10-24"
+    },
+    "0x4de4a4c18ced11752bb880cd46957fd7cb62dc1d8a87268a325705fcafa2c446": {
+      "title": "Will the price of Bitcoin be above $78,000 on October 23?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-24",
+      "last_seen": "2026-10-24"
+    },
+    "0xf488830d5dc6790fe59b3900144530353d247d2e42facac36e8297626a1f9730": {
+      "title": "Will the price of Ethereum be above $2,200 on October 23?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-24",
+      "last_seen": "2026-10-24"
+    },
+    "0xb02d51e87160e22fef45bca873f55ba0739b64213c0a277e89f755dc3a43190a": {
+      "title": "Will the price of Ethereum be above $2,600 on October 23?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-24",
+      "last_seen": "2026-10-24"
+    },
+    "0x113fade561be7424c75b614d1d45a65be5d80bed8099e810df6c3d92bf6f2ecb": {
+      "title": "Will Elon Musk post 480-499 tweets from October 20 to October 27, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-24",
+      "last_seen": "2026-10-24"
+    },
+    "0x12118edd1d59428286491720743f587efb76b199c3cf470514e352b1bf8645b9": {
+      "title": "Will Elon Musk post 360-379 tweets from October 16 to October 23, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-24",
+      "last_seen": "2026-10-24"
+    },
+    "0x6a8cf7e0f27ed12a5793593d133642ba90f2720ea981e6eddee7004c772d8f44": {
+      "title": "Will the price of Bitcoin be above $84,000 on October 23?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0021043952999999505,
+      "first_seen": "2026-10-24",
+      "last_seen": "2026-10-24"
+    },
+    "0x712753693f78c30537eb3d861601cad2ee5129a26a1acf10aabbc3c43737040b": {
+      "title": "Will Bitcoin dip to $78,000 on October 23?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.004061646100000038,
+      "first_seen": "2026-10-24",
+      "last_seen": "2026-10-24"
+    },
+    "0xea7ca911fe81345685924fe36b88b81dd33531eeeabaa24e3c1ef99f96f95c51": {
+      "title": "Will WTI Crude Oil (WTI) hit (HIGH) $130 in October?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.010000000000000009,
+      "first_seen": "2026-10-24",
+      "last_seen": "2026-10-24"
+    },
+    "0x4568ddee88c723eea4942fc59d9050cffcbcec86be10d14b5d758245504b185b": {
+      "title": "Will WTI Crude Oil (WTI) hit (HIGH) $120 in October?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.050000000000000044,
+      "first_seen": "2026-10-24",
+      "last_seen": "2026-10-24"
     }
   },
-  "updated": "2026-10-23"
+  "updated": "2026-10-24"
 }
