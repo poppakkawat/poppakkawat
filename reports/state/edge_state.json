@@ -204,9 +204,9 @@
       "title": "Will China invade Taiwan by end of 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.02200000000000002,
+      "prob": 0.020000000000000018,
       "first_seen": "2026-06-19",
-      "last_seen": "2026-10-24"
+      "last_seen": "2026-10-26"
     },
     "0xc4569c1a4da5845a2bbb14195cfb31aee79e438c6c0c8fe6f0b1dbb922e1c3b0": {
       "title": "Will the price of Bitcoin be above $58,000 on June 20?",
@@ -7124,9 +7124,9 @@
       "title": "Will the Fed decrease interest rates by 50+ bps after the October 2026 meeting?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.0020000000000000018,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-09-17",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-26"
     },
     "0x3db052315d8e06325af1cc1009f33d4f2174bc7795c68b46f01b4ef34b2a06e0": {
       "title": "Will WTI Crude Oil (WTI) hit (LOW) $100 in September?",
@@ -7212,9 +7212,9 @@
       "title": "Will the Fed decrease interest rates by 25 bps after the October 2026 meeting?",
       "theme": "Fed rate cut",
       "venue": "polymarket",
-      "prob": 0.0030000000000000027,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-09-18",
-      "last_seen": "2026-10-23"
+      "last_seen": "2026-10-26"
     },
     "0xc949f5ad36b48204535f874f81bf559f91b034f67d5991b771bbc7d44f0fe405": {
       "title": "Will the price of Bitcoin be above $72,000 on September 18?",
@@ -7756,9 +7756,9 @@
       "title": "US-Iran Final Nuclear Deal by October 31, 2026?",
       "theme": "Armed conflict / war",
       "venue": "polymarket",
-      "prob": 0.014935784399999985,
+      "prob": 0.015000000000000013,
       "first_seen": "2026-09-26",
-      "last_seen": "2026-10-13"
+      "last_seen": "2026-10-26"
     },
     "0xed0a3d999ef6b84f0a818610fac2a4cb162e6ccefe1c08470a00be4da6e29ffe": {
       "title": "Will Bitcoin dip to $80,000 September 21-27?",
@@ -8252,9 +8252,9 @@
       "title": "US x Iran ceasefire continues through October 31?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.82,
+      "prob": 0.8425328951,
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-25"
+      "last_seen": "2026-10-26"
     },
     "0xbde661710532d882dc1ed45ec97220d2331e526fded07a8fb4ae497d82d1d94e": {
       "title": "Will the price of Bitcoin be less than $76,000 on October 3?",
@@ -9324,9 +9324,9 @@
       "title": "US x Iran ceasefire continues through October 22?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.998,
+      "prob": 0.9899995938,
       "first_seen": "2026-10-20",
-      "last_seen": "2026-10-25"
+      "last_seen": "2026-10-26"
     },
     "0x48a09353d6ee6ad60fb12e70d01e2c3dba832b36ec0a422bee9e9d879d32bd11": {
       "title": "Will Elon Musk post 300-319 tweets from October 13 to October 20, 2026?",
@@ -9436,9 +9436,9 @@
       "title": "US x Iran ceasefire continues through October 24?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.9749998143,
+      "prob": 0.9838972272,
       "first_seen": "2026-10-22",
-      "last_seen": "2026-10-25"
+      "last_seen": "2026-10-26"
     },
     "0xfbb80ea5f8fc02ee7df8bd4f58790e1d04b874078a49a7b7028a74a2075100c9": {
       "title": "Will Elon Musk win the 2028 Republican presidential nomination?",
@@ -9622,7 +9622,7 @@
       "venue": "polymarket",
       "prob": 0.0010000000000000009,
       "first_seen": "2026-10-25",
-      "last_seen": "2026-10-25"
+      "last_seen": "2026-10-26"
     },
     "0xd534cf4c91624647fb24f13624ab5ef1ccd764e02f6e2693444c00031c15080f": {
       "title": "Will the price of Bitcoin be above $84,000 on October 24?",
@@ -9647,7 +9647,63 @@
       "prob": 0.017000000000000015,
       "first_seen": "2026-10-25",
       "last_seen": "2026-10-25"
+    },
+    "0xcda97b9cc0fa3702795571235d580ade6b451929f3144f4517ccb2cf22b31cf8": {
+      "title": "Will the price of Ethereum be above $2,300 on October 25?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26"
+    },
+    "0x93a1a21d8d60fe29b23bcf8d8e48eb2b50d0a6196c52dfccf9ceb1e3403803a3": {
+      "title": "Will the price of Bitcoin be above $72,000 on October 26?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26"
+    },
+    "0x44450aa4ba752e4c83c610c3986fe2db7d079d45a116878d87dad77c84df7eb8": {
+      "title": "Will Bitcoin reach $90,000 October 19-25?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26"
+    },
+    "0x2659034a882e59ab1daa92841b4a47985e04f35a602891cdca2652a9eb63ba4f": {
+      "title": "Will the price of Bitcoin be above $82,000 on October 25?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26"
+    },
+    "0x53975fa768c6b1b840a2b5d85ecf79abacda66ee31d2df5915e5be1a01b72e3b": {
+      "title": "Will the price of Bitcoin be above $84,000 on October 25?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010004166999999509,
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26"
+    },
+    "0xdd21ee65d56ff6a89d5184e00d29b06a4a7cc4273f8c29445024b122afca2761": {
+      "title": "Will Elon Musk post 165-189 tweets from October 24 to October 26, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0020000000000000018,
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26"
+    },
+    "kalshi:KXMVECROSSCATEGORY-S2026WKQLTQFXSBLEOBUB-DOB6K2BXS": {
+      "title": "yes Kenneth Walker III,no Elijah Higgins: 1+,no Jacoby Brissett: 1+,no Jalen Brooks: 1+,no Teagan Quitoriano: 1+,no Adam Trautman: 1+,no Lil'Jordan Humphrey: 1+,no Marvin Mims Jr.: 1+,no Nate Adkins: 1+,no Troy Franklin: 1+,no Brock Wright: 1+,no Jared Goff: 1+,no Sione Vaki: 1+,no Tyler Conklin: 1+,no Bo Melton: 1+,no Jordan Love: 1+,no Jonnu Smith: 1+,no Josh Whyle: 1+,no Mark Redman: 1+,no Andrew Armstrong: 1+,no Cyrus Allen: 1+,no Emmett Johnson: 1+,no Noah Gray: 1+,yes Travis Kelce: 1+,no Eric Saubert: 1+,no Tory Horton: 1+,no Velus Jones Jr.: 1+,no Alex Bachman: 1+,no Jordan Whittington: 1+,no Matthew Stafford: 1+,no Tutu Atwell: 1+,no Connor Heyward: 1+,no Cody White: 1+,no Dylan Laube: 1+,no Kirk Cousins: 1+,no Malik Benson: 1+",
+      "theme": "Ethereum",
+      "venue": "kalshi",
+      "prob": 0.0050000000000000044,
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26"
     }
   },
-  "updated": "2026-10-25"
+  "updated": "2026-10-26"
 }
