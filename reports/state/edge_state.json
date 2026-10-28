@@ -7084,9 +7084,9 @@
       "title": "Will the Fed increase interest rates by 50+ bps after the October 2026 meeting?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.0030000000000000027,
+      "prob": 0.0040000000000000036,
       "first_seen": "2026-09-16",
-      "last_seen": "2026-10-27"
+      "last_seen": "2026-10-28"
     },
     "0xfef493a8c66402027270ecf4ad018703f855ce02aa38af5d5d92284ebfe90554": {
       "title": "Will the price of Bitcoin be above $68,000 on September 17?",
@@ -7660,9 +7660,9 @@
       "title": "Israel x Iran ceasefire continues through October 31?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.92,
+      "prob": 0.94,
       "first_seen": "2026-09-25",
-      "last_seen": "2026-10-27"
+      "last_seen": "2026-10-28"
     },
     "0x3e04385988e1d6e6995397d1590c7a49600cac84ea990c85656f09ef3eecb9b1": {
       "title": "Will Ethereum dip to $2,600 in September?",
@@ -8182,7 +8182,7 @@
       "venue": "polymarket",
       "prob": 0.0030000000000000027,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-22"
+      "last_seen": "2026-10-28"
     },
     "0x799c35de1e5f3ebd75053643e020e6df9e9a3f477e3d6066eb0a8565f65d547f": {
       "title": "Will Bitcoin reach $180,000 by December 31, 2026?",
@@ -8204,9 +8204,9 @@
       "title": "Will Bitcoin dip to $67,500 in October?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.019000000000000017,
+      "prob": 0.0080171,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-25"
+      "last_seen": "2026-10-28"
     },
     "0x8764f7431ad942e3b2e25441bbe6fd2cce61935895fb5710719665c0b18d1894": {
       "title": "Will the price of Bitcoin be above $74,000 on October 4?",
@@ -8252,9 +8252,9 @@
       "title": "US x Iran ceasefire continues through October 31?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.86,
+      "prob": 0.94,
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-27"
+      "last_seen": "2026-10-28"
     },
     "0xbde661710532d882dc1ed45ec97220d2331e526fded07a8fb4ae497d82d1d94e": {
       "title": "Will the price of Bitcoin be less than $76,000 on October 3?",
@@ -8700,9 +8700,9 @@
       "title": "Will WTI Crude Oil (WTI) hit (HIGH) $140 in October?",
       "theme": "Oil / OPEC",
       "venue": "polymarket",
-      "prob": 0.008000000000000007,
+      "prob": 0.0050000000000000044,
       "first_seen": "2026-10-10",
-      "last_seen": "2026-10-10"
+      "last_seen": "2026-10-28"
     },
     "0xb510a449bdb84110d928136bb12190d54993ff41dc87c18bac33793070101ff7": {
       "title": "Will WTI Crude Oil (WTI) hit (HIGH) $150 in October?",
@@ -8748,9 +8748,9 @@
       "title": "US-Iran ceasefire continues through the midterms?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.81,
+      "prob": 0.9,
       "first_seen": "2026-10-11",
-      "last_seen": "2026-10-20"
+      "last_seen": "2026-10-28"
     },
     "0xca394e0db041f91ac2d69f3ea06efdfc8643acb0d2751283bd594e7b8bd581f9": {
       "title": "Israel x Iran ceasefire continues through November 15?",
@@ -9436,9 +9436,9 @@
       "title": "US x Iran ceasefire continues through October 24?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.996,
+      "prob": 0.999,
       "first_seen": "2026-10-22",
-      "last_seen": "2026-10-27"
+      "last_seen": "2026-10-28"
     },
     "0xfbb80ea5f8fc02ee7df8bd4f58790e1d04b874078a49a7b7028a74a2075100c9": {
       "title": "Will Elon Musk win the 2028 Republican presidential nomination?",
@@ -9636,9 +9636,9 @@
       "title": "Will Bitcoin reach $102,500 in October?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.008000000000000007,
+      "prob": 0.0020000000000000018,
       "first_seen": "2026-10-25",
-      "last_seen": "2026-10-25"
+      "last_seen": "2026-10-28"
     },
     "0x3d78687856148bc4410fcf2d511c6a8e797a32cd123d5130550937776c1bc580": {
       "title": "Will Bitcoin reach $95,000 in October?",
@@ -9735,7 +9735,55 @@
       "prob": 0.01100000000000001,
       "first_seen": "2026-10-27",
       "last_seen": "2026-10-27"
+    },
+    "0xedafbe4163ce7097605b2e3448f61f24209fd57e3fa0b7bfb6e253cc8822aab0": {
+      "title": "Will the price of Bitcoin be above $78,000 on October 27?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28"
+    },
+    "0x0d745569b9f1a9c50fb52d1f5c18c2367da3a9ddc76aede27095d23c661a1b00": {
+      "title": "Will the price of Bitcoin be above $72,000 on October 27?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28"
+    },
+    "0xd1ab518c56ce6ffc73f174ef07c65cfa58934f5ab4751f3a43b65069d7a9dbe7": {
+      "title": "Will the price of Ethereum be above $2,100 on October 27?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28"
+    },
+    "kalshi:KXRATECUTCOUNT-26DEC31-T0": {
+      "title": "Will the Fed cut rates 0 times? \u2014 Exactly 0 cuts",
+      "theme": "Fed rate cut",
+      "venue": "kalshi",
+      "prob": 0.95,
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28"
+    },
+    "0x68e3c4e0dd8f82d010060032006fd157401b0bd8e04bd2953ae293e31eb99bf6": {
+      "title": "Will Elon Musk win the 2028 US Presidential Election?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0020000000000000018,
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28"
+    },
+    "0x3da12c22a07038e636adf33688c2f1c6ee47ce288cde6103c467340b09241304": {
+      "title": "Will Elon Musk post 165-189 tweets from October 26 to October 28, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0020000000000000018,
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28"
     }
   },
-  "updated": "2026-10-27"
+  "updated": "2026-10-28"
 }
