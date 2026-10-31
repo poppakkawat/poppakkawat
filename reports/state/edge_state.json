@@ -4724,9 +4724,9 @@
       "title": "Will Bitcoin reach $1,000,000 by December 31, 2026?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.004305209199999993,
+      "prob": 0.0020004544999999707,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-09-07"
+      "last_seen": "2026-10-31"
     },
     "0x1fcd2f7f384f2f28f1f5e13e74224795d99753eb3e9dff0258f9f0e54f328d8d": {
       "title": "Will WTI Crude Oil (WTI) hit (HIGH) $130 in August?",
@@ -7516,9 +7516,9 @@
       "title": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
       "theme": "Fed rate hike",
       "venue": "polymarket",
-      "prob": 0.75,
+      "prob": 0.7,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-10-30"
+      "last_seen": "2026-10-31"
     },
     "0x8923e1ccf64ef74e177a1e3386b342736e7dd4b1f5bc91e8c16e3a9b55677a97": {
       "title": "Will Bitcoin dip to $81,000 on September 22?",
@@ -8094,7 +8094,7 @@
       "venue": "polymarket",
       "prob": 0.0010000000000000009,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-30"
+      "last_seen": "2026-10-31"
     },
     "0x68bd2cba871a2289c3cbc75396a2e180795b74c0183c1407875247243a083af7": {
       "title": "Will Bitcoin dip to $65,000 in October?",
@@ -9596,9 +9596,9 @@
       "title": "Will WTI Crude Oil (WTI) hit (HIGH) $120 in October?",
       "theme": "Oil / OPEC",
       "venue": "polymarket",
-      "prob": 0.050000000000000044,
+      "prob": 0.0020000000000000018,
       "first_seen": "2026-10-24",
-      "last_seen": "2026-10-24"
+      "last_seen": "2026-10-31"
     },
     "0x5e90faea2aca89ecf9a8700db6b54dfcfb2c780f3a8cb54d13e48ef116d90c70": {
       "title": "Will the price of Bitcoin be above $72,000 on October 25?",
@@ -9716,9 +9716,9 @@
       "title": "Will NVIDIA be the largest company in the world by market cap on October 31, 2026?",
       "theme": "Nvidia / AI",
       "venue": "polymarket",
-      "prob": 0.928345529,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-10-27",
-      "last_seen": "2026-10-27"
+      "last_seen": "2026-10-31"
     },
     "0x5689269befef797effc1b2850e3f2981ec7bc5588f6aa4b34e7b2ce000b13c7a": {
       "title": "Will the price of Bitcoin be above $88,000 on October 27?",
@@ -9804,17 +9804,17 @@
       "title": "US x Iran ceasefire continues through October 28?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.9940946819,
+      "prob": 0.978391267,
       "first_seen": "2026-10-29",
-      "last_seen": "2026-10-29"
+      "last_seen": "2026-10-31"
     },
     "0xdbcc19248725b32aa85acbdd91f1877cb124a68cf6d7bc2d036e0e91ffa0f9c6": {
       "title": "US x Iran ceasefire continues through November 8?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.7635312796,
+      "prob": 0.7371617088,
       "first_seen": "2026-10-29",
-      "last_seen": "2026-10-29"
+      "last_seen": "2026-10-31"
     },
     "0x5ce14dd9eb04b5a41104cef63b33194b64b70ae4bb8587957632b99288782822": {
       "title": "Will Bitcoin reach $82,500 in October?",
@@ -9895,7 +9895,71 @@
       "prob": 0.0010000000000000009,
       "first_seen": "2026-10-30",
       "last_seen": "2026-10-30"
+    },
+    "0x58f0b1134dfb22c684624d7435010939c6ea9cf5e5d661300ea244e39c693e37": {
+      "title": "Will WTI Crude Oil (WTI) hit (HIGH) $105 Week of October 26 2026?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.9986930643,
+      "first_seen": "2026-10-31",
+      "last_seen": "2026-10-31"
+    },
+    "0x33f529b87bb00a1ff2a948694a0b72cb67f8e267246c9e7658bb6198eb2d9af4": {
+      "title": "Will WTI Crude Oil (WTI) hit (HIGH) $105 in October?",
+      "theme": "Oil / OPEC",
+      "venue": "polymarket",
+      "prob": 0.9530037988,
+      "first_seen": "2026-10-31",
+      "last_seen": "2026-10-31"
+    },
+    "0xe537847931e3088d6037d1567efc261c00bc3533dc3892301a90578f2ddc083b": {
+      "title": "Will Ethereum reach $3,100 in October?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-31",
+      "last_seen": "2026-10-31"
+    },
+    "0xf85b67bd067486be206b4cf23395e1ac463b87ec70e19ed35554f49a41d88930": {
+      "title": "Will Elon Musk post 420-439 tweets from October 23 to October 30, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-31",
+      "last_seen": "2026-10-31"
+    },
+    "0x785c05dd6455cff863182357c1dda54b4cef44b76ac94aa40fa4c22e2b2d5dee": {
+      "title": "Will Elon Musk post 360-379 tweets from October 23 to October 30, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-31",
+      "last_seen": "2026-10-31"
+    },
+    "0x1c707b137459d799ca3d67fcc246016c01d97c9d6338c8e73efe428b3f0cc44d": {
+      "title": "Will the price of Bitcoin be above $82,000 on October 30?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-10-31",
+      "last_seen": "2026-10-31"
+    },
+    "0xde5c4c7f05b34f4774d07fec9aa9cf880555f95ddcce4c7830ab09daecc493c4": {
+      "title": "Russia x Ukraine ceasefire by October 31, 2026?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.0020000000000000018,
+      "first_seen": "2026-10-31",
+      "last_seen": "2026-10-31"
+    },
+    "0x30d3f0988840f3ad6284bcd4d2318dcc09e24aaecaee8afa8cabc8ec28ee753a": {
+      "title": "Will the price of Bitcoin be above $80,000 on October 30?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0020009166000000134,
+      "first_seen": "2026-10-31",
+      "last_seen": "2026-10-31"
     }
   },
-  "updated": "2026-10-30"
+  "updated": "2026-10-31"
 }
