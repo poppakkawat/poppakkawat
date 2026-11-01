@@ -7660,9 +7660,9 @@
       "title": "Israel x Iran ceasefire continues through October 31?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.94,
+      "prob": 0.998,
       "first_seen": "2026-09-25",
-      "last_seen": "2026-10-28"
+      "last_seen": "2026-11-01"
     },
     "0x3e04385988e1d6e6995397d1590c7a49600cac84ea990c85656f09ef3eecb9b1": {
       "title": "Will Ethereum dip to $2,600 in September?",
@@ -8252,9 +8252,9 @@
       "title": "US x Iran ceasefire continues through October 31?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.9368567572,
+      "prob": 0.988,
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-30"
+      "last_seen": "2026-11-01"
     },
     "0xbde661710532d882dc1ed45ec97220d2331e526fded07a8fb4ae497d82d1d94e": {
       "title": "Will the price of Bitcoin be less than $76,000 on October 3?",
@@ -8516,9 +8516,9 @@
       "title": "Will Bitcoin dip to $70,000 in October?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.06999999999999995,
+      "prob": 0.0020000000000000018,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-07"
+      "last_seen": "2026-11-01"
     },
     "0xd25e8460fb5713ccf28c3267611391ed0ce316e55d08623042b7da0bf0f61349": {
       "title": "Will the price of Bitcoin be above $74,000 on October 8?",
@@ -8932,9 +8932,9 @@
       "title": "US x Yemen ceasefire continues through October 31?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.9799711775,
+      "prob": 0.999,
       "first_seen": "2026-10-14",
-      "last_seen": "2026-10-27"
+      "last_seen": "2026-11-01"
     },
     "0x2da43a83294d15daacd4b6ec1134863075f1c0981e0fef4a91ad0a19316d43f7": {
       "title": "Will Elon Musk post 140-159 tweets from October 9 to October 16, 2026?",
@@ -9948,9 +9948,9 @@
       "title": "Russia x Ukraine ceasefire by October 31, 2026?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.0020000000000000018,
+      "prob": 0.0010000000000000009,
       "first_seen": "2026-10-31",
-      "last_seen": "2026-10-31"
+      "last_seen": "2026-11-01"
     },
     "0x30d3f0988840f3ad6284bcd4d2318dcc09e24aaecaee8afa8cabc8ec28ee753a": {
       "title": "Will the price of Bitcoin be above $80,000 on October 30?",
@@ -9959,7 +9959,87 @@
       "prob": 0.0020009166000000134,
       "first_seen": "2026-10-31",
       "last_seen": "2026-10-31"
+    },
+    "0x31d64f37cf59d710c35fdb183bed99f03069490ba23e57adbc34fb1f3f2f53f9": {
+      "title": "Will the price of Bitcoin be above $70,000 on November 1?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01"
+    },
+    "0xff98892eae3088f9a5a232548309ac22b84178ae000b2f14b7c144872f9a0092": {
+      "title": "Will Xiaomi have the best Chinese AI model at the end of October 2026?",
+      "theme": "AI / big tech",
+      "venue": "polymarket",
+      "prob": 0.9980627272,
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01"
+    },
+    "0x5785e567e54ff56b81acf02b5287c982cba6d107e413db71813180db40ffac55": {
+      "title": "Israel x Iran ceasefire continues through November 2?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.966815911,
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01"
+    },
+    "0x4d85dc38372ea0e06ac9537c0ad5ee390739982b06c8ea3a21f7220eb843e2f1": {
+      "title": "Will Elon Musk post 215-239 tweets from October 29 to October 31, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01"
+    },
+    "0x94f623a9c9ac7e0caca65b1ab664e8158ebb8ec0c826b023ba98518967910755": {
+      "title": "Will Bitcoin reach $90,000 in October?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01"
+    },
+    "0x7fce5d62233723da8ff6a95bdae8b9b70cdd30ce9356814c353bb41b5b70834c": {
+      "title": "Will Alibaba have the best Chinese AI model at the end of October 2026?",
+      "theme": "AI / big tech",
+      "venue": "polymarket",
+      "prob": 0.0014733244000000312,
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01"
+    },
+    "0x7570252d9010bf894105e4aac690e294dfff7cbb67577d17c27a0ac71370ce31": {
+      "title": "Will Elon Musk post 115-139 tweets from October 29 to October 31, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0015186769999999683,
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01"
+    },
+    "0x6c3f1009a0c91ba9f7aae44aeadf86863b0d433b60f7a090fd00c945019aa32f": {
+      "title": "Russia x Ukraine ceasefire agreement by October 31, 2026?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.0020000000000000018,
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01"
+    },
+    "0x5280e91e95ab540de0879f26813f060f51f9d77d8c2e41dd81f1aec41c8bb714": {
+      "title": "Will Bitcoin dip to $75,000 in October?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.010000000000000009,
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01"
+    },
+    "0x0e8ca472ad22b9cfc3cc933e4262ca27a740a60210419d832db4248f06d5eba1": {
+      "title": "Will the price of Ethereum be above $1,900 on November 7?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.010000000000000009,
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01"
     }
   },
-  "updated": "2026-10-31"
+  "updated": "2026-11-01"
 }
