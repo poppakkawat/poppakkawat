@@ -7662,7 +7662,7 @@
       "venue": "polymarket",
       "prob": 0.998,
       "first_seen": "2026-09-25",
-      "last_seen": "2026-11-01"
+      "last_seen": "2026-11-02"
     },
     "0x3e04385988e1d6e6995397d1590c7a49600cac84ea990c85656f09ef3eecb9b1": {
       "title": "Will Ethereum dip to $2,600 in September?",
@@ -8084,9 +8084,9 @@
       "title": "Will Bitcoin dip to $25,000 by December 31, 2026?",
       "theme": "Bitcoin",
       "venue": "polymarket",
-      "prob": 0.01100000000000001,
+      "prob": 0.015000000000000013,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-02"
+      "last_seen": "2026-11-02"
     },
     "0x6fb90566bc3da452fed4460dfba11e93765802b824bdc022a5f1902b439075f0": {
       "title": "Will Bitcoin reach $105,000 in October?",
@@ -8252,9 +8252,9 @@
       "title": "US x Iran ceasefire continues through October 31?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.988,
+      "prob": 0.993,
       "first_seen": "2026-10-04",
-      "last_seen": "2026-11-01"
+      "last_seen": "2026-11-02"
     },
     "0xbde661710532d882dc1ed45ec97220d2331e526fded07a8fb4ae497d82d1d94e": {
       "title": "Will the price of Bitcoin be less than $76,000 on October 3?",
@@ -9812,9 +9812,9 @@
       "title": "US x Iran ceasefire continues through November 8?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.7371617088,
+      "prob": 0.7305927742,
       "first_seen": "2026-10-29",
-      "last_seen": "2026-10-31"
+      "last_seen": "2026-11-02"
     },
     "0x5ce14dd9eb04b5a41104cef63b33194b64b70ae4bb8587957632b99288782822": {
       "title": "Will Bitcoin reach $82,500 in October?",
@@ -9980,9 +9980,9 @@
       "title": "Israel x Iran ceasefire continues through November 2?",
       "theme": "Ceasefire / peace",
       "venue": "polymarket",
-      "prob": 0.966815911,
+      "prob": 0.981,
       "first_seen": "2026-11-01",
-      "last_seen": "2026-11-01"
+      "last_seen": "2026-11-02"
     },
     "0x4d85dc38372ea0e06ac9537c0ad5ee390739982b06c8ea3a21f7220eb843e2f1": {
       "title": "Will Elon Musk post 215-239 tweets from October 29 to October 31, 2026?",
@@ -10039,7 +10039,87 @@
       "prob": 0.010000000000000009,
       "first_seen": "2026-11-01",
       "last_seen": "2026-11-01"
+    },
+    "0x78cc428ca8255c271c2063ff184200c178b8292a2be0cbea965fdc060f08093f": {
+      "title": "Will the price of Bitcoin be above $70,000 on November 2?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02"
+    },
+    "0xd995e7c677c2321c8027c635c72d5fd5501f9cd25d88eee4aa978803d163ce1d": {
+      "title": "Will the price of Ethereum be above $2,000 on November 1?",
+      "theme": "Ethereum",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02"
+    },
+    "0x43c73a08281c4db24da63a9d6441fcf22e04a9316213fa05b08a9ff36d528b19": {
+      "title": "Will the price of Bitcoin be above $74,000 on November 1?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.999,
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02"
+    },
+    "0x3b3b3df7e2cf92521060749dcbb65fb70ffc83630c52454cabd0423cdf2997f4": {
+      "title": "Will the price of Bitcoin be above $76,000 on November 1?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.9882075176,
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02"
+    },
+    "0x112619feddff577b703d42e060e67197278781e204b87e04deca3ede47b67435": {
+      "title": "Israel x Iran ceasefire continues through November 3?",
+      "theme": "Ceasefire / peace",
+      "venue": "polymarket",
+      "prob": 0.9877256318,
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02"
+    },
+    "0xc988970829dd79f363737845941ef2fecb0399229d74cffdfbcb0a6fd41e2a1d": {
+      "title": "Will Bitcoin reach $92,000 October 26-November 1?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02"
+    },
+    "0x8a0f37044e202294857919e7f058704f7849bc06b51ab7403c02e6dadbdb82a1": {
+      "title": "Will Bitcoin reach $94,000 October 26-November 1?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02"
+    },
+    "0x6baff3d2ec5069a0145c1713122a6fc5f41d3b001badda7d8b7c2ca1694824c5": {
+      "title": "Will the price of Bitcoin be above $88,000 on November 2?",
+      "theme": "Bitcoin",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02"
+    },
+    "0x2ad804365eae4c08588bbd1eca881b18b1a2e0c6b978fc7df0b69c4896025cf8": {
+      "title": "Will Elon Musk post 320-339 tweets from October 27 to November 3, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0010000000000000009,
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02"
+    },
+    "0x2ed6dff8155df8766f4de09eb9f8cbd163861b70b420dd39969ce46e2ce8f914": {
+      "title": "Will Elon Musk post 190-214 tweets from October 31 to November 2, 2026?",
+      "theme": "Tesla",
+      "venue": "polymarket",
+      "prob": 0.0030000000000000027,
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02"
     }
   },
-  "updated": "2026-11-01"
+  "updated": "2026-11-02"
 }
