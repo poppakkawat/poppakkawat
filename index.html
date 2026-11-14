@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Pixel Trading Floor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&family=Pixelify+Sans:wght@500;700&family=VT323&display=swap">
+<style>
+/* Layout: arcade HUD on top → three desk "rooms" as live pixel scenes → party roster + quest log */
+:root{
+  --bg:#100d1b; --panel:#1b1630; --panel-2:#241d3f; --edge:#3b305e; --ink:#f4ecd6; --dim:#a698c6; --well:#0b0914;
+  --gold:#ffc94a; --cyan:#4fd6ff; --violet:#c08cff;
+  --up:#62e88f; --down:#ff6170; --warn:#ffb03a;
+  --f-display:"Pixelify Sans","Kanit",system-ui,sans-serif;
+  --f-body:"Kanit",system-ui,sans-serif;
+  --f-num:"VT323",ui-monospace,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:14px;
+  background-image:radial-gradient(rgba(192,140,255,.07) 1px,transparent 1px);background-size:8px 8px}
+.app{max-width:1320px;margin:0 auto;padding-inline:16px;padding-block:22px 48px;display:grid;gap:26px}
+.px{background:var(--panel);margin:3px;
+  box-shadow:0 -3px 0 0 var(--edge),0 3px 0 0 var(--edge),-3px 0 0 0 var(--edge),3px 0 0 0 var(--edge),0 9px 0 0 rgba(0,0,0,.4)}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+
+/* HUD */
+.hud{display:grid;grid-template-columns:auto 1fr;gap:18px 28px;align-items:center;padding:16px 20px}
+.brand{display:grid;gap:4px}
+.brand .ins{font:500 11px var(--f-display);letter-spacing:.18em;color:var(--gold);animation:blink 1.4s steps(2) infinite}
+.brand h1{margin:0;font:700 clamp(22px,3vw,30px)/1 var(--f-display);letter-spacing:.02em;text-wrap:balance}
+.brand .demo{justify-self:start;font-size:11px;color:var(--warn);border:1px dashed var(--warn);padding:1px 6px}
+.brand .demo.live{color:var(--up);border-color:var(--up)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px 22px}
+.stat{display:grid;gap:3px;min-width:0}
+.stat .k{font-size:11px;letter-spacing:.06em;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.stat .k em{font-style:normal;color:var(--ink)}
+.stat .v{font-size:30px;line-height:1}
+.up{color:var(--up)}.down{color:var(--down)}
+.seg{height:12px;background:var(--well);position:relative;margin-top:4px;box-shadow:0 0 0 2px var(--edge)}
+.seg i{display:block;height:100%;transition:width .6s steps(8)}
+.seg::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 7px,var(--panel) 7px 9px)}
+.seg.hp i{background:var(--up)}.seg.hp.low i{background:var(--down)}
+.seg.xp i{background:var(--gold)}
+@keyframes blink{50%{opacity:.25}}
+
+/* Rooms */
+.rooms{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:26px}
+.room{display:flex;flex-direction:column;min-width:0}
+.room[data-desk=roc]{--desk:var(--gold)}.room[data-desk=beta]{--desk:var(--cyan)}.room[data-desk=alpha]{--desk:var(--violet)}
+.room-head{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;padding:12px 16px 10px}
+.room-head .tag{font:700 11px/1 var(--f-display);color:var(--bg);background:var(--desk);padding:4px 6px 3px;letter-spacing:.08em}
+.room-head h2{margin:0;font:700 21px/1.1 var(--f-display);color:var(--desk)}
+.room-head .sub{flex-basis:100%;color:var(--dim);font-size:12.5px}
+.stage{position:relative;background:#000;border-block:3px solid var(--edge)}
+.stage canvas{display:block;width:100%;height:auto;aspect-ratio:200/112;image-rendering:pixelated;cursor:pointer}
+.bubble{position:absolute;transform:translate(-50%,-100%);background:var(--ink);color:#1b1630;font:500 12px/1.25 var(--f-body);
+  padding:3px 7px;white-space:nowrap;pointer-events:none;
+  box-shadow:0 -2px 0 0 #1b1630,0 2px 0 0 #1b1630,-2px 0 0 0 #1b1630,2px 0 0 0 #1b1630}
+.bubble::after{content:"";position:absolute;left:50%;top:100%;margin-left:-3px;border:4px solid transparent;border-top-color:var(--ink);border-bottom:0}
+.bubble.alert{background:var(--warn)}.bubble.alert::after{border-top-color:var(--warn)}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;margin:0;padding:14px 16px 16px}
+.kpis div{min-width:0}
+.kpis dt{font-size:11.5px;color:var(--dim);letter-spacing:.03em}
+.kpis dd{margin:2px 0 0;font:28px/1 var(--f-num);font-variant-numeric:tabular-nums}
+.kpis small{display:block;font:400 11.5px/1.3 var(--f-body);color:var(--dim);margin-top:3px}
+
+/* Lower */
+.lower{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:26px;align-items:start}
+@media (max-width:920px){.lower{grid-template-columns:1fr}.hud{grid-template-columns:1fr}}
+.lower h3{margin:0;padding:14px 16px 10px;font:700 15px var(--f-display);letter-spacing:.06em;display:flex;justify-content:space-between;gap:8px}
+.lower h3 span{color:var(--dim);font:400 12px var(--f-body);letter-spacing:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,232px),1fr));gap:10px;padding:0 14px 16px}
+.card{display:grid;grid-template-columns:56px minmax(0,1fr);gap:10px;align-items:center;padding:8px 10px 8px 8px;background:var(--panel-2);
+  border-left:4px solid var(--desk);cursor:pointer;outline:none}
+.card[data-desk=roc]{--desk:var(--gold)}.card[data-desk=beta]{--desk:var(--cyan)}.card[data-desk=alpha]{--desk:var(--violet)}
+.card:hover{background:#2c2450}
+.card:focus-visible{box-shadow:0 0 0 2px var(--ink)}
+.card.sel{background:#332a5c;box-shadow:inset 0 0 0 2px var(--desk)}
+.por{width:56px;height:60px;image-rendering:pixelated;background:var(--well)}
+.meta{display:grid;gap:3px;min-width:0}
+.nm{display:flex;justify-content:space-between;align-items:baseline;gap:6px}
+.nm b{font:700 15px var(--f-display);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nm .lv{font:17px var(--f-num);color:var(--desk)}
+.role{font-size:12px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.risk{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:6px;font:15px var(--f-num);color:var(--dim)}
+.risk .seg{height:7px;margin:0;box-shadow:0 0 0 1px var(--edge)}
+.risk .seg::after{background:repeating-linear-gradient(90deg,transparent 0 5px,var(--panel-2) 5px 6px)}
+.row{display:flex;gap:6px;align-items:center;min-width:0}
+.st{font-size:11px;padding:0 6px;background:var(--well);color:var(--dim);white-space:nowrap}
+.st[data-s=alert]{background:var(--warn);color:#1b1630}
+.st[data-s=talk]{background:var(--ink);color:#1b1630}
+.st[data-s=walk]{color:var(--cyan)}
+.stat-line{font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.log ol{list-style:none;margin:0;padding:0 14px 16px;display:grid;gap:2px;max-height:470px;overflow:auto}
+.log li{display:grid;grid-template-columns:44px 50px minmax(0,1fr);gap:6px;align-items:baseline;padding:5px 6px;font-size:12.5px;background:var(--panel-2)}
+.log li:first-child{animation:pop .5s steps(3)}
+.log time{font:16px var(--f-num);color:var(--dim)}
+.log .tg{font:700 10px var(--f-display);letter-spacing:.06em;color:var(--c)}
+.log .d-roc{--c:var(--gold)}.log .d-beta{--c:var(--cyan)}.log .d-alpha{--c:var(--violet)}.log .d-sys{--c:var(--dim)}
+@keyframes pop{from{background:#3b305e}}
+.foot{color:var(--dim);font-size:12px;text-align:center}
+@media (prefers-reduced-motion:reduce){.brand .ins,.log li:first-child{animation:none}.seg i{transition:none}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="hud px">
+    <div class="brand">
+      <span class="ins">PLAYER 1 · PAPER MODE</span>
+      <h1>Pixel Trading Floor</h1>
+      <span class="demo" id="mode">กำลังโหลดข้อมูล…</span>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="k">ทุนรวม · EQUITY</span><span class="v num" id="h-eq">—</span></div>
+      <div class="stat"><span class="k">กำไรวันนี้ · DAY P&amp;L</span><span class="v num" id="h-pnl">—</span></div>
+      <div class="stat"><span class="k">HP · Drawdown <em id="h-dd"></em></span><div class="seg hp" id="h-hpbar"><i id="h-hp"></i></div></div>
+      <div class="stat"><span class="k">XP · เป้าเดือนนี้ <em id="h-xpt"></em></span><div class="seg xp"><i id="h-xp"></i></div></div>
+      <div class="stat"><span class="k">อัปเดตล่าสุด <em id="h-age"></em></span><span class="v num" id="h-clock">—</span></div>
+    </div>
+  </header>
+
+  <main class="rooms">
+    <section class="room px" data-desk="roc">
+      <div class="room-head"><span class="tag">DESK 01</span><h2>Return on Cash</h2><span class="sub">ห้องนิรภัย · เงินสดทดลองรับดอกเบี้ยตามอัตรา T-Bill จริง</span></div>
+      <div class="stage"><canvas id="c-roc" width="200" height="112" aria-label="ฉากห้องนิรภัย Return on Cash"></canvas></div>
+      <dl class="kpis">
+        <div><dt>เงินสด (paper)</dt><dd id="k-cash">—</dd><small id="k-cash-s">—</small></div>
+        <div><dt>T-Bill 13 สัปดาห์</dt><dd id="k-rate" class="up">—</dd><small id="k-rate-s">—</small></div>
+        <div><dt>ดอกเบี้ยวันนี้</dt><dd id="k-acc" class="up">—</dd><small>คิดถึงรอบอัปเดตล่าสุด</small></div>
+        <div><dt>ดอกเบี้ยสะสม</dt><dd id="k-acct" class="up">—</dd><small id="k-acct-s">—</small></div>
+      </dl>
+    </section>
+
+    <section class="room px" data-desk="beta">
+      <div class="room-head"><span class="tag">DESK 02</span><h2>Beta · Oil Grid</h2><span class="sub">แท่นขุด · Grid ทดลองบนราคา WTI จริง แท่ง 5 นาที</span></div>
+      <div class="stage"><canvas id="c-beta" width="200" height="112" aria-label="ฉากแท่นน้ำมัน Oil Grid"></canvas></div>
+      <dl class="kpis">
+        <div><dt id="k-wti-l">WTI ล่าสุด</dt><dd id="k-wti">—</dd><small id="k-wti-s">—</small></div>
+        <div><dt>กรอบ Grid</dt><dd id="k-range">—</dd><small id="k-range-s">—</small></div>
+        <div><dt>Fills วันนี้</dt><dd id="k-fills">—</dd><small id="k-held">—</small></div>
+        <div><dt>กำไร Grid ทั้งหมด</dt><dd id="k-grid">—</dd><small id="k-grid-s">—</small></div>
+      </dl>
+    </section>
+
+    <section class="room px" data-desk="alpha">
+      <div class="room-head"><span class="tag">DESK 03</span><h2>Alpha</h2><span class="sub">หอเวทมนตร์ · เลือกหุ้นโมเมนตัมแรงสุด 3 ตัว ทุกสัปดาห์</span></div>
+      <div class="stage"><canvas id="c-alpha" width="200" height="112" aria-label="ฉากหอเวท Alpha"></canvas></div>
+      <dl class="kpis">
+        <div><dt>Alpha สะสม</dt><dd id="k-alpha">—</dd><small id="k-alpha-s">—</small></div>
+        <div><dt>Hit rate</dt><dd id="k-hit">—</dd><small id="k-hit-s">—</small></div>
+        <div><dt>ถืออยู่</dt><dd id="k-open">—</dd><small id="k-open-s">—</small></div>
+        <div><dt>Information ratio</dt><dd id="k-ir">—</dd><small id="k-ir-s">—</small></div>
+      </dl>
+    </section>
+  </main>
+
+  <div class="lower">
+    <section class="px">
+      <h3>PARTY · ทีม 8/8 <span>กดการ์ดหรือกดตัวละครในฉากเพื่อเลือก</span></h3>
+      <div class="cards" id="cards"></div>
+    </section>
+    <section class="px log">
+      <h3>QUEST LOG <span>เหตุการณ์จากข้อมูลจริง</span></h3>
+      <ol id="log"></ol>
+    </section>
+  </div>
+  <p class="foot" id="foot">ราคาจริงจาก Yahoo Finance · พอร์ตทั้งหมดเป็นเงินทดลอง (paper) · อัปเดตอัตโนมัติทุก 30 นาที</p>
+</div>
+
+<script>
+(() => {
+const W = 200, H = 112;
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const $ = s => document.querySelector(s);
+const rnd = (a, b) => a + Math.random() * (b - a);
+const pick = a => a[Math.floor(Math.random() * a.length)];
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const gauss = () => { let u = 0, v = 0; while (!u) u = Math.random(); while (!v) v = Math.random(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); };
+const money = (n, d = 0) => '$' + Math.abs(n).toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
+const signed = (n, d = 0) => (n < 0 ? '−' : '+') + money(n, d);
+function seeded(a) { return () => { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+
+/* ---------- pixel primitives ---------- */
+const R = (g, x, y, w, h, c) => { g.fillStyle = c; g.fillRect(x, y, w, h); };
+function line(g, x0, y0, x1, y1, c) {
+  x0 = Math.round(x0); y0 = Math.round(y0); x1 = Math.round(x1); y1 = Math.round(y1);
+  g.fillStyle = c;
+  const dx = Math.abs(x1 - x0), sx = x0 < x1 ? 1 : -1, dy = -Math.abs(y1 - y0), sy = y0 < y1 ? 1 : -1;
+  let err = dx + dy;
+  for (;;) { g.fillRect(x0, y0, 1, 1); if (x0 === x1 && y0 === y1) break; const e2 = 2 * err; if (e2 >= dy) { err += dy; x0 += sx; } if (e2 <= dx) { err += dx; y0 += sy; } }
+}
+function disc(g, cx, cy, r, c) { g.fillStyle = c; for (let dy = -r; dy <= r; dy++) { const w = Math.floor(Math.sqrt(r * r - dy * dy)); g.fillRect(cx - w, cy + dy, 2 * w + 1, 1); } }
+const GL = {
+  '0':'111101101101111','1':'010110010010111','2':'111001111100111','3':'111001111001111','4':'101101111001001',
+  '5':'111100111001111','6':'111100111101111','7':'111001001001001','8':'111101111101111','9':'111101111001111',
+  '.':'000000000000010','%':'101001010100101','+':'000010111010000','-':'000000111000000',
+  A:'010101111101101',B:'110101110101110',D:'110101101101110',E:'111100110100111',F:'111100110100100',H:'101101111101101',
+  I:'111010010010111',L:'100100100100111',M:'101111111101101',P:'110101110100100',S:'011100010001110',T:'111010010010010',
+  W:'101101101111101',Y:'101101010010010',G:'011100101101011',R:'110101110101101'
+};
+function text(g, s, x, y, c) { g.fillStyle = c; for (const ch of s) { const p = GL[ch]; if (p) for (let i = 0; i < 15; i++) if (p[i] === '1') g.fillRect(x + i % 3, y + (i / 3 | 0), 1, 1); x += 4; } }
+
+/* ---------- data ---------- */
+let D = null, MODE = 'loading';
+const FX = { casting: 0, flashT: 0, flashSide: '' };
+const G0 = () => D && D.grid && D.grid.lo != null ? D.grid : null;
+const A0 = () => (D && D.alpha) || {};
+const R0 = () => (D && D.roc) || {};
+
+/* ---------- characters ---------- */
+const CH = [
+  { id: 'goldie', name: 'Goldie', room: 'roc', lv: 14, role: 'ผู้คุมห้องนิรภัย · ดอกเบี้ย', prop: 'coin', speed: 16,
+    look: { skin: '#f1c08f', hair: '#7a4a2a', shirt: '#2f6b4f', pants: '#2a2a3a', shoe: '#1a1420', hat: 'top', hatC: '#1d1b26', band: '#ffc94a', stache: '#eadfcf' },
+    spots: [[40, 76], [104, 74], [164, 74], [70, 94]] },
+  { id: 'penny', name: 'Penny', room: 'roc', lv: 9, role: 'เฝ้าอัตรา T-Bill', prop: 'clip', speed: 26,
+    look: { skin: '#d9a07a', hair: '#2a1a1a', shirt: '#c9a24a', pants: '#3a3550', shoe: '#1a1420', hat: 'cap', hatC: '#2f6b4f' },
+    spots: [[110, 76], [150, 96], [60, 98], [132, 76]] },
+  { id: 'boss', name: 'Rig Boss', room: 'beta', lv: 17, role: 'ผู้คุมกรอบ Grid', prop: 'clip', speed: 16,
+    look: { skin: '#c98d63', hair: '#3a2a20', shirt: '#3b5b7a', pants: '#2b2f3a', shoe: '#141018', hat: 'hard', hatC: '#ffc94a' },
+    spots: [[110, 74], [46, 82], [92, 98]] },
+  { id: 'bot', name: 'GridBot-7', room: 'beta', lv: 11, robot: true, role: 'ยิงคำสั่ง Buy/Sell ตามชั้น', prop: 'tab', speed: 30,
+    look: { skin: '#9fb0c0', hair: '#9fb0c0', shirt: '#6f8296', pants: '#4a5868', shoe: '#2a3440', eye: '#4fd6ff' },
+    spots: [[94, 76], [126, 76], [112, 92]] },
+  { id: 'dusty', name: 'Dusty', room: 'beta', lv: 8, role: 'คุมขนาดสถานะ', prop: 'wrench', speed: 22,
+    look: { skin: '#e0b08a', hair: '#b05a2a', shirt: '#b8462f', pants: '#2f3a4a', shoe: '#141018', hat: 'hard', hatC: '#ff8a3a' },
+    spots: [[30, 82], [176, 78], [150, 100], [60, 98]] },
+  { id: 'merlin', name: 'Merlin', room: 'alpha', lv: 19, role: 'นักเวทสร้างสัญญาณ', prop: 'staff', speed: 14,
+    look: { skin: '#f0c9a0', hair: '#e8e4f0', shirt: '#4b3a9a', pants: '#3a2f6a', shoe: '#1a1430', hat: 'wizard', hatC: '#5a46b8', beard: '#e8e4f0' },
+    spots: [[101, 74], [74, 78], [104, 94]] },
+  { id: 'kage', name: 'Kage', room: 'alpha', lv: 15, role: 'เข้า-ออกออเดอร์', prop: 'none', speed: 34,
+    look: { skin: '#e6b48c', hair: '#151225', shirt: '#26233f', pants: '#26233f', shoe: '#0c0a14', hat: 'ninja', hatC: '#26233f' },
+    spots: [[134, 94], [60, 98], [124, 76], [156, 100]] },
+  { id: 'scout', name: 'Scout', room: 'alpha', lv: 10, role: 'ส่องหุ้นที่ขยับแรง', prop: 'scope', speed: 22,
+    look: { skin: '#b9805a', hair: '#3a2a1a', shirt: '#3f7a5a', pants: '#3a3040', shoe: '#1a1420', hat: 'hood', hatC: '#3f7a5a' },
+    spots: [[168, 76], [26, 78], [40, 96]] },
+];
+const BY = {};
+CH.forEach((c, i) => {
+  BY[c.id] = c;
+  const s = c.spots[0];
+  Object.assign(c, { x: s[0] + (i % 2 ? 2 : -2), y: s[1], tx: s[0], ty: s[1], face: i % 2 ? -1 : 1, moving: false, state: 'work', timer: rnd(800, 5000),
+    seed: i * 977, jump: 0, say: '', sayT: 0, alertT: 0, spot: 0 });
+});
+let sel = 'bot';
+
+function goSpot(c, i) {
+  c.spot = i; const s = c.spots[i];
+  c.tx = s[0] + rnd(-4, 4); c.ty = s[1] + rnd(-2, 2); c.state = 'walk';
+}
+function wander(c) { let i; do { i = Math.floor(Math.random() * c.spots.length); } while (i === c.spot && c.spots.length > 1); goSpot(c, i); }
+function updateChar(c, dt) {
+  c.jump = Math.max(0, c.jump - dt / 420); c.sayT = Math.max(0, c.sayT - dt); c.alertT = Math.max(0, c.alertT - dt);
+  if (RM) { c.moving = false; return; }
+  if (c.state === 'walk') {
+    const dx = c.tx - c.x, dy = c.ty - c.y, d = Math.hypot(dx, dy), st = c.speed * dt / 1000;
+    if (d <= st) { c.x = c.tx; c.y = c.ty; c.state = 'work'; c.moving = false; c.timer = rnd(2500, 7000); }
+    else { c.x += dx / d * st; c.y += dy / d * st; if (Math.abs(dx) > 0.6) c.face = dx > 0 ? 1 : -1; c.moving = true; }
+  } else { c.timer -= dt; if (c.timer <= 0) wander(c); }
+}
+function react(id, msg, o = {}) {
+  const c = BY[id];
+  c.say = msg; c.sayT = o.dur || 3000; c.alert = !!o.alert;
+  if (!RM) c.jump = 1;
+  if (o.alert) c.alertT = o.alertDur || 4500;
+  if (o.spot != null) goSpot(c, o.spot);
+  const b = bubbles[id]; b.textContent = msg; b.classList.toggle('alert', !!o.alert);
+}
+
+function drawChar(g, c, t, opt = {}) {
+  const L = c.look, x = Math.round(c.x), y = Math.round(c.y);
+  const mv = c.moving, f = Math.floor((t + c.seed) / (mv ? 150 : 540)) % 2;
+  const jmp = c.jump > 0 ? Math.round(Math.sin(c.jump * Math.PI) * 7) : 0;
+  const by = y - jmp;
+  if (!opt.noShadow) { R(g, x - 5, y, 10, 1, 'rgba(0,0,0,.38)'); R(g, x - 3, y + 1, 6, 1, 'rgba(0,0,0,.25)'); }
+  g.save(); if (c.face < 0) { g.translate(2 * x, 0); g.scale(-1, 1); }
+  const u = mv ? 0 : f, top = by - 11 + u, ht = top - 8;
+  if (L.hat === 'ninja') { R(g, x - 7, ht + 3, 3, 1, '#c33b4a'); R(g, x - 8, ht + 4, 2, 1, '#c33b4a'); }
+  // legs
+  const l1 = mv && f ? 3 : 4, l2 = mv && !f ? 3 : 4;
+  R(g, x - 3, by - 4, 2, l1, L.pants); R(g, x - 3, by - 5 + l1, 2, 1, L.shoe);
+  R(g, x + 1, by - 4, 2, l2, L.pants); R(g, x + 1, by - 5 + l2, 2, 1, L.shoe);
+  // body
+  R(g, x - 4, top, 8, by - 4 - top, L.shirt);
+  R(g, x - 4, top, 8, 1, 'rgba(255,255,255,.14)');
+  R(g, x - 4, by - 5, 8, 1, 'rgba(0,0,0,.3)');
+  // arms
+  const sw = mv ? (f ? 1 : -1) : 0, aL = top + 1 + (sw > 0 ? 1 : 0), aR = top + 1 + (sw < 0 ? 1 : 0);
+  R(g, x - 6, aL, 2, 4, L.shirt); R(g, x - 6, aL + 4, 2, 1, L.skin);
+  R(g, x + 4, aR, 2, 4, L.shirt); R(g, x + 4, aR + 4, 2, 1, L.skin);
+  // head
+  R(g, x - 4, ht, 8, 8, L.skin);
+  const blink = ((t + c.seed * 7) % 3400) < 110;
+  if (c.robot) {
+    R(g, x - 3, ht + 3, 7, 2, '#0d1a26');
+    if (!blink) { R(g, x, ht + 3, 1, 1, L.eye); R(g, x + 2, ht + 3, 1, 1, L.eye); }
+    R(g, x, ht - 3, 1, 3, '#7d8ea0'); R(g, x - 1, ht - 4, 3, 1, (t % 1000 < 500) ? '#ff6170' : '#7a2a32');
+    R(g, x - 5, ht + 2, 1, 3, '#7d8ea0'); R(g, x - 4, ht + 7, 8, 1, 'rgba(0,0,0,.25)'); R(g, x - 4, ht, 8, 1, 'rgba(255,255,255,.25)');
+  } else {
+    R(g, x - 4, ht, 8, 2, L.hair); R(g, x - 4, ht + 2, 2, 3, L.hair);
+    if (blink) R(g, x, ht + 4, 3, 1, '#1a1020');
+    else { R(g, x, ht + 3, 1, 2, '#1a1020'); R(g, x + 2, ht + 3, 1, 2, '#1a1020'); }
+    R(g, x + 3, ht + 5, 1, 1, 'rgba(220,90,90,.55)');
+    if (L.stache) R(g, x, ht + 6, 4, 1, L.stache);
+    if (L.beard) { R(g, x - 2, ht + 5, 6, 3, L.beard); R(g, x - 1, ht + 8, 4, 3, L.beard); R(g, x, ht + 11, 2, 1, L.beard); }
+  }
+  switch (L.hat) {
+    case 'top': R(g, x - 5, ht, 10, 1, L.hatC); R(g, x - 3, ht - 6, 7, 6, L.hatC); R(g, x - 3, ht - 2, 7, 1, L.band); break;
+    case 'cap': R(g, x - 4, ht - 1, 8, 3, L.hatC); R(g, x + 3, ht + 1, 4, 1, L.hatC); R(g, x - 4, ht - 1, 8, 1, 'rgba(255,255,255,.18)'); break;
+    case 'hard': R(g, x - 3, ht - 3, 7, 1, L.hatC); R(g, x - 4, ht - 2, 9, 3, L.hatC); R(g, x - 5, ht + 1, 11, 1, L.hatC);
+      R(g, x - 5, ht + 1, 11, 1, 'rgba(0,0,0,.22)'); R(g, x - 1, ht - 2, 2, 1, 'rgba(255,255,255,.5)'); break;
+    case 'wizard': R(g, x - 6, ht + 1, 13, 1, L.hatC); R(g, x - 4, ht - 1, 9, 2, L.hatC); R(g, x - 3, ht - 3, 7, 2, L.hatC);
+      R(g, x - 2, ht - 5, 5, 2, L.hatC); R(g, x - 2, ht - 7, 3, 2, L.hatC); R(g, x - 4, ht - 8, 2, 1, L.hatC);
+      R(g, x + 1, ht - 2, 1, 1, '#ffc94a'); R(g, x - 1, ht - 5, 1, 1, '#ffc94a'); break;
+    case 'ninja': R(g, x - 4, ht, 8, 3, L.hatC); R(g, x - 4, ht + 5, 8, 3, L.hatC); R(g, x - 4, ht + 3, 2, 2, L.hatC);
+      R(g, x - 4, ht + 2, 8, 1, '#c33b4a'); break;
+    case 'hood': R(g, x - 5, ht - 1, 10, 3, L.hatC); R(g, x - 5, ht + 2, 3, 7, L.hatC); R(g, x + 4, ht + 1, 1, 5, L.hatC);
+      R(g, x - 5, ht - 1, 10, 1, 'rgba(255,255,255,.14)'); break;
+  }
+  const hy = aR + 4;
+  switch (c.prop) {
+    case 'coin': { const cy = hy - 1 - (c.jump > 0 ? Math.round(Math.sin(c.jump * Math.PI) * 6) : 0); R(g, x + 6, cy, 3, 3, '#ffc94a'); R(g, x + 7, cy + 1, 1, 1, '#b8862a'); break; }
+    case 'clip': R(g, x + 5, hy - 4, 4, 6, '#a9763f'); R(g, x + 6, hy - 3, 2, 4, '#f4ecd6'); R(g, x + 6, hy - 5, 2, 1, '#c9cfd6'); break;
+    case 'wrench': R(g, x + 6, hy - 6, 1, 7, '#b9c4cf'); R(g, x + 5, hy - 8, 3, 2, '#b9c4cf'); R(g, x + 6, hy - 8, 1, 1, L.shirt); break;
+    case 'tab': R(g, x + 5, hy - 3, 4, 4, '#22303e'); R(g, x + 6, hy - 2, 2, 2, (t % 600 < 300) ? '#4fd6ff' : '#62e88f'); break;
+    case 'staff': R(g, x + 6, hy - 12, 1, 16, '#8a5a34'); R(g, x + 5, hy - 15, 3, 3, FX.casting > 0 && (t % 240 < 120) ? '#fff3b0' : '#c08cff'); R(g, x + 6, hy - 14, 1, 1, '#ffffff'); break;
+    case 'scope': R(g, x + 5, hy - 2, 6, 2, '#c9a24a'); R(g, x + 10, hy - 3, 2, 4, '#a8822f'); break;
+  }
+  g.restore();
+  const headTop = by - 19 + u - ({ wizard: 8, top: 6, hard: 3 }[L.hat] || (c.robot ? 4 : 1));
+  if (c.alertT > 0 && (t % 500 < 330)) { R(g, x, headTop - 9, 2, 4, '#ffb03a'); R(g, x, headTop - 4, 2, 1, '#ffb03a'); }
+  if (opt.sel) {
+    const b = Math.floor(t / 260) % 2, ay = headTop - 6 - b - (c.alertT > 0 ? 7 : 0);
+    R(g, x - 2, ay, 5, 1, '#ffc94a'); R(g, x - 1, ay + 1, 3, 1, '#ffc94a'); R(g, x, ay + 2, 1, 1, '#ffc94a');
+  }
+  return headTop;
+}
+
+/* ---------- room backgrounds (drawn once) ---------- */
+const BG = {
+  roc(g) {
+    R(g, 0, 0, W, 62, '#1c3a33');
+    for (let x = 0; x < W; x += 20) R(g, x, 0, 1, 50, '#17302a');
+    R(g, 0, 50, W, 12, '#24493f'); R(g, 0, 50, W, 1, '#c9a24a'); R(g, 0, 61, W, 1, '#14281f');
+    for (let y = 62, r = 0; y < H; y += 7, r++) for (let x = 0, k = 0; x < W; x += 12, k++) R(g, x, y, 12, 7, (k + r) % 2 ? '#3a2e24' : '#32281f');
+    disc(g, 34, 32, 23, '#3d444e'); disc(g, 34, 32, 21, '#69737f'); disc(g, 34, 32, 17, '#7d8894'); disc(g, 34, 32, 14, '#6a7480');
+    for (let i = 0; i < 10; i++) { const a = i / 10 * Math.PI * 2; R(g, Math.round(34 + Math.cos(a) * 19) - 1, Math.round(32 + Math.sin(a) * 19) - 1, 2, 2, '#c3cbd4'); }
+    R(g, 8, 24, 4, 16, '#4a525c');
+    R(g, 82, 56, 44, 3, '#8a5a34'); R(g, 84, 59, 40, 8, '#6b4426'); R(g, 86, 61, 16, 4, '#5a3920'); R(g, 106, 61, 16, 4, '#5a3920');
+    R(g, 93, 62, 2, 1, '#c9a24a'); R(g, 113, 62, 2, 1, '#c9a24a');
+    R(g, 90, 38, 26, 17, '#15121c'); R(g, 92, 40, 22, 13, '#0b211b'); R(g, 100, 55, 6, 1, '#15121c');
+    R(g, 130, 5, 64, 32, '#5a3a22'); R(g, 132, 7, 60, 28, '#13261f');
+    R(g, 136, 60, 58, 3, '#7a5a3a'); R(g, 136, 62, 58, 1, '#4a3420');
+  },
+  beta(g) {
+    R(g, 0, 0, W, 62, '#16212c');
+    for (let x = 0; x < W; x += 25) { R(g, x, 0, 1, 62, '#1d2a37'); R(g, x + 3, 4, 1, 1, '#2c3b4a'); R(g, x + 3, 46, 1, 1, '#2c3b4a'); }
+    R(g, 0, 55, W, 4, '#475665'); R(g, 0, 55, W, 1, '#5d6f80');
+    for (let x = 14; x < W; x += 34) R(g, x, 54, 3, 6, '#3a4754');
+    R(g, 0, 62, W, 50, '#262f39');
+    for (let y = 62, r = 0; y < H; y += 5, r++) { R(g, 0, y, W, 1, '#1f2730'); for (let x = (r % 2) * 6; x < W; x += 12) R(g, x, y, 1, 5, '#1f2730'); }
+    R(g, 62, 4, 90, 48, '#2f3b48'); R(g, 64, 6, 86, 44, '#070b10'); R(g, 104, 52, 6, 3, '#2f3b48');
+    const barrel = (x, yb) => { R(g, x, yb - 15, 12, 15, '#a8322c'); R(g, x, yb - 13, 12, 1, '#2a1414'); R(g, x, yb - 4, 12, 1, '#2a1414');
+      R(g, x + 2, yb - 15, 1, 15, '#c9463e'); R(g, x + 1, yb - 16, 10, 1, '#c9463e'); R(g, x + 4, yb - 10, 4, 3, '#f4ecd6'); };
+    barrel(162, 66); barrel(176, 66); barrel(169, 50);
+    R(g, 2, 64, 54, 3, '#3a4552'); R(g, 4, 58, 7, 6, '#55606c'); R(g, 5, 57, 5, 1, '#6b7a88');
+    line(g, 22, 64, 30, 31, '#6b7a88'); line(g, 23, 64, 31, 31, '#6b7a88'); line(g, 38, 64, 30, 31, '#56636f'); line(g, 39, 64, 31, 31, '#56636f');
+  },
+  alpha(g) {
+    R(g, 0, 0, W, 62, '#241a3d');
+    for (let y = 0, r = 0; y < 58; y += 6, r++) { R(g, 0, y, W, 1, '#1d1533'); for (let x = (r % 2) * 7; x < W; x += 14) R(g, x, y, 1, 6, '#1d1533'); }
+    R(g, 0, 58, W, 4, '#3a2a5a'); R(g, 0, 58, W, 1, '#5a4a7a');
+    R(g, 0, 62, W, 50, '#35264d');
+    const rr = seeded(7);
+    for (let y = 62; y < H; y += 6) { R(g, 0, y, W, 1, '#2b1f40'); for (let x = rr() * 30 | 0; x < W; x += 24 + (rr() * 20 | 0)) R(g, x, y, 1, 6, '#2b1f40'); }
+    R(g, 4, 10, 40, 52, '#4a2e22'); R(g, 6, 12, 36, 48, '#21140f');
+    const bookC = ['#c33b4a', '#3f7a5a', '#c9a24a', '#4b6ab8', '#8a4ab8', '#d97a3a', '#e8e4f0'];
+    [[12, 26], [28, 40], [42, 54]].forEach(([y0, y1]) => {
+      R(g, 6, y1, 36, 2, '#5a3a2a');
+      for (let x = 7; x < 41;) { const w = 2 + (rr() * 3 | 0), h = 7 + (rr() * 5 | 0); if (x + w > 41) break; R(g, x, y1 - h, w, h, bookC[rr() * bookC.length | 0]); R(g, x, y1 - h + 2, w, 1, 'rgba(0,0,0,.3)'); x += w + (rr() < .2 ? 2 : 0); }
+    });
+    R(g, 148, 6, 44, 36, '#6b4f8a'); R(g, 150, 8, 40, 32, '#0d1030');
+    disc(g, 181, 16, 4, '#f4ecd6'); disc(g, 183, 15, 4, '#0d1030');
+    R(g, 169, 8, 2, 32, '#6b4f8a'); R(g, 150, 23, 40, 2, '#6b4f8a'); R(g, 146, 42, 48, 2, '#5a4a7a');
+    R(g, 54, 8, 40, 30, '#6b4a2a'); R(g, 56, 10, 36, 26, '#1f3a2e'); R(g, 60, 37, 6, 1, '#e8f0e0');
+    R(g, 96, 50, 10, 12, '#4a3a6a'); R(g, 94, 48, 14, 3, '#5a4a7a'); R(g, 94, 60, 14, 2, '#3a2a5a');
+  },
+};
+const STARS = (() => { const r = seeded(3); return Array.from({ length: 16 }, () => ({ x: 151 + (r() * 38 | 0), y: 9 + (r() * 30 | 0), p: r() * 6 })).filter(s => !(s.x >= 168 && s.x <= 171) && !(s.y >= 23 && s.y <= 25) && Math.hypot(s.x - 181, s.y - 16) > 6); })();
+
+/* ---------- room animation layers ---------- */
+const DY = {
+  roc(g, t) {
+    const r = R0(), a = t / 5000, rate = r.rate || 0;
+    for (let i = 0; i < 3; i++) { const an = a + i * Math.PI * 2 / 3, ex = 34 + Math.cos(an) * 11, ey = 32 + Math.sin(an) * 11;
+      line(g, 34, 32, ex, ey, '#c3cbd4'); line(g, 35, 33, ex + 1, ey + 1, '#9aa3ad'); disc(g, Math.round(ex), Math.round(ey), 1, '#ffc94a'); }
+    disc(g, 34, 32, 3, '#c9a24a'); R(g, 33, 31, 1, 1, '#fff3b0');
+    text(g, 'APY', 97, 42, '#62e88f'); text(g, rate.toFixed(2) + '%', 93, 47, '#62e88f');
+    text(g, 'TBILL ' + rate.toFixed(2), 135, 10, '#f4ecd6');
+    text(g, 'DAY  +' + (r.accrued_today || 0).toFixed(2), 135, 18, '#62e88f');
+    text(g, 'ALL  +' + (r.accrued_total || 0).toFixed(2), 135, 26, '#ffc94a');
+    const base = [9, 15, 7, 12, 17, 5], grow = (r.accrued_total || 0) / 0.5;
+    for (let i = 0; i < 6; i++) {
+      const h = Math.min(22, base[i] + Math.floor(grow / (i + 2))), x = 139 + i * 9;
+      for (let j = 0; j * 2 < h; j++) R(g, x, 58 - j * 2, 7, 2, j % 2 ? '#e0a83a' : '#ffc94a');
+      const ty = 58 - Math.ceil(h / 2) * 2 + 2; R(g, x + 1, ty, 5, 1, '#fff0b0');
+      if (((t / 300 | 0) + i * 5) % 17 === 0) R(g, x + 3, ty - 3, 1, 1, '#ffffff');
+    }
+  },
+  beta(g, t) {
+    const b = G0(), x0 = 66, x1 = 148, y0 = 15, y1 = 48;
+    if (b) {
+      const pmin = b.price - 2.2, pmax = b.price + 2.2, Y = p => Math.round(y1 - (p - pmin) / (pmax - pmin) * (y1 - y0));
+      const held = new Set(b.held);
+      for (let L = b.lo; L <= b.hi + 1e-9; L = +(L + b.step).toFixed(2)) {
+        const y = Y(L); if (y < y0 || y > y1) continue;
+        const col = L < b.price ? 'rgba(98,232,143,.5)' : 'rgba(255,97,112,.5)';
+        for (let x = x0; x < x1; x += 2) R(g, x, y, 1, 1, col);
+        if (held.has(L)) R(g, x0 - 1, y - 1, 2, 3, '#62e88f');
+      }
+      const hs = (b.hist || []).slice(-(x1 - x0));
+      let px = null, py = null;
+      hs.forEach((p, i) => { const x = x1 - hs.length + i, y = clamp(Y(p), y0, y1); if (px !== null) line(g, px, py, x, y, '#ffc94a'); px = x; py = y; });
+      if (px !== null) {
+        R(g, px - 1, py - 1, 2, 2, '#ffffff');
+        if (FX.flashT > 0) { const r = 2 + Math.round((1 - FX.flashT / 700) * 5), c = FX.flashSide === 'buy' ? '#62e88f' : '#ff6170';
+          R(g, px - r, py, r * 2, 1, c); R(g, px, py - r, 1, r * 2, c); }
+      }
+      R(g, 64, 6, 86, 8, '#0f1922');
+      text(g, (b.label || 'WTI').slice(0, 4) + ' ' + b.price.toFixed(2), 67, 8, '#ffc94a');
+      text(g, 'FILLS ' + b.fills_today, 148 - (6 + String(b.fills_today).length) * 4, 8, '#4fd6ff');
+      if (b.out && t % 600 < 300) { R(g, 62, 4, 90, 2, '#ff6170'); R(g, 62, 50, 90, 2, '#ff6170'); }
+    }
+    R(g, 148, 4, 2, 1, t % 1200 < 600 ? '#62e88f' : '#1f4a2f');
+    const ph = t / 700, a = Math.sin(ph) * 0.28;
+    const lx = 30 - 22 * Math.cos(a), ly = 31 - 22 * Math.sin(a), rx = 30 + 14 * Math.cos(a), ry = 31 + 14 * Math.sin(a);
+    line(g, lx, ly, rx, ry, '#2d3a48'); line(g, lx, ly + 1, rx, ry + 1, '#3e4e5e');
+    R(g, Math.round(lx) - 3, Math.round(ly) - 2, 4, 9, '#ffc94a'); R(g, Math.round(lx) - 3, Math.round(ly) - 2, 1, 9, '#c9952a');
+    line(g, Math.round(lx) - 3, Math.round(ly) + 7, 7, 57, '#c0c8d0');
+    const cx = 44, cy = 52, pinX = cx + Math.cos(ph) * 5, pinY = cy + Math.sin(ph) * 5;
+    disc(g, cx, cy, 5, '#4a5866'); line(g, rx, ry + 1, pinX, pinY, '#8a98a6'); disc(g, Math.round(pinX), Math.round(pinY), 2, '#2a3440');
+    disc(g, 30, 31, 1, '#ffc94a');
+  },
+  alpha(g, t) {
+    const A = A0();
+    for (const s of STARS) { const v = (Math.sin(t / 600 + s.p) + 1) / 2; R(g, s.x, s.y, 1, 1, v > .65 ? '#ffffff' : v > .3 ? '#a8a0d8' : '#4a4680'); }
+    const al = A.alpha || 0;
+    text(g, 'ALPHA', 57, 12, '#e8f0e0'); text(g, (al >= 0 ? '+' : '-') + Math.abs(al).toFixed(1), 77, 12, al >= 0 ? '#9ff0b8' : '#ff9aa4');
+    const hs = (A.hist || []).slice(-32);
+    if (hs.length > 1) {
+      const mn = Math.min(0, ...hs), mx = Math.max(0, ...hs), Y = v => Math.round(33 - (v - mn) / Math.max(.01, mx - mn) * 13);
+      for (let x = 58; x < 90; x += 2) R(g, x, Y(0), 1, 1, 'rgba(232,240,224,.35)');
+      let px = null, py = null;
+      hs.forEach((v, i) => { const x = 58 + i, y = Y(v); if (px !== null) line(g, px, py, x, y, '#9ff0b8'); px = x; py = y; });
+    }
+    const cast = FX.casting > 0, pulse = (Math.sin(t / (cast ? 110 : 520)) + 1) / 2;
+    disc(g, 101, 42, 9, `rgba(192,140,255,${(0.10 + pulse * (cast ? .4 : .14)).toFixed(2)})`);
+    disc(g, 101, 42, 6, '#4a3398'); disc(g, 101, 42, 5, cast ? '#c08cff' : '#7a5ad0');
+    const sa = t / (cast ? 120 : 320); R(g, 101 + Math.round(Math.cos(sa) * 3), 42 + Math.round(Math.sin(sa) * 3), 1, 1, '#ffffff');
+    R(g, 98, 39, 2, 2, '#f4ecd6');
+    if (cast) for (let i = 0; i < 7; i++) { const p = ((t / 700) + i / 7) % 1; R(g, 92 + ((i * 37) % 19), Math.round(40 - p * 32), 1, 1, `rgba(255,243,176,${(1 - p).toFixed(2)})`); }
+  },
+};
+
+/* ---------- DOM setup ---------- */
+const rooms = {}, bubbles = {};
+['roc', 'beta', 'alpha'].forEach(k => {
+  const cv = $('#c-' + k), g = cv.getContext('2d');
+  const bg = document.createElement('canvas'); bg.width = W; bg.height = H; BG[k](bg.getContext('2d'));
+  rooms[k] = { cv, g, bg, stage: cv.parentElement };
+  cv.addEventListener('click', e => {
+    const r = cv.getBoundingClientRect(), mx = (e.clientX - r.left) * W / r.width, my = (e.clientY - r.top) * H / r.height;
+    let best = null, bd = 1e9;
+    CH.filter(c => c.room === k).forEach(c => { const d = Math.hypot(mx - c.x, (my - (c.y - 10)) * 0.7); if (d < bd) { bd = d; best = c; } });
+    if (best && bd < 16) select(best.id);
+  });
+});
+CH.forEach(c => { const b = document.createElement('div'); b.className = 'bubble'; b.hidden = true; rooms[c.room].stage.appendChild(b); bubbles[c.id] = b; });
+
+const cardsEl = $('#cards'), cards = {};
+CH.forEach(c => {
+  const el = document.createElement('article');
+  el.className = 'card'; el.dataset.desk = c.room; el.tabIndex = 0; el.setAttribute('role', 'button');
+  el.innerHTML = `<canvas class="por" width="28" height="30"></canvas>
+    <div class="meta"><div class="nm"><b></b><span class="lv">LV ${c.lv}</span></div>
+    <div class="role"></div>
+    <div class="risk">RISK<div class="seg"><i></i></div></div>
+    <div class="row"><span class="st"></span><span class="stat-line"></span></div></div>`;
+  el.querySelector('b').textContent = c.name; el.querySelector('.role').textContent = c.role;
+  el.addEventListener('click', () => select(c.id));
+  el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(c.id); } });
+  cardsEl.appendChild(el);
+  cards[c.id] = { el, g: el.querySelector('canvas').getContext('2d'), st: el.querySelector('.st'), line: el.querySelector('.stat-line'), bar: el.querySelector('.seg i') };
+});
+function select(id) { sel = id; CH.forEach(c => cards[c.id].el.classList.toggle('sel', c.id === id)); }
+select(sel);
+
+/* ---------- quest log ---------- */
+const logEl = $('#log');
+const TAG = { roc: 'CASH', grid: 'BETA', alpha: 'ALPHA' };
+const off = () => ((D && D.tz_offset_hours) || 7) * 3600;
+const localISO = ts => new Date((ts + off()) * 1000).toISOString();
+function stamp(ts) {
+  const iso = localISO(ts), today = localISO(Date.now() / 1000).slice(0, 10);
+  return iso.slice(0, 10) === today ? iso.slice(11, 16) : iso.slice(8, 10) + '/' + iso.slice(5, 7);
+}
+function renderLog() {
+  logEl.textContent = '';
+  (D.events || []).slice(-60).reverse().forEach(e => {
+    const li = document.createElement('li'); li.className = 'd-' + (e.desk === 'grid' ? 'beta' : e.desk);
+    li.innerHTML = '<time></time><span class="tg"></span><span class="msg"></span>';
+    li.querySelector('time').textContent = stamp(e.ts);
+    li.querySelector('.tg').textContent = TAG[e.desk] || 'SYS';
+    li.querySelector('.msg').textContent = `${BY[e.who] ? BY[e.who].name + ': ' : ''}${e.text}`;
+    logEl.appendChild(li);
+  });
+}
+
+/* ---------- event playback: real events become character reactions ---------- */
+const queue = [];
+let seenTs = 0, idleFor = 0;
+try { seenTs = +localStorage.getItem('floor-seen') || 0; } catch (e) {}
+function ingest(first) {
+  const evs = D.events || [];
+  let fresh = evs.filter(e => e.ts > seenTs);
+  if (first && !fresh.length) fresh = evs.slice(-3);
+  queue.push(...fresh.slice(-8));
+  if (evs.length) { seenTs = Math.max(seenTs, evs[evs.length - 1].ts); try { localStorage.setItem('floor-seen', String(seenTs)); } catch (e) {} }
+}
+const SPOT = { bot: { buy: 0, sell: 1 }, merlin: 0, kage: 2, scout: 0, boss: 0, dusty: 1, goldie: 0, penny: 0 };
+function play(e) {
+  if (!BY[e.who]) return;
+  const sp = SPOT[e.who], spot = typeof sp === 'object' ? sp[e.kind] : sp;
+  const msg = e.text.length > 38 ? e.text.slice(0, 37) + '…' : e.text;
+  react(e.who, msg, { alert: e.kind === 'alert' || e.kind === 'miss', spot });
+  if (e.kind === 'buy' || e.kind === 'sell') { FX.flashT = 700; FX.flashSide = e.kind; }
+  if (e.who === 'merlin') FX.casting = 2200;
+}
+function chatter() {
+  const g = G0(), A = A0(), r = R0(), pool = [];
+  if (r.rate != null) pool.push(['goldie', `เงินสดได้ ${r.rate.toFixed(2)}% ต่อปี`]);
+  if (r.rate != null && r.rate_prev != null && r.rate_prev !== r.rate) pool.push(['penny', `T-Bill ${r.rate_prev.toFixed(2)} → ${r.rate.toFixed(2)}%`]);
+  if (g) {
+    pool.push(['boss', `ห่างขอบกรอบ $${Math.max(0, Math.min(g.price - g.lo, g.hi - g.price)).toFixed(2)}`]);
+    pool.push(['bot', `ถือ ${g.held.length} ชั้น รอขาย`]);
+    pool.push(['dusty', `ถือ ${g.held.length * g.bbl} bbl`]);
+  }
+  if (A.holdings) {
+    pool.push(['kage', 'ถือ ' + (A.holdings.map(h => h.sym.replace('.BK', '')).join(', ') || 'เงินสด')]);
+    pool.push(['merlin', `Alpha ${A.alpha >= 0 ? '+' : ''}${(A.alpha || 0).toFixed(2)}%`]);
+  }
+  if (A.movers && A.movers[0]) pool.push(['scout', `${A.movers[0].sym} ${A.movers[0].chg >= 0 ? '+' : ''}${A.movers[0].chg.toFixed(1)}%`]);
+  if (pool.length) { const [who, msg] = pick(pool); react(who, msg, { dur: 2600 }); }
+}
+
+/* ---------- DOM refresh ---------- */
+const set = (id, v, cls) => { const el = $('#' + id); el.textContent = v; if (cls !== undefined) el.className = cls; };
+function riskOf(c) {
+  const g = G0(), A = A0(), r = R0(), levels = g ? Math.round((g.hi - g.lo) / g.step) : 1;
+  switch (c.id) {
+    case 'goldie': return 0.06;
+    case 'penny': return r.rate_prev ? Math.abs(r.rate - r.rate_prev) / 0.25 : 0.05;
+    case 'boss': return g ? 1 - clamp(Math.min(g.price - g.lo, g.hi - g.price) / ((g.hi - g.lo) / 2), 0, 1) : 0;
+    case 'bot': case 'dusty': return g ? g.held.length / levels : 0;
+    case 'merlin': return clamp(-(A.alpha || 0) / 5 + 0.2, 0, 1);
+    case 'kage': return (A.holdings || []).length / 3 * 0.6;
+    default: return A.movers && A.movers[0] ? clamp(Math.abs(A.movers[0].chg) / 5, 0, 1) : 0.1;
+  }
+}
+function statOf(c) {
+  const g = G0(), A = A0(), r = R0();
+  switch (c.id) {
+    case 'goldie': return r.cash != null ? `${money(r.cash)} @ ${r.rate.toFixed(2)}%` : '—';
+    case 'penny': return r.rate != null ? `T-Bill ${r.rate.toFixed(3)}%` : '—';
+    case 'boss': return g ? `กรอบ ${g.lo.toFixed(1)}–${g.hi.toFixed(1)}` : '—';
+    case 'bot': return g ? `${g.fills_total} fills · ถือ ${g.held.length} ชั้น` : '—';
+    case 'dusty': return g ? `${g.held.length * g.bbl} bbl ≈ ${money(g.held.length * g.bbl * g.price)}` : '—';
+    case 'merlin': return `${A.signals || 0} สัญญาณตั้งแต่ ${(A.start || '').slice(5)}`;
+    case 'kage': return 'ถือ ' + ((A.holdings || []).map(h => h.sym.replace('.BK', '')).join(', ') || '—');
+    case 'scout': return A.movers && A.movers[0] ? `${A.movers[0].sym} ${A.movers[0].chg >= 0 ? '+' : ''}${A.movers[0].chg.toFixed(1)}%` : '—';
+  }
+}
+const pct = (v, d = 2) => (v >= 0 ? '+' : '−') + Math.abs(v).toFixed(d) + '%';
+function refresh() {
+  const h = D.hud || {}, r = R0(), g = G0(), A = A0();
+  const modeEl = $('#mode');
+  modeEl.textContent = MODE === 'live' ? 'PAPER · ราคาจริง' : 'โหมดตัวอย่าง · ยังไม่เจอ data.json';
+  modeEl.className = 'demo' + (MODE === 'live' ? ' live' : '');
+  set('h-eq', money(h.equity || 0, 2));
+  set('h-pnl', signed(h.day_pnl || 0, 2), 'v num ' + ((h.day_pnl || 0) >= 0 ? 'up' : 'down'));
+  const dd = h.drawdown_pct || 0, lim = h.drawdown_limit_pct || 10;
+  set('h-dd', `${dd.toFixed(1)}% / ${lim}%`); $('#h-hp').style.width = clamp((1 - dd / lim) * 100, 0, 100).toFixed(1) + '%';
+  $('#h-hpbar').classList.toggle('low', dd > lim / 2);
+  set("h-xpt", `${signed(h.mtd || 0, 2)} / ${money(h.mtd_target || 0)}`);
+  $('#h-xp').style.width = clamp((h.mtd || 0) / (h.mtd_target || 1) * 100, 0, 100).toFixed(1) + '%';
+  set('h-clock', D.updated ? stamp(D.updated) : '—');
+  const age = D.updated ? Math.round((Date.now() / 1000 - D.updated) / 60) : null;
+  set('h-age', age == null ? '' : age < 1 ? 'เมื่อสักครู่' : age < 120 ? `${age} นาทีก่อน` : `${Math.round(age / 60)} ชม.ก่อน`);
+
+  set('k-cash', money(r.cash || 0)); set('k-cash-s', r.started ? `เริ่ม ${stamp(r.started)} · ทบดอกทุกรอบ` : '—');
+  set('k-rate', r.rate != null ? r.rate.toFixed(2) + '%' : '—');
+  set('k-rate-s', r.rate_prev != null && r.rate_prev !== r.rate ? `ก่อนหน้า ${r.rate_prev.toFixed(2)}%` : 'Yahoo ^IRX · ต่อปี');
+  set('k-acc', signed(r.accrued_today || 0, 2)); set('k-acct', signed(r.accrued_total || 0, 2));
+  set('k-acct-s', r.cash ? `${((r.accrued_total || 0) / r.cash * 100).toFixed(3)}% ของเงินต้น` : '—');
+
+  if (g) {
+    const chg = g.prev_close ? g.price - g.prev_close : 0;
+    set('k-wti-l', `${g.label} ล่าสุด`);
+    set('k-wti', '$' + g.price.toFixed(2), chg >= 0 ? 'up' : 'down');
+    set('k-wti-s', g.prev_close ? `${chg >= 0 ? '+' : '−'}${Math.abs(chg).toFixed(2)} จากปิดก่อนหน้า ${g.prev_close.toFixed(2)}` : g.symbol);
+    set('k-range', `${g.lo.toFixed(1)}–${g.hi.toFixed(1)}`, g.out ? 'down' : '');
+    set('k-range-s', `${Math.round((g.hi - g.lo) / g.step) + 1} ชั้น · ห่าง $${g.step.toFixed(2)} · ${g.bbl} bbl/ชั้น`);
+    set('k-fills', String(g.fills_today)); set('k-held', `ถือ ${g.held.length} ชั้น · ${g.held.length * g.bbl} bbl`);
+    const tot = g.realized_total + g.unrealized;
+    set('k-grid', signed(tot, 2), tot >= 0 ? 'up' : 'down');
+    set('k-grid-s', `ปิดรอบ ${signed(g.realized_total, 2)} · ลอยตัว ${signed(g.unrealized, 2)}`);
+  }
+  if (A.start) {
+    set('k-alpha', pct(A.alpha || 0), (A.alpha || 0) >= 0 ? 'up' : 'down');
+    set('k-alpha-s', `พอร์ต ${pct(A.port || 0, 1)} · ดัชนี ${pct(A.bench || 0, 1)}`);
+    set('k-hit', A.closed ? Math.round(A.hits / A.closed * 100) + '%' : '—'); set('k-hit-s', `ชนะดัชนี ${A.hits} จาก ${A.closed} ไม้ที่ปิด`);
+    set('k-open', String((A.holdings || []).length));
+    set('k-open-s', (A.holdings || []).map(x => `${x.sym.replace('.BK', '')} ${pct(x.ret, 1)}`).join(' · ') || 'ถือเงินสด');
+    set('k-ir', A.ir != null ? A.ir.toFixed(2) : '—'); set('k-ir-s', `ทดสอบย้อนหลังตั้งแต่ ${A.start}`);
+  }
+  CH.forEach(c => {
+    const k = cards[c.id], risk = clamp(riskOf(c), 0.03, 1);
+    k.bar.style.width = (risk * 100).toFixed(0) + '%';
+    k.bar.style.background = risk > 0.7 ? 'var(--down)' : risk > 0.45 ? 'var(--warn)' : 'var(--up)';
+    k.line.textContent = statOf(c);
+  });
+  renderLog();
+}
+function refreshStatus() {
+  CH.forEach(c => {
+    const k = cards[c.id];
+    const s = c.alertT > 0 ? ['alert', 'แจ้งเตือน!'] : c.sayT > 0 ? ['talk', 'กำลังรายงาน'] : c.moving ? ['walk', 'เดินตรวจ'] : ['idle', 'ประจำโต๊ะ'];
+    if (k.st.dataset.s !== s[0]) { k.st.dataset.s = s[0]; k.st.textContent = s[1]; }
+  });
+}
+
+/* ---------- loading ---------- */
+function demoData() {
+  const now = Math.floor(Date.now() / 1000), hist = [];
+  let p = 90; for (let i = 0; i < 160; i++) { p += gauss() * 0.08; hist.push(+p.toFixed(2)); }
+  const ev = (m, desk, who, text, kind = 'info') => ({ id: desk + m, ts: now - m * 60, desk, who, text, kind });
+  return {
+    updated: now, tz_offset_hours: 7,
+    hud: { equity: 10250, day_pnl: 18.4, mtd: 61, mtd_target: 150, drawdown_pct: 0.6, drawdown_limit_pct: 10 },
+    roc: { cash: 5000, rate: 4.04, rate_prev: 4.02, accrued_today: 0.38, accrued_total: 6.2, started: now - 86400 * 9 },
+    grid: { label: 'WTI', symbol: 'CL=F', price: p, prev_close: 89.6, lo: 84, hi: 96, step: 0.5, bbl: 10,
+      held: [90.5, 91, 91.5], fills_today: 6, realized_today: 15, fills_total: 64, realized_total: 140, unrealized: -12, out: false, hist },
+    alpha: { start: '2026-07-09', alpha: 4.2, port: 7.1, bench: 2.9, hist: Array.from({ length: 40 }, (_, i) => i * 0.1 + Math.sin(i / 3)), ir: 1.2, hits: 9, closed: 16,
+      holdings: [{ sym: 'TSM', ret: 8.1 }, { sym: 'NVDA', ret: 2.2 }, { sym: 'DELTA.BK', ret: -0.8 }], signals: 19,
+      movers: [{ sym: 'PTT.BK', chg: -2.4 }] },
+    events: [
+      ev(50, 'grid', 'boss', 'ตั้งกรอบ Grid 84.00–96.00 ห่างชั้นละ $0.50'), ev(40, 'roc', 'penny', 'อัตรา T-Bill 13 สัปดาห์ 4.02% → 4.04%'),
+      ev(30, 'grid', 'bot', 'BUY 10 bbl @ 90.50', 'buy'), ev(22, 'alpha', 'merlin', 'สัญญาณ LONG NVDA · โมเมนตัม +6.1%'),
+      ev(21, 'alpha', 'kage', 'เข้า NVDA สัดส่วน 1/3'), ev(15, 'alpha', 'scout', 'PTT.BK ขยับแรง -2.4% วันนี้', 'alert'),
+      ev(8, 'grid', 'bot', 'SELL @ 91.00 ปิดรอบ +$5.00', 'sell'), ev(3, 'grid', 'dusty', 'ถือ 8 ชั้น (80 bbl) สถานะเริ่มหนัก', 'alert'),
+    ],
+  };
+}
+async function load(first) {
+  try {
+    const r = await fetch('data.json?t=' + Date.now(), { cache: 'no-store' });
+    if (!r.ok) throw new Error(r.status);
+    const d = await r.json();
+    if (!d.hud) throw new Error('shape');
+    D = d; MODE = 'live';
+  } catch (e) {
+    if (!D) { D = demoData(); MODE = 'demo'; }
+  }
+  refresh();
+  if (MODE === 'live') ingest(first); else if (first) queue.push(...D.events.slice(-4));
+}
+
+/* ---------- loops ---------- */
+let last = performance.now(), statusAcc = 0, drawAcc = 0, playAcc = 0;
+function frame(now) {
+  const dt = Math.min(64, now - last); last = now;
+  CH.forEach(c => updateChar(c, dt));
+  FX.flashT = Math.max(0, FX.flashT - dt); FX.casting = Math.max(0, FX.casting - dt);
+  playAcc += dt;
+  if (D && playAcc > 2800) {
+    playAcc = 0;
+    const e = queue.shift();
+    if (e) { play(e); idleFor = 0; }
+    else if ((idleFor += 1) >= 3) { idleFor = 0; if (MODE === 'demo' && Math.random() < .5) play(pick(D.events)); else chatter(); }
+  }
+  drawAcc += dt;
+  if (D && (!RM || drawAcc > 250)) {
+    drawAcc = 0;
+    for (const k in rooms) {
+      const { g, bg } = rooms[k];
+      g.drawImage(bg, 0, 0); DY[k](g, now);
+      CH.filter(c => c.room === k).sort((a, b) => a.y - b.y).forEach(c => {
+        const top = drawChar(g, c, now, { sel: c.id === sel });
+        const bub = bubbles[c.id];
+        if (c.sayT > 0) {
+          bub.hidden = false;
+          bub.style.left = clamp(c.x / W * 100, 18, 82) + '%';
+          bub.style.top = ((top - (c.id === sel ? 9 : 2)) / H * 100) + '%';
+        } else if (!bub.hidden) bub.hidden = true;
+      });
+    }
+    CH.forEach(c => {
+      const pg = cards[c.id].g; pg.clearRect(0, 0, 28, 30);
+      drawChar(pg, { ...c, x: 14, y: 27, moving: false, face: 1, jump: 0, alertT: 0 }, now);
+    });
+  }
+  statusAcc += dt; if (statusAcc > 250) { statusAcc = 0; refreshStatus(); }
+  requestAnimationFrame(frame);
+}
+load(true);
+setInterval(() => load(false), 5 * 60 * 1000);
+setInterval(() => { if (D) refresh(); }, 60 * 1000);
+requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
